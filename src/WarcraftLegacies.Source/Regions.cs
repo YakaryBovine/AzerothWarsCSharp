@@ -106,9 +106,9 @@ public static class Regions
 	public static Rectangle EchoIsleAmbient { get; set; } = new Rectangle(-8576f, -10208f, -5056f, -4064f);
 	public static Rectangle EchoUnlock { get; set; } = new Rectangle(-8608f, -6816f, -6208f, -3968f);
 	public static Rectangle ElwinForestAmbient { get; set; } = new Rectangle(8704f, -14816f, 13376f, -12672f);
-	public static Rectangle EntireMap { get; set; } = new Rectangle(-24512f, -31872f, 24096f, 25056f);
+	public static Rectangle EntireMap { get; set; } = new Rectangle(-24032f, -32256f, 24576f, 24672f);
 	public static Rectangle ExodarBaseUnlock { get; set; } = new Rectangle(-23872f, 5792f, -21248f, 8416f);
-	public static Rectangle Far_Eastern_Northrend { get; set; } = new Rectangle(4608f, 20064f, 7328f, 22944f);
+	public static Rectangle Far_Eastern_Northrend { get; set; } = new Rectangle(4608f, 20064f, 8928f, 22944f);
 	public static Rectangle FeathermoonCreeps { get; set; } = new Rectangle(-22464f, -12128f, -18368f, -7584f);
 	public static Rectangle FeathermoonUnlock { get; set; } = new Rectangle(-21376f, -10272f, -19776f, -7840f);
 	public static Rectangle Fenris_ships { get; set; } = new Rectangle(5760f, 4960f, 13024f, 8128f);
@@ -273,7 +273,7 @@ public static class Regions
 	public static Rectangle SouthshoreAmbient5 { get; set; } = new Rectangle(15296f, 736f, 17856f, 1920f);
 	public static Rectangle SouthshoreUnlock { get; set; } = new Rectangle(10784f, 1632f, 12096f, 2656f);
 	public static Rectangle StonemaulKeep { get; set; } = new Rectangle(-12096f, -10144f, -9216f, -7904f);
-	public static Rectangle Storm_Peaks { get; set; } = new Rectangle(-1088f, 21088f, 4640f, 25088f);
+	public static Rectangle Storm_Peaks { get; set; } = new Rectangle(-1088f, 21088f, 9088f, 25088f);
 	public static Rectangle Stormwind { get; set; } = new Rectangle(10880f, -10176f, 11040f, -10016f);
 	public static Rectangle StormwindAmbient2 { get; set; } = new Rectangle(6624f, -10528f, 8160f, -8544f);
 	public static Rectangle StormwindUnlock { get; set; } = new Rectangle(6816f, -12640f, 11264f, -8576f);
