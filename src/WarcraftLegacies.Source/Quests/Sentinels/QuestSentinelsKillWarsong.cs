@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
     /// </summary>
     public QuestSentinelsKillWarsong(Capital orgrimmar) : base("Green-skinned Brutes",
       "The Warsong Clan has arrived near Ashenvale and begun threatening the wilds. These invaders must be repelled.",
-      "ReplaceableTextures\\CommandButtons\\BTNRaider.blp")
+      @"ReplaceableTextures\CommandButtons\BTNRaider.blp")
     {
       AddObjective(new ObjectiveCapitalDead(orgrimmar));
       ResearchId = Constants.UPGRADE_R007_QUEST_COMPLETED_GREEN_SKINNED_BRUTES_SENTINELS;

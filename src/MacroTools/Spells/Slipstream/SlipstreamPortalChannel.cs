@@ -12,9 +12,6 @@ namespace MacroTools.Spells.Slipstream
   /// </summary>
   public sealed class SlipstreamPortalChannel : Channel
   {
-    /// <inheritdoc />
-    public override bool Active { get; set; }
-    
     /// <summary>
     /// The unit to spawn to act as the actual portal.
     /// </summary>

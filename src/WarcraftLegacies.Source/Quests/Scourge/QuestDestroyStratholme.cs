@@ -14,7 +14,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
   {
     private readonly LegendaryHero _arthas;
     
-    public QuestDestroyStratholme(Capital stratholme, LegendaryHero arthas) : base("The Culling", "When the city of Stratholme falls, Prince Arthas' despair will make him more susceptible to the power of the Lich King.", "ReplaceableTextures\\CommandButtons\\BTNRuneblade.blp")
+    public QuestDestroyStratholme(Capital stratholme, LegendaryHero arthas) : base("The Culling", "When the city of Stratholme falls, Prince Arthas' despair will make him more susceptible to the power of the Lich King.", @"ReplaceableTextures\CommandButtons\BTNRuneblade.blp")
     {
       _arthas = arthas;
       AddObjective(new ObjectiveCapitalDead(stratholme));

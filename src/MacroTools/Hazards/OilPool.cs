@@ -24,9 +24,6 @@ namespace MacroTools.Hazards
     /// Invoked when the <see cref="OilPool"/> calls <see cref="OilPool.OnDispose"/>.
     /// </summary>
     public event EventHandler<OilPool>? Disposed;
-    
-    /// <inheritdoc />
-    public override bool Active { get; set; } = true;
 
     /// <summary>
     /// The amount of oil left in the pool.

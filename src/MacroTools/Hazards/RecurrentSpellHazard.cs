@@ -8,9 +8,6 @@ namespace MacroTools.Hazards
   /// </summary>
   public sealed class RecurrentSpellHazard : Hazard
   {
-    /// <inheritdoc />
-    public override bool Active { get; set; }
-
     private readonly int _dummySpellId;
     private readonly string _dummySpellOrder;
     private readonly int _level;

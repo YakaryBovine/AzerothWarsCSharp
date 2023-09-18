@@ -12,8 +12,8 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
     
     public static void Setup(PreplacedUnitSystem preplacedUnitSystem)
     {
-      Legion = new Faction(FactionNames.Legion, PLAYER_COLOR_PEANUT, "|CFFBF8F4F",
-        "ReplaceableTextures\\CommandButtons\\BTNKiljaedin.blp")
+      Legion = new Faction("Legion", PLAYER_COLOR_PEANUT, "|CFFBF8F4F",
+        @"ReplaceableTextures\CommandButtons\BTNKiljaedin.blp")
       {
         UndefeatedResearch = FourCC("R04T"),
         StartingGold = 200,
@@ -95,7 +95,8 @@ Your primary objective is to summon the great host of the Burning Legion. Invade
       Legion.ModObjectLimit(FourCC("R03Z"), Faction.UNLIMITED); //War Plating
       Legion.ModObjectLimit(FourCC("R040"), Faction.UNLIMITED); //Flying horrors
       Legion.ModObjectLimit(Constants.UPGRADE_R096_REMATERIALIZATION_LEGION, 1);
-      Legion.ModObjectLimit(Constants.UPGRADE_R04R_FORTIFIED_HULLS_UNIVERSAL_UPGRADE, 1);
+      Legion.ModObjectLimit(Constants.UPGRADE_R04R_FORTIFIED_HULLS_UNIVERSAL_UPGRADE, 1 );
+      Legion.ModObjectLimit(Constants.UPGRADE_R09X_IMPROVED_SHADOW_INFUSION_LEGION, 1);
 
       //Heroes
       Legion.ModObjectLimit(FourCC("U00L"), 1); //Anetheron

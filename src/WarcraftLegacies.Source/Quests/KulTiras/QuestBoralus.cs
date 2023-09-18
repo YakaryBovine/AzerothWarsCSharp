@@ -30,7 +30,7 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
     /// <param name="rescueRect">All units in this area will be made neutral, then rescued when the quest is completed or made aggressive when the quest is failed.</param>
     public QuestBoralus(Rectangle rescueRect, PreplacedUnitSystem preplacedUnitSystem) : base("The Admiralty of Kul Tiras",
       "Kul Tiras has degenerated severely in contemporary times. Bandits and vile monsters threaten the islands and the noble houses have split apart. We must quell these threats and reunite the kingdom's various regions under Daelin Proudmoore's command.",
-      "ReplaceableTextures\\CommandButtons\\BTNHumanShipyard.blp")
+      @"ReplaceableTextures\CommandButtons\BTNHumanShipyard.blp")
     {
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_H06I_CASTLE_KUL_TIRAS_T3, Constants.UNIT_H062_TOWN_HALL_KUL_TIRAS_T1));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BX_TIRAGARDE_SOUND_10GOLD_MIN)));

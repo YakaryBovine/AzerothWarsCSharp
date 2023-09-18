@@ -19,7 +19,7 @@ namespace WarcraftLegacies.Source.Setup.QuestSetup
       quelthalas.AddQuest(new QuestQueldanil(Regions.QuelDanil_Lodge, Regions.BloodElfSecondChanceSpawn, 
         allLegendSetup.Quelthalas.Sunwell, allLegendSetup.Quelthalas.Rommath));
       quelthalas.AddQuest(new QuestQueensArchive(allLegendSetup.Quelthalas.Rommath));
-      quelthalas.AddQuest(new QuestForgottenKnowledge(Regions.IllidanStartingPosition));
+      quelthalas.AddQuest(new QuestForgottenKnowledge());
     }
   }
 }

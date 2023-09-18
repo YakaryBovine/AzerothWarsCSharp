@@ -31,7 +31,7 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
     public QuestUnlockShip(Rectangle rescueRect, unit proudmooreCapitalShip, Capital legendBoralus,
       LegendaryHero daelinProudmoore) : base("Stranglethorn Expedition",
       "The Stranglethorn vale is still infested with trolls and pirates. If peace is to be brought back to the South Alliance, it needs to be purged",
-      "ReplaceableTextures\\CommandButtons\\BTNGalleonIcon.blp")
+      @"ReplaceableTextures\CommandButtons\BTNGalleonIcon.blp")
     {
       AddObjective(new ObjectiveControlCapital(legendBoralus, false));
       AddObjective(new ObjectiveControlLegend(daelinProudmoore, false));

@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
     /// <summary>
     /// Initializes a new instance of the <see cref="QuestDuskhaven"/> class.
     /// </summary>
-    public QuestDuskhaven() : base("Duskhaven", "The next town is located at the western coast of Gilneas.", "ReplaceableTextures\\CommandButtons\\BTNGilneasTownHall.blp")
+    public QuestDuskhaven() : base("Duskhaven", "The next town is located at the western coast of Gilneas.", @"ReplaceableTextures\CommandButtons\BTNGilneasTownHall.blp")
     {
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N031_DUSKHAVEN_20GOLD_MIN)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N06V_BLACKWALD_10GOLD_MIN)));

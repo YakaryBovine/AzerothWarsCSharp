@@ -13,7 +13,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
 
     public QuestScouringofLordaeron(IEnumerable<Capital> capitalTargets, LegendaryHero uther) : base("Scouring of Lordaeron",
       "The Kingdom of Lordaeron must be eliminated to pave the way for the Legion's arrival.",
-      "ReplaceableTextures\\CommandButtons\\BTNBaronRivendare.blp")
+      @"ReplaceableTextures\CommandButtons\BTNBaronRivendare.blp")
     {
       _uther = uther;
       foreach (var capital in capitalTargets)

@@ -19,7 +19,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
     /// </summary>
     public QuestFreeNerzhul(Legend lichKing, LegendaryHero thrall) : base("Jailor of the Damned",
       "Before he became the Lich King, Ner'zhul was the chieftain and elder shaman of the Shadowmoon Clan. Perhaps something of his former self still survives within the Frozen Throne.",
-      "ReplaceableTextures\\CommandButtons\\BTNShaman.blp")
+      @"ReplaceableTextures\CommandButtons\BTNShaman.blp")
     {
       _thrall = thrall;
       AddObjective(new ObjectiveKillUnit(lichKing.Unit));

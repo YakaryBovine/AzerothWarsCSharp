@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
     /// <param name="rescueRect">Units in this area start invulnerable then get rescued when the quest is complete.</param>
     public QuestLostOnes(Rectangle rescueRect) : base("The Lost Ones",
       "A tribe of Draenei known as the Ashtongue are struggling to survive in the harsh environment of Outland. If Illidan helps them, they would plead loyalty to him.",
-      "ReplaceableTextures\\CommandButtons\\BTNDranaiAkama.blp")
+      @"ReplaceableTextures\CommandButtons\BTNDranaiAkama.blp")
     {
       AddObjective(
         new ObjectiveControlPoint(

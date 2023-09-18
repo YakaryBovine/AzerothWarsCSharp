@@ -12,7 +12,7 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
     
     public static void Setup(PreplacedUnitSystem preplacedUnitSystem)
     {
-      Gilneas = new Faction(FactionNames.Gilneas, PLAYER_COLOR_COAL, "|cff808080",
+      Gilneas = new Faction("Gilneas", PLAYER_COLOR_COAL, "|cff808080",
         @"ReplaceableTextures\CommandButtons\BTNGreymane.blp")
       {
         StartingGold = 200,

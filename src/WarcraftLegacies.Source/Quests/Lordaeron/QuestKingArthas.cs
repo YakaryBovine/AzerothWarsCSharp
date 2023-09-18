@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     /// </summary>
     public QuestKingArthas(unit terenas, Artifact crownOfLordaeron, Capital capitalPalace, LegendaryHero arthas, Capital lichKing) : base("Line of Succession",
       "Arthas Menethil is the one true heir of the Kingdom of Lordaeron. The only thing standing in the way of his coronation is the world-ending threat of the Scourge.",
-      "ReplaceableTextures\\CommandButtons\\BTNArthas.blp")
+      @"ReplaceableTextures\CommandButtons\BTNArthas.blp")
     {
       AddObjective(new ObjectiveUnitAlive(capitalPalace.Unit));
       AddObjective(new ObjectiveControlLegend(arthas, true));

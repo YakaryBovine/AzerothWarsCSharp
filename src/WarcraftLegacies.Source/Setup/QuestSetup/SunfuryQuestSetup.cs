@@ -17,7 +17,7 @@ namespace WarcraftLegacies.Source.Setup.QuestSetup
       sunfury.AddQuest(new QuestUpperNetherstorm(Regions.UpperNetherstorm));
       sunfury.AddQuest(new QuestSolarian(artifactSetup.EssenceofMurmur));
       sunfury.AddQuest(new QuestSummonKil(allLegendSetup.Stormwind.StormwindKeep, allLegendSetup.Neutral.Karazhan, allLegendSetup.Quelthalas.Kael));
-      sunfury.AddQuest(new QuestForgottenKnowledge(Regions.IllidanStartingPosition));
+      sunfury.AddQuest(new QuestForgottenKnowledge());
       sunfury.AddQuest(new QuestWellOfEternity(preplacedUnitSystem, allLegendSetup.Quelthalas.Kiljaeden));
     }
   }

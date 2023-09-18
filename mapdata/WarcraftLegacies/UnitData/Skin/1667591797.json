@@ -22,12 +22,17 @@
     {
       "Id": 1651864693,
       "Type": 3,
-      "Value": "Practitioner of vile necrotic magic.|n|cfff5962dAbilities:|R Raise Dead|n|cfff5962dCan Learn:|R Unholy Frenzy, Soul Burn, Necromantic Cleansing|n|n|cffffcc00Attacks land and air units.|R"
+      "Value": "Practitioner of vile necrotic magic.|n|cfff5962dAbilities:|R Raise Dead|n|cfff5962dCan Learn:|R Unholy Frenzy, Soul Burn, Dispel Magic|n|n|cffffcc00Attacks land and air units.|R"
     },
     {
       "Id": 1953850229,
       "Type": 3,
       "Value": "- Raise Dead,- Raise Dead|n- Unholy Frenzy,- Raise Dead|n- Unholy Frenzy|n- Soul Burn,- Raise Dead|n- Unholy Frenzy|n- Soul Burn|n- Dispel Magic"
+    },
+    {
+      "Id": 1853186933,
+      "Type": 3,
+      "Value": "Initiate, Adept, Master, Grandmaster"
     }
   ]
 }

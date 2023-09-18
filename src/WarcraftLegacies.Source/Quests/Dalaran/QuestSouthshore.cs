@@ -26,7 +26,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     /// <param name="murlocToKill">This unit must be killed to complete the quest.</param>
     public QuestSouthshore(Rectangle rescueRect, unit murlocToKill) : base("Murloc Troubles",
       "A small murloc skirmish is attacking Southshore, push them back",
-      "ReplaceableTextures\\CommandButtons\\BTNMurloc.blp")
+      @"ReplaceableTextures\CommandButtons\BTNMurloc.blp")
     {
       AddObjective(new ObjectiveUnitIsDead(murlocToKill));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N08M_SOUTHSHORE_15GOLD_MIN)));

@@ -49,7 +49,7 @@ namespace WarcraftLegacies.Source.Setup.Spells
         LifeDrainedPerSecondLevel = 10,
         ManaDrainedPerSecondBase = 15,
         ManaDrainedPerSecondLevel = 5,
-        Range = 500,
+        Range = 800,
         Radius = 225,
         Interval = 0.1f
       };
@@ -71,14 +71,14 @@ namespace WarcraftLegacies.Source.Setup.Spells
         }
       });
 
-      PassiveAbilityManager.Register(new RestoreManaFromDamage(Constants.UNIT_N0E7_BLOODWARDER_SUNFURY, Constants.ABILITY_A11N_ARCANE_ABSORPTION_KHADGAR)
+      PassiveAbilityManager.Register(new RestoreManaFromDamage(Constants.UNIT_N0E7_BLOODWARDER_SUNFURY, Constants.ABILITY_A11N_ARCANE_ABSORPTION_SUNFURY_STORMWIND)
       {
         ManaPerDamage = new LeveledAbilityField<float>
         {
           Base = 0.20f,
           PerLevel = 0.20f
         },
-        Effect = "Abilities\\Spells\\Undead\\ReplenishMana\\SpiritTouchTarget.mdl"
+        Effect = @"Abilities\Spells\Undead\ReplenishMana\SpiritTouchTarget.mdl"
       });
 
       SpellSystem.Register(new RegrowTrees(Constants.ABILITY_A12L_REGROW_TREES_DOMES)

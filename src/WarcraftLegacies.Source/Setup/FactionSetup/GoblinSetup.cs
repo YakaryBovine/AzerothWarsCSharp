@@ -16,8 +16,8 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
 
     public static void Setup(PreplacedUnitSystem preplacedUnitSystem)
     {
-      Goblin = new Faction(FactionNames.Goblin, PLAYER_COLOR_LIGHT_GRAY, "|cff808080",
-        "ReplaceableTextures\\CommandButtons\\BTNHeroTinker.blp")
+      Goblin = new Faction("Bilgewater", PLAYER_COLOR_LIGHT_GRAY, "|cff808080",
+        @"ReplaceableTextures\CommandButtons\BTNHeroTinker.blp")
       {
         StartingGold = 200,
         StartingLumber = 700,

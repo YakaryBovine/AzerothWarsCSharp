@@ -1,0 +1,34 @@
+{
+  "OldId": 1986085697,
+  "NewId": 843460673,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Level": 1,
+      "Id": 1701994849,
+      "Type": 2,
+      "Value": 400
+    },
+    {
+      "Level": 1,
+      "Id": 1718968929,
+      "Type": 3,
+      "Value": "B00E"
+    },
+    {
+      "Level": 1,
+      "Pointer": 1,
+      "Id": 828662088,
+      "Type": 2,
+      "Value": -3
+    },
+    {
+      "Level": 1,
+      "Id": 1918989409,
+      "Type": 3,
+      "Value": "enemies,ground,invulnerable,organic,vulnerable"
+    }
+  ]
+}

@@ -13,8 +13,8 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
 
     public static void Setup(PreplacedUnitSystem preplacedUnitSystem, Artifact helmOfDomination)
     {
-      Scourge = new Faction(FactionNames.Scourge, PLAYER_COLOR_PURPLE, "|c00540081",
-        "ReplaceableTextures\\CommandButtons\\BTNRevenant.blp")
+      Scourge = new Faction("Scourge", PLAYER_COLOR_PURPLE, "|c00540081",
+        @"ReplaceableTextures\CommandButtons\BTNRevenant.blp")
       {
         UndefeatedResearch = FourCC("R05K"),
         StartingGold = 200,

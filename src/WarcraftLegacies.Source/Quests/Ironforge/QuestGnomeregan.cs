@@ -25,7 +25,7 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
     /// <param name="preplacedUnitSystem"></param>
     public QuestGnomeregan(Rectangle rescueRect, PreplacedUnitSystem preplacedUnitSystem) : base("The City of Invention",
       "The people of Gnomeregan have long been unable to assist the Alliance in its wars due an infestation of troggs and Ice Trolls. Resolve their conflicts for them to gain their services.",
-      "ReplaceableTextures\\CommandButtons\\BTNFlyingMachine.blp")
+      @"ReplaceableTextures\CommandButtons\BTNFlyingMachine.blp")
     {
       AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(FourCC("nitw"), Regions.Gnomergan.Center))); //Ice Troll Warlord
       AddObjective(new ObjectiveSelfExists());

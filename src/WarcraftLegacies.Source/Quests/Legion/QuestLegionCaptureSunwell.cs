@@ -12,7 +12,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
     
     public QuestLegionCaptureSunwell(Capital sunwell) : base("Fall of Silvermoon",
       "The Sunwell is the source of the High Elves' immortality and magical prowess. Under control of the Scourge, it would be the source of immense necromantic power.",
-      "ReplaceableTextures\\CommandButtons\\BTNOrbOfCorruption.blp")
+      @"ReplaceableTextures\CommandButtons\BTNOrbOfCorruption.blp")
     {
       AddObjective(new ObjectiveControlCapital(sunwell, false));
     }

@@ -9,7 +9,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
   {
     public QuestKarazhan(Capital karazhan) : base("Secrets of Karazhan",
       "The spire of Medivh stands mysteriously idle. Dalaran could make use of its grand magicks.",
-      "ReplaceableTextures\\CommandButtons\\BTNTomeBrown.blp")
+      @"ReplaceableTextures\CommandButtons\BTNTomeBrown.blp")
     {
       AddObjective(new ObjectiveControlCapital(karazhan, false));
     }

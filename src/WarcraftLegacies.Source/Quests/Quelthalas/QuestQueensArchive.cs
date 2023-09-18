@@ -18,7 +18,7 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
     /// </summary>
     public QuestQueensArchive(LegendaryHero rommath) : base("The Queen's Archive",
       "Queen Azshara studied many forms of arcane knowledge, some darker than others. With access to her library and enough time, the highborn scholares could uncover her secrets",
-      "ReplaceableTextures\\CommandButtons\\BTNBloodElfWizard.blp")
+      @"ReplaceableTextures\CommandButtons\BTNBloodElfWizard.blp")
     {
       AddObjective(new ObjectiveControlLevel(
         ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N04Y_NAZJATAR_25GOLD_MIN), 8));

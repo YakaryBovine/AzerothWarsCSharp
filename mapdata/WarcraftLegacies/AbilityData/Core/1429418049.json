@@ -21,6 +21,36 @@
       "Id": 1667330657,
       "Type": 3,
       "Value": "undead"
+    },
+    {
+      "Id": 1986358369,
+      "Value": 2
+    },
+    {
+      "Level": 2,
+      "Id": 1918989409,
+      "Type": 3,
+      "Value": "air,ground,friend,vuln,invu,self,organic,nonancient,neutral"
+    },
+    {
+      "Level": 2,
+      "Id": 1718968929,
+      "Type": 3,
+      "Value": "B01Y"
+    },
+    {
+      "Level": 2,
+      "Pointer": 1,
+      "Id": 828466504,
+      "Type": 2,
+      "Value": 35
+    },
+    {
+      "Level": 1,
+      "Pointer": 1,
+      "Id": 828466504,
+      "Type": 2,
+      "Value": 20
     }
   ]
 }

@@ -14,7 +14,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
 
     public QuestKelthuzadLich(Capital sunwell, LegendaryHero kelthuzad) : base("Into the Realm Eternal",
       "Kel'thuzad is the leader of the Cult of the Damned and an extraordinarily powerful necromancer. If he were to be brought to the Sunwell and submerged in its waters, he would be reanimated as an immortal Lich.",
-      "ReplaceableTextures\\CommandButtons\\BTNLichVersion2.blp")
+      @"ReplaceableTextures\CommandButtons\BTNLichVersion2.blp")
     {
       _kelthuzad = kelthuzad;
       AddObjective(new ObjectiveControlCapital(sunwell, false));
@@ -51,7 +51,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
       DestroyEffect(AddSpecialEffect("war3mapImported\\Soul Beam Blue.mdx",
         GetUnitX(_kelthuzad.Unit),
         GetUnitY(_kelthuzad.Unit)));
-      DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl",
+      DestroyEffect(AddSpecialEffect(@"Abilities\Spells\Undead\FrostNova\FrostNovaTarget.mdl",
         GetUnitX(_kelthuzad.Unit), GetUnitY(_kelthuzad.Unit)));
     }
   }

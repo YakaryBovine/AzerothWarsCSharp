@@ -24,14 +24,14 @@ namespace WarcraftLegacies.Source.Setup.Legends
         PermaDies = true,
         DeathMessage =
           "The Lord of the Forest, Cenarius, has fallen. The druids of the Kaldorei have lost their greatest mentor.",
-        DeathSfx = "Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl",
+        DeathSfx = @"Objects\Spawnmodels\NightElf\EntBirthTarget\EntBirthTarget.mdl",
         PlayerColor = PLAYER_COLOR_CYAN,
       };
 
       Malfurion = new LegendaryHero("Malfurion")
       {
         UnitType = FourCC("Efur"),
-        StartingArtifactItemTypeIds = new[]
+        StartingArtifactItemTypeIds = new()
         {
           Constants.ITEM_I00C_G_HANIR_THE_MOTHER_TREE
         }

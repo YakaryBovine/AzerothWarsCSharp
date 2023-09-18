@@ -22,9 +22,6 @@ namespace MacroTools.Spells.ExactJustice
     {
     }
 
-    /// <inheritdoc />
-    public override bool Active { get; set; } = true;
-
     /// <summary>
     /// Settings for the visual effects created by the channel effect.
     /// </summary>

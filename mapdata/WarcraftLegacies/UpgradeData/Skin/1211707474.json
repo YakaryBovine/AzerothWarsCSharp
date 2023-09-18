@@ -62,6 +62,18 @@
       "Id": 829453415,
       "Type": 3,
       "Value": "Astromancer Master Training"
+    },
+    {
+      "Level": 1,
+      "Id": 829579623,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNWarp Energy.blp"
+    },
+    {
+      "Level": 2,
+      "Id": 829579623,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNWarpEnergyMaster.blp"
     }
   ]
 }

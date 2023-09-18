@@ -21,7 +21,7 @@ namespace WarcraftLegacies.Source.Quests.Draenei
     /// <summary>
     /// Initializes a new instance of the <see cref="QuestRebuildCivilisation"/> class.
     /// </summary>
-    public QuestRebuildCivilisation(Rectangle rescueRect, LegendaryHero velen) : base("The Way Forward", "The Draenei will need to rebuild their civilisation in Azeroth. Desolace seems like a perfect place for the birth of the second Draenei settlement.", "ReplaceableTextures\\CommandButtons\\BTNDraeneiDivineCitadel.blp")
+    public QuestRebuildCivilisation(Rectangle rescueRect, LegendaryHero velen) : base("The Way Forward", "The Draenei will need to rebuild their civilisation in Azeroth. Desolace seems like a perfect place for the birth of the second Draenei settlement.", @"ReplaceableTextures\CommandButtons\BTNDraeneiDivineCitadel.blp")
     {
       Required = true;
       AddObjective(new ObjectiveKillAllInArea(new List<Rectangle> { Regions.DraeneiQuestKill }, "in Desolace"));

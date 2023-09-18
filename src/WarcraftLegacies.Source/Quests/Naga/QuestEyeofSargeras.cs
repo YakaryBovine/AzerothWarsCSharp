@@ -17,7 +17,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
     /// </summary>
     public QuestEyeofSargeras(Artifact eyeOfSargeras, LegendaryHero illidan) : base("The Eye of Sargeras",
       "The Eye of Sargeras is an extremely powerful artifact, it could be the key to satiate Illidan's thirst for power.",
-      "ReplaceableTextures\\CommandButtons\\BTNKazzakIon.blp")
+      @"ReplaceableTextures\CommandButtons\BTNKazzakIon.blp")
     {
       AddObjective(new ObjectiveLegendHasArtifact(illidan, eyeOfSargeras));
       ResearchId = Constants.UPGRADE_R094_QUEST_COMPLETED_THE_EYE_OF_SARGERAS;

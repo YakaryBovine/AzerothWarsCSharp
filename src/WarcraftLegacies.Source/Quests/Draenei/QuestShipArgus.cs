@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Draenei
     /// <param name="velen">Needs to be brought somewhere to complete the quest.</param>
     public QuestShipArgus(unit outlandToArgusWaygate, unit argusToOutlandWaygate, LegendaryHero velen) : base("Reconquering Tempest Keep",
       "Tempest Keep still has the power to open a portal Argus, but Velen needs to channel it",
-      "ReplaceableTextures\\CommandButtons\\BTNArcaneCastle.blp")
+      @"ReplaceableTextures\CommandButtons\BTNArcaneCastle.blp")
     {
       _outlandToArgusWaygate = outlandToArgusWaygate.Show(false);
       _argusToOutlandWaygate = argusToOutlandWaygate.Show(false);

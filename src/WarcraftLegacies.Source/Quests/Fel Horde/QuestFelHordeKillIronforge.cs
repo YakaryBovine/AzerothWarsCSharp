@@ -14,7 +14,7 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
 
     public QuestFelHordeKillIronforge(Capital theGreatForge) : base("Felsteel Refining",
       "The smiths of Ironforge have long been put to use crafting goods and war machinery. In the hands of the Fel Horde, they could be used to smelt and refine the ultimate metal: Felsteel.",
-      "ReplaceableTextures\\CommandButtons\\BTNInfernalFlameCannon.blp")
+      @"ReplaceableTextures\CommandButtons\BTNInfernalFlameCannon.blp")
     {
       AddObjective(new ObjectiveCapitalDead(theGreatForge));
       ResearchId = Constants.UPGRADE_R011_QUEST_COMPLETED_FELSTEEL_REFINING_FEL_HORDE;

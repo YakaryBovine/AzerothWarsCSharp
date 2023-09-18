@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     /// </summary>
     public QuestMograine() : base("The Exile",
       "Mograine has been gone for a long time, if Lordaeron would be in great peril, he would surely come back to defend it!",
-      "ReplaceableTextures\\CommandButtons\\BTNAlexandros.blp")
+      @"ReplaceableTextures\CommandButtons\BTNAlexandros.blp")
     {
       AddObjective(new ObjectiveTime(900));
       ResearchId = Constants.UPGRADE_R06P_QUEST_COMPLETED_THE_EXILE_LORDAERON;

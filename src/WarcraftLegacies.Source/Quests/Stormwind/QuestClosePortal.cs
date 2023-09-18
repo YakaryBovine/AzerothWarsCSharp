@@ -17,7 +17,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
 
     public QuestClosePortal(PreplacedUnitSystem preplacedUnitSystem, LegendaryHero khadgar) : base("Seal the Dark Portal",
       "The Dark Portal has been a menace to the Kingdom of Stormwind for decades, it is time to end the menace once and for all.",
-      "ReplaceableTextures\\CommandButtons\\BTNDarkPortal.blp")
+      @"ReplaceableTextures\CommandButtons\BTNDarkPortal.blp")
     {
       _khadgar = khadgar;
       AddObjective(new ObjectiveChannelRect(Regions.ClosePortal, "the Dark Portal", khadgar, 480, 270, Title));

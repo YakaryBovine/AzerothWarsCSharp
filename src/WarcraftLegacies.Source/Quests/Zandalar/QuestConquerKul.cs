@@ -29,7 +29,7 @@ namespace WarcraftLegacies.Source.Quests.Zandalar
     public QuestConquerKul(Rectangle onFailSpawnRect, QuestData completeOnFailQuest, QuestData failOnFailQuest, AllLegendSetup legendSetup) : base(
       "Conquer Boralus",
       "The Kul'tiran people and their fleet have been a threat to the Zandalari Empire for ages, it is time to put them to rest.",
-      "ReplaceableTextures\\CommandButtons\\BTNGalleonIcon.blp")
+      @"ReplaceableTextures\CommandButtons\BTNGalleonIcon.blp")
     {
       AddObjective(new ObjectiveControlCapital(legendSetup.Neutral.Dazaralor, true));
       AddObjective(new ObjectiveCapitalDead(legendSetup.Kultiras.LegendBoralus));

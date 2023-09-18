@@ -15,6 +15,7 @@ namespace MacroTools.SpellSystem
     {
       Position = new Point(x, y);
       Caster = caster;
+      Active = true;
     }
     
     protected unit? Caster { get; }
@@ -64,7 +65,8 @@ namespace MacroTools.SpellSystem
       OnDispose();
     }
 
-    public abstract bool Active { get; set; }
+    /// <inheritdoc />
+    public bool Active { get; set; } = true;
 
     /// <summary>
     /// Fired when the <see cref="Hazard"/> is initially registered.
@@ -86,17 +88,6 @@ namespace MacroTools.SpellSystem
     /// </summary>
     protected virtual void OnDispose()
     {
-    }
-
-    /// <summary>
-    ///   Retrieves the LocationZ at the given (X, Y) coordinates.
-    /// </summary>
-    protected static float GetZ(float x, float y)
-    {
-      var loc = Location(x, y);
-      var z = GetLocationZ(loc);
-      RemoveLocation(loc);
-      return z;
     }
 
     /// <summary>

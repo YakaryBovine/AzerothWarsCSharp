@@ -32,7 +32,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     /// </summary>
     public QuestStratholme(Rectangle rescueRect, PreplacedUnitSystem preplacedUnitSystem, LegendaryHero arthas, Capital stratholme) : base("Blackrock and Roll",
       "The Blackrock clan has taken over Alterac, they must be eliminated for the safety of Lordaeron",
-      "ReplaceableTextures\\CommandButtons\\BTNChaosBlademaster.blp")
+      @"ReplaceableTextures\CommandButtons\BTNChaosBlademaster.blp")
     {
       _arthas = arthas;
       _stratholme = stratholme;

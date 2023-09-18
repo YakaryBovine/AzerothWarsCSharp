@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
     /// <summary>
     /// Initializes a new instance of the <see cref="QuestTempestReach"/> class.
     /// </summary>
-    public QuestTempestReach() : base("Tempest Reach", "The first settlement we need to capture is Tempest Reach, just south of our location.", "ReplaceableTextures\\CommandButtons\\BTNGilneasFarm.blp")
+    public QuestTempestReach() : base("Tempest Reach", "The first settlement we need to capture is Tempest Reach, just south of our location.", @"ReplaceableTextures\CommandButtons\BTNGilneasFarm.blp")
     {
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N084_TEMPEST_REACH_10GOLD_MIN)));
       AddObjective(new ObjectiveExpire(670, Title));

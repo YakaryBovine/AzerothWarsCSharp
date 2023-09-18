@@ -22,7 +22,7 @@ namespace WarcraftLegacies.Source.Setup.Legends
         UnitType = Constants.UNIT_H00R_KING_OF_STORMWIND_DARK_GREEN,
         DeathMessage = "The King of Stormwind dies a warrior’s death, defending hearth and family. The Wrynn Dynasty crumbles with his passing.",
         StartingXp = 1800,
-        StartingArtifactItemTypeIds = new[]
+        StartingArtifactItemTypeIds = new()
         {
           Constants.ITEM_I00D_SHALAMAYNE
         }
@@ -32,7 +32,7 @@ namespace WarcraftLegacies.Source.Setup.Legends
       {
         UnitType = Constants.UNIT_H00Z_CROWN_PRINCE_OF_STROMGARDE_STORMWIND,
         StartingXp = 7000,
-        StartingArtifactItemTypeIds = new[] { Constants.ITEM_I01O_TROL_KALAR }
+        StartingArtifactItemTypeIds = new() { Constants.ITEM_I01O_TROL_KALAR }
       };
 
       Bolvar = new LegendaryHero("Bolvar Fordragon")

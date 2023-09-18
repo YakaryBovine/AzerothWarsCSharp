@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     /// </summary>
     public QuestThunderEagle(Capital draktharonKeep) : base("To the Skies!",
       "The Thunder Eagles of the Storm Peaks live in fear of the Legion. Wipe out the Legion Nexus to bring these great birds out into the open.",
-      "ReplaceableTextures\\CommandButtons\\BTNWarEagle.blp")
+      @"ReplaceableTextures\CommandButtons\BTNWarEagle.blp")
     {
       AddObjective(new ObjectiveControlCapital(draktharonKeep, false));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N02S_STORM_PEAKS_15GOLD_MIN)));

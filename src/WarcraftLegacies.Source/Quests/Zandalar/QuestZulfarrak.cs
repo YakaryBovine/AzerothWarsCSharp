@@ -26,7 +26,7 @@ namespace WarcraftLegacies.Source.Quests.Zandalar
     /// <param name="zul"></param>
     public QuestZulfarrak(Rectangle rescueRect, Capital zulfarrak, LegendaryHero zul) : base("Fury of the Sands",
       "The Sandfury Trolls of Zul'farrak are openly hostile to visitors, but they share a common heritage with the Zandalari Trolls. An adequate display of force could bring them around.",
-      "ReplaceableTextures\\CommandButtons\\BTNDarkTroll.blp")
+      @"ReplaceableTextures\CommandButtons\BTNDarkTroll.blp")
     {
       _zulfarrak = zulfarrak;
       ResearchId = Constants.UPGRADE_R02F_QUEST_COMPLETED_FURY_OF_THE_SANDS_WARSONG;

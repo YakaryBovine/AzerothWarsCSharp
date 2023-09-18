@@ -15,7 +15,7 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
     /// </summary>
     public QuestBeyondPortal(Capital hellfireCitadel, Capital kilsorrowFortress) : base("Beyond the Dark Portal",
       "The Orc threat from Draenor still looms over all. Eliminate every trace of the Orcs and their bases.",
-      "ReplaceableTextures\\CommandButtons\\BTNDarkPortal.blp")
+      @"ReplaceableTextures\CommandButtons\BTNDarkPortal.blp")
     {
       AddObjective(new ObjectiveCapitalDead(hellfireCitadel));
       AddObjective(new ObjectiveCapitalDead(kilsorrowFortress));

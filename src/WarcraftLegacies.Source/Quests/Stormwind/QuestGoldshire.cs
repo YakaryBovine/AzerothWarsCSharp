@@ -18,7 +18,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
 
     public QuestGoldshire(Rectangle rescueRect, unit hogger) : base("The Scourge of Elwynn",
       "Hogger and his pack have taken over Goldshire, clear them out!",
-      "ReplaceableTextures\\CommandButtons\\BTNGnoll.blp")
+      @"ReplaceableTextures\CommandButtons\BTNGnoll.blp")
     {
       AddObjective(new ObjectiveUnitIsDead(hogger)); //Hogger
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(FourCC("n00Z"))));

@@ -8,16 +8,22 @@
     {
       "Id": 1718840929,
       "Type": 3,
-      "Value": "(Twilight DK)"
+      "Value": "(Death Knight)"
     },
     {
       "Id": 2020631137,
-      "Value": 2
+      "Value": 1
     },
     {
       "Id": 2037082209,
       "Type": 3,
-      "Value": "E"
+      "Value": "W"
+    },
+    {
+      "Level": 1,
+      "Id": 828536161,
+      "Type": 3,
+      "Value": "Raises 3 dead units in an area for 60 seconds."
     }
   ]
 }

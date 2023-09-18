@@ -14,7 +14,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
   {
     public QuestDarkshire(unit gnollToKill) : base("Gnoll Troubles",
       "The town of Darkshire is under attack by Gnoll's, clear them out!",
-      "ReplaceableTextures\\CommandButtons\\BTNGnollArcher.blp")
+      @"ReplaceableTextures\CommandButtons\BTNGnollArcher.blp")
     {
       AddObjective(new ObjectiveUnitIsDead(gnollToKill));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(FourCC("n00V"))));

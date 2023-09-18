@@ -39,7 +39,7 @@ namespace WarcraftLegacies.Source.Setup.Spells
           Base = 0.25f,
           PerLevel = 0.25f
         },
-        Effect = "Abilities\\Spells\\Undead\\ReplenishMana\\SpiritTouchTarget.mdl"
+        Effect = @"Abilities\Spells\Undead\ReplenishMana\SpiritTouchTarget.mdl"
       });
 
       PassiveAbilityManager.Register(new LocationBasedFlavourAbility(Constants.UNIT_O05J_DRAGON_HATCHERY_DRAGONMAW_SPECIALIST)

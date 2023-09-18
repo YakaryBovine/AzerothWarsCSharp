@@ -15,7 +15,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
 
     public QuestTortolla(LegendaryHero tortolla) : base("The Turtle Demigod",
       "Tortolla was badly wounded during the War of the Ancients, and has been resting ever since.",
-      "ReplaceableTextures\\CommandButtons\\BTNSeaTurtleGreen.blp")
+      @"ReplaceableTextures\CommandButtons\BTNSeaTurtleGreen.blp")
     {
       AddObjective(new ObjectiveTime(1200));
       AddObjective(new ObjectiveSelfExists());
@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
       _sleepingTortolla = CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), HeroId, -10658, 9583, 333)
         .SetInvulnerable(true)
         .AddExperience(tortolla.StartingXp);
-      AddSpecialEffectTarget("Abilities\\Spells\\Undead\\Sleep\\SleepTarget.mdl", _sleepingTortolla,
+      AddSpecialEffectTarget(@"Abilities\Spells\Undead\Sleep\SleepTarget.mdl", _sleepingTortolla,
         "overhead");
     }
 

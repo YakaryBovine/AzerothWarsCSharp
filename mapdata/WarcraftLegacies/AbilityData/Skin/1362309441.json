@@ -8,7 +8,7 @@
     {
       "Id": 1953653089,
       "Type": 3,
-      "Value": "ReplaceableTextures\\CommandButtons\\PASCascadeSmash.blp"
+      "Value": "ReplaceableTextures\\PassiveButtons\\PASBTNSeaGiantPulverize.blp"
     },
     {
       "Id": 2020631137,
@@ -23,11 +23,6 @@
       "Id": 2037082209,
       "Type": 3,
       "Value": "E"
-    },
-    {
-      "Id": 1835101793,
-      "Type": 3,
-      "Value": "Cascade Smash"
     },
     {
       "Id": 1918988897,
@@ -59,12 +54,6 @@
       "Value": "Abilities\\Weapons\\GryphonRiderMissile\\GryphonRiderMissileTarget.mdl"
     },
     {
-      "Level": 1,
-      "Id": 829453409,
-      "Type": 3,
-      "Value": "Cascade Smash"
-    },
-    {
       "Level": 2,
       "Id": 829453409,
       "Type": 3,
@@ -86,7 +75,7 @@
       "Level": 1,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Gives a 20% chance that an attack will deal 30  damage to nearby units."
+      "Value": "Gives a 20% chance that an attack will deal 30 damage to nearby units."
     },
     {
       "Level": 2,

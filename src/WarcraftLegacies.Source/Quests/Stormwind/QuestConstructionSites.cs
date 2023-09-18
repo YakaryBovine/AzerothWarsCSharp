@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     /// <param name="constructionSites">The construction sites that should get pinged when the quest is completed.</param>
     public QuestConstructionSites(IEnumerable<unit> constructionSites) : base("Inevitable Progress",
       "Stormwind has not yet fully recovered from the ravaging it experienced during the Second War. Await reconstruction.",
-      "ReplaceableTextures\\CommandButtons\\BTNGenericHumanBuilding.blp")
+      @"ReplaceableTextures\CommandButtons\BTNGenericHumanBuilding.blp")
     {
       _constructionSites = constructionSites;
       ResearchId = Constants.UPGRADE_R022_QUEST_COMPLETED_INEVITABLE_PROGRESS_STORMWIND;

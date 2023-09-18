@@ -14,7 +14,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
 
     public QuestConsumeTree(LegendaryHero archimonde) : base("Twilight of the Gods",
       "Consuming the World Tree will grant Archimonde immeasurable power and eliminate his mortal enemies, the Druids of Kalimdor, forever.",
-      "ReplaceableTextures\\CommandButtons\\BTNGlazeroth.blp")
+      @"ReplaceableTextures\CommandButtons\BTNGlazeroth.blp")
     {
       _archimonde = archimonde;
       AddObjective(new ObjectiveChannelRect(Regions.ArchimondeChannel, "The World Tree", _archimonde, 420, 90, Title));
@@ -36,9 +36,9 @@ namespace WarcraftLegacies.Source.Quests.Legion
       var archimondeUnit = _archimonde.Unit;
       DruidsSetup.Druids?.Leave();
       BlzSetUnitName(archimondeUnit, "Devourer of Worlds");
-      AddSpecialEffectTarget("Abilities\\Weapons\\GreenDragonMissile\\GreenDragonMissile.mdl", archimondeUnit,
+      AddSpecialEffectTarget(@"Abilities\Weapons\GreenDragonMissile\GreenDragonMissile.mdl", archimondeUnit,
         "hand, right");
-      AddSpecialEffectTarget("Abilities\\Weapons\\GreenDragonMissile\\GreenDragonMissile.mdl", archimondeUnit, "hand, left");
+      AddSpecialEffectTarget(@"Abilities\Weapons\GreenDragonMissile\GreenDragonMissile.mdl", archimondeUnit, "hand, left");
       archimondeUnit?.AddHeroAttributes(80, 80, 80);
     }
   }

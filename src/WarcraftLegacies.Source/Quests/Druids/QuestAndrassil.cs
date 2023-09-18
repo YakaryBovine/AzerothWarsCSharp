@@ -15,7 +15,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
 
     public QuestAndrassil(Capital lichKing) : base("Crown of the Snow",
       "Long ago, Fandral Staghelm cut a sapling from Nordrassil and used it to grow Andrassil in Northrend. Without the blessing of the Aspects, it fell to the Old Gods' corruption. If Northrend were to be reclaimed, Andrassil's growth could begin anew.",
-      "ReplaceableTextures\\CommandButtons\\BTNTreant.blp")
+      @"ReplaceableTextures\CommandButtons\BTNTreant.blp")
     {
       AddObjective(new ObjectiveCapitalDead(lichKing));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N03U_GRIZZLY_HILLS_15GOLD_MIN)));

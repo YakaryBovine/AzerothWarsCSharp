@@ -10,8 +10,8 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
 
     public static void Setup(PreplacedUnitSystem preplacedUnitSystem)
     {
-      ScarletCrusade = new Faction(FactionNames.Militia, PLAYER_COLOR_MAROON, "|cff800000",
-        "ReplaceableTextures\\CommandButtons\\BTNPeasant.blp")
+      ScarletCrusade = new Faction("Militia", PLAYER_COLOR_MAROON, "|cff800000",
+        @"ReplaceableTextures\CommandButtons\BTNPeasant.blp")
       {
         StartingGold = 150,
         StartingLumber = 500,

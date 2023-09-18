@@ -12,8 +12,8 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
 
     public static void Setup(PreplacedUnitSystem preplacedUnitSystem)
     {
-      Sentinels = new Faction(FactionNames.Sentinels, PLAYER_COLOR_MINT, "|CFFBFFF80",
-        "ReplaceableTextures\\CommandButtons\\BTNPriestessOfTheMoon.blp")
+      Sentinels = new Faction("Sentinels", PLAYER_COLOR_MINT, "|CFFBFFF80",
+        @"ReplaceableTextures\CommandButtons\BTNPriestessOfTheMoon.blp")
       {
         UndefeatedResearch = FourCC("R05Y"),
         StartingGold = 200,

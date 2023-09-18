@@ -14,7 +14,7 @@
       "Level": 1,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Summons an immovable ward that heals 3 mana to friendly units per second. |nLasts 10 seconds."
+      "Value": "Summons an immovable ward that restores 3 mana to friendly units per second. |nLasts 10 seconds."
     },
     {
       "Id": 1835101793,
@@ -30,7 +30,7 @@
     {
       "Id": 1953653089,
       "Type": 3,
-      "Value": "ReplaceableTextures\\CommandButtons\\BTNSentryWard.blp"
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNManaWard.blp"
     }
   ]
 }

@@ -15,7 +15,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
 
     public QuestBlueDragons(Capital theNexus) : base("The Blue Dragonflight",
       "The Blue Dragons of Northrend are the wardens of magic on Azeroth. They might be convinced to willingly join the mages of Dalaran.",
-      "ReplaceableTextures\\CommandButtons\\BTNAzureDragon.blp")
+      @"ReplaceableTextures\CommandButtons\BTNAzureDragon.blp")
     {
       AddObjective(new ObjectiveControlCapital(theNexus, false));
     }

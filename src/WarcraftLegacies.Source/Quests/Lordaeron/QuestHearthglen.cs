@@ -25,7 +25,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     /// <param name="arthas">Must be brought somewhere to complete the quest.</param>
     public QuestHearthglen(Rectangle rescueRect, LegendaryHero arthas) : base("Hearthglen",
       "The village of Hearthglen is just nearby. A legendary warrior like Arthas would be enough for them to join us",
-      "ReplaceableTextures\\CommandButtons\\BTNutherAlt.blp")
+      @"ReplaceableTextures\CommandButtons\BTNutherAlt.blp")
     {
       AddObjective(new ObjectiveLegendInRect(arthas, Regions.Hearthglen, "Hearthglen"));
       AddObjective(new ObjectiveExpire(1235, Title));

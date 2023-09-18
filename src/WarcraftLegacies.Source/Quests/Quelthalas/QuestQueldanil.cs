@@ -25,7 +25,7 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
     /// </summary>
     public QuestQueldanil(Rectangle rescueRect, Rectangle secondChanceRect, Capital sunwell, LegendaryHero rommath) : base("Quel'danil Lodge",
       "Quel'danil Lodge is a High Elven outpost situated in the Hinterlands. It's been some time since the rangers there have been in contact with Quel'thalas.",
-      "ReplaceableTextures\\CommandButtons\\BTNBearDen.blp")
+      @"ReplaceableTextures\CommandButtons\BTNBearDen.blp")
     {
       _secondChanceRect = secondChanceRect;
       _rommath = rommath;

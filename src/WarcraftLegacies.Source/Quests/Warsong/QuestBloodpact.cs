@@ -14,21 +14,21 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     /// <summary>
     /// Initializes a new instance of the class <see cref="QuestBloodpact"/>.
     /// </summary>
-    public QuestBloodpact(LegendaryHero Mannoroth, LegendaryHero grom)
+    public QuestBloodpact(LegendaryHero mannoroth, LegendaryHero grom)
       : base("The Bloodpact",
         "The Warsong is still vulnerable to the tentation of Mannoroth's Blood. If they drink it from the Fountain, they would have a surge of power. Although, Thrall would certainly hurry to save his friend Grom from the corruption.",
-        "ReplaceableTextures\\CommandButtons\\BTNBloodFury.blp")
+        @"ReplaceableTextures\CommandButtons\BTNBloodFury.blp")
     {
-      AddObjective(new ObjectiveResearch(Constants.UPGRADE_R09O_DRINK_THE_BLOOD_OF_MANNOROTH, Constants.UNIT_NBFL_FOUNTAIN_OF_BLOOD_BLOODPACT));
+      AddObjective(new ObjectiveResearch(Constants.UPGRADE_R09O_DRINK_THE_BLOOD_OF_MANNOROTH,
+        Constants.UNIT_NBFL_FOUNTAIN_OF_BLOOD_BLOODPACT));
       Global = true;
-      _mannoroth = Mannoroth;
+      _mannoroth = mannoroth;
       _grom = grom;
     }
-    //private bool IsPointValidForGrom(Point whichPoint) =>
-    //  !whichPoint.IsPathable(PATHING_TYPE_FLOATABILITY) && whichPoint.IsPathable(PATHING_TYPE_WALKABILITY);
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "The Warsong has drunk the blood of Mannoroth. It will take Thrall 4 minutes to save Grom and purify the Warsong Clan orcs.";
+    protected override string RewardFlavour =>
+      "The Warsong has drunk the blood of Mannoroth. It will take Thrall 4 minutes to save Grom and purify the Warsong Clan orcs.";
 
     /// <inheritdoc />
     protected override string RewardDescription =>
@@ -48,19 +48,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
 
         _mannoroth.ForceCreate(Player(PLAYER_NEUTRAL_AGGRESSIVE), Regions.FountainUnlock.Center, 270);
         _grom.UnitType = Constants.UNIT_OGRH_CHIEFTAIN_OF_THE_WARSONG_CLAN_WARSONG;
-
       });
-      // Grom Auto Revive towards end of bloodpact Uncomment if perma death becomes a thing again -Madsen
-      //var TimeRessGrom = CreateTimer();
-      //TimerStart(TimeRessGrom, 175, false, () =>
-      //{
-      //  Point randomgrompoint;
-      //  do
-      //  {
-      //    randomgrompoint = Regions.GromRandomPoint.GetRandomPoint();
-      //  } while (!IsPointValidForGrom(randomgrompoint));
-
-      //  ReviveHero(_grom.Unit, randomgrompoint.X, randomgrompoint.Y, true);
     }
   }
 }

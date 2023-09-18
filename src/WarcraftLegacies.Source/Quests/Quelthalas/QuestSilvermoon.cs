@@ -30,7 +30,7 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
     public QuestSilvermoon(Rectangle rescueRect, unit elvenRunestone, PreplacedUnitSystem preplacedUnitSystem,
       Capital silvermoon, Capital sunwell) : base("The Siege of Silvermoon",
       "The Amani Trolls have been harassing Silvermoon since its founding, but their defensive position within their jungle has made the prospect of an all-out assault too costly. Today, however, the Amani begins their largest siege yet. They leave us no choice; we must scour Zul'aman if the High Elves are to prosper.",
-      "ReplaceableTextures\\CommandButtons\\BTNForestTrollTrapper.blp")
+      @"ReplaceableTextures\CommandButtons\BTNForestTrollTrapper.blp")
     {
       _elvenRunestone = elvenRunestone;
       _silvermoon = silvermoon;
@@ -54,7 +54,7 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
 
     /// <inheritdoc />
     protected override string RewardDescription =>
-      "Control of all units in Silvermoon and enable Anasterian to be trained at the Altar";
+      "Control of all units in Silvermoon, unlock the Summon Mystic Defenders ability from Elven Runestones and enable Anasterian to be trained at the Altar";
 
     /// <inheritdoc />
     protected override void OnFail(Faction completingFaction) => 

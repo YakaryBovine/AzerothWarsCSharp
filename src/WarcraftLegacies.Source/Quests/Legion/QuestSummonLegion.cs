@@ -19,7 +19,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
 
     public QuestSummonLegion(Rectangle rescueRect, unit interiorPortal) : base("Under the Burning Sky",
       "The greater forces of the Burning Legion lie in wait in the vast expanse of the Twisting Nether. Use the Book of Medivh to tear open a hole in space-time, and visit the full might of the Legion upon Azeroth.",
-      "ReplaceableTextures\\CommandButtons\\BTNArchimonde.blp")
+      @"ReplaceableTextures\CommandButtons\BTNArchimonde.blp")
     {
       _interiorPortal = interiorPortal;
       _objectiveCastSpell = new ObjectiveCastSpell(RitualId, false);

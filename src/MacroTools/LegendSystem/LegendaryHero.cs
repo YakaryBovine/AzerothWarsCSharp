@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using MacroTools.ArtifactSystem;
 using MacroTools.Extensions;
@@ -95,7 +96,7 @@ namespace MacroTools.LegendSystem
     /// <summary>
     /// The <see cref="LegendaryHero"/> will spawn with <see cref="Artifact"/>s with these IDs the first time they are created.
     /// </summary>
-    public int[] StartingArtifactItemTypeIds { get; init; } = Array.Empty<int>();
+    public List<int> StartingArtifactItemTypeIds { get; init; } = new();
     
     /// <summary>
     /// Initializes a new instance of the <see cref="LegendaryHero"/> class.
@@ -207,7 +208,7 @@ namespace MacroTools.LegendSystem
           ArtifactManager.Register(artifact);
           Unit.AddItemSafe(artifact.Item);
         }
-        Array.Clear(StartingArtifactItemTypeIds);
+        StartingArtifactItemTypeIds.Clear();
       }
       
       RefreshDummy();

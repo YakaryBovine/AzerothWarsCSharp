@@ -25,7 +25,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
     /// <inheritdoc />
     public QuestThunderBluff(PreplacedUnitSystem preplacedUnitSystem, Rectangle rescueRect) : base("The Long March",
       "The Tauren have been wandering for too long. The plains of Mulgore would offer respite from this endless journey.",
-      "ReplaceableTextures\\CommandButtons\\BTNCentaurKhan.blp")
+      @"ReplaceableTextures\CommandButtons\BTNCentaurKhan.blp")
     {
       AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(FourCC("ncnk"), rescueRect.Center)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N026_THOUSAND_NEEDLES_10GOLD_MIN )));

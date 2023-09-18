@@ -24,8 +24,8 @@ namespace WarcraftLegacies.Source.Researches
     {
       var orgrimmarLocation = new Point(-9704, -858);
       var thunderbluffLocation = new Point(-14445, -4042);
-      _flightToOrgrimmar = preplacedUnitSystem.GetUnit(Constants.UNIT_N06Z_FLIGHT_PATH, thunderbluffLocation);
-      _flightToThunderBluff = preplacedUnitSystem.GetUnit(Constants.UNIT_N06Z_FLIGHT_PATH, orgrimmarLocation);
+      _flightToOrgrimmar = preplacedUnitSystem.GetUnit(Constants.UNIT_N06Z_FLIGHT_PATH_FROSTWOLF_WARSONG, thunderbluffLocation);
+      _flightToThunderBluff = preplacedUnitSystem.GetUnit(Constants.UNIT_N06Z_FLIGHT_PATH_FROSTWOLF_WARSONG, orgrimmarLocation);
     }
 
     /// <inheritdoc />

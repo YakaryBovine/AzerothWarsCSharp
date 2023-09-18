@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
     /// <param name="ashenvaleRect">Units in this rectangle start invulnerable and are rescued when the quest is completed.</param>
     public QuestAshenvale(Rectangle ashenvaleRect) : base("The Spirits of Ashenvale",
       "The forest needs healing. Regain control of it to awaken it.",
-      "ReplaceableTextures\\CommandButtons\\BTNKeeperC.blp")
+      @"ReplaceableTextures\CommandButtons\BTNKeeperC.blp")
     {
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N07C_FELWOOD_10GOLD_MIN)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01Q_NORTHERN_ASHENVALE_10GOLD_MIN)));

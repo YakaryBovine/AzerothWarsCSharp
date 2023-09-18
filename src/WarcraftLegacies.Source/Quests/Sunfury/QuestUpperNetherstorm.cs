@@ -18,14 +18,22 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
   public sealed class QuestUpperNetherstorm : QuestData
   {
     private readonly List<unit> _rescueUnits;
+    private const int GoldReward = 400;
+    private const int LumberReward = 200;
+
     /// <summary>
     /// Initializes a new instance of the <see cref="QuestUpperNetherstorm"/> class.
     /// </summary>
-    public QuestUpperNetherstorm(Rectangle rescueRect) : base("Upper Netherstorm", "The Sunfury will need to settle the surrounding lands, Upper Netherstorm is ripe for the taking", "ReplaceableTextures\\CommandButtons\\BTNArcaneCastle.blp")
+    public QuestUpperNetherstorm(Rectangle rescueRect) : base("Upper Netherstorm",
+      "Upper Netherstorm is continously wracked by devastating magical storms. Lands such as these represent opportunity for our people, as starved for mana as they are.",
+      @"ReplaceableTextures\CommandButtons\BTNArcaneCastle.blp")
     {
       Required = true;
-      AddObjective(new ObjectiveKillAllInArea(new List<Rectangle> { Regions.UpperNetherstorm }, "in upper Netherstorm"));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0CW_FARAHLON_10GOLD_MIN)));
+      AddObjective(new ObjectiveKillAllInArea(new List<Rectangle> { Regions.UpperNetherstorm },
+        "in upper Netherstorm"));
+      AddObjective(
+        new ObjectiveControlPoint(
+          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0CW_FARAHLON_10GOLD_MIN)));
       AddObjective(new ObjectiveExpire(1430, Title));
       AddObjective(new ObjectiveSelfExists());
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideAll);
@@ -34,9 +42,8 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
     /// <inheritdoc/>
     protected override void OnComplete(Faction whichFaction)
     {
-      if (whichFaction.Player != null)
-        whichFaction.Player.AddGold(400);
-        whichFaction.Player.AddLumber(200);
+      whichFaction.Player?.AddGold(400);
+      whichFaction.Player?.AddLumber(200);
       if (whichFaction.Player != null)
         whichFaction.Player.RescueGroup(_rescueUnits);
       else
@@ -44,10 +51,9 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "The Upper Netherstorm area is now settled by the Sunfury";
+    protected override string RewardFlavour => "Our people spread throughout the lands of Upper Netherstorm, erecting their homes amidst its arcane crystals and basking in its magical storms.";
 
     /// <inheritdoc/>
-    protected override string RewardDescription => "Gain 400 Gold, 200 Lumber and a base in Upper Netherstorm.";
-
-   }
- }
+    protected override string RewardDescription => $"Gain {GoldReward} gold, {LumberReward} lumber, and a base in Upper Netherstorm";
+  }
+}

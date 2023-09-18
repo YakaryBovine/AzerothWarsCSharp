@@ -18,7 +18,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
 
     public QuestShrineBase(Rectangle rescueRect) : base("Hyjal's Rest",
       "Mount Hyjal has been invaded by the corruption already affecting Felwood. Clear them out to awaken the Ancients",
-      "ReplaceableTextures\\CommandButtons\\BTNAncientOfTheMoon.blp")
+      @"ReplaceableTextures\CommandButtons\BTNAncientOfTheMoon.blp")
     {
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BI_SHRINE_TO_MALORNE_10GOLD_MIN)));
       AddObjective(new ObjectiveKillAllInArea(new List<Rectangle> { Regions.ShrineBaseUnlock }, "in Hyjal"));

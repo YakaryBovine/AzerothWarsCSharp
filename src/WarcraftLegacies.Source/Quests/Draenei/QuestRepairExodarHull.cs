@@ -22,7 +22,7 @@ namespace WarcraftLegacies.Source.Quests.Draenei
     /// </summary>
     public QuestRepairExodarHull(Rectangle rescueRect, Capital exodar) : base("A New Home",
       "After the disastrous voyage through the Twisting Nether, the Exodar crash-landed on Azuremyst Isle. Its hull must be repaired in order to get inside.",
-      "ReplaceableTextures\\CommandButtons\\BTNDraeneiVaultOfRelics.blp")
+      @"ReplaceableTextures\CommandButtons\BTNDraeneiVaultOfRelics.blp")
     {
       Required = true;
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_O051_DIVINE_CITADEL_DRAENEI_T3, Constants.UNIT_O02P_CRYSTAL_HALL_DRAENEI_T1));

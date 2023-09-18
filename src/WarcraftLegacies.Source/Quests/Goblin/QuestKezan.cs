@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Goblin
     /// </summary>
     public QuestKezan() : base("Offshore Investment",
       "The island of Kezan should be the first expansion of our trade empire.",
-      "ReplaceableTextures\\CommandButtons\\BTNIronHordeMerchant.blp")
+      @"ReplaceableTextures\CommandButtons\BTNIronHordeMerchant.blp")
     {
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N092_ZUL_FARRAK_15GOLD_MIN)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BK_LOST_CITY_OF_THE_TOL_VIR_15GOLD_MIN)));

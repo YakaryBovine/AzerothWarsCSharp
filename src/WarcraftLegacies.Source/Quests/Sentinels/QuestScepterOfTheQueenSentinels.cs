@@ -35,7 +35,7 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
     /// </summary>
     public QuestScepterOfTheQueenSentinels(Rectangle area, Artifact scepterOfTheQueen, Capital stonemaulKeep) : base("Return to the Fold",
       "Remnants of the ancient Highborne survive within the ruins of the Athenaeum. If Stonemaul falls, it would be safe for them to come out.",
-      "ReplaceableTextures\\CommandButtons\\BTNNagaWeaponUp2.blp")
+      @"ReplaceableTextures\CommandButtons\BTNNagaWeaponUp2.blp")
     {
       _highBourneArea = area;
       _scepterOfTheQueen = scepterOfTheQueen;

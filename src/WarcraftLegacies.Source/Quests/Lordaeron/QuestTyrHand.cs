@@ -27,7 +27,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     /// <param name="lichKing"></param>
     public QuestTyrHand(Capital capitalCity, Capital stratholme, Rectangle rescueRect, Capital lichKing) : base("The Fortified City",
       "The city of Tyr's Hand is considered impregnable, but they will be reluctant to join the war",
-      "ReplaceableTextures\\CommandButtons\\BTNHumanBarracks.blp")
+      @"ReplaceableTextures\CommandButtons\BTNHumanBarracks.blp")
     {
       AddObjective(new ObjectiveEitherOf(
         new ObjectiveEitherOf(new ObjectiveCapitalDead(capitalCity),new ObjectiveCapitalDead(stratholme)),

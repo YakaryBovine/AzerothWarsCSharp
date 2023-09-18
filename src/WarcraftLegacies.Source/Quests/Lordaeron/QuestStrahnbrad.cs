@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     /// <param name="rescueRect"></param>
     public QuestStrahnbrad(Rectangle rescueRect) : base("The Defense of Strahnbrad",
       "The Strahnbrad is under attack by some brigands, clear them out",
-      "ReplaceableTextures\\CommandButtons\\BTNFarm.blp")
+      @"ReplaceableTextures\CommandButtons\BTNFarm.blp")
     {
       AddObjective(
         new ObjectiveControlPoint(

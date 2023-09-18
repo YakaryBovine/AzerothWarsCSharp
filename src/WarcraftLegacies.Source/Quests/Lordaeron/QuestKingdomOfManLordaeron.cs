@@ -28,7 +28,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     public QuestKingdomOfManLordaeron(Artifact crownOfLordaeron, Artifact crownOfStormwind, LegendaryHero arthas) :
       base("Kingdom of Man",
         "Before the First War, all of humanity was united under the banner of the Arathorian Empire. Reclaim its greatness by uniting mankind once again.",
-        "ReplaceableTextures\\CommandButtons\\BTNFireKingCrown.blp")
+        @"ReplaceableTextures\CommandButtons\BTNFireKingCrown.blp")
     {
       _crownOfLordaeron = crownOfLordaeron;
       _crownOfStormwind = crownOfStormwind;

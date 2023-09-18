@@ -17,7 +17,7 @@ namespace WarcraftLegacies.Source.Quests.Goblin
     /// </summary>
     public QuestBusinessExpansion() : base("Business Expansion",
       "Trade Prince Gallywix will need a great amount of wealth to join the Goblin Empire; he needs to expand his business all over the world quickly.",
-      "ReplaceableTextures\\CommandButtons\\BTNGoblinPrince.blp")
+      @"ReplaceableTextures\CommandButtons\BTNGoblinPrince.blp")
     {
       AddObjective(new ObjectiveControlLevel(
         ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05C_GADGETZAN_15GOLD_MIN), 4));

@@ -16,9 +16,6 @@ namespace MacroTools.Channels
       _timerDialog = CreateTimerDialog(_timer);
     }
 
-    /// <inheritdoc />
-    public override bool Active { get; set; }
-
     public override void OnCreate()
     {
       UnitAddAbility(Caster, _spellImmunityId);

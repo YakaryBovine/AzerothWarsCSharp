@@ -17,7 +17,7 @@ namespace WarcraftLegacies.Source.Quests.Zandalar
     /// </summary>
     public QuestHakkar(Artifact zinrokh) : base("The Binding of the Soulflayer",
       "Hakkar is the most dangerous and powerful of the Troll gods. Only by fusing the Demon Soul would the Zandalari be able to control Hakkar and bind him to their will.",
-      "ReplaceableTextures\\CommandButtons\\BTNWindSerpent2.blp")
+      @"ReplaceableTextures\CommandButtons\BTNWindSerpent2.blp")
     {
       AddObjective(new ObjectiveAcquireArtifact(zinrokh));
       AddObjective(new ObjectiveArtifactInRect(zinrokh, Regions.DrownedTemple,

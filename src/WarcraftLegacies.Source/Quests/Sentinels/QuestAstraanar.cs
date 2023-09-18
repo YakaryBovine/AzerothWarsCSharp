@@ -25,7 +25,7 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
     /// <param name="rescueRects"></param>
     public QuestAstranaar(List<Rectangle> rescueRects) : base("Daughters of the Moon",
       "Shandris need to warn the Sentinels in Auberdine of the Horde invadors by sending a messenger.",
-      "ReplaceableTextures\\CommandButtons\\BTNShandris.blp")
+      @"ReplaceableTextures\CommandButtons\BTNShandris.blp")
     {
       AddObjective(new ObjectiveAnyUnitInRect(Regions.AuberdineUnlock,
         "Auberdine", false));

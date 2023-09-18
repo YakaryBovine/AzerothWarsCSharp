@@ -26,7 +26,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     /// <param name="direwolfToKill">This unit must be killed to complete the quest.</param>
     public QuestShadowfang(Rectangle rescueRect, unit direwolfToKill) : base("Shadows of Silverpine Forest",
       "The woods of Silverspine are unsafe for travellers, they need to be investigated",
-      "ReplaceableTextures\\CommandButtons\\BTNworgen.blp")
+      @"ReplaceableTextures\CommandButtons\BTNworgen.blp")
     {
       AddObjective(new ObjectiveUnitIsDead(direwolfToKill));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01D_SILVERPINE_FOREST_15GOLD_MIN)));

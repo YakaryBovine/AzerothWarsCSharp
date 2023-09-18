@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
     /// <summary>
     /// Initializes a new instance of the <see cref="QuestKeelHarbor"/> class.
     /// </summary>
-    public QuestKeelHarbor() : base("Keel Harbor", "The final village is the coastal harbor near the capital.", "ReplaceableTextures\\CommandButtons\\BTNGilneasShipyard.blp")
+    public QuestKeelHarbor() : base("Keel Harbor", "The final village is the coastal harbor near the capital.", @"ReplaceableTextures\CommandButtons\BTNGilneasShipyard.blp")
     {
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N08X_KEEL_HARBOR_10GOLD_MIN)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N031_DUSKHAVEN_20GOLD_MIN)));

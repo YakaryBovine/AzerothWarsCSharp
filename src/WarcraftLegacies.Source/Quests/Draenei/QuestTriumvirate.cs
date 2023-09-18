@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Quests.Draenei
 
     public QuestTriumvirate(LegendaryHero velen) : base("Crown of the Triumvirate",
       "Eons ago, the council that led the Eredar was the Triumvirate. If Velen could reconquer Argus, he could reform the Crown of the Triumvirate",
-      "ReplaceableTextures\\CommandButtons\\BTNNeverMeltingCrown.blp")
+      @"ReplaceableTextures\CommandButtons\BTNNeverMeltingCrown.blp")
     {
       _velen = velen;
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(FourCC("n0BH"))));

@@ -18,7 +18,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
     /// </summary>
     public QuestAlteracBase(Rectangle rescueRect) : base("Ruins of Alterac",
       "The orcs that occupied Alterac have maintained a secret demon gate, the Legion will make good use of it",
-      "ReplaceableTextures\\CommandButtons\\BTNDemonCrypt.blp")
+      @"ReplaceableTextures\CommandButtons\BTNDemonCrypt.blp")
     {
       AddObjective(new ObjectiveControlPoint(
         ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N019_ALTERAC_MOUNTAINS_20GOLD_MIN)));

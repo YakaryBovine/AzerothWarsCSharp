@@ -12,7 +12,7 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
 
     public static void Setup(PreplacedUnitSystem preplacedUnitSystem)
     {
-      Dalaran = new Faction(FactionNames.Dalaran, PLAYER_COLOR_PINK, "|c00e55bb0",
+      Dalaran = new Faction("Dalaran", PLAYER_COLOR_PINK, "|c00e55bb0",
         @"ReplaceableTextures\CommandButtons\BTNJaina.blp")
       {
         UndefeatedResearch = FourCC("R05N"),

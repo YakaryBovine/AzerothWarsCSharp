@@ -17,7 +17,7 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
     /// <summary>
     /// Initializes a new instance of the <see cref="QuestGoldrinnHumanPath"/> class.
     /// </summary>
-    public QuestGoldrinnHumanPath(LegendaryHero tess, Artifact scytheOfElune) : base("The Twilight Grove", "To understand the plight of her people, Tess will go to the Shrine of Goldrinn in Duskwood to understand what it means to be a Worgen.", "ReplaceableTextures\\CommandButtons\\BTNWorgenHunger.blp")
+    public QuestGoldrinnHumanPath(LegendaryHero tess, Artifact scytheOfElune) : base("The Twilight Grove", "To understand the plight of her people, Tess will go to the Shrine of Goldrinn in Duskwood to understand what it means to be a Worgen.", @"ReplaceableTextures\CommandButtons\BTNWorgenHunger.blp")
     {
       AddObjective(new ObjectiveLegendInRect(tess, Regions.WyrmrestTemple, "The Wyrmrest Temple"));
       AddObjective(new ObjectiveArtifactInRect(scytheOfElune, Regions.WyrmrestTemple, "The Wyrmrest Temple"));

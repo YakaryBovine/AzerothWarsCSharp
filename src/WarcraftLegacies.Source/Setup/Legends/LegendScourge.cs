@@ -31,7 +31,7 @@ namespace WarcraftLegacies.Source.Setup.Legends
       {
         UnitType = FourCC("U001"),
         PermaDies = true,
-        DeathSfx = "Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl",
+        DeathSfx = @"Abilities\Spells\Undead\DeathCoil\DeathCoilSpecialArt.mdl",
         StartingXp = 2800
       };
 

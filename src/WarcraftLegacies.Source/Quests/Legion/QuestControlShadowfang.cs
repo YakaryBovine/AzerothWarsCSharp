@@ -10,7 +10,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
   {
     public QuestControlShadowfang(Capital shadowfang) : base("The Dark Manor",
       "The Legion will need a hidden stronghold to house a demon gate, the Shadowfang Keep is perfectly out of the way for the role.",
-      "ReplaceableTextures\\CommandButtons\\BTNKeep.blp")
+      @"ReplaceableTextures\CommandButtons\BTNKeep.blp")
     {
       AddObjective(new ObjectiveControlCapital(shadowfang, false));
       ResearchId = Constants.UPGRADE_R04H_QUEST_COMPLETED_ANY_OF_THE_THREE_INFILTRATION_QUESTS;

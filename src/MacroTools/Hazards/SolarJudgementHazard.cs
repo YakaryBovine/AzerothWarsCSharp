@@ -45,11 +45,8 @@ namespace MacroTools.Hazards
     
     protected override void OnPeriodic() => DoRandomBolts();
 
-    public override bool Active { get; set; } = true;
-
     public SolarJudgementHazard(unit caster, float x, float y) : base(caster, x, y)
     {
-      
     }
   }
 }

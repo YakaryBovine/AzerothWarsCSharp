@@ -14,7 +14,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
 
     public QuestKhadgar(Capital blackTemple) : base("Keeper of the Eternal Watch",
       "At the end of the Second War, Khadgar remained in Draenor to seal the Dark Portal, effectively ending the conflict. He has been stranded deep in Outland ever since.",
-      "ReplaceableTextures\\CommandButtons\\BTNMageWC2.blp")
+      @"ReplaceableTextures\CommandButtons\BTNMageWC2.blp")
     {
       AddObjective(new ObjectiveCapitalDead(blackTemple));
       ResearchId = Constants.UPGRADE_R016_QUEST_COMPLETED_KEEPER_OF_THE_ETERNAL_WATCH_STORMWIND;

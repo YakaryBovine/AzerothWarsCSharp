@@ -14,7 +14,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
 
     public QuestFallenGuardian(Capital karazhan) : base("The Fallen Guardian",
       "Medivh's body was corrupted by Sargeras at conception. Now that he is dead, the secrets of the Tomb of Sargeras and Karazhan combined might allow the mages of Dalaran to cleanse his spirit.",
-      "ReplaceableTextures\\CommandButtons\\BTNMedivh.blp")
+      @"ReplaceableTextures\CommandButtons\BTNMedivh.blp")
     {
       AddObjective(new ObjectiveControlCapital(karazhan, false));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(FourCC("n00J"))));

@@ -10,8 +10,8 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
     
     public static void Setup(PreplacedUnitSystem preplacedUnitSystem)
     {
-      BlackEmpire = new Faction(FactionNames.BlackEmpire, PLAYER_COLOR_TURQUOISE, "|C0000FFFF",
-        "ReplaceableTextures\\CommandButtons\\BTNNzothIcon.blp")
+      BlackEmpire = new Faction("BlackEmpire", PLAYER_COLOR_TURQUOISE, "|C0000FFFF",
+        @"ReplaceableTextures\CommandButtons\BTNNzothIcon.blp")
       {
         ControlPointDefenderUnitTypeId = Constants.UNIT_N0DV_CONTROL_POINT_DEFENDER_BLACK_EMPIRE_TOWER,
       };

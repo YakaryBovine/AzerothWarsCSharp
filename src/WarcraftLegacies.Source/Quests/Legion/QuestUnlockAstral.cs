@@ -10,7 +10,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
    
     public QuestUnlockAstral(Capital caerDarrow) : base("Secrets of the Ethereal Realm",
       "Once we have established a foothold in this puny mortal plane we can reveal our true power over the dimensions.",
-      "ReplaceableTextures\\CommandButtons\\BTNSpell_Nature_AstralRecal.blp")
+      @"ReplaceableTextures\CommandButtons\BTNSpell_Nature_AstralRecal.blp")
 
     {
       AddObjective(new ObjectiveControlCapital(caerDarrow, false));

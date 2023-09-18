@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
     /// <inheritdoc />
     public QuestVaultoftheWardens(LegendaryHero maiev, Capital vaultOfTheWardens) : base("Vault of the Wardens",
       "In millenia past, the most vile entities of Azeroth were imprisoned in a facility near Zin-Ashari, but it was abandoned when the Broken Isles were shattered. In troubling times such as these, the Wardens could make great use of such a facility.",
-      "ReplaceableTextures\\CommandButtons\\BTNReincarnationWarden.blp")
+      @"ReplaceableTextures\CommandButtons\BTNReincarnationWarden.blp")
     {
       _vaultOfTheWardens = vaultOfTheWardens;
       AddObjective(new ObjectiveChannelRect(Regions.VaultoftheWardens, "Vault of the Wardens", maiev,

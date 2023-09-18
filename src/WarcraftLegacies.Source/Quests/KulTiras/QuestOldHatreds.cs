@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
     /// </summary>
     public QuestOldHatreds(LegendaryHero proudmoore) : base("Old Hatreds",
       "Daelin Proudmoore led his people against the savage Orcs during the Second War. Now his old enemies ride forth once more, and he won't be satisfied until he brings the battle to their doorstep.",
-      "ReplaceableTextures\\CommandButtons\\BTNProudmoore.blp")
+      @"ReplaceableTextures\CommandButtons\BTNProudmoore.blp")
     {
       _proudmoore = proudmoore;
       AddObjective(new ObjectiveLegendInRect(proudmoore, Regions.HellfireUnlock,

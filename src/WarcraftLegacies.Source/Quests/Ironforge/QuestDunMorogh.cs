@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
   {
     public QuestDunMorogh(PreplacedUnitSystem preplacedUnitSystem) : base("Mountain Village",
       "A small troll skirmish is attacking Dun Morogh. Push them back!",
-      "ReplaceableTextures\\CommandButtons\\BTNIceTrollShadowPriest.blp")
+      @"ReplaceableTextures\CommandButtons\BTNIceTrollShadowPriest.blp")
     {
       AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(FourCC("nith"), new Point(10673, -7188)))); //Troll High Priest
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N014_DUN_MOROGH_15GOLD_MIN)));

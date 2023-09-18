@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
 
     public QuestDruidsKillFrostwolf(Capital thunderBluff) : base("Natural Contest",
       "The Frostwolf Clan has arrived on the shores of Kalimdor. Though their respect of the wild spirits is to be admired, their presence cannot be tolerated.",
-      "ReplaceableTextures\\CommandButtons\\BTNHeroTaurenChieftain.blp")
+      @"ReplaceableTextures\CommandButtons\BTNHeroTaurenChieftain.blp")
     {
       AddObjective(new ObjectiveCapitalDead(thunderBluff));
       ResearchId = Constants.UPGRADE_R044_QUEST_COMPLETED_NATURAL_CONTEST_DRUIDS;

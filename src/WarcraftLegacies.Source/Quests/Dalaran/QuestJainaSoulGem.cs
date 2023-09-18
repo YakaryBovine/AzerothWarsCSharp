@@ -14,7 +14,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
 
     public QuestJainaSoulGem(LegendaryHero jaina, Capital caerDarrow) : base("The Soul Gem",
       "Scholomance is home to a wide variety of profane artifacts. Bring Jaina there to see what might be discovered.",
-      "ReplaceableTextures\\CommandButtons\\BTNSoulGem.blp")
+      @"ReplaceableTextures\CommandButtons\BTNSoulGem.blp")
     {
       _jaina = jaina;
       AddObjective(new ObjectiveLegendInRect(jaina, Regions.CaerDarrow, "Caer Darrow"));

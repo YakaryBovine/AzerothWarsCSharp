@@ -12,8 +12,8 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
 
     public static void Setup()
     {
-      Stormwind = new Faction(FactionNames.Stormwind, PLAYER_COLOR_AQUA, "|CFF106246",
-        "ReplaceableTextures\\CommandButtons\\BTNKnight.blp")
+      Stormwind = new Faction("Stormwind", PLAYER_COLOR_AQUA, "|CFF106246",
+        @"ReplaceableTextures\CommandButtons\BTNKnight.blp")
       {
         UndefeatedResearch = FourCC("R060"),
         StartingGold = 200,

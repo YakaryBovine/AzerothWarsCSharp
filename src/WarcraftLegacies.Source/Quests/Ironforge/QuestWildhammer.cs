@@ -22,7 +22,7 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
     /// </summary>
     public QuestWildhammer(LegendaryHero magni) : base("Wildhammer Alliance",
       "The Wildhammer dwarves roam freely over the peaks of the Hinterlands. An audience with Magni himself might earn their cooperation.",
-      "ReplaceableTextures\\CommandButtons\\BTNHeroGriffonWarrior.blp")
+      @"ReplaceableTextures\CommandButtons\BTNHeroGriffonWarrior.blp")
     {
       AddObjective(new ObjectiveLegendInRect(magni, Regions.Aerie_Peak, "Aerie Peak"));
       AddObjective(new ObjectiveTime(900));

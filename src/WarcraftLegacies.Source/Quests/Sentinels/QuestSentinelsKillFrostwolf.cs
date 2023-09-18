@@ -17,7 +17,7 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
     /// </summary>
     public QuestSentinelsKillFrostwolf(Capital thunderBluff) : base("Drive Them Back",
       "The Frostwolf Clan is beginning to seize a firm foothold within the Barrens and on the plains of Mulgore. They must be driven back.",
-      "ReplaceableTextures\\CommandButtons\\BTNThrall.blp")
+      @"ReplaceableTextures\CommandButtons\BTNThrall.blp")
     {
       AddObjective(new ObjectiveCapitalDead(thunderBluff));
       ResearchId = Constants.UPGRADE_R052_QUEST_COMPLETED_DRIVE_THEM_BACK_SENTINELS;

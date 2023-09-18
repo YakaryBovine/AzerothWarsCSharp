@@ -25,7 +25,7 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
     /// </summary>
     public QuestBlackrock(Rectangle rescueRect1, Rectangle rescueRect2, IEnumerable<QuestData> prequisites) : base("Blackrock Unification",
       "Make contact with the Blackrock clan and convince them to join Magtheridon",
-      "ReplaceableTextures\\CommandButtons\\BTNBlackhand.blp")
+      @"ReplaceableTextures\CommandButtons\BTNBlackhand.blp")
     {
       foreach (var prequisite in prequisites) 
         AddObjective(new ObjectiveCompleteQuest(prequisite));

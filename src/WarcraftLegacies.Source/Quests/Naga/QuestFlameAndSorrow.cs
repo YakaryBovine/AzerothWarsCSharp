@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
     /// </summary>
     public QuestFlameAndSorrow(Artifact skullofGuldan, LegendaryHero illidan) : base("A Destiny of Flame and Sorrow",
       "The Skull of Gul'dan is an artifact of immeasurable demonic power. Illidan will need a lot of power to pierce it's secrets",
-      "ReplaceableTextures\\CommandButtons\\BTNMetamorphosis.blp")
+      @"ReplaceableTextures\CommandButtons\BTNMetamorphosis.blp")
     {
       _skullofGuldan = skullofGuldan;
       AddObjective(new ObjectiveLegendHasArtifact(illidan, skullofGuldan));

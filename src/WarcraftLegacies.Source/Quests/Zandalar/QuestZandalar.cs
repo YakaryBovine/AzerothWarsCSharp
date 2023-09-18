@@ -25,7 +25,7 @@ namespace WarcraftLegacies.Source.Quests.Zandalar
     /// <param name="rescueRect"></param>
     /// <param name="preplacedUnitSystem"></param>
     public QuestZandalar(Rectangle rescueRect, PreplacedUnitSystem preplacedUnitSystem) : base("City of Gold", "We need to regain control of our land.",
-      "ReplaceableTextures\\CommandButtons\\BTNBloodTrollMage.blp")
+      @"ReplaceableTextures\CommandButtons\BTNBloodTrollMage.blp")
     {
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N092_ZUL_FARRAK_15GOLD_MIN)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BK_LOST_CITY_OF_THE_TOL_VIR_15GOLD_MIN)));

@@ -17,6 +17,7 @@ namespace MacroTools.ChannelSystem
     /// <param name="spellId">The spell ID representing the <see cref="Channel" />.</param>
     protected Channel(unit caster, int spellId)
     {
+      Active = true;
       Caster = caster;
       SpellId = spellId;
       var ability = BlzGetUnitAbility(Caster, SpellId);
@@ -80,10 +81,8 @@ namespace MacroTools.ChannelSystem
       OnDispose();
     }
 
-    /// <summary>
-    ///   When false, the <see cref="Channel" /> should be disposed of.
-    /// </summary>
-    public abstract bool Active { get; set; }
+    /// <inheritdoc />
+    public bool Active { get; set; }
 
     /// <summary>
     ///   Fired when the <see cref="Channel" /> is initially registered.

@@ -13,7 +13,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
 
     public QuestLegionKillLordaeron(IEnumerable<Capital> capitalTargets, LegendaryHero tichondrius) : base("Token Resistance",
       "The Kingdom of Lordaeron must be eliminated to pave the way for the Legion's arrival.",
-      "ReplaceableTextures\\CommandButtons\\BTNTichondrius.blp")
+      @"ReplaceableTextures\CommandButtons\BTNTichondrius.blp")
     {
       _tichondrius = tichondrius;
       foreach (var capital in capitalTargets)

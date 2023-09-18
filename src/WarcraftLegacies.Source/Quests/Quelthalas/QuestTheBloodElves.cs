@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
     /// </summary>
     public QuestTheBloodElves(Capital draktharonKeep) : base("The Blood Elves",
       "The Elves of Quel'thalas have a deep reliance on the Sunwell's magic. But perhaps, in these dark times they would have to turn to darker magicks to sate themselves.",
-      "ReplaceableTextures\\CommandButtons\\BTNHeroBloodElfPrince.blp")
+      @"ReplaceableTextures\CommandButtons\BTNHeroBloodElfPrince.blp")
 
     { 
       AddObjective(new ObjectiveControlCapital(draktharonKeep, false));

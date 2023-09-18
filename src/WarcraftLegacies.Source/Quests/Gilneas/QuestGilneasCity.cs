@@ -22,7 +22,7 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
     /// <summary>
     /// Initializes a new instance of the <see cref="QuestGilneasCity"/> class.
     /// </summary>
-    public QuestGilneasCity(PreplacedUnitSystem preplacedUnitSystem) : base("Liberation of Gilneas", "Gilneas has been under the curse of the Worgen. Eliminate all of them to free Gilneas of the curse.", "ReplaceableTextures\\CommandButtons\\BTNGilneasCathedral.blp")
+    public QuestGilneasCity(PreplacedUnitSystem preplacedUnitSystem) : base("Liberation of Gilneas", "Gilneas has been under the curse of the Worgen. Eliminate all of them to free Gilneas of the curse.", @"ReplaceableTextures\CommandButtons\BTNGilneasCathedral.blp")
     {
       _gilneasDoor = preplacedUnitSystem.GetUnit(Constants.UNIT_H02K_GREYMANE_S_GATE_CLOSED);
       AddObjective(new ObjectiveKillXUnit(Constants.UNIT_O02J_WORGEN_GILNEAS, 8));

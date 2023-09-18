@@ -41,7 +41,7 @@
     {
       "Id": 1651864693,
       "Type": 3,
-      "Value": "Closed environement of lush life in this desolate plane.|nProvides 100 food, which increases the maximum number of units that can be trained.|n|cfff5962dAbilities:|R Regrow Trees |n|n|cffff0000Make sure to build them at each Bio area in Netherstorm.|r|n|cff99b4d1Can only train 3.|r"
+      "Value": "Provides 100 food, which increases the maximum number of units that can be trained.|n|cfff5962dAbilities:|R Regrow Trees |n|n|cffff0000Make sure to build them at each Bio area in Netherstorm.|r|n|cff99b4d1Can only train 3.|r"
     },
     {
       "Id": 1818520949,
@@ -51,17 +51,17 @@
     {
       "Id": 1868786037,
       "Type": 3,
-      "Value": "ReplaceableTextures\\CommandButtons\\BTNAegisary1.blp"
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNAboretum.blp"
     },
     {
       "Id": 1835101813,
       "Type": 3,
-      "Value": "Biodome"
+      "Value": "Arboretum"
     },
     {
       "Id": 1885959285,
       "Type": 3,
-      "Value": "Build Biodome"
+      "Value": "Build Arboretum"
     }
   ]
 }

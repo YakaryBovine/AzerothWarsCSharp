@@ -35,7 +35,7 @@
       "Level": 1,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Transfer 25 mana to nearby player units."
+      "Value": "Restores 25 mana to up to 50 nearby friendly units. Costs 25 mana plus an additional 25 mana per unit restored, up to a maximum of 625 mana."
     },
     {
       "Id": 2020631137,
@@ -44,6 +44,16 @@
     {
       "Id": 2019718497,
       "Value": 0
+    },
+    {
+      "Id": 1953653089,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\ATCBlueEnergy.blp"
+    },
+    {
+      "Id": 1918989665,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\ATCBlueEnergy.blp"
     }
   ]
 }

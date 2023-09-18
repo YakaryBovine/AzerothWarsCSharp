@@ -31,7 +31,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     public QuestCapitalCity(Rectangle rescueRect, unit unitToMakeInvulnerable, LegendaryHero uther, LegendaryHero arthas, Capital caerDarrow, Capital capitalPalace, IEnumerable<QuestData> prequisites) :
       base("Hearthlands",
         "The territories of Lordaeron are fragmented. Regain control of the old Alliance's hold to secure the kingdom.",
-        "ReplaceableTextures\\CommandButtons\\BTNCastle.blp")
+        @"ReplaceableTextures\CommandButtons\BTNCastle.blp")
     {
       AddObjective(new ObjectiveControlCapital(caerDarrow, false));
       foreach (var prequisite in prequisites)

@@ -1,0 +1,29 @@
+{
+  "OldId": 1836085826,
+  "NewId": 825249876,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Id": 1835101798,
+      "Type": 3,
+      "Value": "Energy Grid"
+    },
+    {
+      "Id": 1885959270,
+      "Type": 3,
+      "Value": "Energy Grid"
+    },
+    {
+      "Id": 1700951398,
+      "Type": 3,
+      "Value": "This unit has been hit by Energy Grid; some of its mana has been restored."
+    },
+    {
+      "Id": 1953653094,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNBlueEnergy.blp"
+    }
+  ]
+}

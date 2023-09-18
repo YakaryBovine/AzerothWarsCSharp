@@ -18,7 +18,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
 
     public QuestArgusControl(PreplacedUnitSystem preplacedUnitSystem) : base("Argus Incursion",
       "The planet of Argus is not fully under the control of the Legion. Bring it under control!",
-      "ReplaceableTextures\\CommandButtons\\BTNMastersLodge.blp")
+      @"ReplaceableTextures\CommandButtons\BTNMastersLodge.blp")
     {
       AddObjective(new ObjectiveControlPoint(
         ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BF_ANTORAN_WASTES_10GOLD_MIN)));

@@ -226,7 +226,7 @@ public static class Regions
 	public static Rectangle Outland_Ships { get; set; } = new Rectangle(-7104f, -32256f, 6016f, -18208f);
 	public static Rectangle OutlandToArgus { get; set; } = new Rectangle(22848f, -28224f, 23360f, -27808f);
 	public static Rectangle Plague_1 { get; set; } = new Rectangle(6368f, 6848f, 7840f, 10816f);
-	public static Rectangle Plague_2 { get; set; } = new Rectangle(12608f, 7968f, 15168f, 9120f);
+	public static Rectangle Plague_2 { get; set; } = new Rectangle(11648f, 8960f, 14208f, 10112f);
 	public static Rectangle Plague_3 { get; set; } = new Rectangle(15968f, 7744f, 18656f, 8960f);
 	public static Rectangle Plague_4 { get; set; } = new Rectangle(15328f, 8896f, 18496f, 10944f);
 	public static Rectangle Plague_5 { get; set; } = new Rectangle(7136f, 10272f, 9280f, 11840f);

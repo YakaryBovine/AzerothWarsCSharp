@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.Zandalar
     /// </summary>
     public QuestGundrak(AllLegendSetup legendSetup) : base("The Drakkari Fortress",
       "The Drakkari troll of Gundrak believe their fortress to be impregnable. Capture it to gain their loyalty.",
-      "ReplaceableTextures\\CommandButtons\\BTNTerrorTroll.blp")
+      @"ReplaceableTextures\CommandButtons\BTNTerrorTroll.blp")
     {
       AddObjective(new ObjectiveControlCapital(legendSetup.Neutral.Gundrak, false));
       AddObjective(new ObjectiveTime(900));

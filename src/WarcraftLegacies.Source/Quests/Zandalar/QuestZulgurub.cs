@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Zandalar
     /// </summary>
     public QuestZulgurub(AllLegendSetup allLegendSetup) : base("Heart of Hakkar",
       "The Gurubashi trolls of Zul'Gurub follow the sacred Heart of Hakkar, hidden within their shrine. Capture it to gain their loyalty.",
-      "ReplaceableTextures\\CommandButtons\\BTNTrollRavager.blp")
+      @"ReplaceableTextures\CommandButtons\BTNTrollRavager.blp")
     {
       AddObjective(new ObjectiveControlCapital(allLegendSetup.Neutral.Zulgurub, false));
       AddObjective(new ObjectiveTime(900));

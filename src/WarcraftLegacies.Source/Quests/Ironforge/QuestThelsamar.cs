@@ -17,7 +17,7 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
 
     public QuestThelsamar(PreplacedUnitSystem preplacedUnitSystem, Rectangle rescueRect) : base("Murloc Menace",
       "A vile group of Murloc is terrorizing Thelsamar. Destroy them!",
-      "ReplaceableTextures\\CommandButtons\\BTNMurlocNightCrawler.blp")
+      @"ReplaceableTextures\CommandButtons\BTNMurlocNightCrawler.blp")
     {
       AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(FourCC("N089"))));
       AddObjective(new ObjectiveExpire(1020, Title));

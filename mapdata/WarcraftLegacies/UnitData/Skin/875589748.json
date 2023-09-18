@@ -1,0 +1,63 @@
+{
+  "OldId": 2036888424,
+  "NewId": 875589748,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Id": 1868786037,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNSunfuryShipyard.blp"
+    },
+    {
+      "Id": 2020631157,
+      "Value": 3
+    },
+    {
+      "Id": 1718840949,
+      "Type": 3,
+      "Value": " (Sunfury Shipyard)"
+    },
+    {
+      "Id": 1818520949,
+      "Type": 3,
+      "Value": "war3mapImported\\ShipyardElfNightElfV1.01.mdl"
+    },
+    {
+      "Id": 1953458293,
+      "Type": 3,
+      "Value": "R"
+    },
+    {
+      "Id": 1835101813,
+      "Type": 3,
+      "Value": "Shipyard"
+    },
+    {
+      "Id": 1668510581,
+      "Type": 1,
+      "Value": 3
+    },
+    {
+      "Id": 1885959285,
+      "Type": 3,
+      "Value": "Build Shipyard"
+    },
+    {
+      "Id": 1935832437,
+      "Type": 3,
+      "Value": ""
+    },
+    {
+      "Id": 1651864693,
+      "Type": 3,
+      "Value": "Boat construction facility.|n|cfff5962dTrains:|R Transport, Scout, Frigate, Fireship, Galley, Boarding Vessel, Juggernaut, Bombard|R|n|n|cff00c4c4Cannot be built near small inland water areas."
+    },
+    {
+      "Id": 1633907573,
+      "Type": 1,
+      "Value": 0.8
+    }
+  ]
+}

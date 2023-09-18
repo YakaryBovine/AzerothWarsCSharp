@@ -27,7 +27,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     /// <param name="prerequisites">These quests must be completed before this one can be completed.</param>
     public QuestDalaran(IEnumerable<Rectangle> rescueRects, IEnumerable<QuestData> prerequisites) : base("Outskirts",
       "The territories of Dalaran are fragmented, secure the lands and protect Dalaran citizens .",
-      "ReplaceableTextures\\CommandButtons\\BTNArcaneCastle.blp")
+      @"ReplaceableTextures\CommandButtons\BTNArcaneCastle.blp")
     {
       foreach (var prerequisite in prerequisites) 
         AddObjective(new ObjectiveCompleteQuest(prerequisite));

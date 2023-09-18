@@ -19,7 +19,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
 
     public QuestOrgrimmar(Rectangle rescueRect) : base("To Tame a Land",
       "This new continent is ripe for the taking. If the Horde is to survive, a new city needs to be built.",
-      "ReplaceableTextures\\CommandButtons\\BTNFortress.blp")
+      @"ReplaceableTextures\CommandButtons\BTNFortress.blp")
     {
       AddObjective(new ObjectiveResearch(RequiredResearchId, Constants.UNIT_O02S_FORTRESS_WARSONG_T3));
       AddObjective(new ObjectiveExpire(1500, Title));

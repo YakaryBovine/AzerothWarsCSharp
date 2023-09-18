@@ -19,7 +19,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
 
     public QuestNethergarde(PreplacedUnitSystem preplacedUnitSystem, LegendaryHero varian) : base("Nethergarde Relief",
       "Nethergarde Keep fort is holding down the Dark Portal, they will need to be reinforced soon!",
-      "ReplaceableTextures\\CommandButtons\\BTNStormwindGuardTower.blp")
+      @"ReplaceableTextures\CommandButtons\BTNStormwindGuardTower.blp")
     {
       AddObjective(new ObjectiveLegendInRect(varian, Regions.NethergardeUnlock, "Nethergarde"));
       AddObjective(new ObjectiveExpire(1440, Title));

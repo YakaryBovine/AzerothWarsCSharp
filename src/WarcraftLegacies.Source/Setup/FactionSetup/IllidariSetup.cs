@@ -10,7 +10,7 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
     
     public static void Setup()
     {
-      Illidari = new Faction(FactionNames.Illidan, PLAYER_COLOR_VIOLET, "|cffff00ff",
+      Illidari = new Faction("Illidan", PLAYER_COLOR_VIOLET, "|cffff00ff",
         @"ReplaceableTextures\CommandButtons\BTNEvilIllidan.blp")
       {
         UndefeatedResearch = FourCC("R02L"),

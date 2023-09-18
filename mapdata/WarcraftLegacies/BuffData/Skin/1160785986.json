@@ -6,24 +6,24 @@
   ],
   "Modifications": [
     {
-      "Id": 1952543846,
+      "Id": 1953653094,
       "Type": 3,
-      "Value": ""
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNUnholy.blp"
     },
     {
       "Id": 1885959270,
       "Type": 3,
-      "Value": "Aura of the Reaver"
+      "Value": "|c00FF0303Vulnerability Aura|r"
     },
     {
       "Id": 1700951398,
       "Type": 3,
-      "Value": "This unit is under the effects of Aura of the reaver it has decreased armor."
+      "Value": "This unit is under the effects of Vulnerability Aura; it has reduced armor."
     },
     {
-      "Id": 1953653094,
+      "Id": 1952543846,
       "Type": 3,
-      "Value": "ReplaceableTextures\\CommandButtons\\BTNPossession.blp"
+      "Value": ""
     }
   ]
 }

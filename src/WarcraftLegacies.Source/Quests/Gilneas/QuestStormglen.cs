@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
     /// <summary>
     /// Initializes a new instance of the <see cref="QuestKeelHarbor"/> class.
     /// </summary>
-    public QuestStormglen() : base("Stormglen", "The next village is right next to the Blackwald, south west of Tempest Reach. We will need to purify the forest too.", "ReplaceableTextures\\CommandButtons\\BTNGilneasWizardTower.blp")
+    public QuestStormglen() : base("Stormglen", "The next village is right next to the Blackwald, south west of Tempest Reach. We will need to purify the forest too.", @"ReplaceableTextures\CommandButtons\BTNGilneasWizardTower.blp")
     {
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N06V_BLACKWALD_10GOLD_MIN)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N084_TEMPEST_REACH_10GOLD_MIN)));

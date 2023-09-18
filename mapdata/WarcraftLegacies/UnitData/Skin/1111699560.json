@@ -37,7 +37,7 @@
     {
       "Id": 1651864693,
       "Type": 3,
-      "Value": "Sanctum for the spellcasters of the Sunfury.|n|cfff5962dTrains:|R Astromancer, Flamekeeper,Blood Knight Squire Warlock|n|cfff5962dResearches:|R Astromancer Training, Flamekeeper Training, Seal of Blood"
+      "Value": "Sanctum for the spellcasters of the Sunfury.|n|cfff5962dTrains:|R Astromancer, Flamekeeper, Warlock|n|cfff5962dResearches:|R Astromancer Training, Flamekeeper Training"
     },
     {
       "Id": 1818520949,
@@ -53,6 +53,11 @@
       "Id": 1885959285,
       "Type": 3,
       "Value": "Build Lyceum Arcanum"
+    },
+    {
+      "Id": 1868786037,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNLyceum.blp"
     }
   ]
 }

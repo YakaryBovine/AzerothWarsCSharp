@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Setup.Legends
       GromHellscream = new LegendaryHero("Grom Hellscream")
       {
         UnitType = Constants.UNIT_OGRH_CHIEFTAIN_OF_THE_WARSONG_CLAN_WARSONG,
-        StartingArtifactItemTypeIds = new[]
+        StartingArtifactItemTypeIds = new()
         {
           Constants.ITEM_I01V_GOREHOWL
         }

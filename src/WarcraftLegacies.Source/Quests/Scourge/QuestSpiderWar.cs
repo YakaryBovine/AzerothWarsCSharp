@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
 
     public QuestSpiderWar(Rectangle rescueRect, unit spiderQueen) : base("War of the Spider",
       "The proud Nerubians have declared war on the newly formed Lich King, destroy them to secure the continent of Northrend.",
-      "ReplaceableTextures\\CommandButtons\\BTNNerubianQueen.blp")
+      @"ReplaceableTextures\CommandButtons\BTNNerubianQueen.blp")
     {
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(FourCC("n08D"))));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(FourCC("n00G"))));

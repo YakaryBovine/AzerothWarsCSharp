@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.Goblin
     /// </summary>
     public QuestLumberMarket(Capital nordrassil) : base("Lumber Market Crash",
       "The World Tree would provide enough lumber to completely crash the lumber market, forcing our Shredders to specialise more on war.",
-      "ReplaceableTextures\\CommandButtons\\BTNJunkGolem.blp")
+      @"ReplaceableTextures\CommandButtons\BTNJunkGolem.blp")
     {
       AddObjective(new ObjectiveControlCapital(nordrassil, false));
       ResearchId = Constants.UPGRADE_R07Z_QUEST_COMPLETED_LUMBER_MARKET_CRASH;

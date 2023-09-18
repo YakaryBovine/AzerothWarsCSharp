@@ -13,7 +13,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
 
     public QuestDruidsKillWarsong() : base("Enemies at the Gate",
       "Arriving from another planet and across the seas of Azeroth, the Orcs of the Warsong Clan have arrived to ravage the wilderness and consume its bounty. They must be stopped.",
-      "ReplaceableTextures\\CommandButtons\\BTNHellScream.blp")
+      @"ReplaceableTextures\CommandButtons\BTNHellScream.blp")
     {
       AddObjective(new ObjectiveControlLevel(
         ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01Q_NORTHERN_ASHENVALE_10GOLD_MIN), 10));

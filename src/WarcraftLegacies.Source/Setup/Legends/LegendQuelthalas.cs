@@ -44,7 +44,7 @@ namespace WarcraftLegacies.Source.Setup.Legends
         UnitType = Constants.UNIT_H00Q_KING_OF_QUEL_THALAS_QUEL_THALAS,
         PlayerColor = PLAYER_COLOR_MAROON,
         StartingXp = 1000,
-        StartingArtifactItemTypeIds = new[]
+        StartingArtifactItemTypeIds = new()
         {
           Constants.ITEM_I00J_FELO_MELORN
         }
@@ -92,7 +92,7 @@ namespace WarcraftLegacies.Source.Setup.Legends
         PermaDies = true,
         StartingXp = 10800,
         DeathMessage =
-          "Kil'jaeden the Deceiver has been annihilated, but it is too late for the Blood Elves, who will continue to live and die with demonic taint coursing through their veins."
+          "Kil'jaeden the Deceiver has been annihilated, but it is too late for the Sunfury, who will continue to live and die with demonic taint coursing through their veins."
       };
 
       Spire = new Capital

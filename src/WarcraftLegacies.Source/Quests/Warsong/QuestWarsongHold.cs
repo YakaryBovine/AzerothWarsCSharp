@@ -17,7 +17,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
 
     public QuestWarsongHold() : base("Warsong Hold",
       "The far-off land of Northrend is the new home of the traitor shaman Ner'zhul. The Warsong must land its forces on its shores in order to end the existential threat he now represents.",
-      "ReplaceableTextures\\CommandButtons\\BTNTuskaarBrown.blp")
+      @"ReplaceableTextures\CommandButtons\BTNTuskaarBrown.blp")
     {
       AddObjective(new ObjectiveResearch(RequiredResearchId, Constants.UNIT_O02T_SHIPYARD_WARSONG_SHIPYARD));
     }

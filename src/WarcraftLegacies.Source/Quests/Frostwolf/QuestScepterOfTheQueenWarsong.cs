@@ -25,7 +25,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
     /// <param name="auberdine">Must be destroyed to complete the quest.</param>
     public QuestScepterOfTheQueenWarsong(Rectangle area, Artifact scepterOfTheQueen, Capital auberdine) : base("Royal Plunder",
       "Remnants of the ancient Highborne survive within the ruins of the Athenaeum. If Feathermoon Stronghold falls, it would become a simple matter to slaughter the Highborne and plunder their artifacts.",
-      "ReplaceableTextures\\CommandButtons\\BTNNagaWeaponUp2.blp")
+      @"ReplaceableTextures\CommandButtons\BTNNagaWeaponUp2.blp")
     {
       _highBourneArea = area;
       _scepterOfTheQueen = scepterOfTheQueen;

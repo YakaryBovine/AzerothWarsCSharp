@@ -22,7 +22,7 @@ namespace WarcraftLegacies.Source.Quests.Goblin
     /// </summary>
     public QuestWesternExpansion(IEnumerable<Capital> capitalTargets) : base("Western Expansion",
       "Feathermoon Stronghold and Auberdine give the Elves a grip on the western shore of Kalimdor. We need to destroy them to clear a way for our business expansion west!",
-      "ReplaceableTextures\\CommandButtons\\BTNNightElfShipyard.blp")
+      @"ReplaceableTextures\CommandButtons\BTNNightElfShipyard.blp")
     {
       foreach (var capital in capitalTargets)
         AddObjective(new ObjectiveCapitalDead(capital));

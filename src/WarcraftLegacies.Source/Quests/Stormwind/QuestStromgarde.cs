@@ -17,7 +17,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
 
     public QuestStromgarde(Rectangle rescueRect) : base("Stromgarde",
       "Although Stromgarde's strength has dwindled since the days of the Arathorian Empire, it remains a significant bastion of humanity. They could be convinced to mobilize their forces for Stormwind.",
-      "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
+      @"ReplaceableTextures\CommandButtons\BTNTheCaptain.blp")
     {
       var objectiveAnyUnitInRect = new ObjectiveAnyUnitInRect(Regions.Stromgarde, "Stromgarde", true);
       AddObjective(objectiveAnyUnitInRect);

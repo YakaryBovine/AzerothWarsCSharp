@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
 
     public QuestHonorHold(Rectangle rescueRect, Capital hellfireCitadel) : base("Honor Hold",
       "Despite Outland's incredibly harsh climate, some Alliance forces have managed to make a home there - a town called Honor Hold",
-      "ReplaceableTextures\\CommandButtons\\BTNHumanBarracks.blp")
+      @"ReplaceableTextures\CommandButtons\BTNHumanBarracks.blp")
     {
       foreach (var unit in CreateGroup().EnumUnitsInRect(rescueRect).EmptyToList())
         if (GetOwningPlayer(unit) == Player(PLAYER_NEUTRAL_PASSIVE))

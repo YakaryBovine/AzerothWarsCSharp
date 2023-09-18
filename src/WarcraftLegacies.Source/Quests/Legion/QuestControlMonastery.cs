@@ -10,7 +10,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
   {
     public QuestControlMonastery(Capital monastery) : base("Corrupting the Monastery",
       "The mind of humans are feeble and easily corruptable, the Scarlet Monastery will be a perfect ground for a secret demon portal",
-      "ReplaceableTextures\\CommandButtons\\BTNLordaeronMageTower.blp")
+      @"ReplaceableTextures\CommandButtons\BTNLordaeronMageTower.blp")
     {
       AddObjective(new ObjectiveControlCapital(monastery, false));
       ResearchId = Constants.UPGRADE_R04H_QUEST_COMPLETED_ANY_OF_THE_THREE_INFILTRATION_QUESTS;

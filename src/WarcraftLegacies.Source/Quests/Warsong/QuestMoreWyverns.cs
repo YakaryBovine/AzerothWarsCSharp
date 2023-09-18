@@ -15,7 +15,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
 
     public QuestMoreWyverns(Capital feathermoon, Capital auberdine) : base("Perfect Warriors",
       "The prowess and savagery of the Sentinels is to be respected - and feared. They must be eliminated.",
-      "ReplaceableTextures\\CommandButtons\\BTNArcher.blp")
+      @"ReplaceableTextures\CommandButtons\BTNArcher.blp")
     {
       AddObjective(new ObjectiveCapitalDead(feathermoon));
       AddObjective(new ObjectiveCapitalDead(auberdine));

@@ -31,7 +31,7 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
       @"ReplaceableTextures\CommandButtons\BTNGatherGold.blp")
     {
       _rewardArtifactItemTypeId = rewardArtifactItemTypeId;
-      AddObjective(new ObjectiveControlLevel(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BD_ULDUM_10GOLD_MIN), 15));
+      AddObjective(new ObjectiveControlLevel(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BD_ULDUM_10GOLD_MIN), 5));
     }
 
     /// <inheritdoc />

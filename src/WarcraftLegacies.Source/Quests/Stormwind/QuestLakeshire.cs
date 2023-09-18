@@ -18,7 +18,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
 
     public QuestLakeshire(Rectangle rescueRect, unit ogreLordToKill) : base("Marauding Ogres",
       "The town of Lakeshire is invaded by Ogres, wipe them out!",
-      "ReplaceableTextures\\CommandButtons\\BTNOgreLord.blp")
+      @"ReplaceableTextures\CommandButtons\BTNOgreLord.blp")
     {
       AddObjective(new ObjectiveUnitIsDead(ogreLordToKill));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(FourCC("n011"))));

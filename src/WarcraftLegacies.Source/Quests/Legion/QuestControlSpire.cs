@@ -9,7 +9,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
   {
     public QuestControlSpire(Capital spire) : base("Windrunner Spire",
       "The seat of the Windrunners, pillaging it would yield a great bounty and be the perfect grounds for a demon gate.",
-      "ReplaceableTextures\\CommandButtons\\BTNElvenScoutTower.blp")
+      @"ReplaceableTextures\CommandButtons\BTNElvenScoutTower.blp")
     {
       AddObjective(new ObjectiveControlCapital(spire, false));
       ResearchId = Constants.UPGRADE_R04H_QUEST_COMPLETED_ANY_OF_THE_THREE_INFILTRATION_QUESTS;

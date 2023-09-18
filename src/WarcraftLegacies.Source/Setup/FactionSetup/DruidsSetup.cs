@@ -11,8 +11,8 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
 
     public static void Setup(PreplacedUnitSystem preplacedUnitSystem)
     {
-      Druids = new Faction(FactionNames.Druids, PLAYER_COLOR_BROWN, "|c004e2a04",
-        "ReplaceableTextures\\CommandButtons\\BTNFurion.blp")
+      Druids = new Faction("Druids", PLAYER_COLOR_BROWN, "|c004e2a04",
+        @"ReplaceableTextures\CommandButtons\BTNFurion.blp")
       {
         UndefeatedResearch = FourCC("R06E"),
         StartingGold = 200,

@@ -25,7 +25,7 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
     /// <param name="rescueRect">Units in this area start invulnerable then get rescued when the quest is complete.</param>
     public QuestHellfireCitadel(Rectangle rescueRect) : base("The Citadel",
       "The clans holding Hellfire Citadel do not respect Kargath's authority yet, Magtheridon is being kept alive by Illidan, if we break him, he could serve us well.",
-      "ReplaceableTextures\\CommandButtons\\BTNFelOrcFortress.blp")
+      @"ReplaceableTextures\CommandButtons\BTNFelOrcFortress.blp")
     {
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01J_ZANGARMARSH_15GOLD_MIN)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N02N_BLADE_S_EDGE_MOUNTAINS_15GOLD_MIN)));

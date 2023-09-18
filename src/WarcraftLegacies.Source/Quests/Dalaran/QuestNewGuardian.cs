@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
 
     public QuestNewGuardian(Artifact bookOfMedivh, LegendaryHero jaina, Capital dalaran) : base("Guardian of Tirisfal",
       "Medivh's death left Azeroth without a Guardian. The spell book he left behind could be used to empower a new one.",
-      "ReplaceableTextures\\CommandButtons\\BTNAstral Blessing.blp")
+      @"ReplaceableTextures\CommandButtons\BTNAstral Blessing.blp")
     {
       _jaina = jaina;
       AddObjective(new ObjectiveControlCapital(dalaran, false));

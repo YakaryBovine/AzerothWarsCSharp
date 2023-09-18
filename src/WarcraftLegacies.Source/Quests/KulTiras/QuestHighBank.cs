@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
     /// </summary>
     public QuestHighBank(Rectangle rescueRect, LegendaryHero katherine) : base("Eliminate Piracy",
       "Kul Tiras' historical isolationism has allowed piracy to fester throughout the seas. It's high time that we do something about it; we can start with the Goblin freebooters living it up in Booty Bay.",
-      "ReplaceableTextures\\CommandButtons\\BTNHeroTinker.blp")
+      @"ReplaceableTextures\CommandButtons\BTNHeroTinker.blp")
     {
       _katherine = katherine;
       AddObjective(new ObjectiveKillAllInArea(new List<Rectangle> { Regions.BootyBayQuest }, "in Booty Bay"));

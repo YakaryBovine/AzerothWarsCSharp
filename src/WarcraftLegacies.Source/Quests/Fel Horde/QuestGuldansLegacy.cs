@@ -22,7 +22,7 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
     /// </summary>
     public QuestGuldansLegacy() : base("Gul'dans Legacy",
       "The Orc Warlock Gul'dan is ultimately responsible for the formation of the Fel Horde. Though long dead, his teachings could still be extracted from his body.",
-      "ReplaceableTextures\\CommandButtons\\BTNGuldan.blp")
+      @"ReplaceableTextures\CommandButtons\BTNGuldan.blp")
     {
       AddObjective(new ObjectiveAnyUnitInRect(Regions.GuldansCorpse, "Gul'dan's corpse in the Tomb of Sargeras", true));
       ResearchId = Constants.UPGRADE_R041_QUEST_COMPLETED_GUL_DANS_LEGACY_FEL_HORDE;

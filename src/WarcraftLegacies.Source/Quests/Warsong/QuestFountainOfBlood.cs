@@ -8,7 +8,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
   {
     public QuestFountainOfBlood(Capital fountainOfBlood, LegendaryHero grom) : base("The Blood of Mannoroth",
       "Long ago, the orcs drank the blood of Mannoroth and were infused with demonic fury. A mere taste of his blood would reignite those powers.",
-      "ReplaceableTextures\\CommandButtons\\BTNFountainOfLifeBlood.blp")
+      @"ReplaceableTextures\CommandButtons\BTNFountainOfLifeBlood.blp")
     {
       AddObjective(new ObjectiveLegendReachRect(grom, Regions.FountainUnlock,
         "The Fountain of Blood"));

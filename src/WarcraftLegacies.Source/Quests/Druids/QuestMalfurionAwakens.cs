@@ -36,7 +36,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
     /// <param name="malfurion">Awakened when the quest is completed.</param>
     public QuestMalfurionAwakens(Rectangle moonglade, Rectangle darnassus, Rectangle cenarionHold, unit worldTree, Artifact hornofCenarius, LegendaryHero malfurion) : base("Awakening of Stormrage",
       "Ever since the War of the Ancients ten thousand years ago, Malfurion Stormrage and his druids have slumbered within the Barrow Den. Now, their help is required once again.",
-      "ReplaceableTextures\\CommandButtons\\BTNFurion.blp")
+      @"ReplaceableTextures\CommandButtons\BTNFurion.blp")
     {
       _worldTree = worldTree;
       _hornofCenarius = hornofCenarius;

@@ -12,7 +12,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
 
     public QuestTheNexus(LegendaryHero jaina, Capital lichKing, Capital theNexus, Capital dalaran) : base("The Nexus",
       "The Nexus is a tower of powerful arcane energy, Jaina could absord it to gain it's power",
-      "ReplaceableTextures\\CommandButtons\\BTNBlueDragonNexus.blp")
+      @"ReplaceableTextures\CommandButtons\BTNBlueDragonNexus.blp")
     {
       _jaina = jaina;
       AddObjective(new ObjectiveChannelRect(Regions.JainaChannel, "The Nexus", jaina, 60, 270, Title));
@@ -61,7 +61,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
       _jaina.UnitType = Constants.UNIT_H04A_LORD_OF_THE_NEXUS_NEXUS;
       
       completingFaction.Name = "The Nexus";
-      completingFaction.Icon = "ReplaceableTextures\\CommandButtons\\BTNJaina_Archmage.blp";
+      completingFaction.Icon = @"ReplaceableTextures\CommandButtons\BTNJaina_Archmage.blp";
       SetPlayerState(completingFaction.Player, PLAYER_STATE_FOOD_CAP_CEILING, 250);
     }
   }

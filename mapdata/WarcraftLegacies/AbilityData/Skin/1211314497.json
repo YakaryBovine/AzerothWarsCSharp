@@ -32,12 +32,6 @@
       "Value": "Howl of Terror - [|cffffcc00Level 4|r]"
     },
     {
-      "Level": 1,
-      "Id": 828536161,
-      "Type": 3,
-      "Value": "The Void Reaver lets loose a terrifying howl that reduces nearby enemy units\u0027 attack damage by 25% for \u003CANht,Dur1\u003E seconds."
-    },
-    {
       "Level": 2,
       "Id": 828536161,
       "Type": 3,
@@ -63,12 +57,13 @@
       "Level": 1,
       "Id": 829453409,
       "Type": 3,
-      "Value": "Howl of Despair"
+      "Value": "Howl of Terror"
     },
     {
-      "Id": 1835101793,
+      "Level": 1,
+      "Id": 828536161,
       "Type": 3,
-      "Value": "Howl of Despair"
+      "Value": "The caster lets loose a terrifying howl that reduces nearby enemy units\u0027 attack damage by \u003CA13H,DataA1,%\u003E% for \u003CA13H,Dur1\u003E seconds."
     }
   ]
 }

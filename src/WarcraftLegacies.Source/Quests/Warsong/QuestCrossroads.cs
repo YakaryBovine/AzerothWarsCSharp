@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
 
     public QuestCrossroads(Rectangle rescueRect, PreplacedUnitSystem preplacedUnitSystem) : base("The Crossroads",
       "The Horde still needs to establish a strong strategic foothold into Kalimdor. Expand into the Barrens and claim the Crossroads.",
-      "ReplaceableTextures\\CommandButtons\\BTNBarracks.blp")
+      @"ReplaceableTextures\CommandButtons\BTNBarracks.blp")
     {
       AddObjective(
         new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(FourCC("nrzm"), rescueRect.Center))); //Razorman Medicine Man

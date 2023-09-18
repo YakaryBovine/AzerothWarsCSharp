@@ -18,7 +18,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
     /// </summary>
     public QuestNajentus(IEnumerable<Capital> capitalTargets) : base("Lord of the Depths",
       "the Naga Lord Naj'entus will only join us if enough blood and destruction was shed in his name",
-      "ReplaceableTextures\\CommandButtons\\BTNLordNaj.blp")
+      @"ReplaceableTextures\CommandButtons\BTNLordNaj.blp")
     {
       foreach (var capital in capitalTargets) 
         AddObjective(new ObjectiveCapitalDead(capital));

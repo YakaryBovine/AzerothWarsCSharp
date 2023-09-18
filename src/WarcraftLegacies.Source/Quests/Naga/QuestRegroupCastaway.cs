@@ -13,7 +13,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
     /// <inheritdoc/>
     public QuestRegroupCastaway() : base("Ancient Libraries",
       "Illidan will need to collect more lost knowledge to be form a new generation of Naga Sea Witch",
-      "ReplaceableTextures\\CommandButtons\\BTNNagaSeaWitch.blp")
+      @"ReplaceableTextures\CommandButtons\BTNNagaSeaWitch.blp")
     {
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N00W_ZUL_GURUB_10GOLD_MIN)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N00Y_DEADWIND_PASS_10GOLD_MIN)));

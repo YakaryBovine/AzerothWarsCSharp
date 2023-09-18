@@ -17,7 +17,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     
     public QuestChenStormstout(unit chen) : base("The Wandering Brewmaster",
       "Rumours tell of a strange white-furred creature from a foreign land. Perhaps it could be convinced to join the Horde.",
-      "ReplaceableTextures\\CommandButtons\\BTNPandarenBrewmaster.blp")
+      @"ReplaceableTextures\CommandButtons\BTNPandarenBrewmaster.blp")
     {
       AddObjective(new ObjectiveAnyUnitInRect(Regions.Chen, "Chen Stormstout", false));
       AddObjective(new ObjectiveSelfExists());

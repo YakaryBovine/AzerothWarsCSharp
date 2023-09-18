@@ -26,7 +26,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     /// </summary>
     public QuestWarsongKillDruids(Capital nordrassil, LegendaryHero grom) : base("Tear It Down",
       "The World Tree, Nordrassil, is the Night Elves' source of immortality. Capture it to cripple them permanently.",
-      "ReplaceableTextures\\CommandButtons\\BTNFountainOfLife.blp")
+      @"ReplaceableTextures\CommandButtons\BTNFountainOfLife.blp")
     {
       _grom = grom;
       AddObjective(new ObjectiveControlCapital(nordrassil, false));

@@ -12,7 +12,7 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
 
     public static void Setup(PreplacedUnitSystem preplacedUnitSystem)
     {
-      Sunfury = new Faction(FactionNames.Sunfury, PLAYER_COLOR_MAROON, "|cffff0000",
+      Sunfury = new Faction("Sunfury", PLAYER_COLOR_MAROON, "|cffff0000",
           @"ReplaceableTextures\CommandButtons\BTNBloodMage2.blp")
       {
         StartingGold = 200,

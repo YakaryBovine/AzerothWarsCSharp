@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
     /// </summary>
     public QuestDarkIron(Rectangle shadowforgeCity, Capital blackTemple, LegendaryHero magni) : base("Dark Iron Alliance",
       "The Dark Iron dwarves are renegades. Bring Magni to their capital to open negotiations for an alliance.",
-      "ReplaceableTextures\\CommandButtons\\BTNRPGDarkIron.blp")
+      @"ReplaceableTextures\CommandButtons\BTNRPGDarkIron.blp")
     {
       AddObjective(new ObjectiveCapitalDead(blackTemple));
       AddObjective(new ObjectiveLegendInRect(magni, shadowforgeCity,

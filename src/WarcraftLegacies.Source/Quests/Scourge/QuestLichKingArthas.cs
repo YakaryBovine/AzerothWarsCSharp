@@ -25,7 +25,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
     /// </summary>
     public QuestLichKingArthas(unit utgardeKeep, Artifact helmOfDomination, LegendaryHero arthas, Capital lichKing) : base("The Ascension",
       "From within the depths of the Frozen Throne, the Lich King Ner'zhul cries out for his champion. Release the Helm of Domination from its confines and merge its power with that of the Scourge's greatest Death Knight.",
-      "ReplaceableTextures\\CommandButtons\\BTNRevenant.blp")
+      @"ReplaceableTextures\CommandButtons\BTNRevenant.blp")
     {
       _utgardeKeep = utgardeKeep;
       _helmOfDomination = helmOfDomination;
@@ -50,7 +50,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
     /// <inheritdoc />
     protected override void OnComplete(Faction completingFaction)
     {
-      PlayThematicMusic("Sound\\Music\\mp3Music\\LichKingTheme.mp3");
+      PlayThematicMusic(@"Sound\Music\mp3Music\LichKingTheme.mp3");
       
       _lichKing.DeathMessage =
         "Icecrown Citadel been razed. Unfortunately, the Lich King has already vacated his unholy throne.";

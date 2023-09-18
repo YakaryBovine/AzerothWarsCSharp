@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
     /// <param name="sylvanas"></param>
     public QuestUnlockSpire(Rectangle rescueRect, LegendaryHero sylvanas) : base("Windrunner Spire",
       "The Windrunner tower is a strong asset to Quel'thalas.",
-      "ReplaceableTextures\\CommandButtons\\BTNElvenScoutTower.blp")
+      @"ReplaceableTextures\CommandButtons\BTNElvenScoutTower.blp")
     {
       AddObjective(new ObjectiveControlLegend(sylvanas, true));
       AddObjective(new ObjectiveSelfExists());

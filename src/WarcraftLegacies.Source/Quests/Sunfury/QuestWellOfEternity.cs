@@ -10,28 +10,26 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
 {
   public sealed class QuestWellOfEternity : QuestData
   {
-    private readonly LegendaryHero _kiljaeden;
     private readonly unit _well;
 
-    public QuestWellOfEternity(PreplacedUnitSystem preplacedUnitSystem, LegendaryHero kiljaeden) : base("The Well of Eternity",
+    public QuestWellOfEternity(PreplacedUnitSystem preplacedUnitSystem, LegendaryHero kiljaeden) : base(
+      "The Well of Eternity",
       "The Maelstrom still hides the shattered Well of Eternity. With his immense power, Kil'jaeden can summon a new well that will bring forth the destruction of the world.",
-      "ReplaceableTextures\\CommandButtons\\BTNFountainOfLife.blp")
+      @"ReplaceableTextures\CommandButtons\BTNFountainOfLife.blp")
     {
-      _kiljaeden = kiljaeden;
       _well = preplacedUnitSystem.GetUnit(Constants.UNIT_N0DZ_THE_WELL_OF_ETERNITY_SUNFURY_MAGIC).Show(false);
-      AddObjective(new ObjectiveChannelRect(Regions.MaelstromChannel, "The Maelstrom", _kiljaeden, 420, 90, Title));
+      AddObjective(new ObjectiveChannelRect(Regions.MaelstromChannel, "The Maelstrom", kiljaeden, 420, 90, Title));
       Global = true;
     }
 
     /// <inheritdoc/>
     protected override string RewardFlavour =>
-      "The Well of Eternity has been reformed, the Sunfury now have unlimited arcane energy";
+      "Kil'jaeden has reformed the ancient Well of Eternity. From its wellsprings, unlimited arcane energies spring forth. For the first time in their miserable existences, the Sunfury are truly sated.";
 
     /// <inheritdoc/>
     protected override string RewardDescription =>
-      "The Well of Eternity will give every Sunfury unit infinite mana";
-
-
+      "Gain control of the Well of Eternity, which will grant every Sunfury unit unlimited mana";
+    
     /// <inheritdoc/>
     protected override void OnComplete(Faction completingFaction)
     {

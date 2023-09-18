@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     /// <summary>
     /// Initializes a new instance of the <see cref="QuestShoresOfNorthrend"/> class.
     /// </summary>
-    public QuestShoresOfNorthrend(LegendaryHero arthas, Capital caerDarrow) : base("Shores of Northrend", "Mal'ganis' citadel lies somewhere within the arctic wastes of the north. In order to assault the Dreadlord, Arthas must first establish a base camp at the shores of Northrend.", "ReplaceableTextures\\CommandButtons\\BTNHumanTransport.blp")
+    public QuestShoresOfNorthrend(LegendaryHero arthas, Capital caerDarrow) : base("Shores of Northrend", "Mal'ganis' citadel lies somewhere within the arctic wastes of the north. In order to assault the Dreadlord, Arthas must first establish a base camp at the shores of Northrend.", @"ReplaceableTextures\CommandButtons\BTNHumanTransport.blp")
     {
       _arthas = arthas;
       AddObjective(new ObjectiveControlLegend(arthas, true));

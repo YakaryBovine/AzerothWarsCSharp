@@ -42,9 +42,6 @@ namespace MacroTools.Channels
     }
 
     /// <inheritdoc />
-    public override bool Active { get; set; } = true;
-
-    /// <inheritdoc />
     public override void OnCreate()
     {
       _lightning = new Lightning("DRAB", Caster, _target)
