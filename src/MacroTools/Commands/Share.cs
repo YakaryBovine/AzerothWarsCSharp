@@ -37,7 +37,7 @@ namespace MacroTools.Commands
       if (cheaterTeam != targetFaction.Player.GetTeam())
         return $"{targetFaction.Name} isn't on your team, so you can't share control with them.";
       
-      SetPlayerAlliance(cheater, targetFaction.Player, ALLIANCE_SHARED_CONTROL, false);
+      SetPlayerAlliance(cheater, targetFaction.Player, ALLIANCE_SHARED_CONTROL, true);
       
       return $"Shared control with {targetFaction.Name}.";
     }

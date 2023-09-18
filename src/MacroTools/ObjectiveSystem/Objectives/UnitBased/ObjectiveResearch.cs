@@ -27,7 +27,7 @@ namespace MacroTools.ObjectiveSystem.Objectives.UnitBased
     {
       try
       {
-        if (EligibleFactions.Contains(GetOwningPlayer(GetTriggerUnit())) is true)
+        if (EligibleFactions.Contains(GetOwningPlayer(GetTriggerUnit())))
           Progress = QuestProgress.Complete;
       }
       catch (Exception ex)

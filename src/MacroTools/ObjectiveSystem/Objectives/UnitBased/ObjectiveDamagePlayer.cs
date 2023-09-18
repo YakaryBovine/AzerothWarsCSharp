@@ -18,7 +18,7 @@ namespace MacroTools.ObjectiveSystem.Objectives.UnitBased
     {
       PlayerUnitEvents.Register(CustomPlayerUnitEvents.PlayerTakesDamage, () =>
       {
-        if (IsPlayerOnSameTeamAsAnyEligibleFaction(GetEventDamageSource().OwningPlayer()) is true)
+        if (IsPlayerOnSameTeamAsAnyEligibleFaction(GetEventDamageSource().OwningPlayer()))
           Progress = QuestProgress.Complete;
       }, GetPlayerId(playerToDamage));
     }

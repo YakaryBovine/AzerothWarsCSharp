@@ -22,7 +22,7 @@ namespace MacroTools.ObjectiveSystem.Objectives.UnitBased
 
     private void OnUnitChangeOwner()
     {
-      if (IsPlayerOnSameTeamAsAnyEligibleFaction(_target.OwningPlayer()) is true)
+      if (IsPlayerOnSameTeamAsAnyEligibleFaction(_target.OwningPlayer()))
         Progress = QuestProgress.Complete;
     }
   }

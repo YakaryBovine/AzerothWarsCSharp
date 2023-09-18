@@ -36,16 +36,10 @@ namespace WarcraftLegacies.Source.GameLogic.GameEnd
     /// </summary>
     public static void Setup()
     {
-      var trig = CreateTrigger();
-      var i = 0;
-      while (true)
-      {
-        if (i > 24) break;
-        TriggerRegisterPlayerEvent(trig, Player(i), EVENT_PLAYER_LEAVE);
-        i += 1;
-      }
-
-      TriggerAddAction(trig, PlayerLeavesGame);
+      var trigger = CreateTrigger();
+      foreach (var player in WCSharp.Shared.Util.EnumeratePlayers())
+        TriggerRegisterPlayerEvent(trigger, player, EVENT_PLAYER_LEAVE);
+      TriggerAddAction(trigger, PlayerLeavesGame);
     }
   }
 }

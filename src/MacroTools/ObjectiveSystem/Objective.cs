@@ -105,22 +105,16 @@ namespace MacroTools.ObjectiveSystem
     /// Returns true if the specified player is on the same team as any of the players that are eligible to contribute
     /// to this objective.
     /// </summary>
-    protected bool? IsPlayerOnSameTeamAsAnyEligibleFaction(player? whichPlayer)
+    protected bool IsPlayerOnSameTeamAsAnyEligibleFaction(player whichPlayer)
     {
-      if (whichPlayer == null)
-        return null;
+      var playerTeam = whichPlayer.GetTeam();
+      if (playerTeam == null)
+        return false;
       
       foreach (var eligibleFaction in EligibleFactions)
-      {
-        if (eligibleFaction.Player == null)
-          return null;
-
-        if (eligibleFaction.Player == Player(PLAYER_NEUTRAL_PASSIVE) || eligibleFaction.Player == Player(PLAYER_NEUTRAL_AGGRESSIVE))
-          return null;
-        
-        if (eligibleFaction.Player.GetTeam() == whichPlayer.GetTeam())
+        if (eligibleFaction.Player != null && eligibleFaction.Player.GetTeam() == playerTeam)
           return true;
-      }
+      
       return false;
     }
 
@@ -160,16 +154,16 @@ namespace MacroTools.ObjectiveSystem
       string effectPath;
       if (MapEffectPath != null && _mapEffect == null)
       {
-        effectPath = EligibleFactions.Contains(GetLocalPlayer()) is true ? MapEffectPath : "";
+        effectPath = EligibleFactions.Contains(GetLocalPlayer()) ? MapEffectPath : "";
         _mapEffect = AddSpecialEffect(effectPath, Position.X, Position.Y);
-        BlzSetSpecialEffectColorByPlayer(_mapEffect, EligibleFactions.First().Player);
+        BlzSetSpecialEffectColorByPlayer(_mapEffect, GetLocalPlayer());
         BlzSetSpecialEffectHeight(_mapEffect, 100 + Environment.GetPositionZ(Position));
       }
 
       if (OverheadEffectPath == null || _overheadEffect != null || TargetWidget == null) 
         return;
       
-      effectPath = EligibleFactions.Contains(GetLocalPlayer()) is true ? OverheadEffectPath : "";
+      effectPath = EligibleFactions.Contains(GetLocalPlayer()) ? OverheadEffectPath : "";
       _overheadEffect = AddSpecialEffectTarget(effectPath, TargetWidget, "overhead");
     }
 

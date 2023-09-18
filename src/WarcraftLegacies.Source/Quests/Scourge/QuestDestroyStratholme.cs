@@ -39,7 +39,8 @@ namespace WarcraftLegacies.Source.Quests.Scourge
         randomPoint = Regions.ArthasRandomPoint.GetRandomPoint();
       } while (!IsPointValidForArthas(randomPoint));
 
-      _arthas.ForceCreate(LordaeronSetup.Lordaeron?.Player ?? Player(PLAYER_NEUTRAL_AGGRESSIVE), randomPoint, 270);
+      if (_arthas.Unit == null || !UnitAlive(_arthas.Unit))
+        _arthas.ForceCreate(LordaeronSetup.Lordaeron?.Player ?? Player(PLAYER_NEUTRAL_AGGRESSIVE), randomPoint, 270);
       
       completingFaction.AddPower(new PingPower(_arthas, "Eye of the Lich King", 5, 5));
     }

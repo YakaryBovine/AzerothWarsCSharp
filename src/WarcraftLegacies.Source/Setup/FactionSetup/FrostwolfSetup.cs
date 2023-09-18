@@ -92,7 +92,7 @@ Salvage the wrecked ships, establish a base and gather your troops to move inlan
       Frostwolf.ModObjectLimit(Constants.UPGRADE_R09N_FLIGHT_PATH_WARSONG, 1);
 
       Frostwolf.AddGoldMine(preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(-8793, -11350)));
-      Frostwolf.AddGoldMine(preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(-14457, -4701)));
+      Frostwolf.AddGoldMine(preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(-15828, -3120)));
       
       FactionManager.Register(Frostwolf);
     }

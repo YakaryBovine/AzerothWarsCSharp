@@ -365,12 +365,12 @@ namespace MacroTools.QuestSystem
           case QuestProgress.Undiscovered:
             break;
           case QuestProgress.Incomplete:
-            if (objective.EligibleFactions.Contains(GetLocalPlayer()) is true)
+            if (objective.EligibleFactions.Contains(GetLocalPlayer()))
               objective.ShowLocal(Progress);
             objective.ShowSync(Progress);
             break;
           case QuestProgress.Complete:
-            if (objective.EligibleFactions.Contains(GetLocalPlayer()) is true)
+            if (objective.EligibleFactions.Contains(GetLocalPlayer()))
               objective.HideLocal();
             objective.HideSync();
             break;

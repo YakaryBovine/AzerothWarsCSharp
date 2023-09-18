@@ -29,6 +29,8 @@ namespace WarcraftLegacies.Source.Setup
       Player(6).SetFaction(FelHordeSetup.FelHorde);
       Player(6).SetTeam(TeamSetup.Outland);
 
+      Player(7).SetTeam(TeamSetup.NorthAlliance);
+      
       Player(8).SetTeam(TeamSetup.Horde);
       
       Player(10).SetFaction(StormwindSetup.Stormwind);

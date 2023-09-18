@@ -43,7 +43,7 @@ namespace MacroTools.ObjectiveSystem.Objectives.UnitBased
     {
       if (GetUnitTypeId(GetTrainedUnit()) != _objectId) return;
 
-      if (!ProgressLocked && EligibleFactions.Contains(GetOwningPlayer(GetTrainedUnit())) is true)
+      if (!ProgressLocked && EligibleFactions.Contains(GetOwningPlayer(GetTrainedUnit())))
       {
         CurrentTrainCount = _currentTrainCount + 1;
         if (_currentTrainCount == _targetTrainCount)

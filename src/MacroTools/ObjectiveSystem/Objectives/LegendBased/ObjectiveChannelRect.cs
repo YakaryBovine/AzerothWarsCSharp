@@ -56,7 +56,7 @@ namespace MacroTools.ObjectiveSystem.Objectives.LegendBased
     private void OnRegionEnter()
     {
       var whichUnit = GetEnteringUnit();
-      if (!EligibleFactions.Contains(GetOwningPlayer(whichUnit)) is true || !UnitAlive(whichUnit) ||
+      if (!EligibleFactions.Contains(GetOwningPlayer(whichUnit)) || !UnitAlive(whichUnit) ||
           LegendaryHeroManager.GetFromUnit(GetTriggerUnit()) != _targetLegend || _channel != null ||
           Progress != QuestProgress.Incomplete) return;
       _channel = new Channel(whichUnit, _duration, _facing, Position, _timerDialogTitle);

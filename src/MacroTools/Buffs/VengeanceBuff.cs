@@ -1,11 +1,12 @@
-﻿using WCSharp.Buffs;
+﻿using MacroTools.Extensions;
+using WCSharp.Buffs;
 using WCSharp.Events;
 using static War3Api.Common;
 
 namespace MacroTools.Buffs
 {
   /// <summary>
-  /// The unit becomes a Spirit of Vengeance when this is applied, heaiing for an amount and gaining bonus damage.
+  /// The unit becomes a Spirit of Vengeance when this is applied, healing for an amount and gaining bonus damage.
   /// If the unit attacks some number of times before the buff expires, it revives.
   /// Otherwise, it dies.
   /// </summary>
@@ -55,9 +56,14 @@ namespace MacroTools.Buffs
 
     private void OnInflictsDamage()
     {
-      if (!BlzGetEventIsAttack()) return;
+      var isAttackerAlliedToVictim = GetPlayerAlliance(GetEventDamageSource().OwningPlayer(),
+        GetTriggerUnit().OwningPlayer(), ALLIANCE_PASSIVE);
+      if (!BlzGetEventIsAttack() || isAttackerAlliedToVictim) 
+        return;
+      
       HitsDone++;
-      if (HitsDone >= HitsReviveThreshold) Active = false;
+      if (HitsDone >= HitsReviveThreshold) 
+        Active = false;
     }
 
     /// <inheritdoc />

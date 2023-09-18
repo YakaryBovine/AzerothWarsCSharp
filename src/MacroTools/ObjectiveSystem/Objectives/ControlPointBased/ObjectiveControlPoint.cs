@@ -1,4 +1,5 @@
-﻿using MacroTools.ControlPointSystem;
+﻿using System;
+using MacroTools.ControlPointSystem;
 using MacroTools.Extensions;
 using MacroTools.FactionSystem;
 using MacroTools.QuestSystem;
@@ -23,21 +24,21 @@ namespace MacroTools.ObjectiveSystem.Objectives.ControlPointBased
 
     internal override void OnAdd(Faction whichFaction)
     {
-      Progress = IsPlayerOnSameTeamAsAnyEligibleFaction(_target.Unit.OwningPlayer()) is true
+      Progress = IsPlayerOnSameTeamAsAnyEligibleFaction(_target.Unit.OwningPlayer())
         ? QuestProgress.Complete
         : QuestProgress.Incomplete;
     }
 
     private void OnTargetChangeOwner(object? sender, ControlPointOwnerChangeEventArgs controlPointOwnerChangeEventArgs)
     {
-      Progress = IsPlayerOnSameTeamAsAnyEligibleFaction(_target.Unit.OwningPlayer()) is true
+      Progress = IsPlayerOnSameTeamAsAnyEligibleFaction(_target.Unit.OwningPlayer())
         ? QuestProgress.Complete
         : QuestProgress.Incomplete;
     }
 
     private void OnFactionTeamJoin(object? sender, PlayerChangeTeamEventArgs playerChangeTeamEventArgs)
     {
-      Progress = IsPlayerOnSameTeamAsAnyEligibleFaction(_target.Unit.OwningPlayer()) is true
+      Progress = IsPlayerOnSameTeamAsAnyEligibleFaction(_target.Unit.OwningPlayer())
         ? QuestProgress.Complete
         : QuestProgress.Incomplete;
     }

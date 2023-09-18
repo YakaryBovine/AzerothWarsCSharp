@@ -104,8 +104,8 @@ namespace WarcraftLegacies.Source.GameLogic
       if (GetLocalPlayer() == whichPlayer && whichFaction.StartingCameraPosition != null)
         SetCameraPosition(whichFaction.StartingCameraPosition.X, whichFaction.StartingCameraPosition.Y);
       
-      whichPlayer.RescueGroup(whichFaction.StartingUnits);
       whichPlayer.SetFaction(whichFaction);
+      whichPlayer.RescueGroup(whichFaction.StartingUnits);
       
       foreach (var unpickedFaction in _factionChoices.Where(x => x != whichFaction))
         RemoveFaction(unpickedFaction);
