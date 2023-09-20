@@ -29,7 +29,7 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
     {
       AddObjective(new ObjectiveAnyUnitInRect(Regions.AuberdineUnlock,
         "Auberdine", false));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05U_FEATHERMOON_STRONGHOLD_20GOLD_MIN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05U_FEATHERMOON_STRONGHOLD)));
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_N06P_SENTINEL_ENCLAVE_SENTINEL_T3, Constants.UNIT_N06J_SENTINEL_OUTPOST_SENTINEL_T1));
       AddObjective(new ObjectiveExpire(480, Title));
       AddObjective(new ObjectiveSelfExists());

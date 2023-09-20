@@ -37,7 +37,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
       _arthas = arthas;
       _stratholme = stratholme;
       AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(Constants.UNIT_O00B_JUBEI_THOS_LEGION_DEMI)));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N019_ALTERAC_MOUNTAINS_20GOLD_MIN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N019_ALTERAC_MOUNTAINS)));
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_HCAS_CASTLE_LORDAERON_T3, Constants.UNIT_HTOW_TOWN_HALL_LORDAERON_T1));
       AddObjective(new ObjectiveControlLegend(arthas, false));
       AddObjective(new ObjectiveExpire(660, Title));

@@ -32,12 +32,12 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     {
       AddObjective(
         new ObjectiveControlPoint(
-          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N00V_DUSKWOOD_10GOLD_MIN)));
+          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N00V_DUSKWOOD)));
       AddObjective(
         new ObjectiveControlPoint(
-          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N00Z_ELWYNN_FOREST_20GOLD_MIN)));
+          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N00Z_ELWYNN_FOREST)));
       AddObjective(new ObjectiveControlPoint(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N011_REDRIDGE_MOUNTAINS_10GOLD_MIN)));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N011_REDRIDGE_MOUNTAINS)));
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_H06N_CASTLE_STORMWIND_T3,
         Constants.UNIT_H06K_TOWN_HALL_STORMWIND_T1));
       AddObjective(new ObjectiveExpire(600, Title));

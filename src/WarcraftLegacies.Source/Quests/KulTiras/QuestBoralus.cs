@@ -33,9 +33,9 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
       @"ReplaceableTextures\CommandButtons\BTNHumanShipyard.blp")
     {
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_H06I_CASTLE_KUL_TIRAS_T3, Constants.UNIT_H062_TOWN_HALL_KUL_TIRAS_T1));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BX_TIRAGARDE_SOUND_10GOLD_MIN)));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BW_STORMSONG_VALLEY_10GOLD_MIN)));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BV_DRUSTVAR_10GOLD_MIN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BX_TIRAGARDE_SOUND)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BW_STORMSONG_VALLEY)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BV_DRUSTVAR)));
       AddObjective(new ObjectiveExpire(480, Title));
       AddObjective(new ObjectiveSelfExists());
       ResearchId = Constants.UPGRADE_R00L_QUEST_COMPLETED_THE_CITY_AT_SEA_KUL_TIRAS;

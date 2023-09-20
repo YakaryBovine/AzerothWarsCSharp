@@ -29,7 +29,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
       @"ReplaceableTextures\CommandButtons\BTNworgen.blp")
     {
       AddObjective(new ObjectiveUnitIsDead(direwolfToKill));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01D_SILVERPINE_FOREST_15GOLD_MIN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01D_SILVERPINE_FOREST)));
       AddObjective(new ObjectiveExpire(660, Title));
       AddObjective(new ObjectiveSelfExists());
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);

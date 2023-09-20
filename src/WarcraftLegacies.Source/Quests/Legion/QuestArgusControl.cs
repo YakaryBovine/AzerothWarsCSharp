@@ -21,13 +21,13 @@ namespace WarcraftLegacies.Source.Quests.Legion
       @"ReplaceableTextures\CommandButtons\BTNMastersLodge.blp")
     {
       AddObjective(new ObjectiveControlPoint(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BF_ANTORAN_WASTES_10GOLD_MIN)));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BF_ANTORAN_WASTES)));
       AddObjective(
         new ObjectiveControlPoint(
-          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BH_EREDATH_25GOLD_MIN)));
+          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BH_EREDATH)));
       AddObjective(
         new ObjectiveControlPoint(
-          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BG_KROKUUN_10GOLD_MIN)));
+          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BG_KROKUUN)));
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_U00N_BURNING_CITADEL_LEGION_T3,
         Constants.UNIT_U00C_LEGION_BASTION_LEGION_T2));
       AddObjective(new ObjectiveSelfExists());

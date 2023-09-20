@@ -21,7 +21,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
       @"ReplaceableTextures\CommandButtons\BTNDemonCrypt.blp")
     {
       AddObjective(new ObjectiveControlPoint(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N019_ALTERAC_MOUNTAINS_20GOLD_MIN)));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N019_ALTERAC_MOUNTAINS)));
 
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideAll);
       Required = true;

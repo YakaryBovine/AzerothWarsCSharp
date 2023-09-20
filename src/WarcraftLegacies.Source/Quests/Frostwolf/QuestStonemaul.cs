@@ -21,7 +21,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
       "Rexxar is having trouble with a beligerent Ogre Warlord, slay the Chieftain to gain the heroe's allegiance.",
       @"ReplaceableTextures\CommandButtons\BTNOneHeadedOgre.blp")
     {
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N022_STONEMAUL_15GOLD_MIN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N022_STONEMAUL)));
       AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(Constants.UNIT_NOGA_STONEMAUL_WARCHIEF_KOR_GALL)));
       AddObjective(new ObjectiveExpire(480,Title));
       AddObjective(new ObjectiveSelfExists());

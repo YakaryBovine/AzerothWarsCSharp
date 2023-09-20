@@ -25,13 +25,13 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
       _thrall = thrall;
       var CPs = new List<ControlPoint>
       {
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N028_DROWNED_REACHES_10GOLD_MIN),
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N02P_MAK_ARA_10GOLD_MIN),
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N04B_GISHAN_CAVERNS_10GOLD_MIN),
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05Y_AZSUNA_15GOLD_MIN),
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N032_SURAMAR_20GOLD_MIN),
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N053_VAL_SHARAH_15GOLD_MIN),
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05Z_STORMHEIM_15GOLD_MIN),
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N028_DROWNED_REACHES),
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N02P_MAK_ARA),
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N04B_GISHAN_CAVERNS),
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05Y_AZSUNA),
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N032_SURAMAR),
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N053_VAL_SHARAH),
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05Z_STORMHEIM),
       };
       AddObjective(new ObjectiveLegendLevel(_thrall, 8));
       AddObjective(new ObjectiveChannelRect(Regions.MaelstromChannel, "the Maelstrom", _thrall, 120, 120, "Taming Maelstrom Power"));

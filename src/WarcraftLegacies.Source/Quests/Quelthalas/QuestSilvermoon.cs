@@ -37,8 +37,8 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
       _sunwell = sunwell;
       AddObjective(new ObjectiveUnitIsDead(
         preplacedUnitSystem.GetUnit(Constants.UNIT_O00O_CHIEFTAN_OF_THE_AMANI_TRIBE_CREEP_ZUL_AMAN)));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01V_ZUL_AMAN_20GOLD_MIN)));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01L_EVERSONG_WOODS_20GOLD_MIN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01V_ZUL_AMAN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01L_EVERSONG_WOODS)));
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_H03T_PALACE_QUEL_THALAS_T3, Constants.UNIT_H033_STEADING_QUEL_THALAS_T1));
       AddObjective(new ObjectiveExpire(660, Title));
       AddObjective(new ObjectiveSelfExists());

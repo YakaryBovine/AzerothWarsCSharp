@@ -36,9 +36,9 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
       AddObjective(new ObjectiveAcquireArtifact(crownOfLordaeron));
       AddObjective(new ObjectiveAcquireArtifact(crownOfStormwind));
       AddObjective(new ObjectiveControlPoint(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N010_STORMWIND_CITY_30GOLD_MIN)));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N010_STORMWIND_CITY)));
       AddObjective(new ObjectiveControlPoint(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01G_LORDAERON_CITY_30GOLD_MIN)));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01G_LORDAERON_CITY)));
       Global = true;
     }
 

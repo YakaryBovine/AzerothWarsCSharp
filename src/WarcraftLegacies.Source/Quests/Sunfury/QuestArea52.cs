@@ -32,7 +32,7 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
       AddObjective(new ObjectiveKillAllInArea(new List<Rectangle> { Regions.Area52Unlock }, "in Area 52"));
       AddObjective(
         new ObjectiveControlPoint(
-          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N07Q_AREA_52_10GOLD_MIN)));
+          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N07Q_AREA_52)));
       AddObjective(new ObjectiveExpire(600, Title));
       AddObjective(new ObjectiveSelfExists());
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideAll);

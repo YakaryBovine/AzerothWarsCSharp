@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
       "The living crystal of the Crystalsong Forest suffers from its proximity to the Legion. Freed from that corruption, it could be used to empower Dalaran's constructs."
       , @"ReplaceableTextures\CommandButtons\BTNRockGolem.blp")
     {
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N02R_CRYSTALSONG_FOREST_15GOLD_MIN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N02R_CRYSTALSONG_FOREST)));
       AddObjective(new ObjectiveControlCapital(draktharonKeep, false));
     }
 

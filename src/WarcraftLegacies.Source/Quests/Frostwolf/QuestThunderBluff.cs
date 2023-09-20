@@ -28,8 +28,8 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
       @"ReplaceableTextures\CommandButtons\BTNCentaurKhan.blp")
     {
       AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(FourCC("ncnk"), rescueRect.Center)));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N026_THOUSAND_NEEDLES_10GOLD_MIN )));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N09G_MULGORE_10GOLD_MIN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N026_THOUSAND_NEEDLES )));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N09G_MULGORE)));
       AddObjective(new ObjectiveExpire(480, Title));
       AddObjective(new ObjectiveSelfExists());
       ResearchId = Constants.UPGRADE_R05I_QUEST_COMPLETED_THE_LONG_MARCH; 

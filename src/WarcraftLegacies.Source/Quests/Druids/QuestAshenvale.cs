@@ -26,8 +26,8 @@ namespace WarcraftLegacies.Source.Quests.Druids
       "The forest needs healing. Regain control of it to awaken it.",
       @"ReplaceableTextures\CommandButtons\BTNKeeperC.blp")
     {
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N07C_FELWOOD_10GOLD_MIN)));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01Q_NORTHERN_ASHENVALE_10GOLD_MIN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N07C_FELWOOD)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01Q_NORTHERN_ASHENVALE)));
       AddObjective(new ObjectiveExpire(600, Title));
       AddObjective(new ObjectiveSelfExists());
       ResearchId = Constants.UPGRADE_R06R_QUEST_COMPLETED_THE_SPIRITS_OF_ASHENVALE;

@@ -21,7 +21,7 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
       @"ReplaceableTextures\CommandButtons\BTNBloodElfWizard.blp")
     {
       AddObjective(new ObjectiveControlLevel(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N04Y_NAZJATAR_25GOLD_MIN), 8));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N04Y_NAZJATAR), 8));
       AddObjective(new ObjectiveChannelRect(Regions.Nazjatar, "Nazjatar", rommath, 80, 270));
       ResearchId = Constants.UPGRADE_R075_QUEST_COMPLETED_THE_QUEEN_S_ARCHIVE;
     }

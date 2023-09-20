@@ -26,7 +26,7 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
     {
       Required = true;
       AddObjective(new ObjectiveAnyUnitInRect(rescueRect, "Shadowmoon Valley", false));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N02T_TEROKKAR_FOREST_10_GOLD_MIN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N02T_TEROKKAR_FOREST)));
       AddObjective(new ObjectiveSelfExists());
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.Invulnerable);
     }

@@ -16,14 +16,14 @@ namespace WarcraftLegacies.Source.Quests.Druids
       @"ReplaceableTextures\CommandButtons\BTNHellScream.blp")
     {
       AddObjective(new ObjectiveControlLevel(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01Q_NORTHERN_ASHENVALE_10GOLD_MIN), 10));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01Q_NORTHERN_ASHENVALE), 10));
       AddObjective(new ObjectiveControlLevel(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N08U_SOUTHERN_ASHENVALE_10GOLD_MIN), 10));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N08U_SOUTHERN_ASHENVALE), 10));
       AddObjective(new ObjectiveControlLevel(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05K_WARSONG_LUMBER_CAMP_15GOLD_MIN), 10));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05K_WARSONG_LUMBER_CAMP), 10));
       AddObjective(new ObjectiveControlLevel(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N09R_ELDARATH_10GOLD_MIN), 10));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05K_WARSONG_LUMBER_CAMP_15GOLD_MIN)));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N09R_ELDARATH), 10));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05K_WARSONG_LUMBER_CAMP)));
       ResearchId = FourCC("R05A");
     }
     

@@ -28,15 +28,15 @@ namespace WarcraftLegacies.Source.Quests.Naga
     {
       AddObjective(
         new ObjectiveControlPoint(
-          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01J_ZANGARMARSH_15GOLD_MIN)));
+          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01J_ZANGARMARSH)));
       AddObjective(new ObjectiveControlPoint(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N02N_BLADE_S_EDGE_MOUNTAINS_15GOLD_MIN)));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N02N_BLADE_S_EDGE_MOUNTAINS)));
       AddObjective(
         new ObjectiveControlPoint(
-          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N00B_NAGRAND_15GOLD_MIN)));
+          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N00B_NAGRAND)));
       AddObjective(
         new ObjectiveControlPoint(
-          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0CW_FARAHLON_10GOLD_MIN)));
+          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0CW_FARAHLON)));
       AddObjective(new ObjectiveExpire(1450, Title));
       AddObjective(new ObjectiveSelfExists());
       ResearchId = Constants.UPGRADE_R05H_QUEST_COMPLETED_THE_LOST_ONES;

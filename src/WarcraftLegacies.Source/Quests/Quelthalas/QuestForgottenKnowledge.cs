@@ -19,7 +19,7 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
       @"ReplaceableTextures\CommandButtons\BTNBloodelf_Arcane_Annihilator.blp")
     {
       AddObjective(new ObjectiveControlLevel(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N032_SURAMAR_20GOLD_MIN), 10));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N032_SURAMAR), 10));
       AddObjective(new ObjectiveTime(1080));
       ResearchId = Constants.UPGRADE_R08Z_QUEST_COMPLETED_FORGOTTEN_KNOWLEDGE;
     }

@@ -33,7 +33,7 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
         "in upper Netherstorm"));
       AddObjective(
         new ObjectiveControlPoint(
-          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0CW_FARAHLON_10GOLD_MIN)));
+          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0CW_FARAHLON)));
       AddObjective(new ObjectiveExpire(600, Title));
       AddObjective(new ObjectiveSelfExists());
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideAll);

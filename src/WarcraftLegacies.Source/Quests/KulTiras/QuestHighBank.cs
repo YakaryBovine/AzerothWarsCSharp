@@ -31,7 +31,7 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
       AddObjective(new ObjectiveControlLegend(katherine, false));
       AddObjective(
         new ObjectiveControlPoint(
-          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N00L_BOOTY_BAY_10GOLD_MIN)));
+          ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N00L_BOOTY_BAY)));
       AddObjective(new ObjectiveSelfExists());
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
     }

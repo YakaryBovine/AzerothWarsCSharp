@@ -18,7 +18,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
       @"ReplaceableTextures\CommandButtons\BTNTreant.blp")
     {
       AddObjective(new ObjectiveCapitalDead(lichKing));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N03U_GRIZZLY_HILLS_15GOLD_MIN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N03U_GRIZZLY_HILLS)));
       AddObjective(new ObjectiveAnyUnitInRect(Regions.GrizzlyHills, "Grizzly Hills", true));
       ResearchId = Constants.UPGRADE_R002_QUEST_COMPLETED_CROWN_OF_THE_SNOW_DRUIDS;
     }

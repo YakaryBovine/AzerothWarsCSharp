@@ -27,10 +27,10 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
       "The clans holding Hellfire Citadel do not respect Kargath's authority yet, Magtheridon is being kept alive by Illidan, if we break him, he could serve us well.",
       @"ReplaceableTextures\CommandButtons\BTNFelOrcFortress.blp")
     {
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01J_ZANGARMARSH_15GOLD_MIN)));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N02N_BLADE_S_EDGE_MOUNTAINS_15GOLD_MIN)));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N00B_NAGRAND_15GOLD_MIN)));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0CV_HALAAR_10GOLD_MIN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01J_ZANGARMARSH)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N02N_BLADE_S_EDGE_MOUNTAINS)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N00B_NAGRAND)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0CV_HALAAR)));
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_O030_FORTRESS_FEL_HORDE_T3, Constants.UNIT_O02Y_GREAT_HALL_FEL_HORDE_T1));
       AddObjective(new ObjectiveExpire(600, Title));
       AddObjective(new ObjectiveSelfExists());

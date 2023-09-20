@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
       @"ReplaceableTextures\CommandButtons\BTNTreeOfAges.blp")
     {
       AddObjective(new ObjectiveControlLevel(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0A0_ASCENDANT_S_RISE_10GOLD_MIN), 2));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0A0_ASCENDANT_S_RISE), 2));
       AddObjective(new ObjectiveExpire(480, Title));
       AddObjective(new ObjectiveSelfExists());
       Required = true;

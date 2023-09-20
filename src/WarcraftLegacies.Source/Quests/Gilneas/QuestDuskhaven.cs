@@ -22,8 +22,8 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
     /// </summary>
     public QuestDuskhaven() : base("Duskhaven", "The next town is located at the western coast of Gilneas.", @"ReplaceableTextures\CommandButtons\BTNGilneasTownHall.blp")
     {
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N031_DUSKHAVEN_20GOLD_MIN)));
-      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N06V_BLACKWALD_10GOLD_MIN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N031_DUSKHAVEN)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N06V_BLACKWALD)));
       AddObjective(new ObjectiveExpire(660, "Duskhaven"));
       AddObjective(new ObjectiveSelfExists());
       _rescueUnits = Regions.GilneasUnlock4.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);

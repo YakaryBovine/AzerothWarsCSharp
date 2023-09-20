@@ -31,13 +31,13 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
       @"ReplaceableTextures\CommandButtons\BTNGatherGold.blp")
     {
       _rewardArtifactItemTypeId = rewardArtifactItemTypeId;
-      AddObjective(new ObjectiveControlLevel(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BD_ULDUM_10GOLD_MIN), 5));
+      AddObjective(new ObjectiveControlLevel(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BD_ULDUM), 5));
     }
 
     /// <inheritdoc />
     protected override void OnComplete(Faction whichFaction)
     {
-      var uldumPosition = ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BD_ULDUM_10GOLD_MIN).Unit.GetPosition();
+      var uldumPosition = ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BD_ULDUM).Unit.GetPosition();
       var rewardArtifact = new Artifact(CreateItem(_rewardArtifactItemTypeId, uldumPosition.X, uldumPosition.Y));
       rewardArtifact.Titanforge();
       ArtifactManager.Register(rewardArtifact);

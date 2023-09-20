@@ -22,7 +22,7 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
       AddObjective(new ObjectiveLegendInRect(tess, Regions.WyrmrestTemple, "The Wyrmrest Temple"));
       AddObjective(new ObjectiveArtifactInRect(scytheOfElune, Regions.WyrmrestTemple, "The Wyrmrest Temple"));
       AddObjective(new ObjectiveControlLevel(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N02J_HOWLING_FJORDS_15GOLD_MIN), 10));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N02J_HOWLING_FJORDS), 10));
       ResearchId = Constants.UPGRADE_R07U_QUEST_COMPLETED_SHRINE_OF_THE_WOLF_GOD;
     }
 

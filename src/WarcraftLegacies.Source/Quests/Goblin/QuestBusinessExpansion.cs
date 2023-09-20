@@ -20,13 +20,13 @@ namespace WarcraftLegacies.Source.Quests.Goblin
       @"ReplaceableTextures\CommandButtons\BTNGoblinPrince.blp")
     {
       AddObjective(new ObjectiveControlLevel(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05C_GADGETZAN_15GOLD_MIN), 4));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05C_GADGETZAN), 4));
       AddObjective(new ObjectiveControlLevel(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0A6_RATCHET_10GOLD_MIN), 4));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0A6_RATCHET), 4));
       AddObjective(new ObjectiveControlLevel(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N09D_AUBERDINE_15GOLD_MIN), 4));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N09D_AUBERDINE), 4));
       AddObjective(new ObjectiveControlLevel(
-        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05U_FEATHERMOON_STRONGHOLD_20GOLD_MIN), 4));
+        ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N05U_FEATHERMOON_STRONGHOLD), 4));
       AddObjective(new ObjectiveSelfExists());
       ResearchId = Constants.UPGRADE_R07G_QUEST_COMPLETED_BUSINESS_EXPANSION;
     }
