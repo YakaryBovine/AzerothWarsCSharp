@@ -10,12 +10,12 @@ namespace WarcraftLegacies.Source.Setup
   {
     private static readonly Dictionary<int, int> ControlPointValues = new()
     {
-      {Constants.BUFF_B025_COMMAND_POINT_10_GOLD_PER_MINUTE, 10},
-      {Constants.BUFF_B050_COMMAND_POINT_15_GOLD_PER_MINUTE, 15},
-      {Constants.BUFF_B051_COMMAND_POINT_20_GOLD_PER_MINUTE, 20},
-      {Constants.BUFF_B052_COMMAND_POINT_25_GOLD_PER_MINUTE, 25},
-      {Constants.BUFF_B053_COMMAND_POINT_30_GOLD_PER_MINUTE, 30},
-      {Constants.BUFF_B054_COMMAND_POINT_50_GOLD_PER_MINUTE, 50},
+      {Constants.BUFF_B025_COMMAND_POINT_8_GOLD_PER_MINUTE, 8},
+      {Constants.BUFF_B050_COMMAND_POINT_12_GOLD_PER_MINUTE, 12},
+      {Constants.BUFF_B051_COMMAND_POINT_16_GOLD_PER_MINUTE, 16},
+      {Constants.BUFF_B052_COMMAND_POINT_20_GOLD_PER_MINUTE, 20},
+      {Constants.BUFF_B053_COMMAND_POINT_24_GOLD_PER_MINUTE, 24},
+      {Constants.BUFF_B054_COMMAND_POINT_40_GOLD_PER_MINUTE, 40},
     };
 
     private static void InitializeControlPoint(unit unit)

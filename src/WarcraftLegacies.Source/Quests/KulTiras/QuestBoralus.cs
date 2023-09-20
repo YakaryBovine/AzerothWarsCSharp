@@ -36,7 +36,7 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BX_TIRAGARDE_SOUND_10GOLD_MIN)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BW_STORMSONG_VALLEY_10GOLD_MIN)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BV_DRUSTVAR_10GOLD_MIN)));
-      AddObjective(new ObjectiveExpire(900, Title));
+      AddObjective(new ObjectiveExpire(480, Title));
       AddObjective(new ObjectiveSelfExists());
       ResearchId = Constants.UPGRADE_R00L_QUEST_COMPLETED_THE_CITY_AT_SEA_KUL_TIRAS;
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
@@ -54,7 +54,11 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
     /// <inheritdoc/>
     protected override void OnFail(Faction completingFaction)
     {
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits);
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
     }
 
     /// <inheritdoc/>

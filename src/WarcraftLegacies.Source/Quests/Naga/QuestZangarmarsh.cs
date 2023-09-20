@@ -25,7 +25,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
       @"ReplaceableTextures\CommandButtons\BTNIllidariDemonGate.blp")
     {
       AddObjective(new ObjectiveLegendInRect(vashj, rescueRect, "Zangarmarsh"));
-      AddObjective(new ObjectiveExpire(1250, Title));
+      AddObjective(new ObjectiveExpire(660, Title));
       AddObjective(new ObjectiveSelfExists());
       ResearchId = Constants.UPGRADE_R03B_QUEST_COMPLETED_THE_COILFANG_RESERVOIR;
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideAll);
@@ -41,7 +41,11 @@ namespace WarcraftLegacies.Source.Quests.Naga
     /// <inheritdoc />
     protected override void OnFail(Faction completingFaction)
     {
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits);
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
     }
 
     /// <inheritdoc />

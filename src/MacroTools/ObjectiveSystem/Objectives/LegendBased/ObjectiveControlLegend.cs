@@ -6,11 +6,17 @@ using static War3Api.Common;
 
 namespace MacroTools.ObjectiveSystem.Objectives.LegendBased
 {
+  /// <summary>
+  /// Retain control of a particular <see cref="Legend"/>.
+  /// </summary>
   public sealed class ObjectiveControlLegend : Objective
   {
     private readonly bool _canFail;
     private readonly Legend _target;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ObjectiveControlLegend"/> class.
+    /// </summary>
     public ObjectiveControlLegend(LegendaryHero target, bool canFail)
     {
       _target = target;
@@ -20,8 +26,7 @@ namespace MacroTools.ObjectiveSystem.Objectives.LegendBased
 
       DisplaysPosition = GetOwningPlayer(target.Unit) == Player(PLAYER_NEUTRAL_AGGRESSIVE);
       target.ChangedOwner += OnTargetChangeOwner;
-      target.PermanentlyDied += OnTargetDeath;
-      target.OwningPlayer.GetPlayerData().PlayerJoinedTeam += OnFactionTeamJoin;
+      target.PermanentlyDied += OnTargetPermaDeath;
       Position = new(GetUnitX(_target.Unit), GetUnitY(_target.Unit));
     }
 
@@ -38,19 +43,11 @@ namespace MacroTools.ObjectiveSystem.Objectives.LegendBased
       else
         Progress = _canFail ? QuestProgress.Failed : QuestProgress.Incomplete;
     }
-    
-    private void OnFactionTeamJoin(object? sender, PlayerChangeTeamEventArgs playerChangeTeamEventArgs)
-    {
-      var isOnSameTeam = IsPlayerOnSameTeamAsAnyEligibleFaction(_target.OwningPlayer);
-      if (_target.Unit != null && isOnSameTeam)
-        Progress = QuestProgress.Complete;
-      else
-        Progress = _canFail ? QuestProgress.Failed : QuestProgress.Incomplete;
-    }
 
-    private void OnTargetDeath(object? sender, Legend legend)
+    private void OnTargetPermaDeath(object? sender, Legend legend)
     {
-      if (_canFail) Progress = QuestProgress.Failed;
+      if (_canFail) 
+        Progress = QuestProgress.Failed;
     }
   }
 }

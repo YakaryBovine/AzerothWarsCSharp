@@ -11,8 +11,4 @@
         <ProjectReference Include="..\MacroTools\MacroTools.csproj" />
     </ItemGroup>
 
-    <PropertyGroup>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    </PropertyGroup>
-
 </Project>

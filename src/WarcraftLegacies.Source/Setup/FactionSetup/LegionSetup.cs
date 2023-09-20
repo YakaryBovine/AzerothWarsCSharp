@@ -18,7 +18,7 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
         UndefeatedResearch = FourCC("R04T"),
         StartingGold = 200,
         StartingLumber = 700,
-        FoodMaximum = 250,
+        FoodMaximum = 200,
         CinematicMusic = "DarkAgents",
         ControlPointDefenderUnitTypeId = Constants.UNIT_U01U_CONTROL_POINT_DEFENDER_LEGION,
         StartingCameraPosition = Regions.LegionStartPos.Center,

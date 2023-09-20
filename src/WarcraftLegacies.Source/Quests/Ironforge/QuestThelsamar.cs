@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
       @"ReplaceableTextures\CommandButtons\BTNMurlocNightCrawler.blp")
     {
       AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(FourCC("N089"))));
-      AddObjective(new ObjectiveExpire(1020, Title));
+      AddObjective(new ObjectiveExpire(600, Title));
       AddObjective(new ObjectiveSelfExists());
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.Invulnerable);
       Required = true;
@@ -35,13 +35,17 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
     /// <inheritdoc/>
     protected override void OnFail(Faction completingFaction)
     {
-      foreach (var unit in _rescueUnits) unit.Rescue(Player(PLAYER_NEUTRAL_AGGRESSIVE));
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
     }
 
     /// <inheritdoc/>
     protected override void OnComplete(Faction completingFaction)
     {
-      foreach (var unit in _rescueUnits) unit.Rescue(completingFaction.Player);
+      completingFaction.Player.RescueGroup(_rescueUnits);
     }
   }
 }

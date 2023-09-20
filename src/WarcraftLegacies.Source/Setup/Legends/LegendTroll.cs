@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Setup.Legends
       Gahzrilla = new LegendaryHero("Gahz'rilla")
       {
         UnitType = FourCC("H06Q"),
-        StartingXp = 2800
+        StartingXp = 1400
       };
 
       Hakkar = new LegendaryHero("Hakkar the Soulflayer")

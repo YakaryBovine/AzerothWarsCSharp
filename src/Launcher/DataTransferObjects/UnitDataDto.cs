@@ -23,7 +23,7 @@ namespace Launcher.DataTransferObjects
     public int WaygateDestinationRegionId { get; set; }
     public int TypeId { get; set; }
     public int Variation { get; set; }
-    public Vector3Dto Position { get; set; }
+    public Vector2Dto Position { get; set; }
     public double Rotation { get; set; }
     public Vector3Dto Scale { get; set; }
     public int SkinId { get; set; }

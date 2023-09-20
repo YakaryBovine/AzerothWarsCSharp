@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
         UndefeatedResearch = FourCC("R02L"),
         StartingGold = 200,
         StartingLumber = 700,
-        FoodMaximum = 250,
+        FoodMaximum = 200,
         StartingCameraPosition = Regions.IllidanStartingPosition.Center,
         StartingUnits = Regions.IllidanStartingPosition.PrepareUnitsForRescue(RescuePreparationMode.Invulnerable),
         ControlPointDefenderUnitTypeId = Constants.UNIT_N0BB_CONTROL_POINT_DEFENDER_ILLIDARI_TOWER,

@@ -14,7 +14,7 @@ public static class Regions
 	public static Rectangle Andrassil { get; set; } = new Rectangle(4992f, 18400f, 5440f, 18816f);
 	public static Rectangle Arathi_Ships { get; set; } = new Rectangle(17888f, 544f, 18656f, 1408f);
 	public static Rectangle ArchimondeChannel { get; set; } = new Rectangle(-9824f, 10720f, -9632f, 10880f);
-	public static Rectangle Area52Unlock { get; set; } = new Rectangle(-96f, -22720f, 1024f, -20608f);
+	public static Rectangle Area52Unlock { get; set; } = new Rectangle(-96f, -22688f, 1472f, -20608f);
 	public static Rectangle ArthasRandomPoint { get; set; } = new Rectangle(5664f, 3520f, 22304f, 10048f);
 	public static Rectangle ArtifactDummyInstance { get; set; } = new Rectangle(19584f, 23232f, 22688f, 24800f);
 	public static Rectangle AshbringerForge { get; set; } = new Rectangle(10240f, -5440f, 10368f, -5312f);
@@ -305,6 +305,8 @@ public static class Regions
 	public static Rectangle ThelUnlock { get; set; } = new Rectangle(14432f, -6752f, 15648f, -4768f);
 	public static Rectangle Theramore { get; set; } = new Rectangle(-8480f, -10304f, -6016f, -7776f);
 	public static Rectangle ThrallLanding { get; set; } = new Rectangle(-9120f, -11040f, -8576f, -10752f);
+	public static Rectangle Thunderbluff_Cave { get; set; } = new Rectangle(-15232f, -3616f, -14912f, -3360f);
+	public static Rectangle Thunderbluff_Escape { get; set; } = new Rectangle(-14880f, -2592f, -14528f, -2240f);
 	public static Rectangle ThunderBluff { get; set; } = new Rectangle(-17056f, -7808f, -14240f, -3072f);
 	public static Rectangle ThunderbluffFlight { get; set; } = new Rectangle(-15488f, -4096f, -15328f, -3936f);
 	public static Rectangle TolbaradAmbient { get; set; } = new Rectangle(9792f, -2176f, 12608f, 1568f);
@@ -359,7 +361,5 @@ public static class Regions
 	public static Rectangle ZulAman_trolls { get; set; } = new Rectangle(20256f, 10176f, 22848f, 17440f);
 	public static Rectangle Zulfarrak { get; set; } = new Rectangle(-12352f, -14272f, -10528f, -12064f);
 	public static Rectangle ZulfarrakAmbient { get; set; } = new Rectangle(-5952f, -17216f, 2944f, -10368f);
-	public static Rectangle Thunderbluff_Cave { get; set; } = new Rectangle(-15232f, -3616f, -14912f, -3360f);
-	public static Rectangle Thunderbluff_Escape { get; set; } = new Rectangle(-14880f, -2592f, -14528f, -2240f);
 
 }

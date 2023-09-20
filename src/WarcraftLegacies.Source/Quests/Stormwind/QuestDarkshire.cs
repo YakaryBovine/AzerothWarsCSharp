@@ -18,7 +18,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     {
       AddObjective(new ObjectiveUnitIsDead(gnollToKill));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(FourCC("n00V"))));
-      AddObjective(new ObjectiveExpire(1425, Title));
+      AddObjective(new ObjectiveExpire(600, Title));
       AddObjective(new ObjectiveSelfExists());
       Required = true;
     }
@@ -51,7 +51,11 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     /// <inheritdoc/>
     protected override void OnFail(Faction completingFaction)
     {
-      GrantDarkshire(Player(PLAYER_NEUTRAL_AGGRESSIVE));
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      GrantDarkshire(rescuer);
     }
 
     /// <inheritdoc/>

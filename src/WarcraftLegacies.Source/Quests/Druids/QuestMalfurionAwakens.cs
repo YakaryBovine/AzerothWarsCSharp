@@ -44,7 +44,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
       AddObjective(new ObjectiveAcquireArtifact(hornofCenarius));
       AddObjective(new ObjectiveArtifactInRect(hornofCenarius, Regions.Moonglade,
         "The Barrow Den"));
-      AddObjective(new ObjectiveExpire(1440, Title));
+      AddObjective(new ObjectiveExpire(480, Title));
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_ETOE_TREE_OF_ETERNITY_DRUIDS, Constants.UNIT_ETOL_TREE_OF_LIFE_DRUIDS));
       AddObjective(new ObjectiveSelfExists());
       _moongladeUnits = moonglade.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
@@ -63,10 +63,14 @@ namespace WarcraftLegacies.Source.Quests.Druids
     /// <inheritdoc />
     protected override void OnFail(Faction completingFaction)
     {
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_moongladeUnits);
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_darnassusUnits);
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_cenarionHoldUnits);
-      _worldTree.Rescue(Player(PLAYER_NEUTRAL_AGGRESSIVE));
+      _worldTree.Rescue(completingFaction.Player);
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_moongladeUnits);
+      rescuer.RescueGroup(_darnassusUnits);
+      rescuer.RescueGroup(_cenarionHoldUnits);
     }
 
     /// <inheritdoc />

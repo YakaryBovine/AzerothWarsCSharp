@@ -30,7 +30,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
       AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(FourCC("ncnk"), rescueRect.Center)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N026_THOUSAND_NEEDLES_10GOLD_MIN )));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N09G_MULGORE_10GOLD_MIN)));
-      AddObjective(new ObjectiveExpire(1455, Title));
+      AddObjective(new ObjectiveExpire(480, Title));
       AddObjective(new ObjectiveSelfExists());
       ResearchId = Constants.UPGRADE_R05I_QUEST_COMPLETED_THE_LONG_MARCH; 
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
@@ -42,12 +42,16 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
     protected override string RewardFlavour => "The long march of the Tauren clans has ended, and they have joined forces with the Horde.";
 
     /// <inheritdoc />
-    protected override string RewardDescription => "Control of Thunder Bluff";
+    protected override string RewardDescription => "Control of Thunder Bluff and enable Cairne to be trained at the Altar of Storms";
 
     /// <inheritdoc />
     protected override void OnFail(Faction completingFaction)
     {
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits);
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
     }
 
     /// <inheritdoc />

@@ -42,17 +42,21 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
 
     /// <inheritdoc/>
     protected override string RewardDescription =>
-      $"Gain control of High Bank, earn 450 gold, and {_katherine.Name} gains 2000 experience";
+      $"Gain control of High Bank, earn 225 gold, and {_katherine.Name} gains 2000 experience";
 
     protected override void OnFail(Faction completingFaction)
     {
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits);
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
     }
 
     /// <inheritdoc/>
     protected override void OnComplete(Faction completingFaction)
     {
-      completingFaction.Player?.AdjustPlayerState(PLAYER_STATE_RESOURCE_GOLD, 450);
+      completingFaction.Player?.AdjustPlayerState(PLAYER_STATE_RESOURCE_GOLD, 225);
       completingFaction.Player.RescueGroup(_rescueUnits);
       _katherine.Unit?.AddExperience(2000);
     }

@@ -22,7 +22,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     {
       AddObjective(new ObjectiveUnitIsDead(hogger)); //Hogger
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(FourCC("n00Z"))));
-      AddObjective(new ObjectiveExpire(1335, Title));
+      AddObjective(new ObjectiveExpire(600, Title));
       AddObjective(new ObjectiveSelfExists());
       foreach (var unit in CreateGroup().EnumUnitsInRect(rescueRect).EmptyToList())
         if (GetOwningPlayer(unit) == Player(PLAYER_NEUTRAL_PASSIVE))
@@ -42,7 +42,11 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     /// <inheritdoc/>
     protected override void OnFail(Faction completingFaction)
     {
-      foreach (var unit in _rescueUnits) unit.Rescue(Player(PLAYER_NEUTRAL_AGGRESSIVE));
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
     }
 
     /// <inheritdoc/>

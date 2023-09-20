@@ -42,9 +42,13 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
     }
 
     /// <inheritdoc/>
-    protected override void OnFail(Faction whichFaction)
+    protected override void OnFail(Faction completingFaction)
     {
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits);
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
     }
   }
 }

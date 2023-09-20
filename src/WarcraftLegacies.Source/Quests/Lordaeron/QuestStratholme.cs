@@ -40,7 +40,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N019_ALTERAC_MOUNTAINS_20GOLD_MIN)));
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_HCAS_CASTLE_LORDAERON_T3, Constants.UNIT_HTOW_TOWN_HALL_LORDAERON_T1));
       AddObjective(new ObjectiveControlLegend(arthas, false));
-      AddObjective(new ObjectiveExpire(1470, Title));
+      AddObjective(new ObjectiveExpire(660, Title));
       AddObjective(new ObjectiveSelfExists());
 
       _goldmine1 = preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(17204, 8197));
@@ -65,7 +65,11 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     /// <inheritdoc/>
     protected override void OnFail(Faction completingFaction)
     {
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits);
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
       _arthas.AddUnitDependency(_stratholme.Unit);
     }
 

@@ -22,7 +22,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
       @"ReplaceableTextures\CommandButtons\BTNStormwindGuardTower.blp")
     {
       AddObjective(new ObjectiveLegendInRect(varian, Regions.NethergardeUnlock, "Nethergarde"));
-      AddObjective(new ObjectiveExpire(1440, Title));
+      AddObjective(new ObjectiveExpire(600, Title));
       AddObjective(new ObjectiveSelfExists());
       _rescueUnits = Regions.NethergardeUnlock.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
       _gate = preplacedUnitSystem.GetUnit(Constants.UNIT_H00L_HORIZONTAL_WOODEN_GATE_OPEN, new Point(17140, -18000));
@@ -37,7 +37,11 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     /// <inheritdoc />
     protected override void OnFail(Faction completingFaction)
     {
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits);
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
     }
 
     /// <inheritdoc />

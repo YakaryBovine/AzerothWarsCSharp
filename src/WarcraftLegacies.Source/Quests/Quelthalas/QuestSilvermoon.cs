@@ -40,14 +40,14 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01V_ZUL_AMAN_20GOLD_MIN)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01L_EVERSONG_WOODS_20GOLD_MIN)));
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_H03T_PALACE_QUEL_THALAS_T3, Constants.UNIT_H033_STEADING_QUEL_THALAS_T1));
-      AddObjective(new ObjectiveExpire(1480, Title));
+      AddObjective(new ObjectiveExpire(660, Title));
       AddObjective(new ObjectiveSelfExists());
       ResearchId = Constants.UPGRADE_R02U_QUEST_COMPLETED_THE_SIEGE_OF_SILVERMOON;
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
       Required = true;
       ResearchId = Constants.UPGRADE_R02U_QUEST_COMPLETED_THE_SIEGE_OF_SILVERMOON;
     }
-    
+
     /// <inheritdoc />
     protected override string RewardFlavour =>
       "The Amani trolls have been eliminated, settling a racial feud that had persisted for millenia.";
@@ -57,8 +57,18 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
       "Control of all units in Silvermoon, unlock the Summon Mystic Defenders ability from Elven Runestones and enable Anasterian to be trained at the Altar";
 
     /// <inheritdoc />
-    protected override void OnFail(Faction completingFaction) => 
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits);
+
+    protected override void OnFail(Faction completingFaction)
+    {
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
+      if (UnitAlive(_elvenRunestone))
+        _silvermoon.Unit?.SetInvulnerable(true);
+      _sunwell.Unit?.SetInvulnerable(true);
+    }
 
     /// <inheritdoc />
     protected override void OnComplete(Faction completingFaction)

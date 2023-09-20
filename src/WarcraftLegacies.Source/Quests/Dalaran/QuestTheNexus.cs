@@ -62,7 +62,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
       
       completingFaction.Name = "The Nexus";
       completingFaction.Icon = @"ReplaceableTextures\CommandButtons\BTNJaina_Archmage.blp";
-      SetPlayerState(completingFaction.Player, PLAYER_STATE_FOOD_CAP_CEILING, 250);
+      SetPlayerState(completingFaction.Player, PLAYER_STATE_FOOD_CAP_CEILING, 200);
     }
   }
 }

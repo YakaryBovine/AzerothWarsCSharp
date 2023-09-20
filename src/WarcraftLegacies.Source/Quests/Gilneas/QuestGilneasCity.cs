@@ -28,7 +28,7 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
       AddObjective(new ObjectiveKillXUnit(Constants.UNIT_O02J_WORGEN_GILNEAS, 8));
       AddObjective(new ObjectiveKillXUnit(Constants.UNIT_O038_WORGEN_BLOOD_SHAMAN_WORGEN_HERO, 3));
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_H02C_CASTLE_GILNEAS_T3, Constants.UNIT_H01R_TOWN_HALL_GILNEAS_T1));
-      AddObjective(new ObjectiveExpire(1300, "Liberation of Gilneas"));
+      AddObjective(new ObjectiveExpire(660, "Liberation of Gilneas"));
       AddObjective(new ObjectiveSelfExists());
 
       _rescueUnits = Regions.GilneasUnlock5.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures, RescuableFilter);
@@ -59,9 +59,22 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
     }
 
     /// <inheritdoc/>
-    protected override void OnFail(Faction whichFaction) => 
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits);
-    
+    protected override void OnFail(Faction completingFaction)
+    {
+      if (completingFaction.Player == null)
+        return;
+      _gilneasDoor
+        .SetInvulnerable(false);
+      SetUnitOwner(_gilneasDoor, completingFaction.Player, true);
+      RockSystem.Register(new RockGroup(Regions.GilneasUnlock5, FourCC("LTrc"), 1));
+   
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
+    }
+
     private static bool RescuableFilter(unit filterUnit) => filterUnit.GetTypeId() != Constants.UNIT_O05Q_GREYMANETOWER_GILNEAS_REAL_TOWER;
   }
 }

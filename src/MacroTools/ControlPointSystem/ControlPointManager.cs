@@ -150,7 +150,8 @@ namespace MacroTools.ControlPointSystem
         .SetMaximumHitpoints(StartingMaxHitPoints)
         .AddAbility(IncreaseControlLevelAbilityTypeId)
         .SetLifePercent(100)
-        .SetArmorType(7);
+        .SetArmorType(2)
+        .SetName($"{controlPoint.Unit.GetName()} ({controlPoint.Value} gold/min)");
       RegisterIncome(controlPoint);
       RegisterDamageTrigger(controlPoint);
       RegisterOwnershipChangeTrigger(controlPoint);

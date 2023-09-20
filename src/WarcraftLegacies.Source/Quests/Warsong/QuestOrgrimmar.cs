@@ -22,7 +22,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
       @"ReplaceableTextures\CommandButtons\BTNFortress.blp")
     {
       AddObjective(new ObjectiveResearch(RequiredResearchId, Constants.UNIT_O02S_FORTRESS_WARSONG_T3));
-      AddObjective(new ObjectiveExpire(1500, Title));
+      AddObjective(new ObjectiveExpire(800, Title));
       AddObjective(new ObjectiveSelfExists());
       ResearchId = Constants.UPGRADE_R05R_QUEST_COMPLETED_TO_TAME_A_LAND;
       Required = true;
@@ -45,7 +45,11 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     /// <inheritdoc/>
     protected override void OnFail(Faction completingFaction)
     {
-      foreach (var unit in _rescueUnits) unit.Rescue(Player(PLAYER_NEUTRAL_AGGRESSIVE));
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
     }
 
     /// <inheritdoc/>

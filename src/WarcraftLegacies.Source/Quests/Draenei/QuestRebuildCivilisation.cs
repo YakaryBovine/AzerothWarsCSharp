@@ -26,7 +26,7 @@ namespace WarcraftLegacies.Source.Quests.Draenei
       Required = true;
       AddObjective(new ObjectiveKillAllInArea(new List<Rectangle> { Regions.DraeneiQuestKill }, "in Desolace"));
       AddObjective(new ObjectiveLegendReachRect(velen, Regions.DesolaceUnlock, "Desolace"));
-      AddObjective(new ObjectiveExpire(1430, Title));
+      AddObjective(new ObjectiveExpire(480, Title));
       AddObjective(new ObjectiveSelfExists());
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideAll);
       ResearchId = Constants.UPGRADE_R082_QUEST_COMPLETED_THE_WAY_FORWARD;

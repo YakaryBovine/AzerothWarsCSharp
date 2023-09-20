@@ -43,7 +43,7 @@ namespace MacroTools.FactionSystem
     /// <summary>
     ///   The amount of food <see cref="Faction" />s can have by default.
     /// </summary>
-    private const int FoodMaximumDefault = 200;
+    private const int FoodMaximumDefault = 150;
 
     private readonly Dictionary<int, int> _abilityAvailabilities = new();
     private readonly List<Augment> _augments = new();

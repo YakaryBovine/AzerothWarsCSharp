@@ -35,7 +35,7 @@ namespace WarcraftLegacies.Source.Quests.Zandalar
 
     /// <inheritdoc/>>
     protected override string RewardDescription =>
-      "Control of Jintha'Alor, 300 gold tribute and the ability to train " + GetObjectName(_bearRiderId) +
+      "Control of Jintha'Alor, 150 gold tribute and the ability to train " + GetObjectName(_bearRiderId) +
       "s from the " + GetObjectName(_trollShrineId);
     /// <inheritdoc/>
     protected override void OnComplete(Faction completingFaction)
@@ -43,7 +43,7 @@ namespace WarcraftLegacies.Source.Quests.Zandalar
       if (completingFaction.Player != null)
       {
         SetPlayerTechResearched(completingFaction.Player, _jinthaalorResearch, 1);
-        completingFaction.Player.AdjustPlayerState(PLAYER_STATE_RESOURCE_GOLD, 300);
+        completingFaction.Player.AdjustPlayerState(PLAYER_STATE_RESOURCE_GOLD, 150);
       }
     }
     /// <inheritdoc/>

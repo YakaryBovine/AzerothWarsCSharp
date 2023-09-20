@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
         "Eastern Ashenvale"));
       AddObjective(new ObjectiveKillAllInArea(new List<Rectangle> { Regions.UpperBarrenCreeps }, "in the Northern Barrens"));
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_O02S_FORTRESS_WARSONG_T3, Constants.UNIT_O00C_GREAT_HALL_WARSONG_T1));
-      AddObjective(new ObjectiveExpire(1483, Title));
+      AddObjective(new ObjectiveExpire(480, Title));
       AddObjective(new ObjectiveSelfExists());
       Required = true;
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideAll);
@@ -43,8 +43,11 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     /// <inheritdoc />
     protected override void OnFail(Faction completingFaction)
     {
-      foreach (var unit in _rescueUnits) 
-        unit.Rescue(Player(PLAYER_NEUTRAL_AGGRESSIVE));
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
     }
 
     /// <inheritdoc />

@@ -29,7 +29,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
       AddObjective(
         new ObjectiveControlPoint(
           ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01C_STRAHNBRAD_10GOLD_MIN)));
-      AddObjective(new ObjectiveExpire(1170, Title));
+      AddObjective(new ObjectiveExpire(660, Title));
       AddObjective(new ObjectiveSelfExists());
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
       Required = true;
@@ -44,7 +44,11 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     /// <inheritdoc/>
     protected override void OnFail(Faction completingFaction)
     {
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits);
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
     }
 
     /// <inheritdoc/>

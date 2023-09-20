@@ -41,7 +41,10 @@ namespace Launcher.Services
         cfg.CreateMap<SoundDto, Sound>().ReverseMap();
         cfg.CreateMap<PlayerDataDto, PlayerData>().ReverseMap();
         cfg.CreateMap<TerrainTileDto, TerrainTile>().ReverseMap();
-        cfg.CreateMap<UnitDataDto, UnitData>().ReverseMap();
+        cfg.CreateMap<UnitData, UnitDataDto>().ForMember(dest => dest.Position, opt 
+          => opt.MapFrom<UnitDataDtoZPositionValueResolver>());
+        cfg.CreateMap<UnitDataDto, UnitData>().ForMember(dest => dest.Position, opt 
+          => opt.MapFrom<UnitDataZPositionValueResolver>());
         cfg.CreateMap<DoodadDataDto, DoodadData>().ReverseMap();
         cfg.CreateMap<Vector3Dto, Vector3>().ReverseMap();
         cfg.CreateMap<Vector2Dto, Vector2>().ReverseMap();

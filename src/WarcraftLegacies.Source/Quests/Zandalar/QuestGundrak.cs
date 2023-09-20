@@ -36,7 +36,7 @@ namespace WarcraftLegacies.Source.Quests.Zandalar
 
     /// <inheritdoc/>
     protected override string RewardDescription =>
-      $"300 gold and the ability to train {GetObjectName(_warlordId)}s from the {GetObjectName(_trollShrineId)}.";
+      $"150 gold and the ability to train {GetObjectName(_warlordId)}s from the {GetObjectName(_trollShrineId)}.";
 
     /// <inheritdoc/>
     protected override void OnComplete(Faction completingFaction)
@@ -44,7 +44,7 @@ namespace WarcraftLegacies.Source.Quests.Zandalar
       if (completingFaction.Player != null)
       {
         SetPlayerTechResearched(completingFaction.Player, _gundrakResearch, 1);
-        completingFaction.Player.AdjustPlayerState(PLAYER_STATE_RESOURCE_GOLD, 300);
+        completingFaction.Player.AdjustPlayerState(PLAYER_STATE_RESOURCE_GOLD, 150);
       }
     }
 

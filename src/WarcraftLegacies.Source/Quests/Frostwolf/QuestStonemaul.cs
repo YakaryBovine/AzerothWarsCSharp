@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
     {
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N022_STONEMAUL_15GOLD_MIN)));
       AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(Constants.UNIT_NOGA_STONEMAUL_WARCHIEF_KOR_GALL)));
-      AddObjective(new ObjectiveExpire(1327,Title));
+      AddObjective(new ObjectiveExpire(480,Title));
       AddObjective(new ObjectiveSelfExists());
       ResearchId = Constants.UPGRADE_R03S_QUEST_COMPLETED_THE_CHIEFTAIN_S_CHALLENGE_FROSTWOLF;
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.Invulnerable);
@@ -41,13 +41,17 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
     /// <inheritdoc/>
     protected override void OnFail(Faction completingFaction)
     {
-      foreach (var unit in _rescueUnits) unit.Rescue(Player(PLAYER_NEUTRAL_AGGRESSIVE));
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
     }
 
     /// <inheritdoc/>
     protected override void OnComplete(Faction completingFaction)
     {
-      foreach (var unit in _rescueUnits) unit.Rescue(completingFaction.Player);
+      completingFaction.Player.RescueGroup(_rescueUnits);
     }
   }
 }

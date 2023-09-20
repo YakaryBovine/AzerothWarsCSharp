@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
     {
       AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(FourCC("nith"), new Point(10673, -7188)))); //Troll High Priest
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N014_DUN_MOROGH_15GOLD_MIN)));
-      AddObjective(new ObjectiveExpire(1435, Title));
+      AddObjective(new ObjectiveExpire(660, Title));
       AddObjective(new ObjectiveSelfExists());
       Required = true;
     }
@@ -52,7 +52,11 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
     /// <inheritdoc/>
     protected override void OnFail(Faction completingFaction)
     {
-      GrantDunMorogh(Player(PLAYER_NEUTRAL_AGGRESSIVE));
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      GrantDunMorogh(completingFaction.Player);
     }
 
     /// <inheritdoc/>

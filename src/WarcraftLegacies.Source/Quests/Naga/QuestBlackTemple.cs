@@ -27,8 +27,9 @@ namespace WarcraftLegacies.Source.Quests.Naga
       @"ReplaceableTextures\CommandButtons\BTNWarpPortal.blp")
     {
       AddObjective(new ObjectiveLegendInRect(illidan, Regions.IllidanBlackTempleUnlock, "Black Temple"));
-      AddObjective(new ObjectiveExpire(1250, Title));
+      AddObjective(new ObjectiveExpire(660, Title));
       AddObjective(new ObjectiveSelfExists());
+      ResearchId = Constants.UPGRADE_R09Y_QUEST_COMPLETED_SEAT_OF_POWER;
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
       Required = true;
     }
@@ -37,12 +38,16 @@ namespace WarcraftLegacies.Source.Quests.Naga
     protected override string RewardFlavour => "The forces of Outland are now under Illidan's command.";
 
     /// <inheritdoc />
-    protected override string RewardDescription => $"Gain control of the Black Temple";
+    protected override string RewardDescription => $"Gain control of the Black Temple and enable Lady Vashj to be trained at the Altar of the Betrayer";
 
     /// <inheritdoc />
     protected override void OnFail(Faction completingFaction)
     {
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits);
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
     }
 
     /// <inheritdoc />

@@ -42,7 +42,7 @@ namespace WarcraftLegacies.Source.Quests.Draenei
 
     /// <inheritdoc/>
     protected override string RewardDescription =>
-      "Gain access to the Exodar's interior";
+      "Gain access to the Exodar's interior and enable Nobundo to be trained at the Altar of Light";
 
     /// <inheritdoc/>
     protected override void OnComplete(Faction whichFaction)

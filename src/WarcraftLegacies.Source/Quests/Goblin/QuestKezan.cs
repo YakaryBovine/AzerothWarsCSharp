@@ -31,6 +31,7 @@ namespace WarcraftLegacies.Source.Quests.Goblin
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_O03N_FORTRESS_GOBLIN_T3, Constants.UNIT_O03L_GREAT_HALL_GOBLIN_T1));
       AddObjective(new ObjectiveSelfExists());
       Required = true;
+      ResearchId = Constants.UPGRADE_R09Z_QUEST_COMPLETED_OFFSHORE_INVESTMENT;
       _rescueUnits = Regions.KezanUnlock.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures,
         filterUnit => filterUnit.GetTypeId() != FourCC("ngme"));
     }
@@ -39,12 +40,16 @@ namespace WarcraftLegacies.Source.Quests.Goblin
     protected override string RewardFlavour => "We have succesfully expanded our trade empire!";
 
     /// <inheritdoc />
-    protected override string RewardDescription => "You can now train Traders";
+    protected override string RewardDescription => "You can now train Traders and train Gallywix at the Altar of Industry";
 
     /// <inheritdoc />
     protected override void OnFail(Faction completingFaction)
     {
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits);
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
     }
 
     /// <inheritdoc />

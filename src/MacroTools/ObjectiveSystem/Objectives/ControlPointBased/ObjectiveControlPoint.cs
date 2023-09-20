@@ -1,5 +1,4 @@
-﻿using System;
-using MacroTools.ControlPointSystem;
+﻿using MacroTools.ControlPointSystem;
 using MacroTools.Extensions;
 using MacroTools.FactionSystem;
 using MacroTools.QuestSystem;
@@ -14,10 +13,9 @@ namespace MacroTools.ObjectiveSystem.Objectives.ControlPointBased
     public ObjectiveControlPoint(ControlPoint target)
     {
       _target = target;
-      Description = "Your team controls " + target.Name;
+      Description = $"Your team controls {target.Name}";
       TargetWidget = target.Unit;
       target.ChangedOwner += OnTargetChangeOwner;
-      target.Owner.GetPlayerData().PlayerJoinedTeam += OnFactionTeamJoin;
       DisplaysPosition = true;
       Position = new(GetUnitX(_target.Unit), GetUnitY(_target.Unit));
     }
@@ -30,13 +28,6 @@ namespace MacroTools.ObjectiveSystem.Objectives.ControlPointBased
     }
 
     private void OnTargetChangeOwner(object? sender, ControlPointOwnerChangeEventArgs controlPointOwnerChangeEventArgs)
-    {
-      Progress = IsPlayerOnSameTeamAsAnyEligibleFaction(_target.Unit.OwningPlayer())
-        ? QuestProgress.Complete
-        : QuestProgress.Incomplete;
-    }
-
-    private void OnFactionTeamJoin(object? sender, PlayerChangeTeamEventArgs playerChangeTeamEventArgs)
     {
       Progress = IsPlayerOnSameTeamAsAnyEligibleFaction(_target.Unit.OwningPlayer())
         ? QuestProgress.Complete

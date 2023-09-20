@@ -27,11 +27,11 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
       "Make contact with the Blackrock clan and convince them to join Magtheridon",
       @"ReplaceableTextures\CommandButtons\BTNBlackhand.blp")
     {
-      foreach (var prequisite in prequisites) 
+      foreach (var prequisite in prequisites)
         AddObjective(new ObjectiveCompleteQuest(prequisite));
       AddObjective(new ObjectiveResearch(Constants.UPGRADE_R090_ACTIVATE_THE_BLACKROCK_CLAN_FEL, Constants.UNIT_O008_HELLFIRE_CITADEL_FEL_HORDE));
       AddObjective(new ObjectiveTime(540));
-      AddObjective(new ObjectiveExpire(1451, Title));
+      AddObjective(new ObjectiveExpire(660, Title));
       AddObjective(new ObjectiveSelfExists());
       ResearchId = Constants.UPGRADE_R03C_QUEST_COMPLETED_BLACKROCK_UNIFICATION;
       _rescueUnits1 = rescueRect1.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
@@ -50,8 +50,15 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
       "Control of all units in Blackrock Citadel, a small outpost near the Dark Portal and enable Dal'rend Blackhand to be trained at the altar";
 
     /// <inheritdoc />
-    protected override void OnFail(Faction completingFaction) => 
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits1);
+    protected override void OnFail(Faction completingFaction)
+    {
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits1);
+      rescuer.RescueGroup(_rescueUnits2);
+    }
 
     /// <inheritdoc />
     protected override void OnComplete(Faction completingFaction)

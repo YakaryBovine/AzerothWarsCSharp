@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
     {
       _rescueUnits = Regions.EchoUnlock.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
       AddObjective(new ObjectiveSelfExists());
-      AddObjective(new ObjectiveExpire(1455, Title));
+      AddObjective(new ObjectiveExpire(480, Title));
       AddObjective(new ObjectiveAnyUnitInRect(Regions.EchoUnlock, "Echo Isles", true));
       Required = true;
       ResearchId = Constants.UPGRADE_R032_QUEST_COMPLETED_THE_DARKSPEAR_TROLLS;
@@ -38,8 +38,14 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
       "You gain control of Echo Isles, and learn to train Vol'jin from the Altar of Storms";
 
     /// <inheritdoc />
-    protected override void OnFail(Faction completingFaction) =>
-      Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits);
+    protected override void OnFail(Faction completingFaction)
+    {
+      var rescuer = completingFaction.ScoreStatus == ScoreStatus.Defeated
+        ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
+        : completingFaction.Player;
+
+      rescuer.RescueGroup(_rescueUnits);
+    }
 
     /// <inheritdoc />
     protected override void OnComplete(Faction completingFaction) =>

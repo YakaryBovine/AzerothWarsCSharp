@@ -18,7 +18,7 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
         StartingGold = 200,
         StartingLumber = 700,
         CinematicMusic = "BloodElfTheme",
-        FoodMaximum = 250,
+        FoodMaximum = 200,
         StartingCameraPosition = Regions.SunfuryStartingPosition.Center,
         StartingUnits = Regions.SunfuryStartingPosition.PrepareUnitsForRescue(RescuePreparationMode.Invulnerable),
         ControlPointDefenderUnitTypeId = Constants.UNIT_N0BC_CONTROL_POINT_DEFENDER_QUELTHALAS,
