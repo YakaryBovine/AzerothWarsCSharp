@@ -80,7 +80,6 @@ Fortify your strongholds against the storm to come and make ready to unleash the
       //Upgrades
       ScarletCrusade.ModObjectLimit(FourCC("R05D"), Faction.UNLIMITED); //Chaplain Adept Training
       ScarletCrusade.ModObjectLimit(FourCC("R04F"), Faction.UNLIMITED); //Inquisitor traiing
-      ScarletCrusade.ModObjectLimit(FourCC("R00K"), Faction.UNLIMITED); //Power Infusion
       ScarletCrusade.ModObjectLimit(FourCC("Rhse"), Faction.UNLIMITED); //Magic Sentry
       ScarletCrusade.ModObjectLimit(FourCC("Rhlh"), Faction.UNLIMITED); //Improved Lumber Harvesting
       ScarletCrusade.ModObjectLimit(FourCC("Rhac"), Faction.UNLIMITED); //Improved Masonry

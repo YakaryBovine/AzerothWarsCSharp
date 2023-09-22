@@ -50,16 +50,13 @@ namespace WarcraftLegacies.Source.GameLogic
 
       if (_warCount >= 12)
       {
-        DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "The Great war begins! Boats are now available from the start");
+        DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "The Great war begins!");
         Hint.Register(
           new Hint("You can change alliances by using the commands -invite, -uninvite, -join, and -unally."));
         AreAlliancesOpen = true;
         ControlPointVictory.CpsVictory = 1000;
         ControlPointVictory.CpsWarning = 1000;
-        foreach (var player in WCSharp.Shared.Util.EnumeratePlayers())
-        {
-          SetPlayerTechResearched(player, Constants.UPGRADE_R068_QUEST_COMPLETED_NAVIGATION, 1);
-        }
+
         Player(3).SetTeam(TeamSetup.Legion);
         Player(23).SetTeam(TeamSetup.Legion);
 
@@ -85,7 +82,7 @@ namespace WarcraftLegacies.Source.GameLogic
       
       else if (_voteCount > 0)
       {
-        DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Alliances are open! Boats are now available from the start");
+        DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Alliances are open!");
         Hint.Register(
           new Hint("You can change alliances by using the commands -invite, -uninvite, -join, and -unally."));
         AreAlliancesOpen = true;

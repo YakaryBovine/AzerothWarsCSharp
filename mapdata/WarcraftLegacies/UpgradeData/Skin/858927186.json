@@ -1,5 +1,5 @@
 {
-  "OldId": 1851877458,
+  "OldId": 1702062162,
   "NewId": 858927186,
   "Unk": [
     0
@@ -9,59 +9,37 @@
       "Level": 1,
       "Id": 829579623,
       "Type": 3,
-      "Value": "ReplaceableTextures\\CommandButtons\\BTNEntrapmentWard.blp"
-    },
-    {
-      "Id": 2037408359,
-      "Value": 1
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNTrollBatRider.blp"
     },
     {
       "Level": 1,
       "Id": 1718840935,
       "Type": 3,
-      "Value": "(Warsong-Frostwolf-Fel Horde)"
+      "Value": "(Frostwolf)"
     },
     {
       "Level": 1,
       "Id": 829122663,
       "Type": 3,
-      "Value": "D"
+      "Value": "C"
     },
     {
       "Level": 1,
       "Id": 1835101799,
       "Type": 3,
-      "Value": "Spiritual Infusion"
+      "Value": "Batriders"
     },
     {
       "Level": 1,
       "Id": 829453415,
       "Type": 3,
-      "Value": "Research Spiritual Infusion"
+      "Value": "Research Batriders"
     },
     {
       "Level": 1,
       "Id": 828536167,
       "Type": 3,
-      "Value": "Increases the maximum hit points of all casters by 100 and increases armor by 2.|n|n|cfff5962dAffects:|r Shamans, Witch Doctors, Spirit Walkers, Shadowbinders, Stonmaul Magi, Necrolytes, Eredar Occultist, Fel Warlocks"
-    },
-    {
-      "Level": 2,
-      "Id": 829122663,
-      "Type": 3,
-      "Value": "D"
-    },
-    {
-      "Level": 3,
-      "Id": 829122663,
-      "Type": 3,
-      "Value": "D"
-    },
-    {
-      "Level": 4,
-      "Id": 829122663,
-      "Type": 3,
-      "Value": "D"
+      "Value": "Allows the training of Batriders."
     }
   ]
 }

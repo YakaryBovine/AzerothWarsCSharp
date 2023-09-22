@@ -79,7 +79,6 @@ Support your ally in Outland by unlocking bases and coordinating with his push o
 
       Illidari.ModObjectLimit(FourCC("Rnsw"), Faction.UNLIMITED); //Siren Adept Training
       Illidari.ModObjectLimit(FourCC("R02V"), Faction.UNLIMITED); //Shadowcaster Adept Training
-      Illidari.ModObjectLimit(FourCC("R00K"), Faction.UNLIMITED); //Power Infusion
 
       FactionManager.Register(Illidari);
     }

@@ -25,16 +25,6 @@ namespace WarcraftLegacies.Source.Setup.Spells
         Color = new Color(40, 40, 255, 255)
       });
 
-      PassiveAbilityManager.Register(new RestoreManaFromDamage(Constants.UNIT_H05Y_LORD_WIZARD_STORMWIND, Constants.ABILITY_A11N_ARCANE_ABSORPTION_SUNFURY_STORMWIND)
-      {
-        ManaPerDamage = new LeveledAbilityField<float>
-        {
-          Base = 0.20f,
-          PerLevel = 0.20f
-        },
-        Effect = @"Abilities\Spells\Undead\ReplenishMana\SpiritTouchTarget.mdl"
-      });
-
       var legendaryWarrior = new ChannelSpellOnAttack(Constants.UNIT_H00R_KING_OF_STORMWIND_DARK_GREEN,
         Constants.ABILITY_A12C_LEGENDARY_WARRIOR_VARIAN)
       {

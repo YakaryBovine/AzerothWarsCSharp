@@ -9,7 +9,7 @@
       "Level": 1,
       "Id": 829579623,
       "Type": 3,
-      "Value": "ReplaceableTextures\\CommandButtons\\BTNFourthUgrade.blp"
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNHumanTransport.blp"
     },
     {
       "Level": 2,
@@ -24,14 +24,6 @@
       "Value": "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp"
     },
     {
-      "Id": 2020631143,
-      "Value": 2
-    },
-    {
-      "Id": 2037408359,
-      "Value": 2
-    },
-    {
       "Level": 1,
       "Id": 1718840935,
       "Type": 3,
@@ -41,7 +33,7 @@
       "Level": 1,
       "Id": 829122663,
       "Type": 3,
-      "Value": "C"
+      "Value": "D"
     },
     {
       "Level": 2,
@@ -59,7 +51,7 @@
       "Level": 1,
       "Id": 1835101799,
       "Type": 3,
-      "Value": "Full Scale Escalation"
+      "Value": "Navigation"
     },
     {
       "Level": 2,
@@ -77,7 +69,7 @@
       "Level": 1,
       "Id": 829453415,
       "Type": 3,
-      "Value": "Research Full Scale Escalation"
+      "Value": "Research Navigation"
     },
     {
       "Level": 2,
@@ -95,7 +87,7 @@
       "Level": 1,
       "Id": 828536167,
       "Type": 3,
-      "Value": "Go into Full Scale Escalation, unlocking your strongest technologies and units"
+      "Value": "Unlock the ability to build boats."
     },
     {
       "Level": 2,
@@ -114,6 +106,10 @@
       "Id": 829122663,
       "Type": 3,
       "Value": "C"
+    },
+    {
+      "Id": 2020631143,
+      "Value": 2
     }
   ]
 }

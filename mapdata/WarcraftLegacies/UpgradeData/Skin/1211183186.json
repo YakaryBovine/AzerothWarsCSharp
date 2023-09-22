@@ -1,5 +1,5 @@
 {
-  "OldId": 1851877458,
+  "OldId": 1702062162,
   "NewId": 1211183186,
   "Unk": [
     0
@@ -9,59 +9,41 @@
       "Level": 1,
       "Id": 829579623,
       "Type": 3,
-      "Value": "ReplaceableTextures\\CommandButtons\\BTNRegeneration.blp"
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNWyvernRider.blp"
     },
     {
-      "Id": 2037408359,
+      "Id": 2020631143,
       "Value": 1
     },
     {
       "Level": 1,
       "Id": 1718840935,
       "Type": 3,
-      "Value": "(Druids)"
+      "Value": "(Warsong)"
     },
     {
       "Level": 1,
       "Id": 829122663,
       "Type": 3,
-      "Value": "D"
+      "Value": "X"
     },
     {
       "Level": 1,
       "Id": 1835101799,
       "Type": 3,
-      "Value": "Malorne\u0027s Infusion"
+      "Value": "Wind Riders"
     },
     {
       "Level": 1,
       "Id": 829453415,
       "Type": 3,
-      "Value": "Research Malorne\u0027s Infusion"
+      "Value": "Research Wind Riders"
     },
     {
       "Level": 1,
       "Id": 828536167,
       "Type": 3,
-      "Value": "Increases the maximum hit points of all casters by 100 and increases armor by 2.|n|n|cffffd700Affects Druids of the Talon, Druids of the Claw, and Wisps.|r"
-    },
-    {
-      "Level": 2,
-      "Id": 829122663,
-      "Type": 3,
-      "Value": "D"
-    },
-    {
-      "Level": 3,
-      "Id": 829122663,
-      "Type": 3,
-      "Value": "D"
-    },
-    {
-      "Level": 4,
-      "Id": 829122663,
-      "Type": 3,
-      "Value": "D"
+      "Value": "Allows the training of Wind Riders."
     }
   ]
 }

@@ -65,8 +65,6 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
       Nazjatar.ModObjectLimit(Constants.UNIT_H0A5_SEA_WITCH_NZOTH, 1);
       Nazjatar.ModObjectLimit(Constants.UNIT_U02U_ABYSSAL_COMMANDER_NAZJATAR, 1);
 
-      Nazjatar.ModObjectLimit(FourCC("R00K"), Faction.UNLIMITED); //Power Infusion
-
       FactionManager.Register(Nazjatar);
     }
   }

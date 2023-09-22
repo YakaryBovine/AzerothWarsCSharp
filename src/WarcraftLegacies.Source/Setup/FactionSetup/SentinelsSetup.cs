@@ -77,7 +77,6 @@ Once you have secured your holdings, gather your army and destroy the Orcish Hor
       Sentinels.ModObjectLimit(FourCC("R00S"), Faction.UNLIMITED); //Priestess Adept Training
       Sentinels.ModObjectLimit(FourCC("R064"), Faction.UNLIMITED); //Sentinel Fortifications
       Sentinels.ModObjectLimit(FourCC("R01W"), Faction.UNLIMITED); //Trapper Adept Training
-      Sentinels.ModObjectLimit(FourCC("R026"), Faction.UNLIMITED); //Elune's Power Infusion
       Sentinels.ModObjectLimit(FourCC("Reib"), Faction.UNLIMITED); //Improved Bows
       Sentinels.ModObjectLimit(FourCC("Reuv"), Faction.UNLIMITED); //Ultravision
       Sentinels.ModObjectLimit(FourCC("Remg"), Faction.UNLIMITED); //Upgraded Moon Glaive
@@ -86,6 +85,8 @@ Once you have secured your holdings, gather your army and destroy the Orcish Hor
       Sentinels.ModObjectLimit(FourCC("R002"), Faction.UNLIMITED); //Blackwald Enhancement
       Sentinels.ModObjectLimit(FourCC("R03J"), Faction.UNLIMITED); //Wind Walk
       Sentinels.ModObjectLimit(FourCC("R018"), Faction.UNLIMITED); //Lightning Barrage
+      Sentinels.ModObjectLimit(Constants.UPGRADE_R068_HIPPOGRYPH_RIDERS_SENTINEL, Faction.UNLIMITED);
+      Sentinels.ModObjectLimit(Constants.UPGRADE_R0A0_CHIMAERAS_SENTINEL, Faction.UNLIMITED);
 
       Sentinels.AddGoldMine(preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(-22721, -13570)));
 

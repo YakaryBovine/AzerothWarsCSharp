@@ -82,7 +82,6 @@ The Trading Center in Kezan will unlock the ability to train Traders. Be sure to
       Goblin.ModObjectLimit(Constants.UNIT_NALC_BARON_OF_GADGETZAN_GOBLIN, 1);
 
       Goblin.ModObjectLimit(Constants.UPGRADE_R07M_ALCHEMIST_GRANDMASTER_TRAINING_GOBLIN, Faction.UNLIMITED);
-      Goblin.ModObjectLimit(Constants.UPGRADE_R023_SPIRITUAL_INFUSION_WARSONG_FROSTWOLF_FEL_HORDE, Faction.UNLIMITED);
       Goblin.ModObjectLimit(Constants.UPGRADE_R097_FORTIFIED_HULLS_GOBLIN, Faction.UNLIMITED);
 
       var oilPower = new OilPower

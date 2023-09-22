@@ -9,11 +9,7 @@
       "Level": 1,
       "Id": 829579623,
       "Type": 3,
-      "Value": "ReplaceableTextures\\CommandButtons\\BTNBreathOfFrost.blp"
-    },
-    {
-      "Id": 2020631143,
-      "Value": 0
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNDestroyer.blp"
     },
     {
       "Level": 1,
@@ -25,25 +21,29 @@
       "Level": 1,
       "Id": 829122663,
       "Type": 3,
-      "Value": "Z"
+      "Value": "X"
     },
     {
       "Level": 1,
       "Id": 1835101799,
       "Type": 3,
-      "Value": "Improved Hypothermic Breath"
+      "Value": "Obsidian Destroyers"
     },
     {
       "Level": 1,
       "Id": 829453415,
       "Type": 3,
-      "Value": "Research Improved Hypothermic Breath"
+      "Value": "Research Obsidian Destroyers"
     },
     {
       "Level": 1,
       "Id": 828536167,
       "Type": 3,
-      "Value": "Improves Frost Wyrms\u0027 Hypothermic Breath by increasing its initial damage to \u003CA058,DataA2\u003E and damage per second to \u003CA058,DataE2\u003E."
+      "Value": "Allows the training of Obsidian Destroyers."
+    },
+    {
+      "Id": 2020631143,
+      "Value": 1
     }
   ]
 }

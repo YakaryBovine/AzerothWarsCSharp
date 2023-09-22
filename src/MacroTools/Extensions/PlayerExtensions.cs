@@ -391,5 +391,11 @@ namespace MacroTools.Extensions
         $"\n|cffd45e19LEGENDARY FOE SUMMONED - {legendaryHero.Name}\n|r{message}");
       StartSound(SoundLibrary.Warning);
     }
+
+    /// <summary>
+    /// Checks whether or not the given player has the specified alliance towards another player.
+    /// </summary>
+    public static bool GetAllianceState(this player whichPlayer, player otherPlayer, alliancetype allianceType) =>
+      GetPlayerAlliance(whichPlayer, otherPlayer, allianceType);
   }
 }

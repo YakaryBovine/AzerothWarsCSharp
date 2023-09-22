@@ -116,10 +116,7 @@ namespace WarcraftLegacies.Source.GameLogic
       foreach (var unit in whichFaction.StartingUnits)
       {
         if (ControlPointManager.Instance.UnitIsControlPoint(unit))
-        {
-          unit.SetInvulnerable(false);
-          unit.SetOwner(Player(PLAYER_NEUTRAL_AGGRESSIVE));
-        }
+          unit.Rescue(Player(PLAYER_NEUTRAL_AGGRESSIVE));
         else
           unit.Remove();
       }

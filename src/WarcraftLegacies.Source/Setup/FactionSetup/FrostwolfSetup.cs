@@ -74,7 +74,6 @@ Salvage the wrecked ships, establish a base and gather your troops to move inlan
       Frostwolf.ModObjectLimit(FourCC("Rost"), Faction.UNLIMITED); //Shaman Adept Training
       Frostwolf.ModObjectLimit(FourCC("Rowd"), Faction.UNLIMITED); //Witch Doctor Adept Training
       Frostwolf.ModObjectLimit(FourCC("Rowt"), Faction.UNLIMITED); //Spirit Walker Adept Training
-      Frostwolf.ModObjectLimit(FourCC("R023"), Faction.UNLIMITED); //Spiritual Infusion
       Frostwolf.ModObjectLimit(FourCC("Rolf"), Faction.UNLIMITED); //Liquid Fire
       Frostwolf.ModObjectLimit(FourCC("Rosp"), Faction.UNLIMITED); //Spiked Barricades
       Frostwolf.ModObjectLimit(FourCC("Rorb"), Faction.UNLIMITED); //reinforced Defenses
@@ -83,11 +82,13 @@ Salvage the wrecked ships, establish a base and gather your troops to move inlan
       Frostwolf.ModObjectLimit(FourCC("R00W"), Faction.UNLIMITED); //Toughened Hides
       Frostwolf.ModObjectLimit(FourCC("R01Z"), Faction.UNLIMITED); //Battle Stations
       Frostwolf.SetObjectLevel(FourCC("R01Z"), 1); //Battle Stations
+      Frostwolf.ModObjectLimit(Constants.UPGRADE_R023_BATRIDERS_FROSTWOLF, Faction.UNLIMITED);
 
       Frostwolf.ModAbilityAvailability(Constants.ABILITY_A0PF_FEL_ENERGY_TEAL_FORTRESSES, -1);
       Frostwolf.ModAbilityAvailability(Constants.ABILITY_ANTR_TROLL_REGENERATION_PINK_WITCH_DOCTOR_TROLL_HEADHUNTER_TROLL_BATRIDER_DARKSPEAR_WARLORD_TROLL_BERSERKER_ICON, -1);
       Frostwolf.ModAbilityAvailability(Constants.ABILITY_A0M4_BATTLE_STATIONS_PINK_GREY_ORC_BURROW_BLOODPACT, -1);
       Frostwolf.ModAbilityAvailability(Constants.ABILITY_ABTL_BATTLE_STATIONS_FROSTWOLF_WARSONG_BURROW, 1);
+
       
       Frostwolf.ModObjectLimit(Constants.UPGRADE_R09N_FLIGHT_PATH_WARSONG, 1);
 

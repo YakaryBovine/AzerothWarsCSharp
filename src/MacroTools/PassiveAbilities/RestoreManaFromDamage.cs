@@ -1,4 +1,5 @@
-﻿using MacroTools.Extensions;
+﻿using System.Collections.Generic;
+using MacroTools.Extensions;
 using MacroTools.PassiveAbilitySystem;
 using static War3Api.Common;
 
@@ -26,10 +27,14 @@ namespace MacroTools.PassiveAbilities
     /// </summary>
     /// <param name="unitTypeId"><inheritdoc /></param>
     /// <param name="abilityTypeId">The Warcraft 3 ability representing this instance.</param>
-    public RestoreManaFromDamage(int unitTypeId, int abilityTypeId) : base(unitTypeId)
-    {
-      _abilityTypeId = abilityTypeId;
-    }
+    public RestoreManaFromDamage(int unitTypeId, int abilityTypeId) : base(unitTypeId) => _abilityTypeId = abilityTypeId;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="RestoreManaFromDamage"/> class.
+    /// </summary>
+    /// <param name="unitTypeIds"><inheritdoc /></param>
+    /// <param name="abilityTypeId">The Warcraft 3 ability representing this instance.</param>
+    public RestoreManaFromDamage(IEnumerable<int> unitTypeIds, int abilityTypeId) : base(unitTypeIds) => _abilityTypeId = abilityTypeId;
 
     /// <inheritdoc />
     public void OnDealsDamage()

@@ -62,7 +62,7 @@ namespace WarcraftLegacies.Source.Setup.Legends
       Jinthaalor = new Capital
       {
         Capturable = true,
-        Unit = preplacedUnitSystem.GetUnit(FourCC("o02G"))
+        Unit = preplacedUnitSystem.GetUnit(Constants.UNIT_O02G_JINTHA_ALOR)
       };
 
       ShrineOfUlatek = new Capital

@@ -82,7 +82,6 @@ The Alliance is gathering outside the Dark Portal to stop you, so prepare to for
       FelHorde.ModObjectLimit(FourCC("R00O"), Faction.UNLIMITED); //Ensnare
       FelHorde.ModObjectLimit(FourCC("Rorb"), Faction.UNLIMITED); //Reinforced Defenses
       FelHorde.ModObjectLimit(FourCC("Rosp"), Faction.UNLIMITED); //Spiked Barricades
-      FelHorde.ModObjectLimit(FourCC("R023"), Faction.UNLIMITED); //Spiritual Infusion
       FelHorde.ModObjectLimit(FourCC("R000"), -Faction.UNLIMITED); //Skeletal Perserverance
       FelHorde.ModObjectLimit(FourCC("R024"), Faction.UNLIMITED); //Necrolyte adept Training
       FelHorde.ModObjectLimit(FourCC("R00M"), Faction.UNLIMITED); //Warlock Adept Training

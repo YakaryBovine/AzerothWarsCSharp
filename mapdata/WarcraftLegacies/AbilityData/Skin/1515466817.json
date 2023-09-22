@@ -43,7 +43,7 @@
     {
       "Id": 1953854049,
       "Type": 3,
-      "Value": "Activate Voodoo Restoration, healing units within a range of 350 each second. |n|n|cffffcc00Level 1|r - 25 health per second. |n|cffffcc00Level 2|r - 35 health per second. |n|cffffcc00Level 3|r - 45 health per second.|n|cffffcc00Level 4 -|r 55 health per second."
+      "Value": "Activate Voodoo Restoration, healing units within a range of 320 each second. |n|n|cffffcc00Level 1|r - 25 health per second. |n|cffffcc00Level 2|r - 35 health per second. |n|cffffcc00Level 3|r - 45 health per second.|n|cffffcc00Level 4 -|r 55 health per second."
     },
     {
       "Level": 1,
@@ -73,19 +73,19 @@
       "Level": 2,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Activate Voodoo Restoration, healing units within a range of 350 for 35 health per second.|nDrains mana until deactivated."
+      "Value": "Activate Voodoo Restoration, healing units within a range of 320 for 35 health per second.|nDrains mana until deactivated."
     },
     {
       "Level": 3,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Activate Voodoo Restoration, healing units within a range of 350 for 45 health per second.|nDrains mana until deactivated."
+      "Value": "Activate Voodoo Restoration, healing units within a range of 320 for 45 health per second.|nDrains mana until deactivated."
     },
     {
       "Level": 4,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Activate Voodoo Restoration, healing units within a range of 350 for 55 health per second.|nDrains mana until deactivated."
+      "Value": "Activate Voodoo Restoration, healing units within a range of 320 for 55 health per second.|nDrains mana until deactivated."
     },
     {
       "Id": 1918989665,
@@ -113,7 +113,7 @@
       "Level": 1,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Activate Voodoo Restoration, healing units within a range of 350 for 25 health per second.|nDrains mana until deactivated."
+      "Value": "Activate Voodoo Restoration, healing units within a range of 320 for 25 health per second.|nDrains mana until deactivated."
     }
   ]
 }

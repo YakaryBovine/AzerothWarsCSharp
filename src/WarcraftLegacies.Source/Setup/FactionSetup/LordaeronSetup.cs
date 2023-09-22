@@ -85,7 +85,6 @@ If you survive the Plague, sail to the frozen wasteland of Northrend and take th
       //Upgrades
       Lordaeron.ModObjectLimit(Constants.UPGRADE_R02E_LIGHT_S_PRAISE_MASTER_TRAINING_ARATHOR_LORDAERON, Faction.UNLIMITED);
       Lordaeron.ModObjectLimit(Constants.UPGRADE_R00I_MAGE_MASTER_TRAINING_LORDAERON, Faction.UNLIMITED);
-      Lordaeron.ModObjectLimit(Constants.UPGRADE_R00K_POWER_INFUSION_4_SHARED, Faction.UNLIMITED);
       Lordaeron.ModObjectLimit(Constants.UPGRADE_RHSE_MAGIC_SENTRY_PURPLE_GREEN_DARK_GREEN_RESEARCH, Faction.UNLIMITED);
       Lordaeron.ModObjectLimit(Constants.UPGRADE_RHAN_ANIMAL_WAR_TRAINING_DARK_GREEN_PURPLE_RESEARCH, Faction.UNLIMITED);
       Lordaeron.ModObjectLimit(Constants.UPGRADE_RHLH_IMPROVED_LUMBER_HARVESTING_ADVANCED_LUMBER_HARVESTING_YELLOW_PURPLE_ORANGE_GREEN_DARK_GREEN_RESEARCH, Faction.UNLIMITED);

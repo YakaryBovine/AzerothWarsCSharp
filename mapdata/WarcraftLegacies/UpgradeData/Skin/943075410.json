@@ -1,5 +1,5 @@
 {
-  "OldId": 1751347026,
+  "OldId": 1702062162,
   "NewId": 943075410,
   "Unk": [
     0
@@ -9,13 +9,41 @@
       "Level": 1,
       "Id": 829579623,
       "Type": 3,
-      "Value": "ReplaceableTextures\\CommandButtons\\BTNSteelRanged.blp"
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNHippogriffRider.blp"
+    },
+    {
+      "Level": 1,
+      "Id": 1718840935,
+      "Type": 3,
+      "Value": "(sentinel)"
+    },
+    {
+      "Level": 1,
+      "Id": 829122663,
+      "Type": 3,
+      "Value": "Z"
     },
     {
       "Level": 1,
       "Id": 1835101799,
       "Type": 3,
-      "Value": "Quest Completed: Navigation"
+      "Value": "Hippogryph Riders"
+    },
+    {
+      "Level": 1,
+      "Id": 829453415,
+      "Type": 3,
+      "Value": "Research Hippogryph Riders"
+    },
+    {
+      "Level": 1,
+      "Id": 828536167,
+      "Type": 3,
+      "Value": "Allows the training of Hippogryph Riders."
+    },
+    {
+      "Id": 2020631143,
+      "Value": 0
     }
   ]
 }

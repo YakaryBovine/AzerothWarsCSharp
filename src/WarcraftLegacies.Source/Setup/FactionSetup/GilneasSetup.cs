@@ -79,7 +79,6 @@ Once you have reclaimed Gilneas, open Greymane's Gate and march North to assist 
       //Upgrades
       Gilneas.ModObjectLimit(FourCC("R04O"), Faction.UNLIMITED); //Cleric Training
       Gilneas.ModObjectLimit(FourCC("R04P"), Faction.UNLIMITED); //Scythe Training
-      Gilneas.ModObjectLimit(FourCC("R00K"), Faction.UNLIMITED); //Power Infusion
       Gilneas.ModObjectLimit(FourCC("Rhlh"), Faction.UNLIMITED); //Improved Lumber Harvesting
       Gilneas.ModObjectLimit(FourCC("Rhac"), Faction.UNLIMITED); //Improved Masonry
       Gilneas.ModObjectLimit(FourCC("R09L"), Faction.UNLIMITED); //Worgen Shaman training

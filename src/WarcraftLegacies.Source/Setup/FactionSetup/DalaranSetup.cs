@@ -84,7 +84,6 @@ Your mages are the finest in Azeroth, be sure to utilize them alongside your her
       Dalaran.ModObjectLimit(FourCC("R01V"), Faction.UNLIMITED); //Geomancer Adept Training
       Dalaran.ModObjectLimit(FourCC("R00E"), Faction.UNLIMITED); //Hydromancer Adept Training
       Dalaran.ModObjectLimit(Constants.UPGRADE_R01L_MAGIC_SENTRY_DALARAN, Faction.UNLIMITED);
-      Dalaran.ModObjectLimit(FourCC("R00K"), Faction.UNLIMITED); //Power Infusion
       Dalaran.ModObjectLimit(FourCC("R00D"), Faction.UNLIMITED); //Pyromancer Adept Training
       Dalaran.ModObjectLimit(FourCC("Rhac"), Faction.UNLIMITED); //Improved Masonry
       Dalaran.ModObjectLimit(FourCC("R06J"), Faction.UNLIMITED); //Improved Ooze

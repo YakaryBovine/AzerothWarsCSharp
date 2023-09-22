@@ -83,7 +83,6 @@ Make sure to communicate with your Dwarven and Kul'tiran allies, as they will be
       //Researches
       Stormwind.ModObjectLimit(FourCC("R02E"), Faction.UNLIMITED); //Chaplain Adept Training
       Stormwind.ModObjectLimit(FourCC("R005"), Faction.UNLIMITED); //Clergyman Adept Training
-      Stormwind.ModObjectLimit(FourCC("R00K"), Faction.UNLIMITED); //Power Infusion
       Stormwind.ModObjectLimit(FourCC("R02B"), Faction.UNLIMITED); //Steel Plating
       Stormwind.ModObjectLimit(FourCC("Rhan"), Faction.UNLIMITED); //Animal War Training
       Stormwind.ModObjectLimit(FourCC("Rhlh"), Faction.UNLIMITED); //Improved Lumber Harvesting
@@ -107,6 +106,7 @@ Make sure to communicate with your Dwarven and Kul'tiran allies, as they will be
       Stormwind.ModObjectLimit(FourCC("R03T"), Faction.UNLIMITED); //Electric Strike Ritual
       Stormwind.ModObjectLimit(FourCC("R03U"), Faction.UNLIMITED); //Solar Flare Ritual
       Stormwind.ModObjectLimit(FourCC("R03X"), Faction.UNLIMITED); //Conjurers
+      Stormwind.ModObjectLimit(Constants.UPGRADE_R0A3_GUNSHIPS_STORMWIND, Faction.UNLIMITED);
 
       Stormwind.ModAbilityAvailability(Constants.ABILITY_A0GA_SUMMON_GARRISON_LORDAERON, -1);
       Stormwind.ModAbilityAvailability(Constants.ABILITY_A0GC_REPLENISH_MANA_ORANGE_KEEPS_CAPITALS, -1);

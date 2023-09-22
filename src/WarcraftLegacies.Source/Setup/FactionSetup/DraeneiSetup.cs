@@ -70,9 +70,9 @@ The Exodar is a mighty fortress-base with the ability to move around the map, bu
       Draenei.ModObjectLimit(FourCC("E01J"), 1); //Nobundo
       Draenei.ModObjectLimit(FourCC("H09M"), 1); //Adal
 
-      Draenei.ModObjectLimit(FourCC("R023"), Faction.UNLIMITED); //Spiritual Infusion
       Draenei.ModObjectLimit(FourCC("R078"), Faction.UNLIMITED); //Elementalist training
       Draenei.ModObjectLimit(FourCC("R07C"), Faction.UNLIMITED); //Luminarch training
+      Draenei.ModObjectLimit(Constants.UPGRADE_R0A4_NETHER_RAYS_DRAENEI, Faction.UNLIMITED);
 
       //Powers
       var dummyPower = new DummyPower("Crystallization",

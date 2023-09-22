@@ -80,7 +80,6 @@ Stormwind is preparing for an invasion through the Dark Portal in the South. Mus
 
       //Upgrades
       Ironforge.ModObjectLimit(FourCC("R03H"), Faction.UNLIMITED); //Engineering Adept Training
-      Ironforge.ModObjectLimit(FourCC("R00K"), Faction.UNLIMITED); //Power Infusion
       Ironforge.ModObjectLimit(FourCC("R00F"), Faction.UNLIMITED); //Mithril Armor
       Ironforge.ModObjectLimit(FourCC("Rhfl"), Faction.UNLIMITED); //Flare
       Ironforge.ModObjectLimit(FourCC("Rhfs"), Faction.UNLIMITED); //Dragmentation Shards
@@ -98,6 +97,7 @@ Stormwind is preparing for an invasion through the Dark Portal in the South. Mus
       Ironforge.ModObjectLimit(Constants.UPGRADE_R00T_OVERCLOCK_IRONFORGE_STEAM_TANK, Faction.UNLIMITED);
       Ironforge.ModObjectLimit(Constants.UPGRADE_R00N_IMPROVED_SWIG_IRONFORGE_TAVERN, Faction.UNLIMITED);
       Ironforge.ModObjectLimit(Constants.UPGRADE_R014_DEEPRUN_TRAM_IRONFORGE, 1);
+      Ironforge.ModObjectLimit(Constants.UPGRADE_R0A5_GRYPHON_RIDERS_IRONFORGE, Faction.UNLIMITED);
 
       Ironforge.ModAbilityAvailability(Constants.ABILITY_A0IH_SPIKED_BARRICADES_DWARF_KEEP, -1);
       Ironforge.ModAbilityAvailability(Constants.ABILITY_A0GA_SUMMON_GARRISON_LORDAERON, -1);

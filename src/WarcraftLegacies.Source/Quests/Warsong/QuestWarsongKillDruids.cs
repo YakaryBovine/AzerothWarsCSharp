@@ -1,4 +1,4 @@
-using MacroTools.Extensions;
+﻿using MacroTools.Extensions;
 using MacroTools.FactionSystem;
 using MacroTools.LegendSystem;
 using MacroTools.ObjectiveSystem.Objectives.LegendBased;
@@ -12,7 +12,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
   public sealed class QuestWarsongKillDruids : QuestData
   {
     private readonly LegendaryHero _grom;
-    private const int ExperienceReward = 10000;
+    private const int ExperienceReward = 8000;
 
     /// <inheritdoc/>
     protected override string RewardFlavour => "Nordrassil has been captured. The Warsong is supreme!";

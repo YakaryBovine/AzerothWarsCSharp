@@ -21,7 +21,7 @@
       "Level": 1,
       "Id": 1852072801,
       "Type": 2,
-      "Value": 80
+      "Value": 70
     },
     {
       "Level": 2,
@@ -39,7 +39,7 @@
       "Pointer": 1,
       "Id": 829645653,
       "Type": 2,
-      "Value": 60
+      "Value": 75
     },
     {
       "Level": 2,
@@ -81,7 +81,7 @@
       "Pointer": 5,
       "Id": 895902286,
       "Type": 2,
-      "Value": 8
+      "Value": 10
     },
     {
       "Level": 2,
@@ -115,10 +115,6 @@
       "Value": 2
     },
     {
-      "Id": 1986358369,
-      "Value": 2
-    },
-    {
       "Id": 1667330657,
       "Type": 3,
       "Value": "undead"
@@ -134,6 +130,25 @@
       "Id": 1918989409,
       "Type": 3,
       "Value": "ground,air"
+    },
+    {
+      "Level": 1,
+      "Pointer": 3,
+      "Id": 863200085,
+      "Type": 2,
+      "Value": 800
+    },
+    {
+      "Level": 1,
+      "Id": 1701994849,
+      "Type": 2,
+      "Value": 200
+    },
+    {
+      "Level": 1,
+      "Id": 1851880033,
+      "Type": 2,
+      "Value": 700
     }
   ]
 }

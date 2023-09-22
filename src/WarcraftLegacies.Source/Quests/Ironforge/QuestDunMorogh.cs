@@ -56,7 +56,7 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
         ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
         : completingFaction.Player;
 
-      GrantDunMorogh(completingFaction.Player);
+      GrantDunMorogh(rescuer);
     }
 
     /// <inheritdoc/>

@@ -86,7 +86,6 @@ Your primary objective is to summon the great host of the Burning Legion. Invade
 
       //Researches
       Legion.ModObjectLimit(FourCC("R02C"), Faction.UNLIMITED); //Acute Sensors
-      Legion.ModObjectLimit(FourCC("R02A"), Faction.UNLIMITED); //Chaos Infusion
       Legion.ModObjectLimit(FourCC("R028"), Faction.UNLIMITED); //Shadow Priest Adept Training
       Legion.ModObjectLimit(FourCC("R042"), Faction.UNLIMITED); //Nathrezim Adept Training
       Legion.ModObjectLimit(FourCC("R027"), Faction.UNLIMITED); //Warlock Adept Training
