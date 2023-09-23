@@ -1,13 +1,13 @@
 [
   {
-    "State": 2,
+    "State": 6,
     "Life": 255,
     "TypeId": 1379217476,
     "Variation": 5,
     "Position": {
-      "X": 11879.72,
+      "X": 11751.72,
       "Y": 7969.877,
-      "Z": 73.11344
+      "Z": 198.1047
     },
     "Rotation": 4.7256536,
     "Scale": {
@@ -18,7 +18,7 @@
     "SkinId": 1379217476,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 7917
+    "CreationNumber": 800
   },
   {
     "State": 2,
@@ -39,18 +39,18 @@
     "SkinId": 1802654298,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 2215
+    "CreationNumber": 1532
   },
   {
     "State": 2,
     "Life": 255,
     "TypeId": 1261514820,
     "Position": {
-      "X": 11765.1,
-      "Y": 8029.6865,
-      "Z": 10.173422
+      "X": 11637.1,
+      "Y": 7989.6865,
+      "Z": 9.125048
     },
-    "Rotation": 4.7492228,
+    "Rotation": 4.6341515,
     "Scale": {
       "X": 0.90000004,
       "Y": 0.79370004,
@@ -59,7 +59,7 @@
     "SkinId": 1261514820,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 13986
+    "CreationNumber": 1763
   },
   {
     "State": 2,
@@ -80,16 +80,16 @@
     "SkinId": 909127746,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 1745
+    "CreationNumber": 1778
   },
   {
     "State": 2,
     "Life": 100,
     "TypeId": 1668306009,
     "Position": {
-      "X": 11776,
+      "X": 11648,
       "Y": 8064,
-      "Z": 22.75
+      "Z": 60.75
     },
     "Rotation": 4.712389,
     "Scale": {
@@ -100,47 +100,7 @@
     "SkinId": 1668306009,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 29308
-  },
-  {
-    "State": 2,
-    "Life": 100,
-    "TypeId": 1651528793,
-    "Position": {
-      "X": 11616,
-      "Y": 8160,
-      "Z": 102.03125
-    },
-    "Rotation": 4.712389,
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "SkinId": 1651528793,
-    "MapItemTableId": -1,
-    "ItemTableSets": [],
-    "CreationNumber": 29307
-  },
-  {
-    "State": 2,
-    "Life": 100,
-    "TypeId": 1651528793,
-    "Position": {
-      "X": 11680,
-      "Y": 8160,
-      "Z": 80.59375
-    },
-    "Rotation": 4.712389,
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "SkinId": 1651528793,
-    "MapItemTableId": -1,
-    "ItemTableSets": [],
-    "CreationNumber": 29306
+    "CreationNumber": 1783
   },
   {
     "State": 2,
@@ -148,9 +108,9 @@
     "TypeId": 1802654298,
     "Variation": 2,
     "Position": {
-      "X": 11727.592,
+      "X": 11599.592,
       "Y": 8055.2793,
-      "Z": 32.343792
+      "Z": 82.02796
     },
     "Rotation": 5.235988,
     "Scale": {
@@ -161,16 +121,16 @@
     "SkinId": 1802654298,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 6434
+    "CreationNumber": 1787
   },
   {
     "State": 6,
     "Life": 255,
     "TypeId": 1127362628,
     "Position": {
-      "X": 11887.317,
+      "X": 11759.317,
       "Y": 7993.837,
-      "Z": 29.965715
+      "Z": 69.530716
     },
     "Rotation": 1.5707965,
     "Scale": {
@@ -181,7 +141,7 @@
     "SkinId": 1127362628,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 2192
+    "CreationNumber": 1919
   },
   {
     "State": 2,
@@ -189,9 +149,9 @@
     "TypeId": 2004112462,
     "Variation": 1,
     "Position": {
-      "X": 11648,
+      "X": 11584,
       "Y": 8064,
-      "Z": 60.75
+      "Z": 100
     },
     "Rotation": 4.712389,
     "Scale": {
@@ -202,16 +162,16 @@
     "SkinId": 2004112462,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 2278
+    "CreationNumber": 2192
   },
   {
     "State": 6,
     "Life": 255,
     "TypeId": 1886146393,
     "Position": {
-      "X": 11887.484,
+      "X": 11759.484,
       "Y": 7992.4062,
-      "Z": -33.981213
+      "Z": 27.83071
     },
     "Rotation": 5.3756146,
     "Scale": {
@@ -222,6 +182,6 @@
     "SkinId": 1886146393,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 2199
+    "CreationNumber": 2206
   }
 ]

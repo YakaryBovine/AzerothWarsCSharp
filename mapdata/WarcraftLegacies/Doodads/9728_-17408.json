@@ -1,24 +1,43 @@
 [
   {
-    "State": 6,
-    "Life": 255,
-    "TypeId": 942682180,
-    "Variation": 8,
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1668052057,
     "Position": {
-      "X": 9914.751,
-      "Y": -17597.78,
-      "Z": 179.3313
+      "X": 9856,
+      "Y": -17536,
+      "Z": 664.5
     },
-    "Rotation": 2.4434612,
+    "Rotation": 4.712389,
     "Scale": {
-      "X": 2.3844268,
-      "Y": 2.3844268,
-      "Z": 2.3844268
+      "X": 1,
+      "Y": 1,
+      "Z": 1
     },
-    "SkinId": 942682180,
+    "SkinId": 1668052057,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 4559
+    "CreationNumber": 29615
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1668052057,
+    "Position": {
+      "X": 9728,
+      "Y": -17536,
+      "Z": 607
+    },
+    "Rotation": 4.712389,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1668052057,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 29614
   },
   {
     "State": 2,
@@ -61,43 +80,24 @@
     "CreationNumber": 29613
   },
   {
-    "State": 2,
-    "Life": 100,
-    "TypeId": 1668052057,
+    "State": 6,
+    "Life": 255,
+    "TypeId": 942682180,
+    "Variation": 8,
     "Position": {
-      "X": 9728,
-      "Y": -17536,
-      "Z": 607
+      "X": 9914.751,
+      "Y": -17597.78,
+      "Z": 179.3313
     },
-    "Rotation": 4.712389,
+    "Rotation": 2.4434612,
     "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
+      "X": 2.3844268,
+      "Y": 2.3844268,
+      "Z": 2.3844268
     },
-    "SkinId": 1668052057,
+    "SkinId": 942682180,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 29614
-  },
-  {
-    "State": 2,
-    "Life": 100,
-    "TypeId": 1668052057,
-    "Position": {
-      "X": 9856,
-      "Y": -17536,
-      "Z": 664.5
-    },
-    "Rotation": 4.712389,
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "SkinId": 1668052057,
-    "MapItemTableId": -1,
-    "ItemTableSets": [],
-    "CreationNumber": 29615
+    "CreationNumber": 4559
   }
 ]

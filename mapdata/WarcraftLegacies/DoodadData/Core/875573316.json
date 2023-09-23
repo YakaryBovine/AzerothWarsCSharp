@@ -11,11 +11,6 @@
       "Value": 1.5
     },
     {
-      "Id": 1818846820,
-      "Type": 3,
-      "Value": "Doodads\\LordaeronSummer\\Terrain\\StoneWall0\\StoneWall04.mdl"
-    },
-    {
       "Id": 1920493156,
       "Type": 2,
       "Value": -1
@@ -49,6 +44,11 @@
       "Variation": 1,
       "Id": 829584996,
       "Value": 240
+    },
+    {
+      "Id": 1818846820,
+      "Type": 3,
+      "Value": "Doodads\\Cityscape\\Structures\\CityLowWall90\\CityLowWall90.mdl"
     }
   ]
 }

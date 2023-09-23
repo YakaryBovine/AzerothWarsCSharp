@@ -16,22 +16,14 @@
       "Value": "Doodads\\Dalaran\\Terrain\\DalaranBuilding\\DalaranBuilding0.mdl"
     },
     {
-      "Id": 1735156597,
-      "Value": 200
-    },
-    {
       "Id": 1633907573,
       "Type": 1,
-      "Value": 0.7
+      "Value": 0.55
     },
     {
       "Id": 1835101813,
       "Type": 3,
       "Value": "Dalaran Building"
-    },
-    {
-      "Id": 1919705973,
-      "Value": 200
     },
     {
       "Id": 1935832437,
@@ -42,6 +34,20 @@
       "Id": 1684960117,
       "Type": 3,
       "Value": ""
+    },
+    {
+      "Id": 1920494965,
+      "Type": 1,
+      "Value": 0
+    },
+    {
+      "Id": 1886940533,
+      "Type": 1,
+      "Value": 0
+    },
+    {
+      "Id": 1735156597,
+      "Value": 200
     }
   ]
 }

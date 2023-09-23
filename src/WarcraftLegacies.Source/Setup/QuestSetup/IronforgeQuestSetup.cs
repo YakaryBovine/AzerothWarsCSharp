@@ -20,7 +20,6 @@ namespace WarcraftLegacies.Source.Setup.QuestSetup
 
       var missingArtifacts = new int[]
       {
-        Constants.ITEM_I012_ASHBRINGER,
         Constants.ITEM_I01A_DEMON_SOUL,
         Constants.ITEM_I00F_GLOVES_OF_AHN_QIRAJ,
         Constants.ITEM_I00Z_THUNDERFURY,

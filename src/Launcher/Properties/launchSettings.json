@@ -6,7 +6,7 @@
     },
     "TestMap: Convert W3X to MapData": {
       "commandName": "Project",
-      "commandLineArgs": "w3x-to-mapdata \"..\\..\\..\\..\\..\\maps\\TestMap.w3x\" \"..\\..\\..\\..\\..\\mapdata\\TestMap\""
+      "commandLineArgs": "w3x-to-mapdata \"..\\..\\..\\..\\..\\maps\\TestMap.w3x\" \"..\\..\\..\\..\\..\\mapdata\\TestMap\" --constantsOutputPath \"..\\..\\..\\..\\TestMap.Source\""
     },
     "TestMap: Convert MapData to W3X": {
       "commandName": "Project",
@@ -20,13 +20,9 @@
       "commandName": "Project",
       "commandLineArgs": "mapdata-to-w3x WarcraftLegacies false \"..\\..\\..\\..\\..\\mapdata\\WarcraftLegacies\" \"..\\..\\..\\..\\..\\maps\\published\" --sourcecodepath \"..\\..\\..\\..\\WarcraftLegacies.Source\" --set-map-titles True"
     },
-    "WarcraftLegacies: Generate Constants": {
-      "commandName": "Project",
-      "commandLineArgs": "generate-constants \"..\\..\\..\\..\\..\\maps\\WarcraftLegacies.w3x\" \"..\\..\\..\\..\\WarcraftLegacies.Source\""
-    },
     "WarcraftLegacies: Convert W3X to MapData": {
       "commandName": "Project",
-      "commandLineArgs": "w3x-to-mapdata \"..\\..\\..\\..\\..\\maps\\WarcraftLegacies.w3x\" \"..\\..\\..\\..\\..\\mapdata\\WarcraftLegacies\""
+      "commandLineArgs": "w3x-to-mapdata \"..\\..\\..\\..\\..\\maps\\WarcraftLegacies.w3x\" \"..\\..\\..\\..\\..\\mapdata\\WarcraftLegacies\" --constantsOutputPath \"..\\..\\..\\..\\WarcraftLegacies.Source\""
     },
     "WarcraftLegacies: Convert MapData to W3X": {
       "commandName": "Project",

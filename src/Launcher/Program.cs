@@ -17,7 +17,6 @@ namespace Launcher
     private static int Main(string[] args)
     {
       var rootCommand = new RootCommand();
-      rootCommand.RegisterGenerateConstantsCommand();
       rootCommand.RegisterMapDataToW3XCommand();
       rootCommand.RegisterW3XToMapDataCommand();
       return rootCommand.Invoke(args);
