@@ -1,0 +1,107 @@
+[
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1667846734,
+    "Variation": 6,
+    "Position": {
+      "X": 11481.141,
+      "Y": -7815.095,
+      "Z": 286.99356
+    },
+    "Rotation": 3.0892332,
+    "Scale": {
+      "X": 1.0002136,
+      "Y": 1.0002136,
+      "Z": 1.0002136
+    },
+    "SkinId": 1667846734,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 523
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1667846734,
+    "Variation": 6,
+    "Position": {
+      "X": 11013.79,
+      "Y": -7956.1836,
+      "Z": 167.40778
+    },
+    "Rotation": 1.4660767,
+    "Scale": {
+      "X": 1.1348735,
+      "Y": 1.1348735,
+      "Z": 1.1348735
+    },
+    "SkinId": 1667846734,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 510
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1953715287,
+    "Variation": 1,
+    "Position": {
+      "X": 11136,
+      "Y": -7808,
+      "Z": 127.75
+    },
+    "Rotation": 4.7123895,
+    "Scale": {
+      "X": 1.1576403,
+      "Y": 1.1576403,
+      "Z": 1.1576403
+    },
+    "SkinId": 1953715287,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 501
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1953715289,
+    "Variation": 1,
+    "Position": {
+      "X": 11072,
+      "Y": -7680,
+      "Z": 126.25
+    },
+    "Rotation": 4.7123895,
+    "Scale": {
+      "X": 1.0457351,
+      "Y": 1.0457351,
+      "Z": 1.0457351
+    },
+    "SkinId": 1953715289,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 21394
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1953715287,
+    "Variation": 2,
+    "Position": {
+      "X": 11200,
+      "Y": -7680,
+      "Z": 141.25
+    },
+    "Rotation": 4.7123895,
+    "Scale": {
+      "X": 1.182458,
+      "Y": 1.182458,
+      "Z": 1.182458
+    },
+    "SkinId": 1953715287,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 21666
+  }
+]

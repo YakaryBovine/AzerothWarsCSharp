@@ -1,0 +1,106 @@
+[
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1886605914,
+    "Variation": 5,
+    "Position": {
+      "X": -15601.158,
+      "Y": -11470.401,
+      "Z": 272.89282
+    },
+    "Rotation": 1.8418735,
+    "Scale": {
+      "X": 5.1140876,
+      "Y": 5.1140876,
+      "Z": 6.014091
+    },
+    "SkinId": 1886605914,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 9895
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 892350532,
+    "Variation": 5,
+    "Position": {
+      "X": -15535.811,
+      "Y": -11770.898,
+      "Z": 330.0645
+    },
+    "Rotation": 4.7911034,
+    "Scale": {
+      "X": 2.4289994,
+      "Y": 2.4289994,
+      "Z": 2.4289994
+    },
+    "SkinId": 892350532,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 25442
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 892350532,
+    "Variation": 1,
+    "Position": {
+      "X": -15578.785,
+      "Y": -11495.225,
+      "Z": 579.2942
+    },
+    "Rotation": 4.8899565,
+    "Scale": {
+      "X": 1.6351409,
+      "Y": 1.6351409,
+      "Z": 1.6351409
+    },
+    "SkinId": 892350532,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 25429
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1668568129,
+    "Variation": 2,
+    "Position": {
+      "X": -15392,
+      "Y": -11744,
+      "Z": 365.21875
+    },
+    "Rotation": 6.1435595,
+    "Scale": {
+      "X": 0.7499999,
+      "Y": 0.7499999,
+      "Z": 0.7499999
+    },
+    "SkinId": 1668568129,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 17616
+  },
+  {
+    "State": 6,
+    "Life": 100,
+    "TypeId": 1668568129,
+    "Position": {
+      "X": -15392,
+      "Y": -11424,
+      "Z": 348.57797
+    },
+    "Rotation": 4.1189775,
+    "Scale": {
+      "X": 0.7999999,
+      "Y": 0.7999999,
+      "Z": 0.7999999
+    },
+    "SkinId": 1668568129,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 17615
+  }
+]

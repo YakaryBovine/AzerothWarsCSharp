@@ -1,0 +1,84 @@
+[
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1818644300,
+    "Position": {
+      "X": -11964.811,
+      "Y": -14949.728,
+      "Z": 293.05814
+    },
+    "Rotation": 4.163224,
+    "Scale": {
+      "X": 0.5,
+      "Y": 1.1,
+      "Z": 1.2499999
+    },
+    "SkinId": 1818644300,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 36450
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1378955330,
+    "Variation": 1,
+    "Position": {
+      "X": -12000,
+      "Y": -14944,
+      "Z": 297.51562
+    },
+    "Rotation": 4.7822022,
+    "Scale": {
+      "X": 0.6499999,
+      "Y": 0.6499999,
+      "Z": 0.6499999
+    },
+    "SkinId": 1378955330,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 36426
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1936151106,
+    "Position": {
+      "X": -11988.445,
+      "Y": -14920.539,
+      "Z": 291.9526
+    },
+    "Rotation": 5.0090947,
+    "Scale": {
+      "X": 1.3999999,
+      "Y": 1.3999999,
+      "Z": 4.900001
+    },
+    "SkinId": 1936151106,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 36420
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1633898562,
+    "Variation": 7,
+    "Position": {
+      "X": -12172.411,
+      "Y": -14993.515,
+      "Z": 386.184
+    },
+    "Rotation": 5.305801,
+    "Scale": {
+      "X": 0.8267,
+      "Y": 0.8267,
+      "Z": 0.8267
+    },
+    "SkinId": 1633898562,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 28932
+  }
+]

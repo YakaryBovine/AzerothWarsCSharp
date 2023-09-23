@@ -1,0 +1,211 @@
+[
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1177563202,
+    "Position": {
+      "X": 2560,
+      "Y": 22720,
+      "Z": 682.75
+    },
+    "Rotation": 4.3807764,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1177563202,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 35098
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1953715287,
+    "Variation": 9,
+    "Position": {
+      "X": 2688,
+      "Y": 22464,
+      "Z": 420.125
+    },
+    "Rotation": 1.7104226,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1953715287,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 35065
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1177563202,
+    "Variation": 7,
+    "Position": {
+      "X": 2560,
+      "Y": 22464,
+      "Z": 485.375
+    },
+    "Rotation": 5.0090947,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1177563202,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 34957
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1936872009,
+    "Variation": 2,
+    "Position": {
+      "X": 2790.3103,
+      "Y": 22679.43,
+      "Z": 466.6492
+    },
+    "Rotation": 0.5061455,
+    "Scale": {
+      "X": 1.6499994,
+      "Y": 1.6499994,
+      "Z": 1.6499994
+    },
+    "SkinId": 1936872009,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 34950
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1936872009,
+    "Variation": 5,
+    "Position": {
+      "X": 2621.7725,
+      "Y": 22623.453,
+      "Z": 582.5329
+    },
+    "Rotation": 1.9896753,
+    "Scale": {
+      "X": 1.5499995,
+      "Y": 1.5499995,
+      "Z": 1.5499995
+    },
+    "SkinId": 1936872009,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 34892
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1936872009,
+    "Variation": 3,
+    "Position": {
+      "X": 2669.4854,
+      "Y": 22708.816,
+      "Z": 593.1047
+    },
+    "Rotation": 6.213372,
+    "Scale": {
+      "X": 1.7499993,
+      "Y": 1.7499993,
+      "Z": 1.7499993
+    },
+    "SkinId": 1936872009,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 34891
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1667846729,
+    "Variation": 2,
+    "Position": {
+      "X": 2415.8206,
+      "Y": 22717.72,
+      "Z": 719.3924
+    },
+    "Rotation": 3.5953782,
+    "Scale": {
+      "X": 1.6999993,
+      "Y": 1.6999993,
+      "Z": 1.9499991
+    },
+    "SkinId": 1667846729,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 34889
+  },
+  {
+    "State": 6,
+    "Life": 100,
+    "TypeId": 1919112265,
+    "Variation": 2,
+    "Position": {
+      "X": 2353.4602,
+      "Y": 22598.174,
+      "Z": 526.6044
+    },
+    "Rotation": 0.40142572,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1919112265,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 34883
+  },
+  {
+    "State": 6,
+    "Life": 100,
+    "TypeId": 1919112265,
+    "Variation": 5,
+    "Position": {
+      "X": 2476.7979,
+      "Y": 22602.01,
+      "Z": 461.40454
+    },
+    "Rotation": 3.8571777,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1919112265,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 34881
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1667715657,
+    "Variation": 7,
+    "Position": {
+      "X": 2688,
+      "Y": 22720,
+      "Z": 580.375
+    },
+    "Rotation": 0.40142572,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1667715657,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 34855
+  }
+]

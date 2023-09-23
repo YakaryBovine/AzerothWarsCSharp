@@ -1,0 +1,105 @@
+[
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1936872002,
+    "Variation": 1,
+    "Position": {
+      "X": -16096.603,
+      "Y": -12824.451,
+      "Z": 73.797325
+    },
+    "Rotation": 1.7453293,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1936872002,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 33576
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1668436802,
+    "Variation": 1,
+    "Position": {
+      "X": -16082.1045,
+      "Y": -13159.493,
+      "Z": 155.77379
+    },
+    "Rotation": 4.0033655,
+    "Scale": {
+      "X": 0.81087685,
+      "Y": 0.81087685,
+      "Z": 0.81087685
+    },
+    "SkinId": 1668436802,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 5582
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1668436802,
+    "Position": {
+      "X": -16045.472,
+      "Y": -13225.248,
+      "Z": 142.34232
+    },
+    "Rotation": 3.8283217,
+    "Scale": {
+      "X": 1.1591663,
+      "Y": 1.1591663,
+      "Z": 1.1591663
+    },
+    "SkinId": 1668436802,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 5581
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1987203906,
+    "Position": {
+      "X": -16096.332,
+      "Y": -13082.708,
+      "Z": 157.40198
+    },
+    "Rotation": 5.3273325,
+    "Scale": {
+      "X": 0.9562182,
+      "Y": 0.9562182,
+      "Z": 0.9562182
+    },
+    "SkinId": 1987203906,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 17939
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1802654274,
+    "Variation": 7,
+    "Position": {
+      "X": -15941.805,
+      "Y": -12848.017,
+      "Z": 196.22997
+    },
+    "Rotation": 3.5953786,
+    "Scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+    },
+    "SkinId": 1802654274,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 17938
+  }
+]

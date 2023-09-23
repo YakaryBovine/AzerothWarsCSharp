@@ -1,0 +1,107 @@
+[
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 875573314,
+    "Variation": 3,
+    "Position": {
+      "X": 18880,
+      "Y": 15680,
+      "Z": 136.8125
+    },
+    "Rotation": 4.712389,
+    "Scale": {
+      "X": 1.1738151,
+      "Y": 1.1738151,
+      "Z": 1.1738151
+    },
+    "SkinId": 875573314,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 12674
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 875573314,
+    "Variation": 2,
+    "Position": {
+      "X": 18944,
+      "Y": 15616,
+      "Z": 109.5
+    },
+    "Rotation": 4.712389,
+    "Scale": {
+      "X": 0.98200023,
+      "Y": 0.98200023,
+      "Z": 0.98200023
+    },
+    "SkinId": 875573314,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 12673
+  },
+  {
+    "State": 6,
+    "Life": 100,
+    "TypeId": 875573314,
+    "Variation": 7,
+    "Position": {
+      "X": 19072,
+      "Y": 15680,
+      "Z": 145.80002
+    },
+    "Rotation": 4.712389,
+    "Scale": {
+      "X": 1.1860148,
+      "Y": 1.1860148,
+      "Z": 1.1860148
+    },
+    "SkinId": 875573314,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 12689
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 875704386,
+    "Variation": 7,
+    "Position": {
+      "X": 18688,
+      "Y": 15680,
+      "Z": 104.75
+    },
+    "Rotation": 4.712389,
+    "Scale": {
+      "X": 0.8499999,
+      "Y": 0.8499999,
+      "Z": 0.8499999
+    },
+    "SkinId": 875704386,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 14231
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1802654273,
+    "Variation": 4,
+    "Position": {
+      "X": 18933.967,
+      "Y": 15831.631,
+      "Z": 116.35428
+    },
+    "Rotation": 3.0317936,
+    "Scale": {
+      "X": 1.6499994,
+      "Y": 1.6499994,
+      "Z": 1.3499997
+    },
+    "SkinId": 1802654273,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 14237
+  }
+]

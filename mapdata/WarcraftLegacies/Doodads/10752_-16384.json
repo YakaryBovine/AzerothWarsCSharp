@@ -1,0 +1,106 @@
+[
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1920226371,
+    "Variation": 1,
+    "Position": {
+      "X": 10688,
+      "Y": -16384,
+      "Z": 153.625
+    },
+    "Rotation": 4.7123895,
+    "Scale": {
+      "X": 0.94081247,
+      "Y": 0.94081247,
+      "Z": 0.94081247
+    },
+    "SkinId": 1920226371,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 4875
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1936543811,
+    "Variation": 3,
+    "Position": {
+      "X": 10625.998,
+      "Y": -16888.41,
+      "Z": 147.00285
+    },
+    "Rotation": 4.6949363,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1936543811,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 4557
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1920226371,
+    "Variation": 4,
+    "Position": {
+      "X": 10560,
+      "Y": -16448,
+      "Z": 165.75
+    },
+    "Rotation": 4.7123895,
+    "Scale": {
+      "X": 0.94853973,
+      "Y": 0.94853973,
+      "Z": 0.94853973
+    },
+    "SkinId": 1920226371,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 4493
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1379217476,
+    "Variation": 5,
+    "Position": {
+      "X": 10862.287,
+      "Y": -16403.424,
+      "Z": 172.00209
+    },
+    "Rotation": 4.7256536,
+    "Scale": {
+      "X": 0.8,
+      "Y": 0.8,
+      "Z": 0.8
+    },
+    "SkinId": 1379217476,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 22057
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1886146380,
+    "Position": {
+      "X": 10852.674,
+      "Y": -16386.357,
+      "Z": 171.38737
+    },
+    "Rotation": 3.5992599,
+    "Scale": {
+      "X": 0.8792109,
+      "Y": 0.8792109,
+      "Z": 0.8792109
+    },
+    "SkinId": 1886146380,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 22056
+  }
+]

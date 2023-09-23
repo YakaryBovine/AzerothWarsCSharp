@@ -1,0 +1,107 @@
+[
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1802654274,
+    "Variation": 4,
+    "Position": {
+      "X": 377.48618,
+      "Y": -15087.65,
+      "Z": 31.33581
+    },
+    "Rotation": 0.10471976,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1802654274,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 1157
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1886802010,
+    "Variation": 1,
+    "Position": {
+      "X": 400.3904,
+      "Y": -15078.93,
+      "Z": 143.68434
+    },
+    "Rotation": 1.3962634,
+    "Scale": {
+      "X": 1.2173712,
+      "Y": 1.2173712,
+      "Z": 1.2173712
+    },
+    "SkinId": 1886802010,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 2107
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1886802010,
+    "Variation": 2,
+    "Position": {
+      "X": 305.58887,
+      "Y": -15016.171,
+      "Z": 131.72763
+    },
+    "Rotation": 5.969026,
+    "Scale": {
+      "X": 1.3592455,
+      "Y": 1.3592455,
+      "Z": 1.3592455
+    },
+    "SkinId": 1886802010,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 2969
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 2004047706,
+    "Variation": 3,
+    "Position": {
+      "X": 273.66776,
+      "Y": -15179.837,
+      "Z": 38.399994
+    },
+    "Rotation": 5.4556055,
+    "Scale": {
+      "X": 1.7999992,
+      "Y": 1.7999992,
+      "Z": 1.7999992
+    },
+    "SkinId": 2004047706,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 1294
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1752387418,
+    "Variation": 9,
+    "Position": {
+      "X": 477.95413,
+      "Y": -14906.433,
+      "Z": 191.82143
+    },
+    "Rotation": 0.10471976,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1752387418,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 38551
+  }
+]

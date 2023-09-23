@@ -1,0 +1,106 @@
+[
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1651658572,
+    "Variation": 1,
+    "Position": {
+      "X": 5484.9614,
+      "Y": -25972.096,
+      "Z": 469.95453
+    },
+    "Rotation": 0.6981318,
+    "Scale": {
+      "X": 0.79999995,
+      "Y": 0.79999995,
+      "Z": 0.79999995
+    },
+    "SkinId": 1651658572,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 13239
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1868713794,
+    "Variation": 8,
+    "Position": {
+      "X": 5600.9775,
+      "Y": -25884.822,
+      "Z": 466.42093
+    },
+    "Rotation": 4.590216,
+    "Scale": {
+      "X": 0.74999994,
+      "Y": 0.74999994,
+      "Z": 0.74999994
+    },
+    "SkinId": 1868713794,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 13238
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1801867855,
+    "Variation": 2,
+    "Position": {
+      "X": 5866.709,
+      "Y": -25638.941,
+      "Z": 620.54425
+    },
+    "Rotation": 4.7123895,
+    "Scale": {
+      "X": 0.9368695,
+      "Y": 0.9368695,
+      "Z": 0.9368695
+    },
+    "SkinId": 1801867855,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 12822
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 2004112463,
+    "Variation": 7,
+    "Position": {
+      "X": 5696,
+      "Y": -25856,
+      "Z": 436
+    },
+    "Rotation": 4.7123895,
+    "Scale": {
+      "X": 0.8108936,
+      "Y": 0.8108936,
+      "Z": 0.8108936
+    },
+    "SkinId": 2004112463,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 12815
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1429221442,
+    "Position": {
+      "X": 5632,
+      "Y": -25728,
+      "Z": 489.75
+    },
+    "Rotation": 1.7453293,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1429221442,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 12814
+  }
+]

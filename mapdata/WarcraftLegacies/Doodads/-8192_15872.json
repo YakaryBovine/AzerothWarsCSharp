@@ -1,0 +1,107 @@
+[
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1886540354,
+    "Variation": 1,
+    "Position": {
+      "X": -8569.354,
+      "Y": 15621.594,
+      "Z": 65.11994
+    },
+    "Rotation": 5.096361,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1886540354,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 11109
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1886343247,
+    "Variation": 7,
+    "Position": {
+      "X": -8363.037,
+      "Y": 15719.688,
+      "Z": 151.40912
+    },
+    "Rotation": 5.131268,
+    "Scale": {
+      "X": 0.5499999,
+      "Y": 0.5499999,
+      "Z": 0.5499999
+    },
+    "SkinId": 1886343247,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 11100
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1802654276,
+    "Variation": 2,
+    "Position": {
+      "X": -8235.341,
+      "Y": 15964.236,
+      "Z": 169.55751
+    },
+    "Rotation": 4.485496,
+    "Scale": {
+      "X": 0.58,
+      "Y": 0.58,
+      "Z": 0.58
+    },
+    "SkinId": 1802654276,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 11074
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1936151106,
+    "Variation": 1,
+    "Position": {
+      "X": -8311,
+      "Y": 15747.247,
+      "Z": 173.12326
+    },
+    "Rotation": 3.2288592,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1936151106,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 11047
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1936085570,
+    "Variation": 1,
+    "Position": {
+      "X": -8292.071,
+      "Y": 15663.731,
+      "Z": 140.06435
+    },
+    "Rotation": 1.3927835,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 2.4499986
+    },
+    "SkinId": 1936085570,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 5619
+  }
+]

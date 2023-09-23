@@ -1,0 +1,105 @@
+[
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1953714759,
+    "Variation": 1,
+    "Position": {
+      "X": 3149.4788,
+      "Y": -20984.646,
+      "Z": 618.1967
+    },
+    "Rotation": 0.122173056,
+    "Scale": {
+      "X": 2.8499982,
+      "Y": 2.8499982,
+      "Z": 2.8499982
+    },
+    "SkinId": 1953714759,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 31870
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 842018884,
+    "Position": {
+      "X": 2975.0955,
+      "Y": -20500.959,
+      "Z": 700.0996
+    },
+    "Rotation": 5.2736583,
+    "Scale": {
+      "X": 0.9500001,
+      "Y": 0.9500001,
+      "Z": 0.5
+    },
+    "SkinId": 842018884,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 4338
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1144336452,
+    "Position": {
+      "X": 3297.7947,
+      "Y": -20936.225,
+      "Z": 689.04376
+    },
+    "Rotation": 4.1809645,
+    "Scale": {
+      "X": 1.1500001,
+      "Y": 1.1500001,
+      "Z": 1.2500001
+    },
+    "SkinId": 1144336452,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 15468
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1953714759,
+    "Variation": 2,
+    "Position": {
+      "X": 3302.5024,
+      "Y": -20856.176,
+      "Z": 604.09924
+    },
+    "Rotation": 3.951774,
+    "Scale": {
+      "X": 2.2499988,
+      "Y": 2.2499988,
+      "Z": 2.2499988
+    },
+    "SkinId": 1953714759,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 31869
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1802654279,
+    "Variation": 4,
+    "Position": {
+      "X": 3290.8208,
+      "Y": -20926.047,
+      "Z": 679.4518
+    },
+    "Rotation": 3.6477385,
+    "Scale": {
+      "X": 1.5999994,
+      "Y": 1.5999994,
+      "Z": 1.5999994
+    },
+    "SkinId": 1802654279,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 31874
+  }
+]

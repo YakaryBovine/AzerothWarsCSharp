@@ -1,0 +1,105 @@
+[
+  {
+    "State": 6,
+    "Life": 100,
+    "TypeId": 1920226369,
+    "Position": {
+      "X": -16064,
+      "Y": 7104,
+      "Z": -6.087507
+    },
+    "Rotation": 2.2863812,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1920226369,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 19851
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1668568129,
+    "Position": {
+      "X": -15904,
+      "Y": 7200,
+      "Z": 70.828125
+    },
+    "Rotation": 0.08726646,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1668568129,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 19842
+  },
+  {
+    "State": 6,
+    "Life": 100,
+    "TypeId": 1920226369,
+    "Variation": 4,
+    "Position": {
+      "X": -15872,
+      "Y": 7040,
+      "Z": 23.349995
+    },
+    "Rotation": 6.091199,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1920226369,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 19821
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1802654273,
+    "Variation": 6,
+    "Position": {
+      "X": -16031.303,
+      "Y": 7049.6016,
+      "Z": 65.69283
+    },
+    "Rotation": 5.67232,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1802654273,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 19839
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1936543809,
+    "Variation": 2,
+    "Position": {
+      "X": -15897.667,
+      "Y": 7029.0835,
+      "Z": 62.36799
+    },
+    "Rotation": 2.687807,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1936543809,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 19840
+  }
+]

@@ -1,0 +1,211 @@
+[
+  {
+    "Flags": 2,
+    "OwnerId": 27,
+    "HP": -1,
+    "MP": -1,
+    "TargetAcquisition": -1,
+    "HeroLevel": 1,
+    "InventoryData": [],
+    "AbilityData": [],
+    "CustomPlayerColorId": -1,
+    "WaygateDestinationRegionId": -1,
+    "TypeId": 1701668718,
+    "Position": {
+      "X": 2304,
+      "Y": 16320
+    },
+    "Rotation": 4.71238899230957,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1701668718,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 238
+  },
+  {
+    "Flags": 2,
+    "OwnerId": 24,
+    "HP": -1,
+    "MP": -1,
+    "TargetAcquisition": -2,
+    "HeroLevel": 1,
+    "InventoryData": [
+      {
+        "ItemId": 1345400905
+      }
+    ],
+    "AbilityData": [
+      {
+        "AbilityId": 2037599809,
+        "HeroAbilityLevel": 1
+      },
+      {
+        "AbilityId": 1935887937
+      },
+      {
+        "AbilityId": 1734692417
+      }
+    ],
+    "CustomPlayerColorId": -1,
+    "WaygateDestinationRegionId": -1,
+    "TypeId": 1651470926,
+    "Position": {
+      "X": 2403.4758,
+      "Y": 16288.037
+    },
+    "Rotation": 4.498237133026123,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1651470926,
+    "MapItemTableId": -1,
+    "ItemTableSets": [
+      {
+        "Items": [
+          {
+            "Chance": 33,
+            "ItemId": 1668444787
+          },
+          {
+            "Chance": 33,
+            "ItemId": 912942450
+          },
+          {
+            "Chance": 34,
+            "ItemId": 1936028275
+          }
+        ]
+      }
+    ],
+    "CreationNumber": 2013
+  },
+  {
+    "Flags": 2,
+    "OwnerId": 24,
+    "HP": -1,
+    "MP": 270,
+    "TargetAcquisition": -2,
+    "HeroLevel": 1,
+    "InventoryData": [
+      {
+        "ItemId": 1345400905
+      }
+    ],
+    "AbilityData": [
+      {
+        "AbilityId": 1650544193,
+        "HeroAbilityLevel": 1
+      },
+      {
+        "AbilityId": 1936215617
+      },
+      {
+        "AbilityId": 1919110721
+      },
+      {
+        "AbilityId": 1836338753
+      },
+      {
+        "AbilityId": 842477633
+      },
+      {
+        "AbilityId": 1802330433,
+        "HeroAbilityLevel": 1
+      }
+    ],
+    "CustomPlayerColorId": -1,
+    "WaygateDestinationRegionId": -1,
+    "TypeId": 1668047182,
+    "Position": {
+      "X": 2767.959,
+      "Y": 16228.791
+    },
+    "Rotation": 3.4906585216522217,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1668047182,
+    "MapItemTableId": -1,
+    "ItemTableSets": [
+      {
+        "Items": [
+          {
+            "Chance": 33,
+            "ItemId": 1819700837
+          },
+          {
+            "Chance": 33,
+            "ItemId": 1970695792
+          },
+          {
+            "Chance": 34,
+            "ItemId": 1936028272
+          }
+        ]
+      }
+    ],
+    "CreationNumber": 2081
+  },
+  {
+    "Flags": 2,
+    "OwnerId": 24,
+    "HP": -1,
+    "MP": -1,
+    "TargetAcquisition": -2,
+    "HeroLevel": 1,
+    "InventoryData": [],
+    "AbilityData": [],
+    "CustomPlayerColorId": -1,
+    "WaygateDestinationRegionId": -1,
+    "TypeId": 1229009006,
+    "Position": {
+      "X": 2801.4941,
+      "Y": 16356.687
+    },
+    "Rotation": 1.5707963705062866,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1229009006,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 3640
+  },
+  {
+    "Flags": 2,
+    "OwnerId": 24,
+    "HP": -1,
+    "MP": -1,
+    "TargetAcquisition": -1,
+    "HeroLevel": 1,
+    "InventoryData": [],
+    "AbilityData": [],
+    "CustomPlayerColorId": -1,
+    "WaygateDestinationRegionId": -1,
+    "TypeId": 1496789102,
+    "Position": {
+      "X": 2688,
+      "Y": 16448
+    },
+    "Rotation": 4.71238899230957,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1496789102,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 3086
+  }
+]

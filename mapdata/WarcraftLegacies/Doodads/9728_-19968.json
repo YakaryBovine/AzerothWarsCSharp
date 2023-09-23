@@ -1,0 +1,165 @@
+[
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1378889796,
+    "Position": {
+      "X": 9543.554,
+      "Y": -20318.785,
+      "Z": 237.8711
+    },
+    "Rotation": 5.3047233,
+    "Scale": {
+      "X": 0.8429823,
+      "Y": 0.8429823,
+      "Z": 0.9429823
+    },
+    "SkinId": 1378889796,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 186
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1362112580,
+    "Position": {
+      "X": 9770.574,
+      "Y": -20243.055,
+      "Z": 237.8711
+    },
+    "Rotation": 4.847986,
+    "Scale": {
+      "X": 0.91560435,
+      "Y": 0.91560435,
+      "Z": 1.0156044
+    },
+    "SkinId": 1362112580,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 185
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1395667012,
+    "Position": {
+      "X": 9963.205,
+      "Y": -20307.873,
+      "Z": 265.62335
+    },
+    "Rotation": 3.8818345,
+    "Scale": {
+      "X": 0.9534791,
+      "Y": 0.9534791,
+      "Z": 0.90347916
+    },
+    "SkinId": 1395667012,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 184
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1651461978,
+    "Variation": 1,
+    "Position": {
+      "X": 9627.632,
+      "Y": -20385.61,
+      "Z": 265.53818
+    },
+    "Rotation": 6.275669,
+    "Scale": {
+      "X": 0.8000001,
+      "Y": 0.8000001,
+      "Z": 0.8998367
+    },
+    "SkinId": 1651461978,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 204
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1935823450,
+    "Position": {
+      "X": 9675,
+      "Y": -20323.938,
+      "Z": 261.1808
+    },
+    "Rotation": 3.3684857,
+    "Scale": {
+      "X": 0.5017731,
+      "Y": 0.5017731,
+      "Z": 0.5017731
+    },
+    "SkinId": 1935823450,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 217
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1935823450,
+    "Position": {
+      "X": 9822.939,
+      "Y": -20288.438,
+      "Z": 257.00726
+    },
+    "Rotation": 1.6580629,
+    "Scale": {
+      "X": 0.7942427,
+      "Y": 0.7942427,
+      "Z": 0.4942426
+    },
+    "SkinId": 1935823450,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 210
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 2004112474,
+    "Variation": 6,
+    "Position": {
+      "X": 9856,
+      "Y": -20352,
+      "Z": 260.25
+    },
+    "Rotation": 4.7123895,
+    "Scale": {
+      "X": 0.72203594,
+      "Y": 0.72203594,
+      "Z": 0.72203594
+    },
+    "SkinId": 2004112474,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 193
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 2004112474,
+    "Variation": 9,
+    "Position": {
+      "X": 9728,
+      "Y": -20352,
+      "Z": 265.75
+    },
+    "Rotation": 4.7123895,
+    "Scale": {
+      "X": 0.8976639,
+      "Y": 0.8976639,
+      "Z": 0.8976639
+    },
+    "SkinId": 2004112474,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 192
+  }
+]

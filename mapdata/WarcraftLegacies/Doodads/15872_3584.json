@@ -1,0 +1,210 @@
+[
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1668436802,
+    "Position": {
+      "X": 15856.723,
+      "Y": 3435.3877,
+      "Z": 130.14981
+    },
+    "Rotation": 4.852016,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1668436802,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 4643
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1935823450,
+    "Position": {
+      "X": 15929.082,
+      "Y": 3761.3833,
+      "Z": 87.64706
+    },
+    "Rotation": 4.5378566,
+    "Scale": {
+      "X": 1.0361462,
+      "Y": 1.0361462,
+      "Z": 1.0361462
+    },
+    "SkinId": 1935823450,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 1468
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1127297090,
+    "Variation": 1,
+    "Position": {
+      "X": 15808,
+      "Y": 3456,
+      "Z": 113
+    },
+    "Rotation": 1.5882498,
+    "Scale": {
+      "X": 0.88111824,
+      "Y": 0.88111824,
+      "Z": 0.88111824
+    },
+    "SkinId": 1127297090,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 16157
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 2003193946,
+    "Variation": 3,
+    "Position": {
+      "X": 15803.7,
+      "Y": 3709.1191,
+      "Z": 132.8053
+    },
+    "Rotation": 3.9618979,
+    "Scale": {
+      "X": 0.8133184,
+      "Y": 0.8133184,
+      "Z": 0.8133184
+    },
+    "SkinId": 2003193946,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 1510
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1936936794,
+    "Variation": 3,
+    "Position": {
+      "X": 15811.727,
+      "Y": 3788.2432,
+      "Z": 181.44801
+    },
+    "Rotation": 1.2876424,
+    "Scale": {
+      "X": 1.2499998,
+      "Y": 1.2499998,
+      "Z": 1.2499998
+    },
+    "SkinId": 1936936794,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 16144
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1936936794,
+    "Variation": 3,
+    "Position": {
+      "X": 15808.328,
+      "Y": 3348.0417,
+      "Z": 172.3152
+    },
+    "Rotation": 2.0943954,
+    "Scale": {
+      "X": 0.84999996,
+      "Y": 0.84999996,
+      "Z": 0.84999996
+    },
+    "SkinId": 1936936794,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 1406
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1802654275,
+    "Variation": 5,
+    "Position": {
+      "X": 16048.365,
+      "Y": 3687.308,
+      "Z": 211.05008
+    },
+    "Rotation": 4.4156833,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1802654275,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 1415
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1953256524,
+    "Variation": 7,
+    "Position": {
+      "X": 16064,
+      "Y": 3776,
+      "Z": 216.6875
+    },
+    "Rotation": 1.5707964,
+    "Scale": {
+      "X": 0.98101145,
+      "Y": 0.98101145,
+      "Z": 0.98101145
+    },
+    "SkinId": 1953256524,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 16198
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1936543834,
+    "Variation": 3,
+    "Position": {
+      "X": 15946.518,
+      "Y": 3673.113,
+      "Z": 175.38458
+    },
+    "Rotation": 5.0090957,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1936543834,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 16208
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1752387674,
+    "Variation": 1,
+    "Position": {
+      "X": 16069.744,
+      "Y": 3681.6626,
+      "Z": 216.701
+    },
+    "Rotation": 3.9718711,
+    "Scale": {
+      "X": 0.95,
+      "Y": 0.95,
+      "Z": 0.95
+    },
+    "SkinId": 1752387674,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 16273
+  }
+]

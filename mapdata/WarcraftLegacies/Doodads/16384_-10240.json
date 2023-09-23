@@ -1,0 +1,107 @@
+[
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 2004112450,
+    "Variation": 8,
+    "Position": {
+      "X": 16576,
+      "Y": -10368,
+      "Z": 149.125
+    },
+    "Rotation": 4.7123895,
+    "Scale": {
+      "X": 0.95199996,
+      "Y": 0.95199996,
+      "Z": 0.95199996
+    },
+    "SkinId": 2004112450,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 2011
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 2004112450,
+    "Variation": 8,
+    "Position": {
+      "X": 16448,
+      "Y": -10432,
+      "Z": 257.875
+    },
+    "Rotation": 4.7123895,
+    "Scale": {
+      "X": 1.1269265,
+      "Y": 1.1269265,
+      "Z": 1.1269265
+    },
+    "SkinId": 2004112450,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 2603
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1633898562,
+    "Variation": 2,
+    "Position": {
+      "X": 16540.314,
+      "Y": -10503.636,
+      "Z": 279.797
+    },
+    "Rotation": 2.321288,
+    "Scale": {
+      "X": 0.81676084,
+      "Y": 0.81676084,
+      "Z": 0.81676084
+    },
+    "SkinId": 1633898562,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 3366
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1936872002,
+    "Variation": 5,
+    "Position": {
+      "X": 16233.649,
+      "Y": -10407.639,
+      "Z": 160.6868
+    },
+    "Rotation": 6.0912,
+    "Scale": {
+      "X": 1.1003267,
+      "Y": 1.1003267,
+      "Z": 1.1003267
+    },
+    "SkinId": 1936872002,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 7873
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1936872002,
+    "Variation": 6,
+    "Position": {
+      "X": 16362.777,
+      "Y": -10530.19,
+      "Z": 237.5057
+    },
+    "Rotation": 0.890118,
+    "Scale": {
+      "X": 0.8147466,
+      "Y": 0.8147466,
+      "Z": 0.8147466
+    },
+    "SkinId": 1936872002,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 7872
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "Flags": 2,
+    "OwnerId": 24,
+    "HP": -1,
+    "MP": -1,
+    "TargetAcquisition": -2,
+    "HeroLevel": 1,
+    "InventoryData": [],
+    "AbilityData": [
+      {
+        "AbilityId": 828927553,
+        "IsAutocastActive": true
+      },
+      {
+        "AbilityId": 1329672257,
+        "IsAutocastActive": true
+      },
+      {
+        "AbilityId": 1514483777,
+        "IsAutocastActive": true
+      },
+      {
+        "AbilityId": 1835287361,
+        "IsAutocastActive": true
+      }
+    ],
+    "CustomPlayerColorId": -1,
+    "WaygateDestinationRegionId": -1,
+    "TypeId": 1886611054,
+    "Position": {
+      "X": 21267.76,
+      "Y": 15019.026
+    },
+    "Rotation": 1.4517648220062256,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1886611054,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 2964
+  }
+]

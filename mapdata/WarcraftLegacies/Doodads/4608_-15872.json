@@ -1,0 +1,107 @@
+[
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 2004047706,
+    "Variation": 1,
+    "Position": {
+      "X": 4725.2134,
+      "Y": -15997.103,
+      "Z": 51.199997
+    },
+    "Rotation": 1.0605373,
+    "Scale": {
+      "X": 2.1000013,
+      "Y": 2.1000013,
+      "Z": 0.01
+    },
+    "SkinId": 2004047706,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 25485
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1886802010,
+    "Variation": 1,
+    "Position": {
+      "X": 4539.37,
+      "Y": -15908.526,
+      "Z": 77.40892
+    },
+    "Rotation": 0.8487215,
+    "Scale": {
+      "X": 1.2,
+      "Y": 1.2,
+      "Z": 1.2
+    },
+    "SkinId": 1886802010,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 25484
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 942682180,
+    "Variation": 8,
+    "Position": {
+      "X": 4723.426,
+      "Y": -15929.965,
+      "Z": -62.350292
+    },
+    "Rotation": 5.590289,
+    "Scale": {
+      "X": 1.1620001,
+      "Y": 1.1620001,
+      "Z": 1.0120007
+    },
+    "SkinId": 942682180,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 25483
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 942682180,
+    "Variation": 4,
+    "Position": {
+      "X": 4617.9565,
+      "Y": -15918.445,
+      "Z": -61.482204
+    },
+    "Rotation": 5.590368,
+    "Scale": {
+      "X": 1.2120152,
+      "Y": 1.2120152,
+      "Z": 1.8120146
+    },
+    "SkinId": 942682180,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 25482
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1379217476,
+    "Variation": 2,
+    "Position": {
+      "X": 4629.612,
+      "Y": -15926.973,
+      "Z": 460.7997
+    },
+    "Rotation": 4.7256536,
+    "Scale": {
+      "X": 1.05,
+      "Y": 1.05,
+      "Z": 1.05
+    },
+    "SkinId": 1379217476,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 25481
+  }
+]

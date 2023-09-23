@@ -1,0 +1,126 @@
+[
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1752387418,
+    "Variation": 2,
+    "Position": {
+      "X": -485.99823,
+      "Y": 5178.0234,
+      "Z": 74.09552
+    },
+    "Rotation": 5.707227,
+    "Scale": {
+      "X": 1.3499997,
+      "Y": 1.3499997,
+      "Z": 1.3499997
+    },
+    "SkinId": 1752387418,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 24661
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 2004112474,
+    "Variation": 5,
+    "Position": {
+      "Y": 5312,
+      "Z": 85.25
+    },
+    "Rotation": 4.6251225,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 2004112474,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 18225
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 2004112474,
+    "Variation": 7,
+    "Position": {
+      "X": -448,
+      "Y": 5312,
+      "Z": 105.5625
+    },
+    "Rotation": 5.5850534,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 2004112474,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 18259
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1633900378,
+    "Position": {
+      "X": -288,
+      "Y": 4992,
+      "Z": 5.125
+    },
+    "Rotation": 1.5707964,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1633900378,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 18265
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1886802010,
+    "Variation": 1,
+    "Position": {
+      "X": 59.82614,
+      "Y": 5254.2314,
+      "Z": 71.25918
+    },
+    "Rotation": 1.9024088,
+    "Scale": {
+      "X": 1.2,
+      "Y": 1.2,
+      "Z": 1.2
+    },
+    "SkinId": 1886802010,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 18282
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1886539610,
+    "Variation": 4,
+    "Position": {
+      "X": 62.408844,
+      "Y": 5329.216,
+      "Z": 83.019455
+    },
+    "Rotation": 0.46803647,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1886539610,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 22163
+  }
+]

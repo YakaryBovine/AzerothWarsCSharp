@@ -1,0 +1,124 @@
+[
+  {
+    "Flags": 2,
+    "OwnerId": 24,
+    "HP": -1,
+    "MP": -1,
+    "TargetAcquisition": -2,
+    "HeroLevel": 1,
+    "InventoryData": [],
+    "AbilityData": [
+      {
+        "AbilityId": 1634943809,
+        "IsAutocastActive": true
+      }
+    ],
+    "CustomPlayerColorId": -1,
+    "WaygateDestinationRegionId": -1,
+    "TypeId": 1835623278,
+    "Position": {
+      "X": -18726.89,
+      "Y": -3897.133
+    },
+    "Rotation": 2.874382734298706,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1835623278,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 1141
+  },
+  {
+    "Flags": 2,
+    "OwnerId": 27,
+    "HP": -1,
+    "MP": -1,
+    "TargetAcquisition": -1,
+    "HeroLevel": 1,
+    "InventoryData": [],
+    "AbilityData": [],
+    "CustomPlayerColorId": -1,
+    "WaygateDestinationRegionId": -1,
+    "TypeId": 943009903,
+    "Position": {
+      "X": -18464,
+      "Y": -3680
+    },
+    "Rotation": 4.71238899230957,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 943009903,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 3470
+  },
+  {
+    "Flags": 2,
+    "OwnerId": 24,
+    "HP": -1,
+    "MP": -1,
+    "TargetAcquisition": -1,
+    "HeroLevel": 1,
+    "InventoryData": [],
+    "AbilityData": [],
+    "CustomPlayerColorId": -1,
+    "WaygateDestinationRegionId": -1,
+    "TypeId": 1496395886,
+    "Position": {
+      "X": -18880,
+      "Y": -3776
+    },
+    "Rotation": 4.71238899230957,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1496395886,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 473
+  },
+  {
+    "Flags": 2,
+    "OwnerId": 24,
+    "HP": -1,
+    "MP": -1,
+    "TargetAcquisition": -2,
+    "HeroLevel": 1,
+    "InventoryData": [],
+    "AbilityData": [
+      {
+        "AbilityId": 1818379073,
+        "IsAutocastActive": true
+      },
+      {
+        "AbilityId": 1835287361,
+        "IsAutocastActive": true
+      }
+    ],
+    "CustomPlayerColorId": -1,
+    "WaygateDestinationRegionId": -1,
+    "TypeId": 1936417646,
+    "Position": {
+      "X": -18878.088,
+      "Y": -4057.4307
+    },
+    "Rotation": 1.5503759384155273,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1936417646,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 1884
+  }
+]

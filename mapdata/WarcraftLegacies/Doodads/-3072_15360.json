@@ -1,0 +1,105 @@
+[
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 879122254,
+    "Position": {
+      "X": -3328,
+      "Y": 15360,
+      "Z": 38.399994
+    },
+    "Rotation": 5.3930674,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 879122254,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 1515
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1868713806,
+    "Variation": 7,
+    "Position": {
+      "X": -3363.953,
+      "Y": 15478.795,
+      "Z": 104.13495
+    },
+    "Rotation": 5.223393,
+    "Scale": {
+      "X": 0.81149995,
+      "Y": 0.81149995,
+      "Z": 0.81149995
+    },
+    "SkinId": 1868713806,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 20997
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1685215054,
+    "Position": {
+      "X": -3416.1484,
+      "Y": 15364.064,
+      "Z": -58.493443
+    },
+    "Rotation": 0.33161256,
+    "Scale": {
+      "X": 0.99999994,
+      "Y": 0.99999994,
+      "Z": 0.99999994
+    },
+    "SkinId": 1685215054,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 21009
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1752453198,
+    "Variation": 2,
+    "Position": {
+      "X": -3209.1045,
+      "Y": 15413.436,
+      "Z": 1.1577415
+    },
+    "Rotation": 1.3264502,
+    "Scale": {
+      "X": 1.6478775,
+      "Y": 1.6478775,
+      "Z": 1.6478775
+    },
+    "SkinId": 1752453198,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 21036
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1667846729,
+    "Variation": 1,
+    "Position": {
+      "X": -3342.1423,
+      "Y": 15565.416,
+      "Z": 94.765015
+    },
+    "Rotation": 4.6076694,
+    "Scale": {
+      "X": 1.3999996,
+      "Y": 1.3999996,
+      "Z": 0.79999995
+    },
+    "SkinId": 1667846729,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 21010
+  }
+]

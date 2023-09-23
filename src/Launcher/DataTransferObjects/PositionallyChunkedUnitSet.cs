@@ -23,7 +23,7 @@ namespace Launcher.DataTransferObjects
 
     public void Add(UnitDataDto unit)
     {
-      var chunkPosition = (unit.Position.X.RoundToNearestMultipleOf(_chunkSize), unit.Position.X.RoundToNearestMultipleOf(_chunkSize));
+      var chunkPosition = (unit.Position.X.RoundToNearestMultipleOf(_chunkSize), unit.Position.Y.RoundToNearestMultipleOf(_chunkSize));
 
       if (!_unitsByChunk.ContainsKey(chunkPosition))
         _unitsByChunk.Add(chunkPosition, new HashSet<UnitDataDto>());

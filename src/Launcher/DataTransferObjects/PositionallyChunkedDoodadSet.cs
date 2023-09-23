@@ -23,7 +23,7 @@ namespace Launcher.DataTransferObjects
 
     public void Add(DoodadDataDto doodad)
     {
-      var chunkPosition = (doodad.Position.X.RoundToNearestMultipleOf(_chunkSize), doodad.Position.X.RoundToNearestMultipleOf(_chunkSize));
+      var chunkPosition = (doodad.Position.X.RoundToNearestMultipleOf(_chunkSize), doodad.Position.Y.RoundToNearestMultipleOf(_chunkSize));
 
       if (!_doodadsByChunk.ContainsKey(chunkPosition))
         _doodadsByChunk.Add(chunkPosition, new HashSet<DoodadDataDto>());

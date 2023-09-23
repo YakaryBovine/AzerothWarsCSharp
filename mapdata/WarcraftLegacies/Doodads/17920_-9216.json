@@ -1,0 +1,105 @@
+[
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 2003981122,
+    "Position": {
+      "X": 17925.797,
+      "Y": -9417.037,
+      "Z": 188.50264
+    },
+    "Rotation": 5.393068,
+    "Scale": {
+      "X": 1.19447,
+      "Y": 1.19447,
+      "Z": 1.19447
+    },
+    "SkinId": 2003981122,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 7433
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1886605890,
+    "Position": {
+      "X": 17934.209,
+      "Y": -9615.348,
+      "Z": 211.16696
+    },
+    "Rotation": 4.1015244,
+    "Scale": {
+      "X": 0.9040316,
+      "Y": 0.9040316,
+      "Z": 0.9040316
+    },
+    "SkinId": 1886605890,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 3821
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1886605890,
+    "Variation": 5,
+    "Position": {
+      "X": 17931.799,
+      "Y": -9435.512,
+      "Z": 182.44336
+    },
+    "Rotation": 2.0420353,
+    "Scale": {
+      "X": 0.9676077,
+      "Y": 0.9676077,
+      "Z": 0.9676077
+    },
+    "SkinId": 1886605890,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 3902
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1886605890,
+    "Variation": 5,
+    "Position": {
+      "X": 17922.344,
+      "Y": -9344.03,
+      "Z": 224.47426
+    },
+    "Rotation": 1.4660767,
+    "Scale": {
+      "X": 0.91407824,
+      "Y": 0.91407824,
+      "Z": 0.91407824
+    },
+    "SkinId": 1886605890,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 3904
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1936872002,
+    "Variation": 4,
+    "Position": {
+      "X": 17870.72,
+      "Y": -9610.969,
+      "Z": 178.4527
+    },
+    "Rotation": 3.3684857,
+    "Scale": {
+      "X": 0.79199994,
+      "Y": 0.79199994,
+      "Z": 0.79199994
+    },
+    "SkinId": 1936872002,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 3127
+  }
+]
