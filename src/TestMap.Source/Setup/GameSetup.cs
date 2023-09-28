@@ -3,6 +3,7 @@ using MacroTools.ControlPointSystem;
 using MacroTools.Mechanics;
 using MacroTools.PassiveAbilitySystem;
 using MacroTools.ResearchSystems;
+using MacroTools.Save;
 using MacroTools.UserInterface;
 using static War3Api.Common;
 
@@ -15,7 +16,7 @@ namespace TestMap.Source.Setup
       SetPlayerState(Player(0), PLAYER_STATE_RESOURCE_FOOD_CAP, 100);
       SetPlayerState(Player(0), PLAYER_STATE_RESOURCE_GOLD, 10000);
       SetPlayerState(Player(0), PLAYER_STATE_RESOURCE_LUMBER, 10000);
-
+      SaveManager.Initialize();
       ControlPointManager.Instance = new ControlPointManager();
       LegendSetup.Setup();
       TeamSetup.Setup();

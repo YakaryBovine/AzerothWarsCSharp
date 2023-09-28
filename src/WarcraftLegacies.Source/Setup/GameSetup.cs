@@ -1,9 +1,9 @@
 ﻿using MacroTools;
 using MacroTools.CommandSystem;
 using MacroTools.ControlPointSystem;
-using MacroTools.FactionSystem;
 using MacroTools.Mechanics;
 using MacroTools.PassiveAbilitySystem;
+using MacroTools.Save;
 using MacroTools.UserInterface;
 using WarcraftLegacies.Source.ArtifactBehaviour;
 using WarcraftLegacies.Source.GameLogic;
@@ -28,9 +28,9 @@ namespace WarcraftLegacies.Source.Setup
     /// </summary>
     public static void Setup()
     {
-      var displayIntroText = new DisplayIntroText(25);
-      var cinematicMode = new CinematicMode(59, displayIntroText);
-      var gameTime = new GameTime();
+      SaveManager.Initialize();
+      DisplayIntroText.Setup(25);
+      CinematicMode.Setup(59);
       SetupControlPointManager();
       var preplacedUnitSystem = new PreplacedUnitSystem();
       SoundLibrary.Setup();
@@ -41,7 +41,7 @@ namespace WarcraftLegacies.Source.Setup
       ControlPointSetup.Setup();
       InstanceSetup.Setup(preplacedUnitSystem);
       TeamSetup.Setup();
-      AllFactionSetup.Setup(preplacedUnitSystem, artifactSetup);
+      AllFactionSetup.Setup(preplacedUnitSystem, artifactSetup, allLegendSetup);
       SharedFactionConfigSetup.Setup();
       PlayerSetup.Setup();
       new FactionChoiceDialogPresenter(GoblinSetup.Goblin, ZandalarSetup.Zandalar).Run(Player(8));
@@ -62,9 +62,8 @@ namespace WarcraftLegacies.Source.Setup
       BlightSystem.Setup(ScourgeSetup.Scourge);
       BlightSetup.Setup(preplacedUnitSystem);
       QuestMenuSetup.Setup();
-      cinematicMode.StartTimer();
-      gameTime.StartTimer();
-      CheatSetup.Setup(commandManager, cinematicMode);
+      GameTime.Start();
+      CheatSetup.Setup(commandManager);
       DialogueSetup.Setup(preplacedUnitSystem, allLegendSetup);
       MapFlagSetup.Setup();
       InfoQuests.Setup();
@@ -97,7 +96,7 @@ namespace WarcraftLegacies.Source.Setup
       CapturableUnitSetup.Setup(preplacedUnitSystem);
       EyeOfSargerasPickup.Setup();
       SacrificeAcolyte.Setup();
-      IntegrityChecker.Setup(true);
+      RuntimeIntegrityChecker.Setup(true);
       PeonsStartHarvestingShips.Setup(preplacedUnitSystem);
       DarkPortalControlNexusSetup.Setup(preplacedUnitSystem);
       BlackPortalControlNexusSetup.Setup(preplacedUnitSystem);

@@ -58,7 +58,7 @@ namespace MacroTools.SpellSystem
         .RemoveAbility(abilId);
     }
 
-    public static void DummyCastNoTarget(unit caster, int abilId, string orderId, int level)
+    public static void DummyCastNoTarget(unit caster, int abilId, int orderId, int level)
     {
       DummyCaster.DummyUnit
         .SetOwner(caster.OwningPlayer())

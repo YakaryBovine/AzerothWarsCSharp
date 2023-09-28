@@ -40,6 +40,12 @@ namespace MacroTools.Extensions
       TriggerRegisterLeaveRegion(whichTrigger, region.Region, filter);
       return whichTrigger;
     }
+
+    public static trigger RegisterLifeEvent(this trigger whichTrigger, unit whichUnit, unitstate unitState, limitop limitOp, float limitValue)
+    {
+      TriggerRegisterUnitStateEvent(whichTrigger, whichUnit, unitState, limitOp, limitValue);
+      return whichTrigger;
+    }
     
     public static trigger RegisterUnitEvent(this trigger whichTrigger, unit whichUnit, unitevent whichEvent)
     {

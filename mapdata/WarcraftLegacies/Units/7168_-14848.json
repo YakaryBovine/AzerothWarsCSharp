@@ -1,7 +1,7 @@
 [
   {
     "Flags": 2,
-    "OwnerId": 10,
+    "OwnerId": 1,
     "HP": -1,
     "MP": -1,
     "TargetAcquisition": -1,
@@ -28,7 +28,7 @@
   },
   {
     "Flags": 2,
-    "OwnerId": 10,
+    "OwnerId": 1,
     "HP": -1,
     "MP": -1,
     "TargetAcquisition": -1,
@@ -58,7 +58,7 @@
     "OwnerId": 27,
     "HP": -1,
     "MP": -1,
-    "GoldAmount": 500,
+    "GoldAmount": 1000,
     "TargetAcquisition": -1,
     "HeroLevel": 1,
     "InventoryData": [],
@@ -83,7 +83,7 @@
   },
   {
     "Flags": 2,
-    "OwnerId": 10,
+    "OwnerId": 1,
     "HP": -1,
     "MP": -1,
     "TargetAcquisition": -1,

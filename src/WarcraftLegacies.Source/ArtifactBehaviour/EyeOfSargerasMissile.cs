@@ -1,6 +1,5 @@
 ﻿using MacroTools.Extensions;
 using WCSharp.Missiles;
-using WCSharp.Shared.Data;
 using static War3Api.Common;
 
 namespace WarcraftLegacies.Source.ArtifactBehaviour
@@ -12,6 +11,7 @@ namespace WarcraftLegacies.Source.ArtifactBehaviour
   {
     private readonly item _eyeOfSargeras;
     private bool _impacted;
+    private const string ImpactEffect = @"Abilities\Spells\Undead\DarkRitual\DarkRitualTarget.mdl";
 
     /// <summary>
     /// Initializes a new instance of the <see cref="EyeOfSargerasMissile"/> class.
@@ -22,7 +22,7 @@ namespace WarcraftLegacies.Source.ArtifactBehaviour
       EffectScale = 1.5f;
       Arc = 0.3f;
       Speed = 700;
-      _eyeOfSargeras = eyeOfSargeras.SetPosition(new Point(20229f, 24244));
+      _eyeOfSargeras = eyeOfSargeras.SetPosition(20229f, 24244);
       CollisionRadius = 100;
       Active = true;
       CasterLaunchZ = 50;
@@ -32,12 +32,18 @@ namespace WarcraftLegacies.Source.ArtifactBehaviour
     /// <inheritdoc />
     public override void OnImpact()
     {
+      if (!UnitAlive(Target)) 
+        return;
+      
       Target
         .AddAbility(Constants.ABILITY_A01Y_INVENTORY_DUMMY_DROP_ARTIFACT)
         .AddItemSafe(_eyeOfSargeras);
-      AddSpecialEffect(@"Abilities\Spells\Undead\DarkRitual\DarkRitualTarget.mdl", GetUnitX(Target), GetUnitY(Target))
+      _impacted = true;
+        
+      AddSpecialEffect(ImpactEffect, GetUnitX(Target), GetUnitY(Target))
         .SetScale(2)
         .SetLifespan(1);
+      
       var eyeEffect = AddSpecialEffectTarget(@"Doodads\Cinematic\EyeOfSargeras\EyeOfSargeras.mdl", Target, "overhead");
       CreateTrigger()
         .RegisterUnitEvent(Target, EVENT_UNIT_DEATH)
@@ -46,14 +52,18 @@ namespace WarcraftLegacies.Source.ArtifactBehaviour
           eyeEffect.Destroy();
           DestroyTrigger(GetTriggeringTrigger());
         });
-      _impacted = true;
     }
 
     /// <inheritdoc />
     public override void OnDispose()
     {
-      if (!_impacted) 
-        _eyeOfSargeras.SetPosition(new Point(MissileX, MissileY));
+      if (_impacted) 
+        return;
+      
+      _eyeOfSargeras.SetPosition(MissileX, MissileY);
+      AddSpecialEffect(ImpactEffect, MissileX, MissileY)
+        .SetScale(2)
+        .SetLifespan(1);
     }
   }
 }

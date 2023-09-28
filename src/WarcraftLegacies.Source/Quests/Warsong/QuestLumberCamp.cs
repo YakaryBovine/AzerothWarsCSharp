@@ -22,7 +22,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     {
       AddObjective(new ObjectiveLegendReachRect(grom, Regions.LumberCampUnlock,
         "Eastern Ashenvale"));
-      AddObjective(new ObjectiveKillAllInArea(new List<Rectangle> { Regions.UpperBarrenCreeps }, "in the Northern Barrens"));
+      AddObjective(new ObjectiveHostilesInAreaAreDead(new List<Rectangle> { Regions.UpperBarrenCreeps }, "in the Northern Barrens"));
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_O02S_FORTRESS_WARSONG_T3, Constants.UNIT_O00C_GREAT_HALL_WARSONG_T1));
       AddObjective(new ObjectiveExpire(480, Title));
       AddObjective(new ObjectiveSelfExists());

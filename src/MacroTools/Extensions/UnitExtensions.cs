@@ -324,6 +324,15 @@ namespace MacroTools.Extensions
       IssueImmediateOrder(unit, order);
       return unit;
     }
+    
+    /// <summary>
+    /// Orders a unit to perform the specified targetless order.
+    /// </summary>
+    public static unit IssueOrder(this unit unit, int orderId)
+    {
+      IssueImmediateOrderById(unit, orderId);
+      return unit;
+    }
 
     /// <summary>
     /// Moves the unit to a specified <see cref="Point"/>.

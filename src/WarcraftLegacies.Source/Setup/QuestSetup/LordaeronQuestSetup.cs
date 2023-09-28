@@ -15,7 +15,7 @@ namespace WarcraftLegacies.Source.Setup.QuestSetup
     {
       var questStrahnbrad = new QuestStrahnbrad(Regions.StrahnbradUnlock);
       var questStratholme = new QuestStratholme(Regions.StratholmeUnlock, preplacedUnitSystem, allLegendSetup.Lordaeron.Arthas, allLegendSetup.Lordaeron.Stratholme);
-      LordaeronSetup.Lordaeron.AddQuest(new QuestHearthglen(Regions.Hearthglen, allLegendSetup.Lordaeron.Arthas));
+      LordaeronSetup.Lordaeron.AddQuest(new QuestHearthglen(Regions.Hearthglen));
       LordaeronSetup.Lordaeron.AddQuest(questStratholme);
       LordaeronSetup.Lordaeron.StartingQuest = questStratholme;
       LordaeronSetup.Lordaeron.AddQuest(questStrahnbrad);

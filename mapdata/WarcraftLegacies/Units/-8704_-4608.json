@@ -10,64 +10,10 @@
     "AbilityData": [],
     "CustomPlayerColorId": -1,
     "WaygateDestinationRegionId": -1,
-    "TypeId": 825503855,
-    "Position": {
-      "X": -8960,
-      "Y": -4800
-    },
-    "Rotation": 4.71238899230957,
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "SkinId": 825503855,
-    "MapItemTableId": -1,
-    "ItemTableSets": [],
-    "CreationNumber": 2388
-  },
-  {
-    "Flags": 2,
-    "OwnerId": 27,
-    "HP": -1,
-    "MP": -1,
-    "TargetAcquisition": -1,
-    "HeroLevel": 1,
-    "InventoryData": [],
-    "AbilityData": [],
-    "CustomPlayerColorId": -1,
-    "WaygateDestinationRegionId": -1,
     "TypeId": 1144270959,
     "Position": {
-      "X": -8744.388,
-      "Y": -4821.1426
-    },
-    "Rotation": 5.1961350440979,
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "SkinId": 1144270959,
-    "MapItemTableId": -1,
-    "ItemTableSets": [],
-    "CreationNumber": 2438
-  },
-  {
-    "Flags": 2,
-    "OwnerId": 27,
-    "HP": -1,
-    "MP": -1,
-    "TargetAcquisition": -1,
-    "HeroLevel": 1,
-    "InventoryData": [],
-    "AbilityData": [],
-    "CustomPlayerColorId": -1,
-    "WaygateDestinationRegionId": -1,
-    "TypeId": 1144270959,
-    "Position": {
-      "X": -9008.579,
-      "Y": -4990.446
+      "X": -8811.489,
+      "Y": -4857.3457
     },
     "Rotation": 5.441962718963623,
     "Scale": {
@@ -79,5 +25,32 @@
     "MapItemTableId": -1,
     "ItemTableSets": [],
     "CreationNumber": 2484
+  },
+  {
+    "Flags": 2,
+    "OwnerId": 27,
+    "HP": -1,
+    "MP": -1,
+    "TargetAcquisition": -1,
+    "HeroLevel": 1,
+    "InventoryData": [],
+    "AbilityData": [],
+    "CustomPlayerColorId": -1,
+    "WaygateDestinationRegionId": -1,
+    "TypeId": 1379086447,
+    "Position": {
+      "X": -9056,
+      "Y": -4960
+    },
+    "Rotation": 4.71238899230957,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1379086447,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 2388
   }
 ]

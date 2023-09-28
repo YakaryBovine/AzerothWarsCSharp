@@ -38,7 +38,7 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BV_DRUSTVAR)));
       AddObjective(new ObjectiveExpire(480, Title));
       AddObjective(new ObjectiveSelfExists());
-      ResearchId = Constants.UPGRADE_R00L_QUEST_COMPLETED_THE_CITY_AT_SEA_KUL_TIRAS;
+      ResearchId = Constants.UPGRADE_R00L_QUEST_COMPLETED_THE_ADMIRALTY_OF_KUL_TIRAS_KUL_TIRAS;
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
       Required = true;
     }

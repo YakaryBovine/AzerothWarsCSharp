@@ -21,7 +21,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
       @"ReplaceableTextures\CommandButtons\BTNAncientOfTheMoon.blp")
     {
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BI_SHRINE_TO_MALORNE)));
-      AddObjective(new ObjectiveKillAllInArea(new List<Rectangle> { Regions.ShrineBaseUnlock }, "in Hyjal"));
+      AddObjective(new ObjectiveHostilesInAreaAreDead(new List<Rectangle> { Regions.ShrineBaseUnlock }, "in Hyjal"));
       AddObjective(new ObjectiveExpire(480, Title));
       AddObjective(new ObjectiveSelfExists());
       Required = true;

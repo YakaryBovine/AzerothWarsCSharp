@@ -3,6 +3,7 @@ using MacroTools.PassiveAbilitySystem;
 using MacroTools.Spells;
 using MacroTools.Spells.ExactJustice;
 using MacroTools.SpellSystem;
+using static War3Api.Common;
 
 namespace WarcraftLegacies.Source.Setup.Spells
 {
@@ -63,7 +64,7 @@ namespace WarcraftLegacies.Source.Setup.Spells
         Constants.ABILITY_A122_WILL_OF_THE_ASHBRINGER_MOGRAINE)
       {
         DummyAbilityId = Constants.ABILITY_A0KA_RESURRECTION_DUMMY_MOGRAINE,
-        DummyOrderString = "resurrection",
+        DummyOrderId = OrderId("resurrection"),
         ProcChance = 0.2f
       };
       PassiveAbilityManager.Register(willoftheAshbringer);

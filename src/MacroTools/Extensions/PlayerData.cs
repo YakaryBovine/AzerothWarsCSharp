@@ -4,6 +4,7 @@ using System.Linq;
 using MacroTools.ControlPointSystem;
 using MacroTools.DialogueSystem;
 using MacroTools.FactionSystem;
+using MacroTools.Save;
 using static War3Api.Common;
 
 namespace MacroTools.Extensions
@@ -126,6 +127,35 @@ namespace MacroTools.Extensions
 
     public int EliminationTurns { get; set; }
     
+    public void UpdatePlayerSetting(string setting, int value)
+    {
+      switch (setting)
+      {
+        case "CamDistance":
+          PlayerSettings.CamDistance = value;
+          _player.ApplyCameraField(CAMERA_FIELD_TARGET_DISTANCE, PlayerSettings.CamDistance, 1);
+          break;
+      }
+      SaveManager.Save(PlayerSettings);
+    }
+
+    public void UpdatePlayerSetting(string setting, bool value)
+    {
+      switch (setting)
+      {
+        case "PlayDialogue":
+          PlayerSettings.PlayDialogue = value;
+          break;
+        case "ShowQuestText":
+          PlayerSettings.ShowQuestText = value;
+          break;
+        case "ShowCaptions":
+          PlayerSettings.ShowCaptions = value;
+          break;
+      }
+      SaveManager.Save(PlayerSettings);
+    }
+    
     public float LumberIncome { get; set; }
 
     /// <summary>
@@ -161,6 +191,16 @@ namespace MacroTools.Extensions
         _goldPerMinute = value;
         IncomeChanged?.Invoke(this, this);
       }
+    }
+
+    public PlayerSettings PlayerSettings => SaveManager.SavesByPlayer.ContainsKey(_player)? SaveManager.SavesByPlayer[_player]: CreateNewPlayerSettings();
+
+    private PlayerSettings CreateNewPlayerSettings()
+    {
+      var newPlayerSettings = new PlayerSettings();
+      newPlayerSettings.SetPlayer(_player);
+      SaveManager.SavesByPlayer[_player] = newPlayerSettings;
+      return newPlayerSettings;
     }
 
     /// <summary>

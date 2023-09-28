@@ -21,6 +21,7 @@ namespace WarcraftLegacies.Source.Setup.Legends
       LegendNobundo = new LegendaryHero("Nobundo")
       {
         UnitType = Constants.UNIT_E01J_HIGH_SHAMAN_DRUIDS,
+        StartingXp = 1800
       };
 
       LegendExodar = new Capital

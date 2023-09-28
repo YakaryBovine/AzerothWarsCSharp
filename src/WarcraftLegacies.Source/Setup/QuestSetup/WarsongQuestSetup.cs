@@ -20,6 +20,7 @@ namespace WarcraftLegacies.Source.Setup.QuestSetup
       warsong.AddQuest(new QuestWarsongKillDruids(allLegendSetup.Druids.Nordrassil, allLegendSetup.Warsong.GromHellscream));
       warsong.AddQuest(new QuestMoreWyverns(allLegendSetup.Sentinels.Feathermoon, allLegendSetup.Sentinels.Auberdine));
       warsong.AddQuest(new QuestWarsongHold());
+      warsong.AddQuest(new QuestWarsongOutpost());
     }
   }
 }

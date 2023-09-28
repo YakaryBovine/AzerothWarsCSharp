@@ -19,7 +19,7 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
       AddObjective(new ObjectiveBuildInRect(questRect, "in Stranglethorn or Westfall", Constants.UNIT_H07Q_SCHOOL_OF_THE_TIDES_KUL_TIRAS_MAGIC));
       AddObjective(new ObjectiveBuildInRect(questRect, "in Stranglethorn or Westfall", Constants.UNIT_H062_TOWN_HALL_KUL_TIRAS_T1));
       AddObjective(new ObjectiveBuildInRect(questRect, "in Stranglethorn or Westfall", Constants.UNIT_H07P_WORKSHOP_KUL_TIRAS_SIEGE));
-      ResearchId = Constants.UPGRADE_R06T_QUEST_COMPLETED_STRANGLETHORN_OUTPOST;
+      ResearchId = Constants.UPGRADE_R06T_QUEST_COMPLETED_CONTINENTAL_OUTPOST;
     }
 
     /// <inheritdoc/>

@@ -11,8 +11,8 @@ namespace WarcraftLegacies.Source.Setup
       Player(0).SetFaction(FrostwolfSetup.Frostwolf);
       Player(0).SetTeam(TeamSetup.Horde);
 
-      Player(1).SetFaction(LordaeronSetup.Lordaeron);
-      Player(1).SetTeam(TeamSetup.NorthAlliance);
+      Player(9).SetFaction(LordaeronSetup.Lordaeron);
+      Player(9).SetTeam(TeamSetup.NorthAlliance);
 
       Player(2).SetFaction(QuelthalasSetup.Quelthalas);
       Player(2).SetTeam(TeamSetup.NorthAlliance);
@@ -33,8 +33,8 @@ namespace WarcraftLegacies.Source.Setup
       
       Player(8).SetTeam(TeamSetup.Horde);
       
-      Player(10).SetFaction(StormwindSetup.Stormwind);
-      Player(10).SetTeam(TeamSetup.SouthAlliance);
+      Player(1).SetFaction(StormwindSetup.Stormwind);
+      Player(1).SetTeam(TeamSetup.SouthAlliance);
 
       Player(11).SetFaction(DruidsSetup.Druids);
       Player(11).SetTeam(TeamSetup.NightElves);

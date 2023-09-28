@@ -2,6 +2,26 @@
   {
     "State": 6,
     "Life": 255,
+    "TypeId": 959590468,
+    "Position": {
+      "X": 8319.233,
+      "Y": -374.89294,
+      "Z": 39.62946
+    },
+    "Rotation": 1.097689,
+    "Scale": {
+      "X": 1.1500008,
+      "Y": 1.1500008,
+      "Z": 0.70000005
+    },
+    "SkinId": 959590468,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 14803
+  },
+  {
+    "State": 6,
+    "Life": 255,
     "TypeId": 1818316622,
     "Position": {
       "X": 7971.953,
@@ -84,26 +104,6 @@
     "Life": 255,
     "TypeId": 959590468,
     "Position": {
-      "X": 8345.181,
-      "Y": -457.76575,
-      "Z": 24.668175
-    },
-    "Rotation": 3.922802,
-    "Scale": {
-      "X": 2.1,
-      "Y": 2.1,
-      "Z": 0.9
-    },
-    "SkinId": 959590468,
-    "MapItemTableId": -1,
-    "ItemTableSets": [],
-    "CreationNumber": 14803
-  },
-  {
-    "State": 6,
-    "Life": 255,
-    "TypeId": 959590468,
-    "Position": {
       "X": 8328.6,
       "Y": 45.657166,
       "Z": 1.5615778
@@ -142,11 +142,11 @@
   {
     "State": 2,
     "Life": 100,
-    "TypeId": 1651528793,
+    "TypeId": 1668306009,
     "Position": {
-      "X": 8416,
-      "Y": 224,
-      "Z": -30.96875
+      "X": 8384,
+      "Y": 64,
+      "Z": 11.9375
     },
     "Rotation": 4.712389,
     "Scale": {
@@ -154,19 +154,19 @@
       "Y": 1,
       "Z": 1
     },
-    "SkinId": 1651528793,
+    "SkinId": 1668306009,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 18559
+    "CreationNumber": 21596
   },
   {
     "State": 2,
     "Life": 100,
-    "TypeId": 1651528793,
+    "TypeId": 1668306009,
     "Position": {
-      "X": 8416,
-      "Y": 160,
-      "Z": -28.15625
+      "X": 8384,
+      "Y": -64,
+      "Z": 22.4375
     },
     "Rotation": 4.712389,
     "Scale": {
@@ -174,10 +174,10 @@
       "Y": 1,
       "Z": 1
     },
-    "SkinId": 1651528793,
+    "SkinId": 1668306009,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 18563
+    "CreationNumber": 21595
   },
   {
     "State": 2,
@@ -465,8 +465,8 @@
     "TypeId": 1651528793,
     "Position": {
       "X": 8288,
-      "Y": -416,
-      "Z": 38.46875
+      "Y": -352,
+      "Z": 28.71875
     },
     "Rotation": 4.712389,
     "Scale": {
@@ -485,8 +485,8 @@
     "TypeId": 1651528793,
     "Position": {
       "X": 8352,
-      "Y": -480,
-      "Z": 42.109375
+      "Y": -416,
+      "Z": 29.203125
     },
     "Rotation": 4.712389,
     "Scale": {
@@ -498,5 +498,85 @@
     "MapItemTableId": -1,
     "ItemTableSets": [],
     "CreationNumber": 21130
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1668306009,
+    "Position": {
+      "X": 8320,
+      "Y": -192,
+      "Z": 49.25
+    },
+    "Rotation": 4.712389,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1668306009,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 21589
+  },
+  {
+    "State": 2,
+    "Life": 100,
+    "TypeId": 1668306009,
+    "Position": {
+      "X": 8384,
+      "Y": 192,
+      "Z": -4
+    },
+    "Rotation": 4.712389,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1668306009,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 18559
+  },
+  {
+    "State": 6,
+    "Life": 255,
+    "TypeId": 1446260804,
+    "Position": {
+      "X": 8410.475,
+      "Y": -440.97504,
+      "Z": -585.5685
+    },
+    "Rotation": 2.6116235,
+    "Scale": {
+      "X": 0.59999996,
+      "Y": 0.59999996,
+      "Z": 1.7
+    },
+    "SkinId": 1446260804,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 30333
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1211117636,
+    "Position": {
+      "X": 8098.258,
+      "Y": -449.3214,
+      "Z": 66.18106
+    },
+    "Rotation": 5.502835,
+    "Scale": {
+      "X": 1.1,
+      "Y": 1.1,
+      "Z": 1.0500001
+    },
+    "SkinId": 1211117636,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 1492
   }
 ]

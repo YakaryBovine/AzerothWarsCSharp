@@ -5,8 +5,8 @@
     "TypeId": 1379217476,
     "Variation": 1,
     "Position": {
-      "X": -22709.734,
-      "Y": 6797.1465,
+      "X": -22621.24,
+      "Y": 6814.3164,
       "Z": 109.25
     },
     "Rotation": 4.7256536,
@@ -18,67 +18,67 @@
     "SkinId": 1379217476,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 26505
-  },
-  {
-    "State": 6,
-    "Life": 255,
-    "TypeId": 1261711428,
-    "Position": {
-      "X": -22848.502,
-      "Y": 6400.342,
-      "Z": -122.40443
-    },
-    "Rotation": 3.1539726,
-    "Scale": {
-      "X": 0.44999987,
-      "Y": 0.44999987,
-      "Z": 0.39999986
-    },
-    "SkinId": 1261711428,
-    "MapItemTableId": -1,
-    "ItemTableSets": [],
-    "CreationNumber": 26522
+    "CreationNumber": 26504
   },
   {
     "State": 6,
     "Life": 255,
     "TypeId": 2002867033,
     "Position": {
-      "X": -22700.334,
-      "Y": 6867.7363,
+      "X": -22619.514,
+      "Y": 6865.8613,
       "Z": -217.14995
     },
-    "Rotation": 0.7853982,
+    "Rotation": 2.3561945,
     "Scale": {
-      "X": 0.34999985,
-      "Y": 0.34999985,
+      "X": 0.35,
+      "Y": 0.35,
       "Z": 1.0999999
     },
     "SkinId": 2002867033,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 18388
+    "CreationNumber": 18390
   },
   {
     "State": 6,
     "Life": 255,
     "TypeId": 2002867033,
     "Position": {
-      "X": -22697.605,
-      "Y": 6862.3613,
+      "X": -22616.785,
+      "Y": 6860.4863,
       "Z": -281.1499
     },
-    "Rotation": 0.7853982,
+    "Rotation": 2.3561945,
     "Scale": {
-      "X": 0.34999985,
-      "Y": 0.34999985,
+      "X": 0.35,
+      "Y": 0.35,
       "Z": 1.0999999
     },
     "SkinId": 2002867033,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 18384
+    "CreationNumber": 18386
+  },
+  {
+    "State": 2,
+    "Life": 255,
+    "TypeId": 1868780377,
+    "Position": {
+      "X": -22618.652,
+      "Y": 6858.4336,
+      "Z": 109.25
+    },
+    "Rotation": 2.3561945,
+    "Scale": {
+      "X": 0.55,
+      "Y": 0.55,
+      "Z": 0.75
+    },
+    "SkinId": 1868780377,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 17551
   },
   {
     "State": 2,
@@ -86,7 +86,7 @@
     "TypeId": 2036552265,
     "Variation": 1,
     "Position": {
-      "X": -22734.879,
+      "X": -22572.352,
       "Y": 6905.338,
       "Z": 109.25
     },
@@ -99,27 +99,28 @@
     "SkinId": 2036552265,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 17555
+    "CreationNumber": 13264
   },
   {
     "State": 2,
     "Life": 255,
-    "TypeId": 1868780377,
+    "TypeId": 2036552265,
+    "Variation": 1,
     "Position": {
-      "X": -22686.99,
-      "Y": 6852.5215,
+      "X": -22635.975,
+      "Y": 6814.7266,
       "Z": 109.25
     },
-    "Rotation": 0.7853982,
+    "Rotation": 0.2857302,
     "Scale": {
-      "X": 0.55,
-      "Y": 0.55,
-      "Z": 0.75
+      "X": 0.49999994,
+      "Y": 0.49999994,
+      "Z": 0.65000004
     },
-    "SkinId": 1868780377,
+    "SkinId": 2036552265,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 17534
+    "CreationNumber": 13259
   },
   {
     "State": 2,
@@ -139,27 +140,27 @@
     "SkinId": 1668306009,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 13188
+    "CreationNumber": 13189
   },
   {
-    "State": 2,
+    "State": 6,
     "Life": 255,
-    "TypeId": 2036552265,
-    "Variation": 1,
+    "TypeId": 1919373130,
+    "Variation": 3,
     "Position": {
-      "X": -22659.15,
-      "Y": 6813.293,
-      "Z": 109.25
+      "X": -22621.68,
+      "Y": 6854.84,
+      "Z": 435.64972
     },
-    "Rotation": 0.2857302,
+    "Rotation": 1.8675023,
     "Scale": {
-      "X": 0.49999994,
-      "Y": 0.49999994,
-      "Z": 0.65000004
+      "X": 0.8,
+      "Y": 0.8,
+      "Z": 0.8
     },
-    "SkinId": 2036552265,
+    "SkinId": 1919373130,
     "MapItemTableId": -1,
     "ItemTableSets": [],
-    "CreationNumber": 10341
+    "CreationNumber": 26451
   }
 ]

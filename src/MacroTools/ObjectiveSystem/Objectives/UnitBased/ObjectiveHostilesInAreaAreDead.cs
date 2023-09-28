@@ -10,7 +10,7 @@ namespace MacroTools.ObjectiveSystem.Objectives.UnitBased
   /// <summary>
   /// Objective that is completed when all Neutral Hostile units in an are are dead.
   /// </summary>
-  public sealed class ObjectiveKillAllInArea : Objective
+  public sealed class ObjectiveHostilesInAreaAreDead : Objective
   {
     private readonly string _areaName;
     private readonly int _maxKillCount;
@@ -29,10 +29,16 @@ namespace MacroTools.ObjectiveSystem.Objectives.UnitBased
     }
     
     /// <summary>
-    /// Initializes a new instance of the <see cref="ObjectiveKillAllInArea"/> class.
+    /// Initializes a new instance of the <see cref="ObjectiveHostilesInAreaAreDead"/> class.
     /// </summary>
-    public ObjectiveKillAllInArea(IEnumerable<Rectangle> rectangles, string areaName)
+    public ObjectiveHostilesInAreaAreDead(ICollection<Rectangle> rectangles, string areaName)
     {
+      if (rectangles.Count == 1)
+      {
+        Position = rectangles.First().Center;
+        DisplaysPosition = true;
+      }
+      
       _areaName = areaName;
       foreach (var rectangle in rectangles)
       {

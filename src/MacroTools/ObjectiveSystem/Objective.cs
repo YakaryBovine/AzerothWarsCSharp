@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using MacroTools.DialogueSystem;
 using MacroTools.Extensions;
 using MacroTools.FactionSystem;
@@ -20,13 +19,7 @@ namespace MacroTools.ObjectiveSystem
     private effect? _overheadEffect;
 
     private QuestProgress _progress = QuestProgress.Incomplete;
-
-    /// <summary>Initializes a new instance of the <see cref="Objective"/> class.</summary>
-    protected Objective()
-    {
-      OverheadEffectPath = @"Abilities\Spells\Other\TalkToMe\TalkToMe";
-    }
-
+    
     /// <summary>The <see cref="Faction"/>s that can contribute towards progressing this objective.</summary>
     public List<Faction> EligibleFactions { get; init; } = new();
 
@@ -35,24 +28,28 @@ namespace MacroTools.ObjectiveSystem
     /// </summary>
     public Point? Position { get; protected init; }
 
+    /// <summary>Whether or not this can be seen as a bullet point in the quest log.</summary>
+    public bool ShowsInQuestLog { get; protected init; } = true;
+    
+    /// <summary>This research is enabled for all players while the objective is completed, and disabled otherwise.</summary>
+    public int ResearchId { get; init; }
+    
     /// <summary>Whether or not the <see cref="Objective" /> should display a position.</summary>
     protected bool DisplaysPosition { get; init; }
 
     /// <summary>Overhead effects get rendered over the target widget.</summary>
     protected widget? TargetWidget { get; init; }
-
-    /// <summary>The file path for the overhead effect to use for this item.</summary>
-    private string? OverheadEffectPath { get; }
-
+    
     /// <summary>The file path for the effect that represents this <see cref="Objective"/> on the minimap.</summary>
     protected string? MapEffectPath { get; init; }
 
     internal questitem? QuestItem { get; set; }
-
-    /// <summary>Whether or not this can be seen as a bullet point in the quest log.</summary>
-    public bool ShowsInQuestLog { get; protected init; } = true;
-
+    
+    /// <summary>If true ,the objective can't have its <see cref="Progress"/> changed.</summary>
     internal bool ProgressLocked { get; set; }
+
+    /// <summary>The file path for the overhead effect to use for this item.</summary>
+    private string OverheadEffectPath => @"Abilities\Spells\Other\TalkToMe\TalkToMe";
 
     /// <summary>The progress that has been made towards completion or failure.</summary>
     public QuestProgress Progress
@@ -64,21 +61,24 @@ namespace MacroTools.ObjectiveSystem
 
         _progress = value;
         if (ShowsInQuestLog)
-          if (value == QuestProgress.Incomplete)
+          switch (value)
           {
-            QuestItemSetCompleted(QuestItem, false);
-          }
-          else if (value == QuestProgress.Complete)
-          {
-            QuestItemSetCompleted(QuestItem, true);
-          }
-          else if (value == QuestProgress.Undiscovered)
-          {
-            QuestItemSetCompleted(QuestItem, false);
-          }
-          else if (value == QuestProgress.Failed)
-          {
-            QuestItemSetCompleted(QuestItem, false);
+            case QuestProgress.Incomplete:
+              QuestItemSetCompleted(QuestItem, false);
+              SetResearchLevelForAllPlayers(ResearchId, 0);
+              break;
+            case QuestProgress.Complete:
+              QuestItemSetCompleted(QuestItem, true);
+              SetResearchLevelForAllPlayers(ResearchId, 1);
+              break;
+            case QuestProgress.Undiscovered:
+              QuestItemSetCompleted(QuestItem, false);
+              SetResearchLevelForAllPlayers(ResearchId, 0);
+              break;
+            case QuestProgress.Failed:
+              QuestItemSetCompleted(QuestItem, false);
+              SetResearchLevelForAllPlayers(ResearchId, 0);
+              break;
           }
 
         ProgressChanged?.Invoke(this, this);
@@ -100,6 +100,11 @@ namespace MacroTools.ObjectiveSystem
     /// The texture path for the icon that appears showing where this <see cref="Objective" />can be completed.
     /// </summary>
     protected string PingPath { get; init; } = "MinimapQuestObjectivePrimary";
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Objective"/> class.
+    /// </summary>
+    protected Objective() => SetResearchLevelForAllPlayers(ResearchId, 0);
 
     /// <summary>
     /// Returns true if the specified player is on the same team as any of the players that are eligible to contribute
@@ -160,7 +165,7 @@ namespace MacroTools.ObjectiveSystem
         BlzSetSpecialEffectHeight(_mapEffect, 100 + Environment.GetPositionZ(Position));
       }
 
-      if (OverheadEffectPath == null || _overheadEffect != null || TargetWidget == null) 
+      if (_overheadEffect != null || TargetWidget == null) 
         return;
       
       effectPath = EligibleFactions.Contains(GetLocalPlayer()) ? OverheadEffectPath : "";
@@ -183,11 +188,15 @@ namespace MacroTools.ObjectiveSystem
         _mapEffect = null;
       }
 
-      if (OverheadEffectPath != null)
-      {
-        DestroyEffect(_overheadEffect);
-        _overheadEffect = null;
-      }
+
+      DestroyEffect(_overheadEffect);
+      _overheadEffect = null;
+    }
+
+    private static void SetResearchLevelForAllPlayers(int researchId, int level)
+    {
+      foreach (var player in WCSharp.Shared.Util.EnumeratePlayers())
+        SetPlayerTechResearched(player, researchId, level);
     }
   }
 }

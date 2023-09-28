@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
       BlzGetAbilityIcon(blackrookHold.UnitType))
     {
       _blackrookHold = blackrookHold;
-      AddObjective(new ObjectiveKillAllInArea(new[]
+      AddObjective(new ObjectiveHostilesInAreaAreDead(new[]
       {
         Regions.BrokenIslesA,
         Regions.BrokenIslesB

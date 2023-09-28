@@ -44,7 +44,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
     
     /// <inheritdoc />
     protected override string RewardDescription =>
-      "Thrall gains 2000 experience and 10 Agility, and you gain the power Maelstrom Spirit";
+      "Thrall gains 2000 experience and 10 Agility, and you gain the Power Maelstrom Spirit";
 
     /// <inheritdoc />
     protected override void OnComplete(Faction completingFaction)

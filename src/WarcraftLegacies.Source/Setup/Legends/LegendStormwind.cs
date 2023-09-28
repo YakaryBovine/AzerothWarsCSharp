@@ -31,7 +31,7 @@ namespace WarcraftLegacies.Source.Setup.Legends
       Galen = new LegendaryHero("Galen Trollbane")
       {
         UnitType = Constants.UNIT_H00Z_CROWN_PRINCE_OF_STROMGARDE_STORMWIND,
-        StartingXp = 7000,
+        StartingXp = 5400,
         StartingArtifactItemTypeIds = new() { Constants.ITEM_I01O_TROL_KALAR }
       };
 

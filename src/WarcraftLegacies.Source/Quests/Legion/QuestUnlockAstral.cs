@@ -7,27 +7,27 @@ namespace WarcraftLegacies.Source.Quests.Legion
 {
   public sealed class QuestUnlockAstral : QuestData
   {
-   
-    public QuestUnlockAstral(Capital caerDarrow) : base("Secrets of the Ethereal Realm",
-      "Once we have established a foothold in this puny mortal plane we can reveal our true power over the dimensions.",
+
+    public QuestUnlockAstral(Capital caerDarrow) : base("Secrets of the Astral Realm",
+      "Within the island stronghold of Caer'Darrow, a profound and potent dark energy pulsates, holding the potential to restore our mastery and grant us the power to traverse realms freely once more.",
       @"ReplaceableTextures\CommandButtons\BTNSpell_Nature_AstralRecal.blp")
 
     {
       AddObjective(new ObjectiveControlCapital(caerDarrow, false));
-      ResearchId = Constants.UPGRADE_R09S_QUEST_COMPLETE_SECRETS_OF_THE_ETHEREAL_REALM;
-     
+      ResearchId = Constants.UPGRADE_R09S_QUEST_COMPLETED_SECRETS_OF_THE_ASTRAL_REALM;
+
     }
-    
-    /// <inheritdoc/>
-    protected override string RewardFlavour => "Resistance is futile, this land will fall to the might of the Burning Legion. ";
 
     /// <inheritdoc/>
-    protected override string RewardDescription => "Your power grows. Dreadlords and Infiltrators can now unlock the ability to teleport.";
-      
+    protected override string RewardFlavour => "With a firm grip on the stronghold and its enigmatic secrets, we embark upon the path to dominate this feeble realm.";
+
+    /// <inheritdoc/>
+    protected override string RewardDescription => "You can now research Astral Walk from Dominant Spires; for Dreadlords and Nathrezim infiltrators.";
+
     /// <inheritdoc/>
     protected override void OnComplete(Faction whichFaction)
     {
-      
+
 
     }
   }

@@ -42,7 +42,7 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
       _highBourneAreaUnits = _highBourneArea.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
       ResearchId = Constants.UPGRADE_R02O_QUEST_COMPLETED_RETURN_TO_THE_FOLD_SENTINELS;
       AddObjective(new ObjectiveCapitalDead(stonemaulKeep));
-      AddObjective(new ObjectiveKillAllInArea(new[]{area}, "outside the Athenaeum"));
+      AddObjective(new ObjectiveHostilesInAreaAreDead(new[]{area}, "outside the Athenaeum"));
       _anyUnitInRect = new ObjectiveAnyUnitInRect(_highBourneArea, "the Athenaeum", false);
       AddObjective(_anyUnitInRect);
       AddObjective(new ObjectiveNoOtherPlayerGetsArtifact(scepterOfTheQueen));

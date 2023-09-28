@@ -78,7 +78,9 @@ namespace Launcher.Services
       if (options.BackupDirectory != null)
         BackupFiles(options.BackupDirectory, mapFilePath);
       
-      Directory.Delete(mapFilePath, true);
+      if (Directory.Exists(mapFilePath))
+        Directory.Delete(mapFilePath, true);
+      
       map.BuildDirectory(@$"{mapFilePath}\", additionalFiles);
     }
     

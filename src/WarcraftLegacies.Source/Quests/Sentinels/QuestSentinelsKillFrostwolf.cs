@@ -19,7 +19,7 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
       "The Frostwolf Clan is beginning to seize a firm foothold within the Barrens and on the plains of Mulgore. They must be driven back.",
       @"ReplaceableTextures\CommandButtons\BTNThrall.blp")
     {
-      AddObjective(new ObjectiveCapitalDead(thunderBluff));
+      AddObjective(new ObjectiveControlCapital(thunderBluff, false));
       ResearchId = Constants.UPGRADE_R052_QUEST_COMPLETED_DRIVE_THEM_BACK_SENTINELS;
       Required = true;
     }

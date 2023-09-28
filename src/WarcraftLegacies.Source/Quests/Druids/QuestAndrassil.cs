@@ -11,9 +11,10 @@ namespace WarcraftLegacies.Source.Quests.Druids
 {
   public sealed class QuestAndrassil : QuestData
   {
+    private readonly Capital _vordrassil;
     private const int UrsocId = Constants.UNIT_E00A_ANCIENT_GUARDIAN_DRUIDS;
 
-    public QuestAndrassil(Capital lichKing) : base("Crown of the Snow",
+    public QuestAndrassil(Capital lichKing, Capital vordrassil) : base("Crown of the Snow",
       "Long ago, Fandral Staghelm cut a sapling from Nordrassil and used it to grow Andrassil in Northrend. Without the blessing of the Aspects, it fell to the Old Gods' corruption. If Northrend were to be reclaimed, Andrassil's growth could begin anew.",
       @"ReplaceableTextures\CommandButtons\BTNTreant.blp")
     {
@@ -21,6 +22,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N03U_GRIZZLY_HILLS)));
       AddObjective(new ObjectiveAnyUnitInRect(Regions.GrizzlyHills, "Grizzly Hills", true));
       ResearchId = Constants.UPGRADE_R002_QUEST_COMPLETED_CROWN_OF_THE_SNOW_DRUIDS;
+      _vordrassil = vordrassil;
     }
     
     /// <inheritdoc/>
@@ -34,7 +36,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
     /// <inheritdoc/>
     protected override void OnComplete(Faction completingFaction)
     {
-      CreateUnit(completingFaction.Player, Constants.UNIT_N04F_ANDRASSIL_DRUID_OTHER, GetRectCenterX(Regions.Andrassil.Rect),
+      _vordrassil.Unit = CreateUnit(completingFaction.Player, Constants.UNIT_N04F_ANDRASSIL_DRUID_OTHER, GetRectCenterX(Regions.Andrassil.Rect),
         GetRectCenterY(Regions.Andrassil.Rect), 0);
     }
 

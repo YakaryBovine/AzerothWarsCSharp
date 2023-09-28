@@ -1,0 +1,95 @@
+{
+  "OldId": 1836338753,
+  "NewId": 825249878,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Level": 2,
+      "Id": 1852072801,
+      "Type": 2,
+      "Value": 30
+    },
+    {
+      "Level": 3,
+      "Id": 1852072801,
+      "Type": 2,
+      "Value": 15
+    },
+    {
+      "Level": 3,
+      "Id": 1935895905,
+      "Value": 250
+    },
+    {
+      "Level": 3,
+      "Pointer": 1,
+      "Id": 829256782,
+      "Type": 2,
+      "Value": 3
+    },
+    {
+      "Level": 2,
+      "Pointer": 3,
+      "Id": 862811214,
+      "Value": 7
+    },
+    {
+      "Level": 3,
+      "Pointer": 3,
+      "Id": 862811214,
+      "Value": 9
+    },
+    {
+      "Level": 2,
+      "Id": 1851880033,
+      "Type": 2,
+      "Value": 650
+    },
+    {
+      "Level": 3,
+      "Id": 1851880033,
+      "Type": 2,
+      "Value": 650
+    },
+    {
+      "Level": 2,
+      "Id": 1918989409,
+      "Type": 3,
+      "Value": "air,ground,enemy,neutral,nonhero"
+    },
+    {
+      "Level": 3,
+      "Id": 1918989409,
+      "Type": 3,
+      "Value": "air,ground,enemy,neutral,nonhero"
+    },
+    {
+      "Id": 1986818657,
+      "Value": 1
+    },
+    {
+      "Level": 1,
+      "Id": 1935895905,
+      "Value": 90
+    },
+    {
+      "Level": 1,
+      "Id": 1852072801,
+      "Type": 2,
+      "Value": 60
+    },
+    {
+      "Level": 1,
+      "Pointer": 1,
+      "Id": 829256782,
+      "Type": 2,
+      "Value": 0.12
+    },
+    {
+      "Id": 1919248481,
+      "Value": 0
+    }
+  ]
+}

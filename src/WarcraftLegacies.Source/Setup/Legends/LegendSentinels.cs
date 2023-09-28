@@ -43,6 +43,7 @@ namespace WarcraftLegacies.Source.Setup.Legends
       {
         UnitType = FourCC("Etyr"),
         PlayerColor = PLAYER_COLOR_CYAN,
+        StartingXp = 400
       };
 
       Naisha = new LegendaryHero("Naisha")

@@ -29,7 +29,7 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
       @"ReplaceableTextures\CommandButtons\BTNArcaneCastle.blp")
     {
       Required = true;
-      AddObjective(new ObjectiveKillAllInArea(new List<Rectangle> { Regions.UpperNetherstorm },
+      AddObjective(new ObjectiveHostilesInAreaAreDead(new List<Rectangle> { Regions.UpperNetherstorm },
         "in upper Netherstorm"));
       AddObjective(
         new ObjectiveControlPoint(

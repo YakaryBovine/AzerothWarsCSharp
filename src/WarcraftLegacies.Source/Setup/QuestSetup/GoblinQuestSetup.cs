@@ -10,6 +10,7 @@ namespace WarcraftLegacies.Source.Setup.QuestSetup
       var goblin = GoblinSetup.Goblin;
       goblin.StartingQuest = goblin.AddQuest(new QuestKezan());
       goblin.AddQuest(new QuestExplosiveEngineering());
+      goblin.AddQuest(new QuestRatchet());
       goblin.AddQuest(new QuestWesternExpansion(new [] { allLegendSetup.Sentinels.Auberdine, allLegendSetup.Sentinels.Feathermoon }));
       goblin.AddQuest(new QuestLumberMarket(allLegendSetup.Druids.Nordrassil));
       goblin.AddQuest(new QuestBusinessExpansion());

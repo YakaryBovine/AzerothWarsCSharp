@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using MacroTools.Cheats;
 using MacroTools.Extensions;
@@ -23,7 +24,7 @@ namespace MacroTools.CommandSystem
     /// <summary>
     /// Returns all registered <see cref="Command"/>s.
     /// </summary>
-    public IEnumerable<Command> GetAllCommands() => _registeredCommands.AsReadOnly();
+    public ReadOnlyCollection<Command> GetAllCommands() => _registeredCommands.AsReadOnly();
 
     /// <summary>
     /// Registers a <see cref="Command"/>, allowing it to be fired when a player executes its command in the chat.
@@ -63,6 +64,18 @@ namespace MacroTools.CommandSystem
             Console.WriteLine($"Failed to execute command: {ex}");
           }
         });
+    }
+
+    /// <summary>Creates a dummy quest that players can read to see the available commands.</summary>
+    public void CreateInfoQuest()
+    {
+      var commandQuest = CreateQuest();
+      QuestSetTitle(commandQuest, "Commands");
+      QuestSetIconPath(commandQuest, @"ReplaceableTextures\CommandButtons\BTNDizzy.blp");
+      var description = _registeredCommands.Aggregate("",
+        (current, command) => $"{current} -{command.CommandText}: {command.Description}\n");
+      
+      QuestSetDescription(commandQuest, description);
     }
 
     private static bool EnteredCommandEndsWithSpaceOrNothing(Command command, string enteredChatString)

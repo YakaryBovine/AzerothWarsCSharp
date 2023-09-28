@@ -26,6 +26,7 @@ namespace WarcraftLegacies.Source.Setup.QuestSetup
       zandalar.AddQuest(new QuestJinthaAlor(allLegendSetup));
       zandalar.AddQuest(new QuestZulgurub(allLegendSetup));
       zandalar.AddQuest(new QuestHakkar(artifactSetup.ZinRokh));
+      zandalar.AddQuest(new QuestZandalarOutpost());
     }
   }
 }

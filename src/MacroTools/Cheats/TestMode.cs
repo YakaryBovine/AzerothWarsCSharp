@@ -8,7 +8,7 @@ namespace MacroTools.Cheats
   /// <summary>
   /// Responsible for determining whether or not the map should be run in test mode.
   /// </summary>
-  public static partial class TestMode
+  public static class TestMode
   {
     /// <summary>
     /// If true, cheats are active for all players.
@@ -27,13 +27,13 @@ namespace MacroTools.Cheats
     private static void CreateInfoQuests(CommandManager commandManager)
     {
       var newQuest = CreateQuest();
-      QuestSetTitle(newQuest, "Test Commands");
+      QuestSetTitle(newQuest, "Cheats");
       var description = commandManager.GetAllCommands().Aggregate("",
         (current, command) => $"{current} -{command.CommandText}: {command.Description}\n");
       QuestSetDescription(newQuest, description);
       QuestSetDiscovered(newQuest, true);
       QuestSetRequired(newQuest, true);
-      QuestSetIconPath(newQuest, "ReplaceableTextures\\CommandButtons\\BTNStaffOfTeleportation.blp");
+      QuestSetIconPath(newQuest, @"ReplaceableTextures\CommandButtons\BTNStaffOfTeleportation.blp");
       QuestSetCompleted(newQuest, false);
     }
 
@@ -47,7 +47,6 @@ namespace MacroTools.Cheats
 
       if (AreCheatsActive)
         CreateInfoQuests(commandManager);
-
     }
   }
 }

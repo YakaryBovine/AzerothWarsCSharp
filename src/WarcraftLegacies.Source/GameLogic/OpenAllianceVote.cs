@@ -67,12 +67,12 @@ namespace WarcraftLegacies.Source.GameLogic
         Player(5).SetTeam(TeamSetup.Legion);
         Player(8).SetTeam(TeamSetup.Legion);
 
-        Player(1).SetTeam(TeamSetup.Alliance);
+        Player(9).SetTeam(TeamSetup.Alliance);
         Player(2).SetTeam(TeamSetup.Alliance);
         Player(7).SetTeam(TeamSetup.Alliance);
 
         Player(4).SetTeam(TeamSetup.Alliance);
-        Player(10).SetTeam(TeamSetup.Alliance);
+        Player(1).SetTeam(TeamSetup.Alliance);
         Player(22).SetTeam(TeamSetup.Alliance);
 
         Player(11).SetTeam(TeamSetup.Alliance);

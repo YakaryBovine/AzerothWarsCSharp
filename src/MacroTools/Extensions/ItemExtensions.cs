@@ -37,6 +37,12 @@ namespace MacroTools.Extensions
       whichItem.SetPosition(shore.Position);
     }
 
+    public static item SetPosition(this item whichItem, float x, float y)
+    {
+      SetItemPosition(whichItem, x, y);
+      return whichItem;
+    }
+    
     public static item SetPosition(this item whichItem, Point position)
     {
       SetItemPosition(whichItem, position.X, position.Y);

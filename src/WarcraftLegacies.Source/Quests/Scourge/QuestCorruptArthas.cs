@@ -31,7 +31,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
         new ObjectiveFactionDefeated(LordaeronSetup.Lordaeron)));
       AddObjective(new ObjectiveSelfExists());
       Required = true;
-      ResearchId = Constants.UPGRADE_R01K_QUEST_COMPLETED_THE_CULLING_LORDAERON;
+      ResearchId = Constants.UPGRADE_R01K_QUEST_COMPLETED_THE_DARK_CHAMPION_LORDAERON;
     }
 
     /// <inheritdoc />

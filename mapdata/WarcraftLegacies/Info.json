@@ -72,10 +72,10 @@
       "Controller": 1,
       "Race": 1,
       "Flags": 1,
-      "Name": "Lordaeron",
+      "Name": "Stormwind",
       "StartPosition": {
-        "X": 12928,
-        "Y": 8448
+        "X": 7104,
+        "Y": -15616
       },
       "AllyLowPriorityFlags": 8650784,
       "EnemyLowPriorityFlags": 32
@@ -91,7 +91,7 @@
         "Y": 12672
       },
       "AllyLowPriorityFlags": 8388693,
-      "AllyHighPriorityFlags": 262157,
+      "AllyHighPriorityFlags": 262669,
       "EnemyLowPriorityFlags": 8388608,
       "EnemyHighPriorityFlags": 32
     },
@@ -121,7 +121,7 @@
         "Y": -3328
       },
       "AllyLowPriorityFlags": 4456456,
-      "AllyHighPriorityFlags": 8651776,
+      "AllyHighPriorityFlags": 8650752,
       "EnemyLowPriorityFlags": 262144
     },
     {
@@ -165,7 +165,7 @@
         "Y": 2816
       },
       "AllyLowPriorityFlags": 262144,
-      "AllyHighPriorityFlags": 262152
+      "AllyHighPriorityFlags": 262664
     },
     {
       "Id": 8,
@@ -180,19 +180,16 @@
       "AllyHighPriorityFlags": 1
     },
     {
-      "Id": 10,
+      "Id": 9,
       "Controller": 1,
       "Race": 1,
       "Flags": 1,
-      "Name": "Stormwind",
+      "Name": "Lordaeron",
       "StartPosition": {
-        "X": 7104,
-        "Y": -15616
+        "X": 12928,
+        "Y": 8448
       },
-      "AllyLowPriorityFlags": 262152,
-      "AllyHighPriorityFlags": 24,
-      "EnemyLowPriorityFlags": 262144,
-      "EnemyHighPriorityFlags": 262144
+      "AllyHighPriorityFlags": 132
     },
     {
       "Id": 11,
@@ -220,7 +217,7 @@
         "Y": 8512
       },
       "AllyHighPriorityFlags": 32,
-      "EnemyLowPriorityFlags": 1200
+      "EnemyLowPriorityFlags": 176
     },
     {
       "Id": 15,
@@ -232,7 +229,7 @@
         "X": 384,
         "Y": 5952
       },
-      "AllyLowPriorityFlags": 4203520,
+      "AllyLowPriorityFlags": 4203008,
       "AllyHighPriorityFlags": 264481
     },
     {
@@ -247,7 +244,7 @@
       },
       "AllyLowPriorityFlags": 4194321,
       "AllyHighPriorityFlags": 262196,
-      "EnemyLowPriorityFlags": 4195504,
+      "EnemyLowPriorityFlags": 4194480,
       "EnemyHighPriorityFlags": 12582944
     },
     {
@@ -260,7 +257,7 @@
         "X": 3904,
         "Y": -13440
       },
-      "AllyHighPriorityFlags": 1040,
+      "AllyHighPriorityFlags": 16,
       "EnemyLowPriorityFlags": 32
     },
     {
@@ -278,13 +275,13 @@
   "Forces": [
     {
       "Flags": 11,
-      "Players": -4500984,
+      "Players": -4500472,
       "Name": "Scourge, Legion"
     },
     {
       "Flags": 11,
-      "Players": 134,
-      "Name": "Lordaeron, Quelthalas, Dalaran"
+      "Players": 644,
+      "Name": "Quelthalas, Dalaran, Lordaeron"
     },
     {
       "Flags": 11,
@@ -293,8 +290,8 @@
     },
     {
       "Flags": 11,
-      "Players": 4195344,
-      "Name": "Ironforge, Stormwind, Kultiras"
+      "Players": 4194322,
+      "Name": "Stormwind, Ironforge, Kultiras"
     },
     {
       "Flags": 11,
@@ -302,8 +299,9 @@
       "Name": "Druids, Draenei, Sentinels"
     },
     {
+      "Flags": 11,
       "Players": 32832,
-      "Name": "Fel Horde, Illidari,Both Crisis"
+      "Name": "Fel Horde, Illidari"
     }
   ],
   "UpgradeData": [
@@ -3416,10 +3414,6 @@
     {
       "Players": 16777215,
       "Id": 942944366
-    },
-    {
-      "Players": 118783,
-      "Id": 959721582
     },
     {
       "Players": 16777215,
@@ -7026,7 +7020,7 @@
       "Id": 1345597551
     },
     {
-      "Players": 15576575,
+      "Players": 15577087,
       "Id": 1513173093
     },
     {
@@ -7100,6 +7094,18 @@
     {
       "Players": 16777215,
       "Id": 1379086446
+    },
+    {
+      "Players": 12889087,
+      "Id": 1379020917
+    },
+    {
+      "Players": 12889087,
+      "Id": 1313091694
+    },
+    {
+      "Players": 118783,
+      "Id": 959721582
     },
     {
       "Players": 16777215,

@@ -390,7 +390,10 @@ namespace MacroTools.FactionSystem
     public void AddPower(Power power)
     {
       _powers.Add(power);
-      if (Player != null) power.OnAdd(Player);
+      power.OnAdd(this);
+      if (Player != null) 
+        power.OnAdd(Player);
+      
       PowerAdded?.Invoke(this, new FactionPowerEventArgs(this, power));
     }
 
@@ -400,7 +403,10 @@ namespace MacroTools.FactionSystem
     public void RemovePower(Power power)
     {
       _powers.Remove(power);
-      if (Player != null) power.OnRemove(Player);
+      power.OnRemove(this);
+      if (Player != null) 
+        power.OnRemove(Player);
+      
       PowerRemoved?.Invoke(this, new FactionPowerEventArgs(this, power));
     }
 

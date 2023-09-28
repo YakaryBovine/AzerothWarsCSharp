@@ -10,9 +10,11 @@ namespace MacroTools.FactionSystem
   {
     private string _description = "";
 
-    public string IconName { get; init; }
+    public string IconName { get; init; } = "";
+    
     public string IconPath => $@"ReplaceableTextures\CommandButtons\BTN{IconName}.blp";
-    public string Name { get; init; }
+
+    public string Name { get; init; } = "";
 
     public string Description
     {
@@ -27,29 +29,39 @@ namespace MacroTools.FactionSystem
     public bool Usable { get; set; }
 
     public bool OnCooldown { get; set; }
-
-
+    
     public event EventHandler<Power>? DescriptionChanged;
 
     /// <summary>
     ///   Fired when the <see cref="Power" /> is added to a <see cref="player" />.
     /// </summary>
-    public abstract void OnAdd(player whichPlayer);
+    public virtual void OnAdd(player whichPlayer)
+    {
+    }
 
     /// <summary>
     ///   Fired when the <see cref="Power" /> is added to a <see cref="player" />.
     /// </summary>
-    public abstract void OnRemove(player whichPlayer);
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="whichPlayer"></param>
-    public virtual void OnUse(player whichPlayer)
+    public virtual void OnRemove(player whichPlayer)
     {
-
     }
 
-  }
+    /// <summary>
+    ///   Fired when the <see cref="Power" /> is added to a <see cref="Faction" />.
+    /// </summary>
+    public virtual void OnAdd(Faction whichFaction)
+    {
+    }
 
+    /// <summary>
+    ///   Fired when the <see cref="Power" /> is added to a <see cref="Faction" />.
+    /// </summary>
+    public virtual void OnRemove(Faction whichFaction)
+    {
+    }
+    
+    public virtual void OnUse(player whichPlayer)
+    {
+    }
+  }
 }

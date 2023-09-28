@@ -1,0 +1,115 @@
+{
+  "OldId": 1835619649,
+  "NewId": 1194537281,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Id": 1718840929,
+      "Type": 3,
+      "Value": "(Druid - Tortolla)"
+    },
+    {
+      "Id": 2037082209,
+      "Type": 3,
+      "Value": "W"
+    },
+    {
+      "Id": 1802007137,
+      "Type": 3,
+      "Value": "W"
+    },
+    {
+      "Id": 1952805473,
+      "Type": 3,
+      "Value": "Learn Seismic Torrent - [|cffffcc00Level %d|r]"
+    },
+    {
+      "Id": 1953854049,
+      "Type": 3,
+      "Value": "The hero creates a powerful torrent out of the earth, stunning and damaging enemies in a line. |n|n|cffffcc00Level 1|r - \u003CAUim,DataC1\u003E damage, 1 second stun. |n|cffffcc00Level 2|r - \u003CAUim,DataC2\u003E damage, 1.5(1.25) second stun. |n|cffffcc00Level 3|r - \u003CAUim,DataC3\u003E damage, 2(1.5) second stun. |n|cffffcc00Level 4|r - \u003CAUim,DataC4\u003E damage, 2.5(1.75) second stun."
+    },
+    {
+      "Level": 4,
+      "Id": 829453409,
+      "Type": 3,
+      "Value": "Seismic Torrent - [|cffffcc00Level 4|r]"
+    },
+    {
+      "Level": 1,
+      "Id": 828536161,
+      "Type": 3,
+      "Value": "The hero creates a powerful torrent out of the earth, stunning and damaging enemies in a line, dealing \u003CAUim,DataC1\u003E damage and stunning them for 1 second."
+    },
+    {
+      "Level": 2,
+      "Id": 828536161,
+      "Type": 3,
+      "Value": "The hero creates a powerful torrent out of the earth, stunning and damaging enemies in a line, dealing \u003CAUim,DataC2\u003E damage and stunning them for 1.5 second (1.25 for heroes)."
+    },
+    {
+      "Level": 3,
+      "Id": 828536161,
+      "Type": 3,
+      "Value": "The hero creates a powerful torrent out of the earth, stunning and damaging enemies in a line, dealing \u003CAUim,DataC3\u003E damage and stunning them for 2 second (1.5 for heroes)."
+    },
+    {
+      "Level": 4,
+      "Id": 828536161,
+      "Type": 3,
+      "Value": "The hero creates a powerful torrent out of the earth, stunning and damaging enemies in a line, dealing \u003CAUim,DataC4\u003E damage and stunning them for 2.5 second (1.75 for heroes)."
+    },
+    {
+      "Level": 1,
+      "Id": 829453409,
+      "Type": 3,
+      "Value": "Seismic Torrent - [|cffffcc00Level 1|r]"
+    },
+    {
+      "Level": 2,
+      "Id": 829453409,
+      "Type": 3,
+      "Value": "Seismic Torrent - [|cffffcc00Level 2|r]"
+    },
+    {
+      "Level": 3,
+      "Id": 829453409,
+      "Type": 3,
+      "Value": "Seismic Torrent - [|cffffcc00Level 3|r]"
+    },
+    {
+      "Id": 1953653089,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNTorrent.BLP"
+    },
+    {
+      "Id": 1918988897,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNTorrent.BLP"
+    },
+    {
+      "Id": 2020631137,
+      "Value": 1
+    },
+    {
+      "Id": 2020635233,
+      "Value": 1
+    },
+    {
+      "Id": 1936090465,
+      "Type": 3,
+      "Value": ""
+    },
+    {
+      "Id": 1952543585,
+      "Type": 3,
+      "Value": "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl"
+    },
+    {
+      "Id": 1835101793,
+      "Type": 3,
+      "Value": "Seismic Torrent"
+    }
+  ]
+}

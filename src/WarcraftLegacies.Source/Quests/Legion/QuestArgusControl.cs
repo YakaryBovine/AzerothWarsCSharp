@@ -42,11 +42,11 @@ namespace WarcraftLegacies.Source.Quests.Legion
 
     /// <inheritdoc/>
     protected override string RewardDescription =>
-      "With Argus finally under the Legion's control, the invasion of Azeroth can begin! ";
+      "Learn to train Tichondrius and Anetheron from the Altar of Destruction, and to cast the Portal spells from the Legion Teleporter";
 
     /// <inheritdoc/>
     protected override string RewardFlavour =>
-      "Learn to research Astral Walk from the Burning Citadel, train Tichondrius and Anetheron from the Altar of Destruction, and cast the Portal spells from the Legion Teleporter";
+      "With Argus finally under the Legion's control, the invasion of Azeroth can begin! ";
 
     /// <inheritdoc/>
     protected override void OnComplete(Faction completingFaction)

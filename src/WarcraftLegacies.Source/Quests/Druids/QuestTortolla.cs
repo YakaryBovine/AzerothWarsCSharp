@@ -17,11 +17,11 @@ namespace WarcraftLegacies.Source.Quests.Druids
       "Tortolla was badly wounded during the War of the Ancients, and has been resting ever since.",
       @"ReplaceableTextures\CommandButtons\BTNSeaTurtleGreen.blp")
     {
-      AddObjective(new ObjectiveTime(1200));
+      AddObjective(new ObjectiveTime(840));
       AddObjective(new ObjectiveSelfExists());
       ResearchId = Constants.UPGRADE_R049_QUEST_COMPLETED_THE_TURTLE_DEMIGOD;
 
-      _sleepingTortolla = CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), HeroId, -10658, 9583, 333)
+      _sleepingTortolla = CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), HeroId, -11315, 9389, 333)
         .SetInvulnerable(true)
         .AddExperience(tortolla.StartingXp);
       AddSpecialEffectTarget(@"Abilities\Spells\Undead\Sleep\SleepTarget.mdl", _sleepingTortolla,

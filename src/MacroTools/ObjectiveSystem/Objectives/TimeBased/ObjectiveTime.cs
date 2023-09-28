@@ -15,7 +15,8 @@ namespace MacroTools.ObjectiveSystem.Objectives.TimeBased
 
     public ObjectiveTime(int duration)
     {
-      Description = $"{duration} seconds have elapsed";
+      var turn = GameTime.ConvertGameTimeToTurn(duration);
+      Description = $"Turn {turn} has started";
       _timer = CreateTimer();
       TimerStart(_timer, duration, false, OnExpire);
     }

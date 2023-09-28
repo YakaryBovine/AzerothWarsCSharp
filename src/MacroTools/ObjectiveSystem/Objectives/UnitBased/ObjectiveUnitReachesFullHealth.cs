@@ -1,4 +1,5 @@
 ﻿using MacroTools.Extensions;
+using MacroTools.FactionSystem;
 using MacroTools.QuestSystem;
 using static War3Api.Common;
 
@@ -10,7 +11,7 @@ namespace MacroTools.ObjectiveSystem.Objectives.UnitBased
   public sealed class ObjectiveUnitReachesFullHealth : Objective
   {
     private readonly unit _objectiveUnit;
-    
+
     /// <summary>
     /// Initializes a new instance of the <see cref="ObjectiveUnitReachesFullHealth"/> class.
     /// </summary>
@@ -24,24 +25,17 @@ namespace MacroTools.ObjectiveSystem.Objectives.UnitBased
         : $"{GetUnitName(objectiveUnit)} brought to full health";
       DisplaysPosition = IsUnitType(objectiveUnit, UNIT_TYPE_STRUCTURE);
       CreateTrigger()
-        .RegisterUnitEvent(objectiveUnit, EVENT_UNIT_SELECTED)
+        .RegisterLifeEvent(objectiveUnit, UNIT_STATE_LIFE, GREATER_THAN, objectiveUnit.GetMaximumHitPoints() - 1)
         .AddAction(() =>
         {
-          if (GetUnitState(_objectiveUnit, UNIT_STATE_LIFE) == GetUnitState(_objectiveUnit, UNIT_STATE_MAX_LIFE))
-            Progress = QuestProgress.Complete;
+          Progress = QuestProgress.Complete;
+          GetTriggeringTrigger().Destroy();
         });
-      CreateTrigger()
-        .RegisterUnitEvent(objectiveUnit, EVENT_UNIT_DESELECTED)
-        .AddAction(() =>
-        {
-          if (GetUnitState(_objectiveUnit, UNIT_STATE_LIFE) == GetUnitState(_objectiveUnit, UNIT_STATE_MAX_LIFE))
-            Progress = QuestProgress.Complete;
-        });
-      
-      Position = new(GetUnitX(_objectiveUnit), GetUnitY(_objectiveUnit));
+
+      Position = _objectiveUnit.GetPosition();
     }
 
-    internal override void OnAdd(FactionSystem.Faction faction)
+    internal override void OnAdd(Faction faction)
     {
       if (!UnitAlive(_objectiveUnit))
         Progress = QuestProgress.Failed;

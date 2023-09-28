@@ -1,0 +1,29 @@
+{
+  "OldId": 1835619650,
+  "NewId": 1211379778,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Id": 1885959270,
+      "Type": 3,
+      "Value": "Stunned"
+    },
+    {
+      "Id": 1700951398,
+      "Type": 3,
+      "Value": "This unit has been stunned. It cannot move or attack or cast spells."
+    },
+    {
+      "Id": 1953653094,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNStun.blp"
+    },
+    {
+      "Id": 1952540006,
+      "Type": 3,
+      "Value": "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl"
+    }
+  ]
+}

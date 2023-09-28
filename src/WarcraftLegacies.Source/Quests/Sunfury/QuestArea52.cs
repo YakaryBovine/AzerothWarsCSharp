@@ -29,7 +29,7 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
       @"ReplaceableTextures\CommandButtons\BTNLordaeronPalace.blp")
     {
       Required = true;
-      AddObjective(new ObjectiveKillAllInArea(new List<Rectangle> { Regions.Area52Unlock }, "in Area 52"));
+      AddObjective(new ObjectiveHostilesInAreaAreDead(new List<Rectangle> { Regions.Area52Unlock }, "in Area 52"));
       AddObjective(
         new ObjectiveControlPoint(
           ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N07Q_AREA_52)));

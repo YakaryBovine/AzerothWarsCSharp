@@ -27,7 +27,7 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
       @"ReplaceableTextures\CommandButtons\BTNHeroTinker.blp")
     {
       _katherine = katherine;
-      AddObjective(new ObjectiveKillAllInArea(new List<Rectangle> { Regions.BootyBayQuest }, "in Booty Bay"));
+      AddObjective(new ObjectiveHostilesInAreaAreDead(new List<Rectangle> { Regions.BootyBayQuest }, "in Booty Bay"));
       AddObjective(new ObjectiveControlLegend(katherine, false));
       AddObjective(
         new ObjectiveControlPoint(

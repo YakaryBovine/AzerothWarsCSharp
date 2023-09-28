@@ -29,13 +29,14 @@ namespace WarcraftLegacies.Source.Setup.Legends
       {
         UnitType = FourCC("U00L"),
         PlayerColor = PLAYER_COLOR_ORANGE,
-        StartingXp = 4000
+        StartingXp = 1000
       };
 
       Tichondrius = new LegendaryHero("Tichondrius")
       {
         UnitType = FourCC("Utic"),
-        PlayerColor = PLAYER_COLOR_RED
+        PlayerColor = PLAYER_COLOR_RED,
+        StartingXp = 1800
       };
 
       Malganis = new LegendaryHero("Mal'ganis")

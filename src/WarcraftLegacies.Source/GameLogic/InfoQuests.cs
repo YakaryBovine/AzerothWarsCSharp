@@ -12,18 +12,6 @@ namespace WarcraftLegacies.Source.GameLogic
      /// </summary>
       public static void Setup()
       {
-         var commandQuest = CreateQuest();
-         QuestSetTitle(commandQuest, "Commands");
-         QuestSetIconPath(commandQuest, @"ReplaceableTextures\CommandButtons\BTNDizzy.blp");
-         QuestSetDescription(commandQuest, 
-@"General:
--info for useful commands
--obs makes you into an observer
-Camera:
--reset sets the camera at default height.
--mid/(-med) sets the camera to a height slightly below default.
--far sets the camera  to a height slightly above default.");
-
          var discordQuest = CreateQuest();
          QuestSetTitle(discordQuest, "Discord");
          QuestSetIconPath(discordQuest, @"ReplaceableTextures\CommandButtons\BTNDrum.blp");

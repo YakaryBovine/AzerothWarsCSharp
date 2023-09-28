@@ -25,10 +25,10 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
       @"ReplaceableTextures\CommandButtons\BTNBearDen.blp")
     {
       AddObjective(new ObjectiveAnyUnitInRect(rescueRect, "Feathermoon Stronghold", true));
-      AddObjective(new ObjectiveKillAllInArea(new List<Rectangle> { Regions.FeathermoonCreeps }, "around Feathermoon Stronghold"));
+      AddObjective(new ObjectiveHostilesInAreaAreDead(new List<Rectangle> { Regions.FeathermoonCreeps }, "around Feathermoon Stronghold"));
       AddObjective(new ObjectiveExpire(480, Title));
       AddObjective(new ObjectiveSelfExists());
-      ResearchId = Constants.UPGRADE_R06M_QUEST_COMPLETED_FEATHERMOON_STRONGHOLD;
+      ResearchId = Constants.UPGRADE_R06M_QUEST_COMPLETED_SHORES_OF_FEATHERMOON;
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.Invulnerable);
       Required = true;
     }

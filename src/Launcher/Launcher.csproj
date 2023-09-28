@@ -19,8 +19,9 @@
         <PackageReference Include="System.Security.Permissions" Version="7.0.0"/>
         <PackageReference Include="War3Net.Build" Version="5.7.1"/>
         <PackageReference Include="War3Net.Build.Core" Version="5.7.1"/>
-        <PackageReference Include="War3Net.CSharpLua.CoreSystem" Version="1.7.18"/>
-        <PackageReference Include="WCSharp.ConstantGenerator" Version="2.1.0"/>
+        <PackageReference Include="War3Net.CSharpLua.CoreSystem" Version="2.0.0-preview.2" />
+        <PackageReference Include="War3Net.CSharpLua" Version="2.0.0-preview.2" />
+        <PackageReference Include="WCSharp.ConstantGenerator" Version="2.2.0" />
         <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1"/>
     </ItemGroup>
 

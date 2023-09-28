@@ -5,29 +5,20 @@ using static War3Api.Common;
 
 namespace WarcraftLegacies.Source.Cheats
 {
-
-  /// <summary>
-  /// 
-  /// </summary>
   public sealed class CheatSkipCinematic
   {
-    private readonly CinematicMode _cinematicMode;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="cinematicMode"></param>
-    public CheatSkipCinematic(CinematicMode cinematicMode)
+    public static void Init()
     {
-      _cinematicMode = cinematicMode;
+      var timer = CreateTimer();
+      TimerStart(timer, 1, false, DelayedSetup);
     }
 
-    private  void Actions()
+    private static void Actions()
     {
       if (!TestMode.CheatCondition()) return;
       try
       {
-        _cinematicMode.EndEarly();
+        CinematicMode.EndEarly();
       }
       catch (Exception ex)
       {
@@ -39,21 +30,12 @@ namespace WarcraftLegacies.Source.Cheats
       }
     }
 
-    private void DelayedSetup()
+    private static void DelayedSetup()
     {
       var trig = CreateTrigger();
       foreach (var player in WCSharp.Shared.Util.EnumeratePlayers())
         TriggerRegisterPlayerEvent(trig, player, EVENT_PLAYER_END_CINEMATIC);
       TriggerAddAction(trig, Actions);
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public void Init()
-    {
-      var timer = CreateTimer();
-      TimerStart(timer, 1, false, DelayedSetup);
     }
   }
 }
