@@ -28,10 +28,5 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
       ResearchId = Constants.UPGRADE_R05Z_QUEST_COMPLETED_THOSE_WHO_CAME_BEFORE_FEL_HORDE;
     }
     
-    /// <inheritdoc/>
-    protected override void OnAdd(Faction whichFaction)
-    {
-      whichFaction.ModObjectLimit(UnittypeId, UnitLimit);
-    }
   }
 }

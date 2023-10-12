@@ -62,6 +62,7 @@ The Plague of Undeath is coming and Lordaeron will need your help with the Scour
       Quelthalas.ModObjectLimit(FourCC("n063"), 12); //Magus
       Quelthalas.ModObjectLimit(FourCC("hspt"), Faction.UNLIMITED); //Spell Breaker
       Quelthalas.ModObjectLimit(FourCC("u00J"), 2); //Arcane Wagon
+      Quelthalas.ModObjectLimit(Constants.UNIT_N048_BLOOD_MAGE_QUEL_THALAS, 6);
 
       //Ships
       Quelthalas.ModObjectLimit(FourCC("hbot"), Faction.UNLIMITED); //Alliance Transport Ship

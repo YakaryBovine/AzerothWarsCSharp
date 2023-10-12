@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
   public sealed class QuestCapitalCity : QuestData
   {
     private readonly List<unit> _rescueUnits;
-    private readonly unit _unitToMakeInvulnerable;
+    private readonly unit _terenas;
     private readonly LegendaryHero _uther;
     private readonly Capital _capitalPalace;
     private const string RewardPowerName = "Dominion";
@@ -28,7 +28,8 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     /// <summary>
     /// Initializes a new instance of the <see cref="QuestCapitalCity"/> class.
     /// </summary>
-    public QuestCapitalCity(Rectangle rescueRect, unit unitToMakeInvulnerable, LegendaryHero uther, LegendaryHero arthas, Capital caerDarrow, Capital capitalPalace, IEnumerable<QuestData> prequisites) :
+    public QuestCapitalCity(Rectangle rescueRect, unit terenas, LegendaryHero uther,
+      LegendaryHero arthas, Capital caerDarrow, Capital capitalPalace, IEnumerable<QuestData> prequisites) :
       base("Hearthlands",
         "The territories of Lordaeron are fragmented. Regain control of the old Alliance's hold to secure the kingdom.",
         @"ReplaceableTextures\CommandButtons\BTNCastle.blp")
@@ -40,20 +41,21 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
       AddObjective(new ObjectiveExpire(660, Title));
       AddObjective(new ObjectiveSelfExists());
       ResearchId = Constants.UPGRADE_R04Y_QUEST_COMPLETED_HEARTHLANDS;
-      _unitToMakeInvulnerable = unitToMakeInvulnerable;
+      _terenas = terenas;
       _uther = uther;
       _capitalPalace = capitalPalace;
-      bool RescueUnitFilter(unit whichUnit) => GetUnitTypeId(whichUnit) != Constants.UNIT_N08F_UNDERCITY_ENTRANCE;
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures, RescueUnitFilter);
       Required = true;
     }
+
+    private static bool RescueUnitFilter(unit whichUnit) => GetUnitTypeId(whichUnit) != Constants.UNIT_N08F_UNDERCITY_ENTRANCE;
 
     /// <inheritdoc/>
     protected override string RewardFlavour =>
       "The Capital City of Lordaeron has joined Arthas.";
 
     /// <inheritdoc/>
-    protected override string RewardDescription => $"Gain control of all units in the Capital City, Gain Uther, and acquire the {RewardPowerName} Power";
+    protected override string RewardDescription => $"Gain control of all units in the Capital City, gain Uther, and acquire the {RewardPowerName} Power";
 
     /// <inheritdoc/>
     protected override void OnFail(Faction completingFaction)
@@ -63,6 +65,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
         : completingFaction.Player;
 
       rescuer.RescueGroup(_rescueUnits);
+      SetUnitInvulnerable(_terenas, true);
     }
 
     /// <inheritdoc/>
@@ -70,7 +73,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     {
       var rewardPower = new ControlLevelPerTurnBonus(0.5f)
       {
-        IconName = @"ShieldOfUnification",
+        IconName = "ShieldOfUnification",
         Name = RewardPowerName
       };
       
@@ -79,14 +82,12 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
 
       if (_uther.Unit == null)
       {
-        _uther.ForceCreate(completingFaction.Player, Regions.King_Arthas_crown.Center,
-          90);
-        _uther.Unit?
-          .SetLevel(5, false);
+        _uther.ForceCreate(completingFaction.Player, Regions.King_Arthas_crown.Center,90);
+        _uther.Unit?.SetLevel(5, false);
       }
 
-        completingFaction.Player?.RescueGroup(_rescueUnits);
-      SetUnitInvulnerable(_unitToMakeInvulnerable, true);
+      completingFaction.Player?.RescueGroup(_rescueUnits);
+      SetUnitInvulnerable(_terenas, true);
       if (GetLocalPlayer() == completingFaction.Player)
         PlayThematicMusic("war3mapImported\\CapitalCity.mp3");
       _uther.AddUnitDependency(_capitalPalace.Unit);

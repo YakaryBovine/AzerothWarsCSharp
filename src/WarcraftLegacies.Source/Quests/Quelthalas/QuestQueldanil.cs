@@ -62,9 +62,10 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
     /// <inheritdoc />
     protected override void OnFail(Faction completingFaction)
     {
-      completingFaction.Obliterate();
+      completingFaction.Player?.RemoveResourcesAndUnits();
       if (completingFaction.ScoreStatus == ScoreStatus.Defeated)
         return;
+      
       if (GetLocalPlayer() == completingFaction.Player)
         SetCameraPosition(_rescueRect.Center.X, _rescueRect.Center.Y);
       CreateSecondChanceUnits(completingFaction);

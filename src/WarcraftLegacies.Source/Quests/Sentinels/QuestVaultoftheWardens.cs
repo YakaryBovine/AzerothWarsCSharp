@@ -57,7 +57,6 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
     /// <inheritdoc />
     protected override void OnAdd(Faction whichFaction)
     {
-      whichFaction.ModObjectLimit(WardenId, 8);
       _vaultOfTheWardens.Unit?.SetInvulnerable(true);
     }
   }

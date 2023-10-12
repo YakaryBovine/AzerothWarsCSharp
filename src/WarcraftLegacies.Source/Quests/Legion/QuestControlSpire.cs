@@ -1,4 +1,5 @@
-﻿using MacroTools.FactionSystem;
+﻿using MacroTools.Extensions;
+using MacroTools.FactionSystem;
 using MacroTools.LegendSystem;
 using MacroTools.ObjectiveSystem.Objectives.LegendBased;
 using MacroTools.QuestSystem;
@@ -22,9 +23,6 @@ namespace WarcraftLegacies.Source.Quests.Legion
     protected override string RewardDescription => "Unlock the Spire as a troop production building and 500 gold. Completing any of the three infiltration quest will enable the Alterac Portal to be opened.";
 
     /// <inheritdoc/>
-    protected override void OnComplete(Faction whichFaction)
-    {
-      whichFaction.Gold += 500;
-    }
+    protected override void OnComplete(Faction whichFaction) => whichFaction.Player?.AddGold(500);
   }
 }

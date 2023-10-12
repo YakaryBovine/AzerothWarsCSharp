@@ -44,18 +44,22 @@
       "Value": 60
     },
     {
-      "Id": 1936028277,
-      "Type": 3,
-      "Value": "Rowt,R03Q,R024,R03Q,R00M,R03Q,Rowd,Rost,R03I"
-    },
-    {
       "Id": 1634890869,
       "Type": 3,
-      "Value": "ospw,oshm,odoc"
+      "Value": "oshm,odoc,ospw"
     },
     {
       "Id": 1836412021,
       "Value": 65
+    },
+    {
+      "Id": 1936028277,
+      "Type": 3,
+      "Value": "Rowd,Rowt,Rost"
+    },
+    {
+      "Id": 1769169525,
+      "Value": 4
     }
   ]
 }

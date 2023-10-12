@@ -19,7 +19,7 @@ namespace WarcraftLegacies.Source.GameLogic
 
       if (IsUnitType(whichUnit, UNIT_TYPE_HERO))
       {
-        player.AdjustPlayerState(PLAYER_STATE_RESOURCE_GOLD, Faction.HeroCost);
+        player.AdjustPlayerState(PLAYER_STATE_RESOURCE_GOLD, PlayerDistributor.HeroCost);
       }
       else
       {

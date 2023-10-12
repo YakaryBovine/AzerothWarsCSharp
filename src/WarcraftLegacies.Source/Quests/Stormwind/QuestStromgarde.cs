@@ -12,7 +12,6 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
 {
   public sealed class QuestStromgarde : QuestData
   {
-    private const int HeroId = Constants.UNIT_H00Z_CROWN_PRINCE_OF_STROMGARDE_STORMWIND;
     private readonly List<unit> _rescueUnits = new();
 
     public QuestStromgarde(Rectangle rescueRect) : base("Stromgarde",
@@ -57,7 +56,6 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     protected override void OnAdd(Faction whichFaction)
     {
       whichFaction.ModObjectLimit(ResearchId, Faction.UNLIMITED);
-      whichFaction.ModObjectLimit(HeroId, 1);
     }
   }
 }

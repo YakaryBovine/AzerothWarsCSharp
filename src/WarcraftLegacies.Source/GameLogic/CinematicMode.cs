@@ -1,4 +1,5 @@
-﻿using MacroTools.Extensions;
+﻿using System.Collections.Generic;
+using MacroTools.Extensions;
 using static War3Api.Common;
 
 namespace WarcraftLegacies.Source.GameLogic
@@ -12,6 +13,7 @@ namespace WarcraftLegacies.Source.GameLogic
     private static timer? _cinematicTimer;
     private static timer? _musicTimer;
     private static CinematicState _state = CinematicState.Inactive;
+    private static List<unit>? _pausedUnits = new();
     
     /// <summary>
     /// Initiates cinematic mode.
@@ -27,8 +29,12 @@ namespace WarcraftLegacies.Source.GameLogic
 
       FogEnable(false);
       FogMaskEnable(false);
+
+      _pausedUnits = CreateGroup()
+        .EnumUnitsInRect(WCSharp.Shared.Data.Rectangle.WorldBounds)
+        .EmptyToList();
       
-      foreach (var unit in CreateGroup().EnumUnitsInRect(WCSharp.Shared.Data.Rectangle.WorldBounds).EmptyToList())
+      foreach (var unit in _pausedUnits)
         unit.PauseEx(true);
 
       _state = CinematicState.Active;
@@ -58,8 +64,14 @@ namespace WarcraftLegacies.Source.GameLogic
       DestroyTimer(_cinematicTimer);
       DestroyTimer(_musicTimer);
       _state = CinematicState.Finished;
-      foreach (var unit in CreateGroup().EnumUnitsInRect(WCSharp.Shared.Data.Rectangle.WorldBounds).EmptyToList())
-        unit.PauseEx(false);
+
+      if (_pausedUnits != null)
+      {
+        foreach (var unit in _pausedUnits)
+          unit.PauseEx(false);
+        _pausedUnits.Clear();
+        _pausedUnits = null;
+      }
     }
 
     private static void PlayFactionMusic()

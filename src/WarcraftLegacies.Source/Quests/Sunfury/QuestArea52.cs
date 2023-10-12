@@ -35,7 +35,8 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
           ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N07Q_AREA_52)));
       AddObjective(new ObjectiveExpire(600, Title));
       AddObjective(new ObjectiveSelfExists());
-      _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideAll);
+      _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideAll,
+        filterUnit => filterUnit.GetTypeId() != FourCC("ngme"));
     }
 
     /// <inheritdoc/>

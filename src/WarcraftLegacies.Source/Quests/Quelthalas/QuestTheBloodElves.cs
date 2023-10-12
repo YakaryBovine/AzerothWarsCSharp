@@ -54,8 +54,6 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
   protected override void OnAdd(Faction whichFaction)
   {
     whichFaction.ModObjectLimit(QuestResearchId, Faction.UNLIMITED);
-    whichFaction.ModObjectLimit(UnittypeId, 6);
-
   }
 
 

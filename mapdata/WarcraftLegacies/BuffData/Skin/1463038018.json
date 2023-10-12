@@ -1,0 +1,29 @@
+{
+  "OldId": 1651204418,
+  "NewId": 1463038018,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Id": 1952543846,
+      "Type": 3,
+      "Value": ""
+    },
+    {
+      "Id": 1700951398,
+      "Type": 3,
+      "Value": "This unit hears War Cadence; it has increased attack speed."
+    },
+    {
+      "Id": 1953653094,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNTribal Drum of War.blp"
+    },
+    {
+      "Id": 1885959270,
+      "Type": 3,
+      "Value": "War Cadence"
+    }
+  ]
+}

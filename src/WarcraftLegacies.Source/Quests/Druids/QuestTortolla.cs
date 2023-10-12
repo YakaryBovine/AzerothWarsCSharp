@@ -45,10 +45,5 @@ namespace WarcraftLegacies.Source.Quests.Druids
     {
       RemoveUnit(_sleepingTortolla);
     }
-
-    protected override void OnAdd(Faction whichFaction)
-    {
-      whichFaction.ModObjectLimit(HeroId, 1);
-    }
   }
 }

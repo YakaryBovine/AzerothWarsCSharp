@@ -214,64 +214,50 @@ namespace MacroTools.QuestSystem
         }
     }
 
-    /// <summary>
-    ///   Fired when the <see cref="QuestData" /> changes its progress.
-    /// </summary>
-    public event EventHandler<QuestProgressChangedEventArgs>? ProgressChanged;
+    /// <summary>Fired when the <see cref="QuestData" /> changes its progress.</summary>
+    internal event EventHandler<QuestProgressChangedEventArgs>? ProgressChanged;
 
-    /// <summary>
-    ///   Fired when the Quest is completed.
-    /// </summary>
+    /// <summary>Fired when the Quest is completed.</summary>
     protected virtual void OnComplete(Faction whichFaction)
     {
     }
 
-    /// <summary>
-    ///   Fired when the Quest is failed.
-    /// </summary>
+    /// <summary>Fired when the Quest is failed.</summary>
     protected virtual void OnFail(Faction whichFaction)
     {
     }
 
-    /// <summary>
-    ///   Fired when the <see cref="QuestData" /> is added to a <see cref="Faction" />.
-    /// </summary>
+    /// <summary>Fired when the <see cref="QuestData" /> is added to a <see cref="Faction" />.</summary>
     protected virtual void OnAdd(Faction whichFaction)
     {
     }
 
-    /// <summary>
-    ///   Enables the local aspects of all child QuestItems.
-    /// </summary>
+    /// <summary>Enables the local aspects of all child QuestItems.</summary>
     internal void ShowLocal()
     {
       QuestSetEnabled(Quest, true);
       foreach (var questItem in _objectives) questItem.ShowLocal(Progress);
     }
 
-    /// <summary>
-    ///   Enables the synchronous aspects of all child QuestItems.
-    /// </summary>
+    /// <summary>Enables the synchronous aspects of all child QuestItems.</summary>
     internal void ShowSync()
     {
-      foreach (var questItem in _objectives) questItem.ShowSync(Progress);
+      foreach (var questItem in _objectives) 
+        questItem.ShowSync(Progress);
     }
 
-    /// <summary>
-    ///   Disables the local aspects of all child QuestItems.
-    /// </summary>
+    /// <summary>Disables the local aspects of all child QuestItems.</summary>
     internal void HideLocal()
     {
       QuestSetEnabled(Quest, false);
       foreach (var questItem in _objectives) questItem.HideLocal();
     }
 
-    /// <summary>
-    ///   Disables the synchronous aspects of all child QuestItems.
-    /// </summary>
+    /// <summary>Disables the synchronous aspects of all child QuestItems.</summary>
     internal void HideSync()
     {
-      foreach (var questItem in _objectives) questItem.HideSync();
+      foreach (var questItem in _objectives) 
+        questItem.HideSync();
     }
 
     /// <summary>

@@ -1,4 +1,4 @@
-using MacroTools.ControlPointSystem;
+﻿using MacroTools.ControlPointSystem;
 using MacroTools.FactionSystem;
 using MacroTools.LegendSystem;
 using MacroTools.ObjectiveSystem.Objectives.ControlPointBased;
@@ -10,7 +10,6 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
 {
   public sealed class QuestFallenGuardian : QuestData
   {
-    private static readonly int MedivhId = FourCC("Haah");
 
     public QuestFallenGuardian(Capital karazhan) : base("The Fallen Guardian",
       "Medivh's body was corrupted by Sargeras at conception. Now that he is dead, the secrets of the Tomb of Sargeras and Karazhan combined might allow the mages of Dalaran to cleanse his spirit.",
@@ -27,11 +26,5 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
 
     /// <inheritdoc/>
     protected override string RewardDescription => "You can summon Medivh from the Altar of Knowledge";
-
-    /// <inheritdoc/>
-    protected override void OnAdd(Faction whichFaction)
-    {
-      whichFaction.ModObjectLimit(MedivhId, 1);
-    }
   }
 }

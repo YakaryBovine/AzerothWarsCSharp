@@ -1,4 +1,5 @@
-﻿using MacroTools.QuestSystem;
+﻿using MacroTools.LegendSystem;
+using MacroTools.QuestSystem;
 using WarcraftLegacies.Source.Quests.Druids;
 
 namespace WarcraftLegacies.Source.Setup.QuestSetup
@@ -23,7 +24,7 @@ namespace WarcraftLegacies.Source.Setup.QuestSetup
       druids.AddQuest(new QuestAshenvale(Regions.AshenvaleUnlock));
       druids.AddQuest(new QuestDruidsKillFrostwolf(allLegendSetup.Frostwolf.ThunderBluff));
       druids.AddQuest(new QuestDruidsKillWarsong());
-      druids.AddQuest(new QuestAndrassil(allLegendSetup.Scourge.TheFrozenThrone, allLegendSetup.Druids.Vordrassil));
+      druids.AddQuest(new QuestAndrassil(allLegendSetup.Druids.Vordrassil, allLegendSetup.Druids.Ursoc));
       druids.AddQuest(new QuestShaladrassil(allLegendSetup.Neutral.Shaladrassil));
       druids.AddQuest(new QuestTortolla(allLegendSetup.Druids.Tortolla));
     }

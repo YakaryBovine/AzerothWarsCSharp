@@ -30,7 +30,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     protected override void OnComplete(Faction completingFaction)
     {
       completingFaction.SetObjectLevel(RewardResearchTypeId, 1);
-      completingFaction.Player?.DisplayResearchAcquired(ResearchId, 1);
+      completingFaction.Player?.DisplayResearchAcquired(RewardResearchTypeId, 1);
       completingFaction.ModObjectLimit(Constants.UNIT_N096_EARTH_GOLEM_DALARAN, -6);
       completingFaction.ModObjectLimit(Constants.UNIT_N0AD_CRYSTAL_GOLEM_DALARAN_HARD_CRYSTAL_CONSTRUCTS, 6);
     }

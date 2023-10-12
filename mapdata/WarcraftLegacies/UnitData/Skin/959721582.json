@@ -1,0 +1,88 @@
+{
+  "OldId": 1634035822,
+  "NewId": 959721582,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Id": 1868786037,
+      "Type": 3,
+      "Value": "ReplaceableTextures/CommandButtons/BTNBluffWatcher.blp"
+    },
+    {
+      "Id": 2020631157,
+      "Value": 1
+    },
+    {
+      "Id": 1718840949,
+      "Type": 3,
+      "Value": "(Frostwolf)"
+    },
+    {
+      "Id": 1818520949,
+      "Type": 3,
+      "Value": "war3mapImported\\Tauren_BluffWatcher.mdl"
+    },
+    {
+      "Id": 1953458293,
+      "Type": 3,
+      "Value": "W"
+    },
+    {
+      "Id": 2054188149,
+      "Type": 2,
+      "Value": 60
+    },
+    {
+      "Id": 828468597,
+      "Type": 2,
+      "Value": 0.05
+    },
+    {
+      "Id": 845245813,
+      "Type": 2,
+      "Value": 0.05
+    },
+    {
+      "Id": 1832018293,
+      "Type": 3,
+      "Value": "Abilities\\Weapons\\Arrow\\ArrowMissile.mdl"
+    },
+    {
+      "Id": 1835101813,
+      "Type": 3,
+      "Value": "Wanderer"
+    },
+    {
+      "Id": 1668510581,
+      "Type": 1,
+      "Value": 0.95
+    },
+    {
+      "Id": 1651864693,
+      "Type": 3,
+      "Value": "Hunter of the Highmountain clan.|n|cfff5962dAbilities:|R Big Game Net, Summon Hawk, Trueshot Aura, Resistant Skin|n|n|cff99b4d1Can only train 4.|r|n|cffffcc00Attacks land and air units.|r"
+    },
+    {
+      "Id": 1633907573,
+      "Type": 1,
+      "Value": 0.8
+    },
+    {
+      "Id": 1684960117,
+      "Type": 3,
+      "Value": "HeroTaurenChieftain"
+    },
+    {
+      "Id": 1831952757,
+      "Type": 3,
+      "Value": "Abilities\\Weapons\\Rifle\\RifleImpact.mdl"
+    },
+    {
+      "Id": 1885959285,
+      "Type": 3,
+      "Value": "Train Wanderer"
+    }
+  ]
+}

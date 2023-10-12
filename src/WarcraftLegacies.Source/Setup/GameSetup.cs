@@ -71,7 +71,6 @@ namespace WarcraftLegacies.Source.Setup
       ResearchSetup.Setup(preplacedUnitSystem);
       PatronSystem.Setup(preplacedUnitSystem);
       OpenAllianceVote.Setup();
-      AugmentSetup.Setup();
       RockSetup.Setup();
       TurnResearchSetup.Setup();
       UnitTypeConfig.Setup();

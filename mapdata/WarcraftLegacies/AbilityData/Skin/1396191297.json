@@ -1,89 +1,59 @@
 {
-  "OldId": 1936478017,
+  "OldId": 1718832961,
   "NewId": 1396191297,
   "Unk": [
     0
   ],
   "Modifications": [
     {
-      "Id": 1953653089,
-      "Type": 3,
-      "Value": "ReplaceableTextures\\CommandButtons\\BTNSpell_Holy_Excorcism.blp"
+      "Id": 2020631137,
+      "Value": 1
     },
     {
       "Id": 1718840929,
       "Type": 3,
-      "Value": "(Pink - Cairne)"
-    },
-    {
-      "Id": 1818649953,
-      "Type": 3,
-      "Value": ""
+      "Value": "(Frostwolf Commander)"
     },
     {
       "Id": 2037082209,
       "Type": 3,
-      "Value": "R"
+      "Value": "W"
     },
     {
-      "Id": 1952542049,
-      "Type": 3,
-      "Value": "Abilities\\Spells\\Orc\\EtherealForm\\SpiritWalkerChange.mdl"
-    },
-    {
-      "Id": 1835101793,
-      "Type": 3,
-      "Value": "Totemic Spirits"
-    },
-    {
-      "Id": 1918988897,
-      "Type": 3,
-      "Value": "ReplaceableTextures\\CommandButtons\\BTNSpell_Holy_Excorcism.blp"
+      "Id": 2020635233,
+      "Value": 1
     },
     {
       "Id": 1802007137,
       "Type": 3,
-      "Value": "R"
-    },
-    {
-      "Id": 1952805473,
-      "Type": 3,
-      "Value": "Learn Totemic Spirits - [|cffffcc00Level %d|r]"
+      "Value": "W"
     },
     {
       "Id": 1953854049,
       "Type": 3,
-      "Value": "Unleashes ancient spirits which drain enemy\u0027s health and replenish Caine\u0027s.|n|n|cffffcc00Level 1|r - 20 spirits. |n|cffffcc00Level 2|r - 30 spirits.|n|cffffcc00Level 3|r - 40 spirits.|n|nLasts \u003CAOls,HeroDur1\u003E seconds."
+      "Value": "Summons \u003CAOsf,DataB1\u003E Spirit Wolves to fight the Far Seer\u0027s enemies. |nLasts \u003CAOsf,Dur1\u003E seconds. |n|n|cffffcc00Level 1|r - \u003Cosw1,realHP\u003E hit points, \u003Cosw1,mindmg1\u003E - \u003Cosw1,maxdmg1\u003E damage and Critical Strike. 2 wolves summoned.|n|cffffcc00Level 2|r - \u003Cosw2,realHP\u003E hit points, \u003Cosw2,mindmg1\u003E - \u003Cosw2,maxdmg1\u003E damage and Critical Strike. 2 wolves summoned.|n|cffffcc00Level 3|r - \u003Cosw3,realHP\u003E hit points, \u003Cosw3,mindmg1\u003E - \u003Cosw3,maxdmg1\u003E damage and Critical Strike. 2 wolves summoned.|n|cffffcc00Level 4|r - \u003Cosw3,realHP\u003E hit points, \u003Cosw3,mindmg1\u003E - \u003Cosw3,maxdmg1\u003E damage, and Critical Strike. 4 wolves summoned.|n|cffffcc00Level 5|r - \u003Cosw3,realHP\u003E hit points, \u003Cosw3,mindmg1\u003E - \u003Cosw3,maxdmg1\u003E damage and Critical Strike. 6 wolves summoned.|n"
     },
     {
       "Level": 1,
       "Id": 829453409,
       "Type": 3,
-      "Value": "Totemic Spirits - [|cffffcc00Level 1|r]"
-    },
-    {
-      "Level": 2,
-      "Id": 829453409,
-      "Type": 3,
-      "Value": "Totemic Spirits - [|cffffcc00Level 2|r]"
-    },
-    {
-      "Level": 3,
-      "Id": 829453409,
-      "Type": 3,
-      "Value": "Totemic Spirits - [|cffffcc00Level 3|r]"
+      "Value": "Summon the Pack"
     },
     {
       "Level": 1,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Unleashes ancient spirits which drain enemy health and replenish Caine\u0027s health.|nLasts \u003CAOls,HeroDur1\u003E seconds."
+      "Value": "Summons 4 Frost Wolf companions. Each wolf has \u003Cnwwf,realHP\u003E hit points and deals 21 - 22 damage. |nLasts \u003CA0LT,Dur1\u003E seconds. |n|n|cffffcc00Attacks land units.|r"
     },
     {
-      "Level": 2,
-      "Id": 828536161,
+      "Id": 1835101793,
       "Type": 3,
-      "Value": "Unleashes ancient spirits which drain enemy health and replenish Caine\u0027s health.|nLasts \u003CAOls,HeroDur1\u003E seconds."
+      "Value": "Summon the Pack"
+    },
+    {
+      "Id": 1953653089,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp"
     }
   ]
 }

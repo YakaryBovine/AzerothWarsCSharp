@@ -34,7 +34,7 @@ namespace MacroTools
     /// <summary>
     /// If true, this unit should never be deleted.
     /// </summary>
-    public bool NeverDelete { get; init; }
+    public bool NeverDelete { internal get; init; }
 
     /// <summary>
     /// An arbitrary category, like "Shipyard" or "Shop".

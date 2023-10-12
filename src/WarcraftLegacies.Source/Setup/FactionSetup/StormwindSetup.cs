@@ -19,7 +19,7 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
         StartingGold = 200,
         StartingLumber = 700,
         ControlPointDefenderUnitTypeId = Constants.UNIT_H05X_CONTROL_POINT_DEFENDER_STORMWIND,
-        IntroText = @"You are playing as the steadfast |cff005800Kingdom of Stormwind|r.
+        IntroText = @"You are playing as the steadfast |c000042FFKingdom of Stormwind|r.
 
 You begin in Westfall, separated from the rest of the kingdom. Reunite your lands by liberating Darkshire, Lakeshire and finally Stormwind City. 
 
@@ -79,6 +79,8 @@ Make sure to communicate with your Dwarven and Kul'tiran allies, as they will be
 
       Stormwind.ModObjectLimit(FourCC("H00R"), 1); //Varian
       Stormwind.ModObjectLimit(FourCC("H017"), 1); //Bolvar
+      Stormwind.ModObjectLimit(Constants.UNIT_H05Y_LORD_WIZARD_STORMWIND, 1);
+      Stormwind.ModObjectLimit(Constants.UNIT_H00Z_CROWN_PRINCE_OF_STROMGARDE_STORMWIND, 1);
 
       //Researches
       Stormwind.ModObjectLimit(FourCC("R02E"), Faction.UNLIMITED); //Chaplain Adept Training
@@ -108,6 +110,7 @@ Make sure to communicate with your Dwarven and Kul'tiran allies, as they will be
       Stormwind.ModObjectLimit(FourCC("R03X"), Faction.UNLIMITED); //Conjurers
       Stormwind.ModObjectLimit(Constants.UPGRADE_R0A3_GUNSHIPS_STORMWIND, Faction.UNLIMITED);
 
+      Stormwind.ModAbilityAvailability(Constants.ABILITY_A0GD_SUMMON_GARRISON_STORMWIND, 1);
       Stormwind.ModAbilityAvailability(Constants.ABILITY_A0GA_SUMMON_GARRISON_LORDAERON, -1);
       Stormwind.ModAbilityAvailability(Constants.ABILITY_A0GC_REPLENISH_MANA_ORANGE_KEEPS_CAPITALS, -1);
       Stormwind.ModAbilityAvailability(Constants.ABILITY_A0K5_DWARVEN_MASONRY_CASTLES_YELLOW, -1);

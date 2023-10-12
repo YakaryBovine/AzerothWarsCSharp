@@ -13,6 +13,9 @@ namespace MacroTools.LegendSystem
     private static readonly Dictionary<unit, Capital> ByUnit = new();
     private static readonly List<Capital> AllCapitals = new();
 
+    /// <summary>Capitals will gain this many hit points, as a percentage of their maximum, per turn.</summary>
+    public const float HitPointPercentagePerTurn = 0.02f;
+    
     /// <summary>
     /// Registers a <see cref="Capital"/> to the <see cref="CapitalManager"/>.
     /// </summary>
@@ -24,6 +27,7 @@ namespace MacroTools.LegendSystem
         throw new Exception($"Tried to register {nameof(Capital)} {capital.Name} but it is already registered.");
       ByUnit.Add(capital.Unit, capital);
       AllCapitals.Add(capital);
+      TurnBasedHitpointsManager.Register(capital.Unit, HitPointPercentagePerTurn);
     }
 
     /// <summary>
@@ -51,14 +55,6 @@ namespace MacroTools.LegendSystem
           return true;
       }
       return false;
-    }
-    
-    /// <summary>
-    ///   Whether or not the given unit is a <see cref="Protector" /> of a given <see cref="Capital" />.
-    /// </summary>
-    public static bool UnitIsCapitalProtector(unit protector, unit capital)
-    {
-      return ByUnit[capital].ProtectorsByUnit.ContainsKey(protector);
     }
     
     /// <summary>

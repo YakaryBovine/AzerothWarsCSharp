@@ -36,12 +36,15 @@ namespace WarcraftLegacies.Source.Mechanics.Scourge
           UnregisterEvents();
         });
 
-      ScourgeSetup.Scourge.LeftGame += OnScourgeLeaveGame;
+      ScourgeSetup.Scourge.ScoreStatusChanged += OnScourgeScoreStatusChanged;
       _helmOfDomination = helmOfDomination;
     }
 
-    private static void OnScourgeLeaveGame(object? sender, Faction faction)
+    private static void OnScourgeScoreStatusChanged(object? sender, Faction faction)
     {
+      if (faction.ScoreStatus != ScoreStatus.Defeated) 
+        return;
+      
       MaybeDropHelmOfDomination();
       UnregisterEvents();
     }
@@ -50,7 +53,7 @@ namespace WarcraftLegacies.Source.Mechanics.Scourge
     {
       _deathTrigger?.Destroy();
       if (ScourgeSetup.Scourge != null)
-        ScourgeSetup.Scourge.LeftGame -= OnScourgeLeaveGame;
+        ScourgeSetup.Scourge.ScoreStatusChanged -= OnScourgeScoreStatusChanged;
     }
 
     private static void MaybeDropHelmOfDomination()

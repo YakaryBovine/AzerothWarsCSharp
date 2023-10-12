@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using MacroTools.FactionSystem;
 using MacroTools.LegendSystem;
+using MacroTools.ObjectiveSystem.Objectives.QuestBased;
 using MacroTools.ObjectiveSystem.Objectives.UnitBased;
 using MacroTools.QuestSystem;
 using static War3Api.Common;
@@ -13,18 +14,19 @@ namespace WarcraftLegacies.Source.Quests.Draenei
   public sealed class QuestRepairGenerator : QuestData
   {
     private readonly Capital _exodarGenerator;
-    private readonly List<unit> _protectors;
+    private readonly IEnumerable<unit> _protectors;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="QuestRepairGenerator"/> class.
     /// </summary>
-    public QuestRepairGenerator(Capital exodarGenerator, List<unit> protectors) : base("Core of the Ship",
+    public QuestRepairGenerator(Capital exodarGenerator, QuestData prerequisite, IEnumerable<unit> protectors) : base("Core of the Ship",
       "The broken core of the Exodar should be rebuilt, bringing us one step closer to making it usable again.",
       @"ReplaceableTextures\CommandButtons\BTNPowerGenerator.blp")
     {
       _exodarGenerator = exodarGenerator;
       _protectors = protectors;
       Required = true;
+      AddObjective(new ObjectiveCompleteQuest(prerequisite));
       AddObjective(new ObjectiveUnitReachesFullHealth(exodarGenerator.Unit));
     }
 

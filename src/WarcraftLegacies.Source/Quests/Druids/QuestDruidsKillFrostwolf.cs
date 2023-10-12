@@ -32,11 +32,5 @@ namespace WarcraftLegacies.Source.Quests.Druids
       completingFaction.Player?.DisplayUnitTypeAcquired(ElementalGuardianId,
         "You can now train the Elemental Guardian from the Altar of Elders.");
     }
-
-    /// <inheritdoc/>
-    protected override void OnAdd(Faction whichFaction)
-    {
-      whichFaction.ModObjectLimit(ElementalGuardianId, 1);
-    }
   }
 }

@@ -20,6 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
       "The Worgen curse originated from Goldrinn, the embodiment of ferocity, savagery, and unyielding will. Through the power of the Scythe of Elune, his fallen spirit might be called upon to aid his unwillingly conceived progeny.",
       @"ReplaceableTextures\CommandButtons\BTNWorgenHunger.blp")
     {
+      AddObjective(new ObjectiveAcquireArtifact(scytheOfElune));
       AddObjective(new ObjectiveArtifactInRect(scytheOfElune, Regions.MountHyjal, "Mount Hyjal"));
       ResearchId = Constants.UPGRADE_R07U_QUEST_COMPLETED_SHRINE_OF_THE_WOLF_GOD;
       _goldrinn = goldrinn;

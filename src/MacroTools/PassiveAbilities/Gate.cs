@@ -9,6 +9,9 @@ namespace MacroTools.PassiveAbilities
   /// </summary>
   public sealed class Gate : PassiveAbility
   {
+    /// <summary>Gates will gain this many hit points, as a percentage of their maximum, per turn.</summary>
+    public const float HitPointPercentagePerTurn = 0.05f;
+    
     private readonly int _openedId;
     private readonly int _deadId;
     
@@ -47,6 +50,7 @@ namespace MacroTools.PassiveAbilities
     {
       if (createdUnit.GetTypeId() == _openedId) 
         createdUnit.SetAnimation("death alternate");
+      TurnBasedHitpointsManager.Register(createdUnit, HitPointPercentagePerTurn);
     }
 
     /// <inheritdoc />

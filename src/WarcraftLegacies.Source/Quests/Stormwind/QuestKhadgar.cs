@@ -10,7 +10,6 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
   /// </summary>
   public sealed class QuestKhadgar : QuestData
   {
-    private const int HeroId = Constants.UNIT_H05Y_LORD_WIZARD_STORMWIND;
 
     public QuestKhadgar(Capital blackTemple) : base("Keeper of the Eternal Watch",
       "At the end of the Second War, Khadgar remained in Draenor to seal the Dark Portal, effectively ending the conflict. He has been stranded deep in Outland ever since.",
@@ -27,7 +26,5 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     /// <inheritdoc/>
     protected override string RewardDescription => "You can summon Khadgar from the Altar of Kings";
 
-    /// <inheritdoc/>
-    protected override void OnAdd(Faction whichFaction) => whichFaction.ModObjectLimit(HeroId, 1);
   }
 }

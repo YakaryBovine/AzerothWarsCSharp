@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using MacroTools.ControlPointSystem;
 using MacroTools.Extensions;
@@ -15,8 +16,6 @@ namespace MacroTools.FactionSystem
   {
     private readonly List<player> _members = new();
     private readonly List<player> _invitees = new();
-    private readonly Queue<player> _playersToDistribute = new();
-    private bool _prcessingDistributeQueue;
 
     public Team(string name)
     {
@@ -51,24 +50,6 @@ namespace MacroTools.FactionSystem
     ///   Music that plays when this <see cref="Team" /> wins the game.
     /// </summary>
     public string? VictoryMusic { get; init; }
-    
-
-    /// <summary>
-    ///   Creates a <see cref="force" /> containing all <see cref="player" />s within this <see cref="Team" />.
-    /// </summary>
-    /// <returns></returns>
-    public List<player> GetAllPlayers()
-    {
-      return _members.ToList();
-    }
-    
-    public Queue<player> PlayersToDistribute => _playersToDistribute;
-
-    public bool PrcessingDistributeQueue
-    {
-      get => _prcessingDistributeQueue;
-      set => _prcessingDistributeQueue = value;
-    }
 
     public IEnumerable<Faction> GetAllFactions()
     {
@@ -131,9 +112,13 @@ namespace MacroTools.FactionSystem
     /// </summary>
     public void Uninvite(player whichPlayer)
     {
-      if (!_invitees.Contains(whichPlayer)) return;
+      if (!_invitees.Contains(whichPlayer)) 
+        return;
+      
       var faction = whichPlayer.GetFaction();
-      if (faction == null) return;
+      if (faction == null)
+        return;
+      
       DisplayText($"{faction.ColoredName}|r is no longer invited to join the {Name}.");
       DisplayTextToPlayer(faction.Player, 0, 0, $"You are no longer invited to join the {Name}.");
       _invitees.Remove(whichPlayer);
@@ -144,11 +129,15 @@ namespace MacroTools.FactionSystem
     /// </summary>
     public void Invite(player whichPlayer)
     {
-      if (_members.Contains(whichPlayer) || _invitees.Contains(whichPlayer)) return;
+      if (_members.Contains(whichPlayer) || _invitees.Contains(whichPlayer)) 
+        return;
+      
       //if (GetLocalPlayer() == whichFaction.Player || ContainsPlayer(GetLocalPlayer()))
       //StartSound("Sound\Interface\ArrangedTeamInvitation.wav");
       var faction = whichPlayer.GetFaction();
-      if (faction == null) return;
+      
+      if (faction == null) 
+        return;
       DisplayText($"{faction.ColoredName}|r has been invited to join the {Name}.");
       DisplayTextToPlayer(faction.Player, 0, 0,
         $"You have been invited to join the {Name}. Type -join {Name} to accept.");
@@ -161,28 +150,22 @@ namespace MacroTools.FactionSystem
     /// <param name="text"></param>
     public void DisplayText(string text)
     {
-      foreach (var player in _members) DisplayTextToPlayer(player, 0, 0, text);
+      foreach (var player in _members) 
+        DisplayTextToPlayer(player, 0, 0, text);
     }
 
     /// <summary>
     ///   Checks whether or not the given <see cref="Faction" /> has been invited to this <see cref="Team" />.
     /// </summary>
-    public bool IsPlayerInvited(player whichPlayer)
-    {
-      return _invitees.Contains(whichPlayer);
-    }
+    public bool IsPlayerInvited(player whichPlayer) => _invitees.Contains(whichPlayer);
 
     /// <summary>
     ///   Checks whether or not the given <see cref="player" /> is in this <see cref="Team" />.
     /// </summary>
     /// <param name="whichPlayer"></param>
     /// <returns></returns>
-    public bool Contains(player whichPlayer)
-    {
-      return _members.Contains(whichPlayer);
-    }
-    
-    
+    public bool Contains(player whichPlayer) => _members.Contains(whichPlayer);
+
     /// <summary>
     ///   Checks whether or not any <see cref="player" />'s faction in the <see cref="Team" /> has an Essential <see cref="Legend" />.
     /// </summary>
@@ -190,12 +173,9 @@ namespace MacroTools.FactionSystem
     public bool DoesTeamHaveEssentialLegend()
     {
       foreach (var player in _members)
-      {
         if (player.GetFaction()!.HasEssentialLegend)
-        {
           return true;
-        }
-      }
+      
       return false;
     }
   }

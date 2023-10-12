@@ -71,7 +71,7 @@
     {
       "Id": 1953854049,
       "Type": 3,
-      "Value": "Hero strikes with massive strength maiming his target and even other nearby enemies. Deals damage over time and reduces the targetted enemies\u0027 move and attack speed as well as reducing his armor.|n|n|cffffcc00Level 1|r - 150 damage, reduces attack speed by 20% and move speed by 10%, armor by 3, lasts 10 second (3 second for Heroes).|n|cffffcc00Level 2|r - 185 damage, reduces attack speed by 30% and move speed by 15%, armor by 4, lasts 11 second (3.5 seconds for Heroes).|n|cffffcc00Level 3|r - 225 damage, reduces attack speed by 40% and move speed by 20%, armor by 5, lasts 12 second (4 seconds for Heroes).|n|cffffcc00Level 4|r - 300 damage, reduces attack speed by 50% and move speed by 25%, armor by 6, lasts 13 second (4.5 seconds for Heroes)."
+      "Value": "Hero strikes with massive strength maiming his target and even other nearby enemies. Deals damage over time and reduces the targetted enemies\u0027 move and attack speed as well as reducing his armor. Last 5 seconds.|n|n|cffffcc00Level 1|r - 250 damage over time, reduces attack speed by 20% and move speed by 10%, armor by 3.|n|cffffcc00Level 2|r - 300 damage, reduces attack speed by 30% and move speed by 15%, armor by 4.|n|cffffcc00Level 3|r - 350 damage, reduces attack speed by 40% and move speed by 20%, armor by 5.|n|cffffcc00Level 4|r - 400 damage, reduces attack speed by 50% and move speed by 25%, armor by 6. "
     },
     {
       "Level": 1,
@@ -101,25 +101,25 @@
       "Level": 1,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Hero strikes with massive strength maiming his target and even other nearby enemies. Deals 150 damage and reduces the targetted enemies\u0027 move and attack speeds by 20%."
+      "Value": "Hero strikes with massive strength maiming his target and even other nearby enemies. Deals 250 damage over time, reduces armor by \u003CA07N,DataC1\u003E whilst reducing the targetted enemies\u0027 move and attack speeds by 20%"
     },
     {
       "Level": 2,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Hero strikes with massive strength maiming his target and even other nearby enemies. Deals 185 damage and reduces the targetted enemies\u0027 move and attack speeds by 30%."
+      "Value": "Hero strikes with massive strength maiming his target and even other nearby enemies. Deals 300 damage over time, reduces armor by \u003CA07N,DataC2\u003E whilst reducing the targetted enemies\u0027 move and attack speeds by 30%"
     },
     {
       "Level": 3,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Hero strikes with massive strength maiming his target and even other nearby enemies. Deals 225 damage and reduces the targetted enemies\u0027 move and attack speeds by 40%."
+      "Value": "Hero strikes with massive strength maiming his target and even other nearby enemies. Deals 350 damage over time, reduces armor by \u003CA07N,DataC3\u003E whilst reducing the targetted enemies\u0027 move and attack speeds by 40%"
     },
     {
       "Level": 4,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Hero strikes with massive strength maiming his target and even other nearby enemies. Deals 300 damage and reduces the targetted enemies\u0027 move and attack speeds by 50%."
+      "Value": ".Hero strikes with massive strength maiming his target and even other nearby enemies. Deals 400 damage over time, reduces armor by \u003CA07N,DataC4\u003E whilst reducing the targetted enemies\u0027 move and attack speeds by 50%"
     }
   ]
 }

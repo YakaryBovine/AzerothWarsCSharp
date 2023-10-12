@@ -27,7 +27,7 @@
     {
       "Id": 1953854049,
       "Type": 3,
-      "Value": "A magical hammer that is thrown at an enemy unit, causing damage and stunning the target. |n|n|cffffcc00Level 1|r - 150 damage, 4 second stun. 1 second on Heroes.|n|cffffcc00Level 2|r - 200 damage, 5 second stun. 1.5 seconds on Heroes.|n|cffffcc00Level 3|r - 300 damage, 6 second stun. 2 seconds on Heroes.|n|cffffcc00Level 4|r - 375 damage, 7 second stun. 2.5 seconds on Heroes"
+      "Value": "A magical hammer that is thrown at an enemy unit, causing damage and stunning the target. |n|n|cffffcc00Level 1|r - \u003CAHtb,DataA1\u003E damage, \u003CAHtb,Dur1\u003E second stun. 1 second on Heroes.|n|cffffcc00Level 2|r - \u003CAHtb,DataA2\u003E damage, \u003CAHtb,Dur2\u003E second stun. 1.5 seconds on Heroes.|n|cffffcc00Level 3|r - \u003CAHtb,DataA3\u003E damage, \u003CAHtb,Dur3\u003E second stun. 2 seconds on Heroes.|n|cffffcc00Level 4|r - \u003CAHtb,DataA4\u003E damage, \u003CAHtb,Dur4\u003E second stun. 2.5 seconds on Heroes."
     },
     {
       "Level": 4,
@@ -39,25 +39,25 @@
       "Level": 1,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Throws a magical hammer at a target enemy unit, dealing 150 damage and stunning the target for 4 seconds. Lasts 1 second on heroes."
+      "Value": "Throws a magical hammer at a target enemy unit, dealing \u003CAHtb,DataA1\u003E damage and stunning the target for \u003CAHtb,Dur1\u003E seconds. Lasts 1 second on heroes."
     },
     {
       "Level": 2,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Throws a magical hammer at a target enemy unit, dealing 225 damage and stunning the target for 5 seconds. Lasts 1.5 seconds on heroes."
+      "Value": "Throws a magical hammer at a target enemy unit, dealing \u003CAHtb,DataA2\u003E damage and stunning the target for \u003CAHtb,Dur2\u003E seconds. Lasts 1.5 seconds on heroes."
     },
     {
       "Level": 3,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Throws a magical hammer at a target enemy unit, dealing 300 damage and stunning the target for 6 seconds. Lasts 2 seconds on heroes."
+      "Value": "Throws a magical hammer at a target enemy unit, dealing \u003CAHtb,DataA3\u003E damage and stunning the target for \u003CAHtb,Dur3\u003E seconds. Lasts 2 seconds on heroes."
     },
     {
       "Level": 4,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Throws a magical hammer at a target enemy unit, dealing 375 damage and stunning the target for 7 seconds. Lasts 2.5 seconds on heroes."
+      "Value": "Throws a magical hammer at a target enemy unit, dealing \u003CAHtb,DataA4\u003E damage and stunning the target for \u003CAHtb,Dur4\u003E seconds. Lasts 2.5 seconds on heroes."
     }
   ]
 }

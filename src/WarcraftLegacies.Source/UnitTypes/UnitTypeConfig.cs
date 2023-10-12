@@ -163,17 +163,17 @@ namespace WarcraftLegacies.Source.UnitTypes
         NeverDelete = true
       });
       
-      UnitType.Register(new UnitType(Constants.UNIT_H01X_GATE_OF_SILVERMOON_OPEN)
+      UnitType.Register(new UnitType(Constants.UNIT_H01X_ELVEN_GATE_OPEN)
       {
         NeverDelete = true
       });
       
-      UnitType.Register(new UnitType(Constants.UNIT_H01W_GATE_OF_SILVERMOON_CLOSED)
+      UnitType.Register(new UnitType(Constants.UNIT_H01W_ELVEN_GATE_CLOSED)
       {
         NeverDelete = true
       });
       
-      UnitType.Register(new UnitType(Constants.UNIT_H01Y_GATE_OF_SILVERMOON_DEAD)
+      UnitType.Register(new UnitType(Constants.UNIT_H01Y_ELVEN_GATE_DEAD)
       {
         NeverDelete = true
       });
@@ -207,21 +207,6 @@ namespace WarcraftLegacies.Source.UnitTypes
       });
       
       UnitType.Register(new UnitType(Constants.UNIT_H02T_GATES_OF_AHN_QIRAJ_DEAD)
-      {
-        NeverDelete = true
-      });
-      
-      UnitType.Register(new UnitType(Constants.UNIT_H04R_ULDUM_GATE_OPEN)
-      {
-        NeverDelete = true
-      });
-      
-      UnitType.Register(new UnitType(Constants.UNIT_H04S_ULDUM_GATE_CLOSED)
-      {
-        NeverDelete = true
-      });
-      
-      UnitType.Register(new UnitType(Constants.UNIT_H04T_ULDUM_GATE_DEAD)
       {
         NeverDelete = true
       });

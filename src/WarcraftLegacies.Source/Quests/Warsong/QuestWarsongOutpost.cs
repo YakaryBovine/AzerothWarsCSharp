@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using MacroTools.ControlPointSystem;
 using MacroTools.Extensions;
 using MacroTools.FactionSystem;
+using MacroTools.ObjectiveSystem.Objectives.ControlPointBased;
 using MacroTools.ObjectiveSystem.Objectives.FactionBased;
 using MacroTools.ObjectiveSystem.Objectives.UnitBased;
 using MacroTools.QuestSystem;
@@ -14,7 +16,6 @@ namespace WarcraftLegacies.Source.Quests.Warsong
   public sealed class QuestWarsongOutpost : QuestData
   {
     private readonly List<unit> _rescueUnits;
-    private readonly ObjectiveAnyUnitInRect _enterWarsongOutpostRegion;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="QuestWarsongOutpost"/>.
@@ -23,7 +24,8 @@ namespace WarcraftLegacies.Source.Quests.Warsong
       "The deserts of Uldum are littered with ancient debris from a lost age, and it seems some of its secrets remain intact even now.  This matters little to the Warsong, however; this land is merely another target ripe for conquest.",
       @"ReplaceableTextures\CommandButtons\BTNIronHordeWatchTower.blp")
     {
-      AddObjective(_enterWarsongOutpostRegion = new ObjectiveAnyUnitInRect(Regions.Warsong_Uldum_Unlock, "the outpost in western Uldum", true));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BK_LOST_CITY_OF_THE_TOL_VIR)));
+      AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N0BD_ULDUM)));
       AddObjective(new ObjectiveSelfExists());
       Required = true;
       ResearchId = Constants.UPGRADE_VQ03_QUEST_COMPLETED_ULDUM_EXCAVATION;
@@ -32,7 +34,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
 
     /// <inheritdoc />
     protected override string RewardFlavour =>
-      $"With the help of his southern allies, {_enterWarsongOutpostRegion.CompletingUnitName} has taken charge of the outpost in the deserts of Uldum.";
+      $"The Warsong and their allies have taken control of the deserts of Uldum and established an outpost in the region.";
 
     /// <inheritdoc />
     protected override string RewardDescription => "Gain control of a small outpost in western Uldum";

@@ -5,10 +5,6 @@
   ],
   "Modifications": [
     {
-      "Id": 2020631157,
-      "Value": 2
-    },
-    {
       "Id": 1718840949,
       "Type": 3,
       "Value": "(Frostwolf Specialist)"
@@ -26,7 +22,21 @@
     {
       "Id": 1651864693,
       "Type": 3,
-      "Value": "Beast stables for the Horde.|n|cfff5962dTrains:|R Wind Rider, Batrider, Kodo Beast|n|cfff5962dResearches:|R Envenomed Spears, Liquid Fire, For The Horde!"
+      "Value": "Beast stables for the Horde.|n|cfff5962dTrains:|R Batrider, Packleader, Mammoth Wrangler|n|cfff5962dResearches:|R Envenomed Spears, Liquid Fire, For The Horde!"
+    },
+    {
+      "Id": 1818520949,
+      "Type": 3,
+      "Value": "war3mapImported\\FrostwolfBeastiary.mdl"
+    },
+    {
+      "Id": 1633907573,
+      "Type": 1,
+      "Value": 0.8
+    },
+    {
+      "Id": 2020631157,
+      "Value": 2
     }
   ]
 }

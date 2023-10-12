@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using MacroTools.Extensions;
+using MacroTools.FactionSystem;
 using static War3Api.Common;
 
 namespace MacroTools.LegendSystem
@@ -19,11 +20,6 @@ namespace MacroTools.LegendSystem
     /// The number of living <see cref="Protector"/> making this <see cref="Legend"/> invulnerable.
     /// </summary>
     public int ProtectorCount => _protectors.Count;
-    
-    /// <summary>
-    /// Get list of <see cref="Protector"/>s
-    /// </summary>
-    public List<Protector> Protectors => _protectors;
     
     public readonly Dictionary<unit, Protector> ProtectorsByUnit = new();
 
@@ -61,9 +57,12 @@ namespace MacroTools.LegendSystem
     /// </summary>
     public void AddProtector(unit whichUnit)
     {
+      if (ProtectorsByUnit.ContainsKey(whichUnit))
+        throw new InvalidOperationException($"{whichUnit.GetName()} is already registered as a Protector for {Name}.");
+      
       var protector = new Protector(whichUnit);
       _protectors.Add(protector);
-      ProtectorsByUnit.Add(whichUnit,protector);
+      ProtectorsByUnit.Add(whichUnit, protector);
       Unit?.SetInvulnerable(true);
       protector.ProtectorDied += OnProtectorDeath;
     }
@@ -103,7 +102,7 @@ namespace MacroTools.LegendSystem
       if (string.IsNullOrEmpty(DeathMessage)) 
         return;
       if (Hivemind && OwningPlayer != null)
-        OwningPlayer.GetFaction()?.Leave();
+        PlayerDistributor.DistributePlayer(OwningPlayer);
       
       DisplayTextToPlayer(GetLocalPlayer(), 0, 0, $"\n|cffffcc00CAPITAL DESTROYED|r\n{DeathMessage}");
     }

@@ -45,7 +45,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
       AddObjective(new ObjectiveArtifactInRect(hornofCenarius, Regions.Moonglade,
         "The Barrow Den"));
       AddObjective(new ObjectiveExpire(480, Title));
-      AddObjective(new ObjectiveUpgrade(Constants.UNIT_ETOE_TREE_OF_ETERNITY_DRUIDS, Constants.UNIT_ETOL_TREE_OF_LIFE_DRUIDS));
+      AddObjective(new ObjectiveUpgrade(Constants.UNIT_ETOE_TREE_OF_ETERNITY_DRUIDS_T3, Constants.UNIT_ETOL_TREE_OF_LIFE_DRUIDS_T1));
       AddObjective(new ObjectiveSelfExists());
       _moongladeUnits = moonglade.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
       _darnassusUnits = darnassus.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
@@ -58,7 +58,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
     protected override string RewardFlavour => "Malfurion has emerged from his deep slumber in the Barrow Den. Darnassus and the Moonglade ancients have been awakened.";
 
     /// <inheritdoc />
-    protected override string RewardDescription => "Gain Nordrassil, the Darnassus base, the Moonglade base, the hero Malfurion, and the artifact G'hanir";
+    protected override string RewardDescription => "Gain Nordrassil, the Darnassus base, the Cenarion Hold base, the Moonglade base, the hero Malfurion, and the artifact G'hanir";
 
     /// <inheritdoc />
     protected override void OnFail(Faction completingFaction)

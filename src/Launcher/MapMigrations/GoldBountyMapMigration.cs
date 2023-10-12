@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using War3Api.Object;
-using War3Api.Object.Enums;
+﻿using War3Api.Object;
 using War3Net.Build;
 
 namespace Launcher.MapMigrations
@@ -12,7 +10,7 @@ namespace Launcher.MapMigrations
   {
     public void Migrate(Map map, ObjectDatabase objectDatabase)
     {
-      foreach (var unit in objectDatabase.GetUnits().Where(IsCreep))
+      foreach (var unit in objectDatabase.GetUnits())
       {
         var level = unit.StatsLevel;
         if (unit.StatsGoldBountyAwardedBase != level)
@@ -27,7 +25,5 @@ namespace Launcher.MapMigrations
 
       map.UnitObjectData = objectDatabase.GetAllData().UnitData;
     }
-    
-    private static bool IsCreep(Unit unit) => unit.StatsRace == UnitRace.Creeps && !unit.StatsIsABuilding;
   }
 }

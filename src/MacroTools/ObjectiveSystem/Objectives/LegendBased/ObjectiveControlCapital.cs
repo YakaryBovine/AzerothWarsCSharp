@@ -28,7 +28,8 @@ namespace MacroTools.ObjectiveSystem.Objectives.LegendBased
       }
 
       DisplaysPosition = true;
-      target.ChangedOwner += OnTargetChangeOwner;
+      target.ChangedOwner += (_, _) => { RecalculateProgress(); };
+      target.UnitChanged += (_, _) => { RecalculateProgress(); };
 
       CreateTrigger()
         .RegisterUnitEvent(target.Unit, EVENT_UNIT_DEATH)
@@ -45,7 +46,7 @@ namespace MacroTools.ObjectiveSystem.Objectives.LegendBased
       }
     }
 
-    private void OnTargetChangeOwner(object? sender, LegendChangeOwnerEventArgs legendChangeOwnerEventArgs)
+    private void RecalculateProgress()
     {
       if (_target.Unit != null && IsPlayerOnSameTeamAsAnyEligibleFaction(_target.Unit.OwningPlayer()))
         Progress = QuestProgress.Complete;

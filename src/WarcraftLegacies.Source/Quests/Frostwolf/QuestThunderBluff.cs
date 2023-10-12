@@ -28,6 +28,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
       @"ReplaceableTextures\CommandButtons\BTNCentaurKhan.blp")
     {
       AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(FourCC("ncnk"), rescueRect.Center)));
+      AddObjective(new ObjectiveHostilesInAreaAreDead(new List<Rectangle> { Regions.LongMarchCentaur }, "in the Thousand Needles"));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N026_THOUSAND_NEEDLES )));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N09G_MULGORE)));
       AddObjective(new ObjectiveExpire(480, Title));

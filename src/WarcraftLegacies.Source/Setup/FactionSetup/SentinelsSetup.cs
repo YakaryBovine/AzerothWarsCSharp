@@ -61,6 +61,7 @@ Once you have secured your holdings, gather your army and destroy the Orcish Hor
       Sentinels.ModObjectLimit(FourCC("nnmg"), 12); //Redeemed Highborne
       Sentinels.ModObjectLimit(FourCC("e022"), 2); //Moon Rider
       Sentinels.ModObjectLimit(Constants.UNIT_ECHM_CHIMAERA_SENTINELS, 6);
+      Sentinels.ModObjectLimit(Constants.UNIT_H045_WARDEN_SENTINELS, 8);
 
       //Ships
       Sentinels.ModObjectLimit(FourCC("etrs"), Faction.UNLIMITED); //Night Elf Transport Ship

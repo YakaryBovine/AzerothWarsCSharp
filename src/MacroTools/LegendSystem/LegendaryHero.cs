@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MacroTools.ArtifactSystem;
 using MacroTools.Extensions;
+using MacroTools.FactionSystem;
 using WCSharp.Events;
 using WCSharp.Shared.Data;
 using static War3Api.Common;
@@ -239,7 +240,8 @@ namespace MacroTools.LegendSystem
     private void PermanentlyKill()
     {
       if (Hivemind && OwningPlayer != null)
-        OwningPlayer.GetFaction()?.Leave();
+        PlayerDistributor.DistributePlayer(OwningPlayer);
+
 
       OnPermaDeath();
       PermanentlyDied?.Invoke(this, this);

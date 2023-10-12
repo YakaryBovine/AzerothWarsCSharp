@@ -25,7 +25,7 @@ namespace MacroTools.Powers
     private timer? _oilTimer;
 
     /// <summary>Fired when the amount of oil stored changes.</summary>
-    public EventHandler<OilPower>? AmountChanged;
+    public event EventHandler<OilPower>? AmountChanged;
 
     /// <summary><see cref="OilPool"/>s cannot spawn within this distance of eachother.</summary>
     public float OilPoolBorderDistance { get; init; } = 600;

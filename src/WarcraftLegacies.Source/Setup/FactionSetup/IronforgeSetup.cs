@@ -67,6 +67,8 @@ Stormwind is preparing for an invasion through the Dark Portal in the South. Mus
       Ironforge.ModObjectLimit(FourCC("h01M"), 1); //Baelgun
       Ironforge.ModObjectLimit(FourCC("H00S"), 1); //Magni
       Ironforge.ModObjectLimit(FourCC("Hmbr"), 1); //Muradin
+      Ironforge.ModObjectLimit(Constants.UNIT_H03G_EMPEROR_OF_BLACKROCK_RAGNAROS, 1);
+      Ironforge.ModObjectLimit(Constants.UNIT_H028_THANE_OF_AERIE_PEAK_IRONFORGE, 1);
 
       //Ships
       Ironforge.ModObjectLimit(FourCC("hbot"), Faction.UNLIMITED); //Alliance Transport Ship

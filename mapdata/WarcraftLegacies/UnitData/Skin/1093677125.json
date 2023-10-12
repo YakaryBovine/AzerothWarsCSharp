@@ -8,16 +8,12 @@
     {
       "Id": 1868786037,
       "Type": 3,
-      "Value": "ReplaceableTextures\\CommandButtons\\BTNFurbolg.blp"
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNFurbolgTracker.blp"
     },
     {
       "Id": 1953980789,
       "Type": 3,
       "Value": "Revive Ancient Guardian"
-    },
-    {
-      "Id": 1651270517,
-      "Value": 140
     },
     {
       "Id": 2037408373,
@@ -31,11 +27,7 @@
     {
       "Id": 1818520949,
       "Type": 3,
-      "Value": "units\\creeps\\FurbolgElder\\FurbolgElder.mdl"
-    },
-    {
-      "Id": 1735156597,
-      "Value": 140
+      "Value": "war3mapImported\\BlackBear.mdl"
     },
     {
       "Id": 1953458293,
@@ -80,7 +72,7 @@
     {
       "Id": 1769173877,
       "Type": 3,
-      "Value": "ReplaceableTextures\\CommandButtons\\BTNFurbolg.blp"
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNFurbolgTracker.blp"
     },
     {
       "Id": 1885959285,
@@ -90,7 +82,7 @@
     {
       "Id": 1651864693,
       "Type": 3,
-      "Value": "Ancient bear hero, adept at frontline melee combat.|n|cfff5962dAbilities:|r Cleaving Attack|n|cfff5962dCan Learn:|R Maiming Strike, War Stomp, Endurance Aura, Avatar|n|n|cffffcc00Attacks land units.|R"
+      "Value": "Ancient bear hero, adept at frontline melee combat.|n|cfff5962dAbilities:|r Bash|n|cfff5962dCan Learn:|R Maiming Strike, Toughness, Endurance Aura, Avatar|n|n|cffffcc00Attacks land units.|R"
     },
     {
       "Id": 1684960117,
@@ -100,6 +92,11 @@
     {
       "Id": 2020631157,
       "Value": 1
+    },
+    {
+      "Id": 1768841589,
+      "Type": 3,
+      "Value": "alternate"
     }
   ]
 }

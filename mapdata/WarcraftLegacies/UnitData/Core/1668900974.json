@@ -10,11 +10,11 @@
     },
     {
       "Id": 1768186485,
-      "Value": 1
+      "Value": 4
     },
     {
       "Id": 1633837685,
-      "Value": 15
+      "Value": 4
     },
     {
       "Id": 1769169525,
@@ -108,12 +108,12 @@
     {
       "Id": 1731289461,
       "Type": 3,
-      "Value": "air,debris,ground,item,structure,tree,ward"
+      "Value": "debris,ground,item,structure,tree,ward"
     },
     {
       "Id": 1731354997,
       "Type": 3,
-      "Value": "air,debris,ground,item,structure,tree,ward"
+      "Value": "debris,ground,item,structure,tree,ward"
     },
     {
       "Id": 1919381621,
@@ -133,6 +133,60 @@
       "Id": 1953918325,
       "Type": 3,
       "Value": "foot"
+    },
+    {
+      "Id": 1999724917,
+      "Type": 3,
+      "Value": "artillery"
+    },
+    {
+      "Id": 1882284405,
+      "Type": 3,
+      "Value": "debris,ground,item,structure,tree,ward"
+    },
+    {
+      "Id": 1714512245,
+      "Value": 25
+    },
+    {
+      "Id": 1748066677,
+      "Value": 35
+    },
+    {
+      "Id": 1899061621,
+      "Value": 55
+    },
+    {
+      "Id": 1882349941,
+      "Type": 3,
+      "Value": "debris,ground,item,structure,tree,ward"
+    },
+    {
+      "Id": 1899127157,
+      "Value": 55
+    },
+    {
+      "Id": 1748132213,
+      "Value": 30
+    },
+    {
+      "Id": 1714577781,
+      "Value": 25
+    },
+    {
+      "Id": 1999790453,
+      "Type": 3,
+      "Value": "artillery"
+    },
+    {
+      "Id": 845441141,
+      "Type": 2,
+      "Value": 0.4
+    },
+    {
+      "Id": 845443445,
+      "Type": 2,
+      "Value": 0.25
     }
   ]
 }

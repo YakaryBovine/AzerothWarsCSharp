@@ -30,7 +30,6 @@ namespace MacroTools.Extensions
     public event EventHandler<PlayerFactionChangeEventArgs>? ChangedFaction;
     
     private static readonly Dictionary<int, PlayerData> ById = new();
-    private readonly Dictionary<int, int> _objectLevels = new();
 
     private readonly Dictionary<int, int> _objectLimits = new();
     private float _goldPerMinute;
@@ -260,8 +259,6 @@ namespace MacroTools.Extensions
       ControlPointsChanged?.Invoke(this, this);
     }
 
-    public int GetObjectLevel(int obj) => _objectLevels.ContainsKey(obj) ? _objectLevels[obj] : 0;
-
     public void SetObjectLevel(int obj, int level)
     {
       var objectLimit = _player.GetObjectLimit(obj);
@@ -282,8 +279,7 @@ namespace MacroTools.Extensions
       }
 
       SetPlayerTechResearched(_player, obj, Math.Max(level, 0));
-
-      _objectLevels[obj] = level;
+      
       if (revertAfter)
         SetPlayerTechMaxAllowed(_player, obj, 0);
       
@@ -345,6 +341,28 @@ namespace MacroTools.Extensions
       }
     }
 
+    public void SetGold(float gold)
+    {
+      var fullGold = (int)gold / 1;
+      SetPlayerState(_player, PLAYER_STATE_RESOURCE_GOLD, fullGold);
+      
+      var remainderGold = gold % 1;
+      _partialGold = remainderGold;
+    }
+
+    public void SetLumber(float lumber)
+    {
+      var fullLumber = (int)lumber / 1;
+      SetPlayerState(_player, PLAYER_STATE_RESOURCE_LUMBER, fullLumber);
+      
+      var remainderLumber = lumber % 1;
+      _partialLumber = remainderLumber;
+    }
+
+    public float GetGold() => GetPlayerState(_player, PLAYER_STATE_RESOURCE_GOLD) + _partialGold;
+
+    public float GetLumber() => GetPlayerState(_player, PLAYER_STATE_RESOURCE_LUMBER) + _partialLumber;
+
     /// <summary>
     ///   Retrieves the <see cref="PlayerData" /> object which contains information about the given <see cref="player" />.
     /// </summary>
@@ -360,9 +378,6 @@ namespace MacroTools.Extensions
     /// <summary>
     ///   Register a <see cref="PlayerData" /> to the Person system.
     /// </summary>
-    private static void Register(PlayerData playerData)
-    {
-      ById.Add(GetPlayerId(playerData._player), playerData);
-    }
+    private static void Register(PlayerData playerData) => ById.Add(GetPlayerId(playerData._player), playerData);
   }
 }

@@ -1,31 +1,50 @@
 {
-  "OldId": 1986085697,
+  "OldId": 1667318593,
   "NewId": 1313222721,
   "Unk": [
     0
   ],
   "Modifications": [
     {
+      "Id": 1953653089,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNArcaniteArmor.blp"
+    },
+    {
+      "Id": 2020631137,
+      "Value": 2
+    },
+    {
       "Id": 1718840929,
       "Type": 3,
-      "Value": "(Red Skeleton - Shield Wall)"
+      "Value": "(Frostwolf Commander"
     },
     {
       "Id": 1835101793,
       "Type": 3,
-      "Value": "Shield Wall"
+      "Value": "Defensive Formation"
+    },
+    {
+      "Id": 1952543841,
+      "Type": 3,
+      "Value": ""
+    },
+    {
+      "Id": 811693153,
+      "Type": 3,
+      "Value": ""
     },
     {
       "Level": 1,
       "Id": 829453409,
       "Type": 3,
-      "Value": "Shield Wall"
+      "Value": "Defensive Formation"
     },
     {
       "Level": 1,
       "Id": 828536161,
       "Type": 3,
-      "Value": "Gives 2 additional armor to nearby friendly units."
+      "Value": "Decrease nearby enemy units attack damage by 10%."
     }
   ]
 }

@@ -11,7 +11,6 @@ namespace WarcraftLegacies.Source.Quests.Warsong
   /// </summary>
   public sealed class QuestChenStormstout : QuestData
   {
-    private readonly int _chenId = FourCC("Nsjs");
     private readonly int _chenResearch = FourCC("R037");
     private readonly unit _chen;
     
@@ -48,7 +47,6 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     protected override void OnAdd(Faction whichFaction)
     {
       whichFaction.ModObjectLimit(_chenResearch, Faction.UNLIMITED);
-      whichFaction.ModObjectLimit(_chenId, 1);
       SetUnitInvulnerable(_chen, true);
     }
   }

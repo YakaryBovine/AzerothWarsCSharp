@@ -11,9 +11,10 @@ namespace WarcraftLegacies.Source.Quests.Legion
   public sealed class QuestConsumeTree : QuestData
   {
     private readonly LegendaryHero _archimonde;
-
+    private const int StatGain = 80;
+    
     public QuestConsumeTree(LegendaryHero archimonde) : base("Twilight of the Gods",
-      "Consuming the World Tree will grant Archimonde immeasurable power and eliminate his mortal enemies, the Druids of Kalimdor, forever.",
+      "Long ago, the Night Elves' hubris led them to forge a second Well of Eternity following the destruction of the first. Nordrassil was planted atop it as a means of protection, but this measly act of defiance shall not prevent Lord Archimonde from seizing the Well's energies for himself.",
       @"ReplaceableTextures\CommandButtons\BTNGlazeroth.blp")
     {
       _archimonde = archimonde;
@@ -23,23 +24,24 @@ namespace WarcraftLegacies.Source.Quests.Legion
 
     /// <inheritdoc/>
     protected override string RewardFlavour =>
-      "Archimonde has now consummed the World Tree and is now nigh unstoppable";
+      "The Third War is over. Archimonde has successfully consumed the energies of the Well of Eternity resting beneath Nordrassil. The last line of defense against the Burning Legion has fallen, and with it dies the hopes and dreams of Azeroth.";
 
     /// <inheritdoc/>
     protected override string RewardDescription =>
-      "By consuming the World Tree, Archimonde will obtain immense power. +80 to all stats. Additionally, the Druids faction will be eliminated.";
-
-
+      $"Archimonde gains {StatGain} Strength, Agility, and Intelligence, and the Druids are defeated";
+    
     /// <inheritdoc/>
     protected override void OnComplete(Faction completingFaction)
     {
       var archimondeUnit = _archimonde.Unit;
-      DruidsSetup.Druids?.Leave();
-      BlzSetUnitName(archimondeUnit, "Devourer of Worlds");
+      var druidsPlayer = DruidsSetup.Druids?.Player;
+      druidsPlayer?.RemoveResourcesAndUnits();
+
+      archimondeUnit?.SetName("Devourer of Worlds");
       AddSpecialEffectTarget(@"Abilities\Weapons\GreenDragonMissile\GreenDragonMissile.mdl", archimondeUnit,
         "hand, right");
       AddSpecialEffectTarget(@"Abilities\Weapons\GreenDragonMissile\GreenDragonMissile.mdl", archimondeUnit, "hand, left");
-      archimondeUnit?.AddHeroAttributes(80, 80, 80);
+      archimondeUnit?.AddHeroAttributes(StatGain, StatGain, StatGain);
     }
   }
 }

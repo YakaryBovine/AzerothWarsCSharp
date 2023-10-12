@@ -1,4 +1,4 @@
-using MacroTools.FactionSystem;
+﻿using MacroTools.FactionSystem;
 using MacroTools.LegendSystem;
 using MacroTools.ObjectiveSystem.Objectives.LegendBased;
 using MacroTools.QuestSystem;
@@ -29,10 +29,5 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
                                                        GetObjectName(UnittypeId) + "s from the " +
                                                        GetObjectName(BuildingId) + " and acquire Felsteel Plating";
     
-    /// <inheritdoc/>
-    protected override void OnAdd(Faction whichFaction)
-    {
-      whichFaction.ModObjectLimit(UnittypeId, UnitLimit);
-    }
   }
 }

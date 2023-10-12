@@ -15,7 +15,6 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
   public sealed class QuestWildhammer : QuestData
   {
     private readonly List<unit> _rescueUnits;
-    private const int HeroId = Constants.UNIT_H028_THANE_OF_AERIE_PEAK_IRONFORGE;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="QuestWildhammer"/> class.
@@ -58,7 +57,6 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
     protected override void OnAdd(Faction whichFaction)
     {
       whichFaction.ModObjectLimit(ResearchId, Faction.UNLIMITED);
-      whichFaction.ModObjectLimit(HeroId, 1);
     }
   }
 }

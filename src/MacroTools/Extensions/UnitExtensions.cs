@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using MacroTools.ControlPointSystem;
 using MacroTools.LegendSystem;
 using MacroTools.Libraries;
 using WCSharp.Shared.Data;
@@ -292,11 +293,9 @@ namespace MacroTools.Extensions
 
     /// <summary>
     /// Removes the unit from the game permanently.
+    /// <para>Prefer using <see cref="SafelyRemove"/> for non-dummy units.</para>
     /// </summary>
-    public static void Remove(this unit unit)
-    {
-      RemoveUnit(unit);
-    }
+    public static void Remove(this unit unit) => RemoveUnit(unit);
 
     /// <summary>
     /// Orders a unit to perform a specified order at a specified <see cref="Point"/>.
@@ -390,26 +389,6 @@ namespace MacroTools.Extensions
       WaygateActivate(waygate, true);
       WaygateSetDestination(waygate, destination.X, destination.Y);
       return waygate;
-    }
-
-    /// <summary>
-    ///   If the unit has the given item type, returns the item slot the item is in.
-    ///   Otherwise, returns 0.
-    ///   This function is 1-indexed.
-    /// </summary>
-    public static int GetInventoryIndexOfItemType(this unit whichUnit, int itemTypeId)
-    {
-      var index = 0;
-      while (true)
-      {
-        var indexItem = UnitItemInSlot(whichUnit, index);
-        if (indexItem != null && GetItemTypeId(indexItem) == itemTypeId) return index + 1;
-
-        index += 1;
-        if (index >= 6) break;
-      }
-
-      return 0;
     }
 
     /// <summary>
@@ -814,16 +793,13 @@ namespace MacroTools.Extensions
     /// <returns>A List of abilityids for a given unit.</returns>
     public static unit RemoveAllAbilities(this unit whichUnit, List<int> ignoredAbilityId)
     {
-      
       var abilities = GetUnitAbilities(whichUnit);
 
       foreach (var ability in abilities)
       {
         var abilityid = BlzGetAbilityId(ability);
-        if (!ignoredAbilityId.Contains(abilityid))
-        {
+        if (!ignoredAbilityId.Contains(abilityid)) 
           RemoveAbility(whichUnit, abilityid);
-        }
       }
 
       return whichUnit;
@@ -836,7 +812,6 @@ namespace MacroTools.Extensions
     /// <returns>A List of ability objects for a given unit.</returns>
     public static List<ability> GetUnitAbilities(this unit whichUnit)
     {
-      
       var abilities = new List<ability>();
       var index = 0;
 
@@ -852,6 +827,28 @@ namespace MacroTools.Extensions
       }
 
       return abilities;
+    }
+
+    /// <summary>Safely removes the unit by dropping its items, killing it, then removing it.
+    /// <para>Should generally be used instead of <see cref="Remove"/>.</para>
+    /// </summary>
+    public static void SafelyRemove(this unit whichUnit)
+    {
+      if (whichUnit.IsType(UNIT_TYPE_HERO))
+        whichUnit.DropAllItems();
+      
+      whichUnit.Kill().Remove();
+    }
+
+    /// <summary>
+    /// Whether or not the unit can be safely removed.
+    /// <para>Control Points, Capitals, and Gates are some examples of units that should not be removed.</para>
+    /// </summary>
+    public static bool IsRemovable(this unit whichUnit)
+    {
+      var unitType = UnitType.GetFromHandle(whichUnit);
+      return !CapitalManager.UnitIsCapital(whichUnit) && !CapitalManager.UnitIsProtector(whichUnit) &&
+             !ControlPointManager.Instance.UnitIsControlPoint(whichUnit) && !unitType.NeverDelete;
     }
   }
 }

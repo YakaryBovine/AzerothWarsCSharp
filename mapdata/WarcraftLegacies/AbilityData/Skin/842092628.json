@@ -1,0 +1,74 @@
+{
+  "OldId": 1651787841,
+  "NewId": 842092628,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Id": 1718840929,
+      "Type": 3,
+      "Value": "(Garithos)"
+    },
+    {
+      "Id": 2037082209,
+      "Type": 3,
+      "Value": "Q"
+    },
+    {
+      "Id": 1952542049,
+      "Type": 3,
+      "Value": "Hammer Missile.mdx"
+    },
+    {
+      "Id": 1802007137,
+      "Type": 3,
+      "Value": "Q"
+    },
+    {
+      "Id": 1953854049,
+      "Type": 3,
+      "Value": "A magical hammer that is thrown at an enemy unit, causing damage and stunning the target. |n|n|cffffcc00Level 1|r - \u003CTP12:AHtb,DataA1\u003E damage, \u003CTP12:AHtb,Dur1\u003E second stun. 1 second on Heroes.|n|cffffcc00Level 2|r - \u003CTP12:AHtb,DataA2\u003E damage, \u003CTP12:AHtb,Dur2\u003E second stun. 1.5 seconds on Heroes.|n|cffffcc00Level 3|r - \u003CTP12:AHtb,DataA3\u003E damage, \u003CTP12:AHtb,Dur3\u003E second stun. 2 seconds on Heroes.|n|cffffcc00Level 4|r - \u003CTP12AHtb,DataA4\u003E damage, \u003CTP12:AHtb,Dur4\u003E second stun. 2.5 seconds on Heroes."
+    },
+    {
+      "Level": 4,
+      "Id": 829453409,
+      "Type": 3,
+      "Value": "Storm Bolt - [|cffffcc00Level 4|r]"
+    },
+    {
+      "Level": 1,
+      "Id": 828536161,
+      "Type": 3,
+      "Value": "Throws a magical hammer at a target enemy unit, dealing \u003CTP12,DataA1\u003E  damage and stunning the target for \u003CTP12,Dur1\u003E seconds. Lasts 1 second on heroes."
+    },
+    {
+      "Level": 2,
+      "Id": 828536161,
+      "Type": 3,
+      "Value": "Throws a magical hammer at a target enemy unit, dealing \u003CTP12,DataA2\u003E  damage and stunning the target for \u003CTP12,Dur2\u003E seconds. Lasts 1.5 seconds on heroes."
+    },
+    {
+      "Level": 3,
+      "Id": 828536161,
+      "Type": 3,
+      "Value": "Throws a magical hammer at a target enemy unit, dealing \u003CTP12,DataA3\u003E  damage and stunning the target for \u003CTP12,Dur3\u003E seconds. Lasts 2 seconds on heroes."
+    },
+    {
+      "Level": 4,
+      "Id": 828536161,
+      "Type": 3,
+      "Value": "Throws a magical hammer at a target enemy unit, dealing \u003CTP12,DataA4\u003E  damage and stunning the target for \u003CTP12,Dur4\u003E seconds. Lasts 2.5 seconds on heroes."
+    },
+    {
+      "Id": 1835101793,
+      "Type": 3,
+      "Value": "Righteous Blow"
+    },
+    {
+      "Id": 1952805473,
+      "Type": 3,
+      "Value": "Learn Righteous Blow - [|cffffcc00Level %d|r]"
+    }
+  ]
+}

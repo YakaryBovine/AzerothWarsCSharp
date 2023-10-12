@@ -1,133 +1,40 @@
 {
-  "OldId": 1936478017,
+  "OldId": 1718832961,
   "NewId": 1396191297,
   "Unk": [
     0
   ],
   "Modifications": [
     {
-      "Level": 1,
-      "Id": 1852072801,
-      "Type": 2,
-      "Value": 150
-    },
-    {
-      "Level": 2,
-      "Id": 1852072801,
-      "Type": 2,
-      "Value": 150
-    },
-    {
-      "Level": 3,
-      "Id": 1852072801,
-      "Type": 2,
-      "Value": 150
-    },
-    {
-      "Level": 2,
-      "Id": 1935895905,
-      "Value": 200
-    },
-    {
-      "Level": 3,
-      "Id": 1935895905,
-      "Value": 250
-    },
-    {
-      "Level": 2,
-      "Pointer": 1,
-      "Id": 829647957,
-      "Value": 30
-    },
-    {
-      "Level": 3,
-      "Pointer": 1,
-      "Id": 829647957,
-      "Value": 40
-    },
-    {
-      "Level": 1,
-      "Pointer": 2,
-      "Id": 846425173,
-      "Type": 2,
-      "Value": 0.1
-    },
-    {
-      "Level": 2,
-      "Pointer": 2,
-      "Id": 846425173,
-      "Type": 2,
-      "Value": 0.1
-    },
-    {
-      "Level": 3,
-      "Pointer": 2,
-      "Id": 846425173,
-      "Type": 2,
-      "Value": 0.1
-    },
-    {
-      "Level": 2,
-      "Pointer": 3,
-      "Id": 863202389,
-      "Value": 13
-    },
-    {
-      "Level": 3,
-      "Pointer": 3,
-      "Id": 863202389,
-      "Value": 19
-    },
-    {
-      "Level": 1,
-      "Pointer": 4,
-      "Id": 879979605,
-      "Type": 2,
-      "Value": 1
-    },
-    {
-      "Level": 2,
-      "Pointer": 5,
-      "Id": 896756821,
-      "Type": 2,
-      "Value": 27
-    },
-    {
-      "Level": 3,
-      "Pointer": 5,
-      "Id": 896756821,
-      "Type": 2,
-      "Value": 33
+      "Id": 1919248481,
+      "Value": 0
     },
     {
       "Id": 1986358369,
-      "Value": 3
-    },
-    {
-      "Id": 1802726497,
-      "Value": 5
-    },
-    {
-      "Id": 1986818657,
-      "Value": 10
+      "Value": 1
     },
     {
       "Level": 1,
-      "Id": 1970498645,
+      "Id": 828797775,
       "Type": 3,
-      "Value": "u005"
+      "Value": "nwwf"
     },
     {
-      "Level": 2,
-      "Id": 1970498645,
-      "Type": 3,
-      "Value": "u005"
+      "Level": 1,
+      "Pointer": 2,
+      "Id": 845574991,
+      "Value": 4
     },
     {
-      "Level": 3,
-      "Id": 1970498645,
+      "Level": 1,
+      "Id": 1935895905,
+      "Value": 0
+    },
+    {
+      "Level": 1,
+      "Id": 1718968929,
       "Type": 3,
-      "Value": "u005"
+      "Value": "BFig"
     }
   ]
 }

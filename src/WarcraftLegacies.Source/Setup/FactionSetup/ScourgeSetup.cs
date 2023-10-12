@@ -24,13 +24,13 @@ namespace WarcraftLegacies.Source.Setup.FactionSetup
         ControlPointDefenderUnitTypeId = Constants.UNIT_U028_CONTROL_POINT_DEFENDER_SCOURGE,
         IntroText = @"You are playing as the the horrific Undead Scourge.
 
-You begin in Northrend, a vast and isolated land, perfect to raise an army of undying warriors to destroy the living.
+You begin in Northrend, a vast and isolated land; perfect to raise an army of undying warriors to destroy the living.
 
-The local Nerubians have declared war on you, destroy their decrepit holdings and kill their Queen to secure the continent.
+The local Nerubians have declared war on you. Destroy their decrepit holdings and kill their Queen to secure the continent.
 
-Coordinate with the Burning Legion and make use of the Plague of Undeath to sweep Lordaeron away.
+Coordinate with the Burning Legion and use the Plague of Undeath to sweep Lordaeron away.
 
-When Plague hits Lordaeron, a great portal will be opened between Dragonblight and the Scholomance, The Black Gate!"
+When the Plague hits Lordaeron, a great portal will be opened between Dragonblight and Scholomance."
       };
 
       //Buildings

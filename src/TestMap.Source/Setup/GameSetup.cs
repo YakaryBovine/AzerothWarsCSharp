@@ -32,7 +32,6 @@ namespace TestMap.Source.Setup
       TestSetup.Setup();
       WaygateManager.Setup(FourCC("nwgt"));
       HintSetup.Setup();
-      AugmentSetup.Setup();
       PassiveAbilityManager.InitializePreplacedUnits();
       ResearchManager.RegisterIncompatibleSet(
         new BasicResearch(FourCC("Rhan"), 30, 30),

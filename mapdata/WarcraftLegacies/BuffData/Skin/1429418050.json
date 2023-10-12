@@ -8,7 +8,7 @@
     {
       "Id": 1885959270,
       "Type": 3,
-      "Value": "Defensive Formation"
+      "Value": "|cffff0000Defensive Formation|r"
     },
     {
       "Id": 1700951398,
@@ -19,6 +19,11 @@
       "Id": 1952543846,
       "Type": 3,
       "Value": ""
+    },
+    {
+      "Id": 1953653094,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNArcaniteArmor.blp"
     }
   ]
 }

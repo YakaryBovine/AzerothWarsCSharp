@@ -5,7 +5,7 @@ using static War3Api.Common;
 
 namespace WarcraftLegacies.Source.Cheats
 {
-  public sealed class CheatSkipCinematic
+  public static class CheatSkipCinematic
   {
     public static void Init()
     {

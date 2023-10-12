@@ -44,8 +44,8 @@ namespace WarcraftLegacies.Source.Setup
       commandManager.Register(new CheatPosition());
       commandManager.Register(new CheatGetUnitAbilities());
       commandManager.Register(new CheatRemoveAllAbilities());
+      commandManager.Register(new CheatSkipTurns());
       TestMode.Setup(commandManager);
-      var cheatSkipCinematic = new CheatSkipCinematic();
       CheatSkipCinematic.Init();
     }
   }

@@ -15,7 +15,6 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
   /// </summary>
   public sealed class QuestDarkIron : QuestData
   {
-    private const int HeroId = Constants.UNIT_H03G_EMPEROR_OF_BLACKROCK_RAGNAROS;
     private readonly List<unit> _rescueUnits;
     
     /// <summary>
@@ -51,12 +50,6 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
     protected override void OnFail(Faction failingFaction)
     {
       Player(PLAYER_NEUTRAL_AGGRESSIVE).RescueGroup(_rescueUnits);
-    }
-
-    /// <inheritdoc />
-    protected override void OnAdd(Faction whichFaction)
-    {
-      whichFaction.ModObjectLimit(HeroId, 1);
     }
   }
 }

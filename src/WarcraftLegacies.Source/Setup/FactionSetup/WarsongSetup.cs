@@ -70,6 +70,7 @@ The Night Elves are aware of your presence and are gathering a mighty host again
       WarsongClan.ModObjectLimit(FourCC("Ogrh"), 1); //Grom
       WarsongClan.ModObjectLimit(FourCC("Obla"), 1); //Varok
       WarsongClan.ModObjectLimit(FourCC("O06L"), 1); //Garrosh
+      WarsongClan.ModObjectLimit(Constants.UNIT_NSJS_BREWMASTER_WARSONG, 1);
       WarsongClan.ModObjectLimit(FourCC("n0CN"), 1); //Gibbs
       WarsongClan.ModObjectLimit(Constants.UNIT_OPGH_CORRUPTOR_OF_THE_WARSONG_CLAN_WARSONG_BLOODPACT, 1); //Blood Pact Grom   Fixes Perma Death Grom Blood Pact bug
 

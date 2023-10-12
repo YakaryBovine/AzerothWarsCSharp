@@ -1,7 +1,6 @@
 ﻿using MacroTools;
 using MacroTools.LegendSystem;
 using static War3Api.Common;
-#pragma warning disable CS1591
 
 namespace WarcraftLegacies.Source.Setup.Legends
 {
@@ -15,6 +14,8 @@ namespace WarcraftLegacies.Source.Setup.Legends
     public Capital Nordrassil { get; }
     public Capital Vordrassil { get; }
     public Capital TempleOfTheMoon { get; }
+    public Capital CenarionHold { get; }
+    
     public static int UnittypeCenariusGhost => Constants.UNIT_E00H_DEMIGOD_OF_THE_NIGHT_ELVES_DRUIDS_GHOST;
 
     public LegendDruids(PreplacedUnitSystem preplacedUnitSystem)
@@ -61,6 +62,13 @@ namespace WarcraftLegacies.Source.Setup.Legends
         Capturable = true,
         Essential = true
       };
+      
+      CenarionHold = new Capital
+      {
+        Capturable = true,
+        Essential = true,
+        Unit = preplacedUnitSystem.GetUnit(Constants.UNIT_N06D_CENARION_HOLD_SENTINEL_OTHER)
+      };
 
       TempleOfTheMoon = new Capital
       {
@@ -73,7 +81,7 @@ namespace WarcraftLegacies.Source.Setup.Legends
         StartingXp = 4000
       };
     }
-    
+
     public void RegisterLegends()
     {
       LegendaryHeroManager.Register(Cenarius);
@@ -84,6 +92,7 @@ namespace WarcraftLegacies.Source.Setup.Legends
       CapitalManager.Register(Nordrassil);
       CapitalManager.Register(Vordrassil);
       CapitalManager.Register(TempleOfTheMoon);
+      CapitalManager.Register(CenarionHold);
     }
   }
 }

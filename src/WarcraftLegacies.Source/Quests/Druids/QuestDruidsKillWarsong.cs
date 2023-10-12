@@ -39,11 +39,5 @@ namespace WarcraftLegacies.Source.Quests.Druids
     {
       completingFaction.Player.DisplayUnitTypeAcquired(UnittypeId, "You can now train Siege Ancients at the Ancient of War.");
     }
-
-    /// <inheritdoc/>
-    protected override void OnAdd(Faction whichFaction)
-    {
-      whichFaction.ModObjectLimit(UnittypeId, 6); //Siege Ancient
-    }
   }
 }

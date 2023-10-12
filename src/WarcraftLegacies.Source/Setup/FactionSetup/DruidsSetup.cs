@@ -58,6 +58,7 @@ Gather your forces and strike before the Horde can organize their efforts."
       Druids.ModObjectLimit(FourCC("e00N"), 6); //Keeper of the Grove
       Druids.ModObjectLimit(FourCC("n05H"), Faction.UNLIMITED); //Furbolg
       Druids.ModObjectLimit(FourCC("n065"), 6); //Green Dragon
+      Druids.ModObjectLimit(Constants.UNIT_E012_SIEGE_ANCIENT_DRUIDS_ELITE, 6);
 
       //Ships
       Druids.ModObjectLimit(FourCC("etrs"), Faction.UNLIMITED); //Night Elf Transport Ship
@@ -73,6 +74,9 @@ Gather your forces and strike before the Horde can organize their efforts."
       Druids.ModObjectLimit(FourCC("E00H"), 1); //Cenarius
       Druids.ModObjectLimit(FourCC("E00K"), 1); //Tortolla
       Druids.ModObjectLimit(FourCC("Efur"), 1); //Furion
+      Druids.ModObjectLimit(Constants.UNIT_E00A_ANCIENT_GUARDIAN_DRUIDS, 1);
+      Druids.ModObjectLimit(Constants.UNIT_E00X_ELEMENTAL_GUARDIAN_DRUIDS_DEMI, 1);
+      Druids.ModObjectLimit(Constants.UNIT_H04U_DEMIGOD_DRUIDS, 1);
 
       Druids.ModObjectLimit(FourCC("Redt"), Faction.UNLIMITED); //Druid of the Talon Adept Training
       Druids.ModObjectLimit(FourCC("Renb"), Faction.UNLIMITED); //Nature)s Blessing
