@@ -45,7 +45,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
 
     /// <inheritdoc/>
     protected override string RewardDescription =>
-      "Access to the Plague Research at the Frozen Throne, Rivendare trainable and a base in Icecrown";
+      "Access to the Plague Research at the Frozen Throne, Kel'thuzad and Rivendare trainable and a base in Icecrown";
 
     /// <inheritdoc/>
     protected override void OnFail(Faction completingFaction)
