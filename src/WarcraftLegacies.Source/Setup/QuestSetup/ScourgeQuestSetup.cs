@@ -15,7 +15,6 @@ namespace WarcraftLegacies.Source.Setup.QuestSetup
         preplacedUnitSystem.GetUnit(Constants.UNIT_N074_QUEEN_NEZAR_AZRET));
       QuestKelthuzadLich questKelthuzadLich = new(allLegendSetup.Quelthalas.Sunwell, allLegendSetup.Scourge.Kelthuzad);
       QuestKelthuzadDies questKelthuzadDies = new(questKelthuzadLich, allLegendSetup.Scourge.Kelthuzad);
-      QuestEnKilahUnlock questEnKilahUnlock = new(Regions.EnKilahUnlock);
       QuestDrakUnlock questDrakUnlock = new(Regions.DrakUnlock, allLegendSetup.Neutral.DraktharonKeep);
 
       var plagueParameters = new PlagueParameters();

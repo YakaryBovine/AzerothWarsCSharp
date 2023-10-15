@@ -320,7 +320,7 @@ public static class Regions
 	public static Rectangle TombOfSargerasInteriorD { get; set; } = new Rectangle(-1824f, 9536f, -1600f, 10304f);
 	public static Rectangle TombOfSargerasInteriorE { get; set; } = new Rectangle(32f, 9728f, 384f, 10176f);
 	public static Rectangle TombOfSargerasInteriorF { get; set; } = new Rectangle(-1376f, 10144f, -800f, 10592f);
-	public static Rectangle TombOfSargerasInteriorG { get; set; } = new Rectangle(352f, 9952f, 576f, 10176f);
+	public static Rectangle TombOfSargerasInteriorG { get; set; } = new Rectangle(352f, 9920f, 608f, 10176f);
 	public static Rectangle TombOfSargerasInteriorH { get; set; } = new Rectangle(-1216f, 8768f, -288f, 8992f);
 	public static Rectangle Trade1 { get; set; } = new Rectangle(9952f, -23200f, 10592f, -22816f);
 	public static Rectangle Trade2 { get; set; } = new Rectangle(-8960f, 7872f, -8576f, 8256f);
@@ -367,10 +367,5 @@ public static class Regions
 	public static Rectangle ZulAman_trolls { get; set; } = new Rectangle(20256f, 10176f, 22848f, 17440f);
 	public static Rectangle Zulfarrak { get; set; } = new Rectangle(-12352f, -14272f, -10528f, -12064f);
 	public static Rectangle ZulfarrakAmbient { get; set; } = new Rectangle(-5952f, -17216f, 2944f, -10368f);
-	public static Rectangle EnKilahUnlock { get; set; } = new Rectangle(-6016f, 18176f, -4832f, 18848f);
-	public static Rectangle NorthrendRock1 { get; set; } = new Rectangle(2752f, 19904f, 3168f, 20832f);
-	public static Rectangle NorthrendRock2 { get; set; } = new Rectangle(3296f, 17536f, 4064f, 18528f);
-	public static Rectangle NorthrendRock3 { get; set; } = new Rectangle(3008f, 16224f, 3776f, 17216f);
-	public static Rectangle NorthrendRock4 { get; set; } = new Rectangle(-704f, 21280f, 160f, 22144f);
 
 }
