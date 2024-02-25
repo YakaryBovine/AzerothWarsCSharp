@@ -6,15 +6,15 @@
   "Modifications": [
     {
       "Id": 1768186485,
-      "Value": 6
+      "Value": 5
     },
     {
       "Id": 1633837685,
-      "Value": 6
+      "Value": 14
     },
     {
       "Id": 1769169525,
-      "Value": 4
+      "Value": 2
     },
     {
       "Id": 2037671029,
@@ -33,6 +33,10 @@
       "Id": 1731289461,
       "Type": 3,
       "Value": "debris,ground,item,nonancient,structure,ward"
+    },
+    {
+      "Id": 1986358389,
+      "Value": 4
     }
   ]
 }

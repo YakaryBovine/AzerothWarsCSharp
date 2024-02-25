@@ -50,7 +50,7 @@ namespace WarcraftLegacies.Source.Quests.Scarlet
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Scarlet Crusade has successfully rebuilt Lordaeron City, cementing their position as the rightful successors of Lordaeron's legacy.";
 
     /// <inheritdoc/>

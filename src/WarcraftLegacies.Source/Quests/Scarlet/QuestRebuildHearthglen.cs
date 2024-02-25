@@ -30,7 +30,7 @@ namespace WarcraftLegacies.Source.Quests.Scarlet
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "With the Monastery under Scarlet control, Sally Whitemane can be brought into the fold of the Crusade's leadership in earnest.";
 
     /// <inheritdoc/>

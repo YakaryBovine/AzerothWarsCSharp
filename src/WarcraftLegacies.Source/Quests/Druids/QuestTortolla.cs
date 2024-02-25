@@ -29,7 +29,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "Tortolla has finally awoken from his ancient slumber.";
+    public override string RewardFlavour => "Tortolla has finally awoken from his ancient slumber.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "You can summon Tortolla from the Altar of Elders";

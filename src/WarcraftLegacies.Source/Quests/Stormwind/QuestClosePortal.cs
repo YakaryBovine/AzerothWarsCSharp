@@ -39,7 +39,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "Khadgar has closed the Dark Portal definately";
+    public override string RewardFlavour => "Khadgar has closed the Dark Portal definately";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Close the Dark Portal from both sides";

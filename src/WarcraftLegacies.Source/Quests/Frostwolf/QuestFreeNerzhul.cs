@@ -26,7 +26,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
     }
     
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Ner'zhul is finally free from his tortured existence as the bearer of the Helm of Domination. With his dying breath, he shares with Thrall the latent energies of the Spell of Conjuration that once shattered the Orc homeworld of Draenor.";
 
     /// <inheritdoc/>

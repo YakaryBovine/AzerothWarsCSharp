@@ -5,7 +5,6 @@ using MacroTools.LegendSystem;
 using MacroTools.ObjectiveSystem.Objectives.ControlPointBased;
 using MacroTools.ObjectiveSystem.Objectives.UnitBased;
 using MacroTools.QuestSystem;
-using WarcraftLegacies.Source.Setup.FactionSetup;
 using static War3Api.Common;
 
 namespace WarcraftLegacies.Source.Quests.Druids
@@ -15,8 +14,9 @@ namespace WarcraftLegacies.Source.Quests.Druids
     private readonly Capital _vordrassil;
 
     private readonly LegendaryHero _ursoc;
+    private readonly Factions.Scourge _scourge;
 
-    public QuestAndrassil(Capital vordrassil, LegendaryHero ursoc) : base("Crown of the Snow",
+    public QuestAndrassil(Capital vordrassil, LegendaryHero ursoc, Factions.Scourge scourge) : base("Crown of the Snow",
       "Long ago, Fandral Staghelm cut a sapling from Nordrassil and used it to grow Andrassil in Northrend. Without the blessing of the Aspects, it fell to the Old Gods' corruption. If Northrend were to be reclaimed, Andrassil's growth could begin anew.",
       @"ReplaceableTextures\CommandButtons\BTNTreant.blp")
     {
@@ -26,10 +26,11 @@ namespace WarcraftLegacies.Source.Quests.Druids
       ResearchId = Constants.UPGRADE_R002_QUEST_COMPLETED_CROWN_OF_THE_SNOW_DRUIDS;
       _vordrassil = vordrassil;
       _ursoc = ursoc;
+      _scourge = scourge;
     }
     
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "With Grizzly Hills now being tended by the Trees of Life, the time is ripe to regrow Andrassil in the hope that it can help reclaim this barren land.";
 
     /// <inheritdoc/>
@@ -46,9 +47,9 @@ namespace WarcraftLegacies.Source.Quests.Druids
         _ursoc.StartingXp /= 2;
     }
 
-    private static bool ShouldApplyExperiencePenalty(Faction completingFaction)
+    private bool ShouldApplyExperiencePenalty(Faction completingFaction)
     {
-      var scourgePlayer = ScourgeSetup.Scourge?.Player;
+      var scourgePlayer = _scourge.Player;
       return scourgePlayer != null && completingFaction.Player != null &&
              scourgePlayer.GetTeam()?.Contains(completingFaction.Player) != false;
     }

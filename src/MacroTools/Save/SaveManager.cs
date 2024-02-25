@@ -12,7 +12,7 @@ namespace MacroTools.Save
   /// </summary>
   public static class SaveManager
   {
-    public static Dictionary<player, PlayerSettings> SavesByPlayer { get; } = new();
+    internal static Dictionary<player, PlayerSettings> SavesByPlayer { get; } = new();
     private static SaveSystem<PlayerSettings>? _saveSystem;
 	
     public static void Initialize()
@@ -63,7 +63,7 @@ namespace MacroTools.Save
     /// Saves the player settings for the given player.
     /// </summary>
     /// <param name="save"></param>
-    public static void Save(PlayerSettings save)
+    internal static void Save(PlayerSettings save)
     {
       _saveSystem?.Save(save);
     }

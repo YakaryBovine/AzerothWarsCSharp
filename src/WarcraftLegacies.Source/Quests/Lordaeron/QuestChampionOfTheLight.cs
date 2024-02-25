@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Uther has achieved the status of living legend, inspiring the men and women of Lordaeron to strive for greatness.";
 
     /// <inheritdoc />

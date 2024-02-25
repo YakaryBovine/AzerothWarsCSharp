@@ -9,8 +9,8 @@ using MacroTools.ObjectiveSystem.Objectives.TimeBased;
 using MacroTools.ObjectiveSystem.Objectives.UnitBased;
 using MacroTools.QuestSystem;
 using MacroTools.UserInterface;
+using WarcraftLegacies.Source.FactionMechanics.Scourge.Plague;
 using WarcraftLegacies.Source.GameLogic;
-using WarcraftLegacies.Source.Mechanics.Scourge.Plague;
 using WarcraftLegacies.Source.Rocks;
 using WCSharp.Buffs;
 using WCSharp.Shared.Data;
@@ -65,7 +65,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The plague has been unleashed! The citizens of Lordaeron are quickly transforming into mindless zombies";
 
     /// <inheritdoc />

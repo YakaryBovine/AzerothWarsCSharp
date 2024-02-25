@@ -51,7 +51,7 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The goblins of Area 52 once aspired to travel amongst the stars. Now they aspire to nothing, buried one layer of dirt beneath our new settlement.";
 
     /// <inheritdoc/>

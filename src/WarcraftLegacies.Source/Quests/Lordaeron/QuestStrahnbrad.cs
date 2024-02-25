@@ -36,7 +36,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "Strahnbrad has been liberated.";
+    public override string RewardFlavour => "Strahnbrad has been liberated.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Control of all buildings in Strahnbrad";

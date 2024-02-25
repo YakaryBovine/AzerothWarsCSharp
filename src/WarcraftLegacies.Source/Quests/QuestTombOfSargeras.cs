@@ -50,7 +50,7 @@ namespace WarcraftLegacies.Source.Quests
     protected override string RewardDescription => "The Tomb of Sargeras opens";
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       $"The Tomb of Sargeras has been opened by {_enterTombOfSargerasRegion.CompletingUnitName}.";
 
     /// <inheritdoc />

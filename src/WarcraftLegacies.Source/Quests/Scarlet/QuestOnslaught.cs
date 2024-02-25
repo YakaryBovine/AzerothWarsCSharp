@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.Scarlet
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Crusade finally manages to establish a foothold in Northrend. Already the land's dark influence pierces the mind of even its most stalwart Archons.";
 
     /// <inheritdoc/>

@@ -118,8 +118,6 @@ namespace MacroTools.FactionSystem
       if (_members.Contains(whichPlayer) || _invitees.Contains(whichPlayer)) 
         return;
       
-      //if (GetLocalPlayer() == whichFaction.Player || ContainsPlayer(GetLocalPlayer()))
-      //StartSound("Sound\Interface\ArrangedTeamInvitation.wav");
       var faction = whichPlayer.GetFaction();
       
       if (faction == null) 

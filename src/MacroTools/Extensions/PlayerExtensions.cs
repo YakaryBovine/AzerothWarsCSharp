@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using MacroTools.ControlPointSystem;
 using MacroTools.DialogueSystem;
 using MacroTools.FactionSystem;
-using MacroTools.LegendSystem;
+using MacroTools.Save;
 using WCSharp.Shared.Data;
 using static War3Api.Common;
 
@@ -51,67 +50,10 @@ namespace MacroTools.Extensions
     }
 
     /// <summary>
-    /// Applies a particular camera field to the player's view.
-    /// </summary>
-    public static void ApplyCameraField(this player whichPlayer, camerafield whichField, float value, float duration)
-    {
-      if (GetLocalPlayer() != whichPlayer)
-        return;
-      SetCameraField(whichField, value, duration);
-    }
-
-    /// <summary>
-    /// Sets a player's alliance state towards another player.
-    /// </summary>
-    public static void SetAllianceState(this player sourcePlayer, player otherPlayer, AllianceState allianceState)
-    {
-      // Prevent players from attempting to ally with themselves.
-      if (sourcePlayer == otherPlayer) return;
-
-      switch (allianceState)
-      {
-        case AllianceState.Unallied:
-          sourcePlayer.SetPlayerAllianceStateAlly(otherPlayer, false);
-          sourcePlayer.SetPlayerAllianceStateVision(otherPlayer, false);
-          sourcePlayer.SetPlayerAllianceStateControl(otherPlayer, false);
-          sourcePlayer.SetPlayerAllianceStateFullControl(otherPlayer, false);
-          break;
-        case AllianceState.AlliedVision:
-          sourcePlayer.SetPlayerAllianceStateAlly(otherPlayer, true);
-          sourcePlayer.SetPlayerAllianceStateVision(otherPlayer, true);
-          sourcePlayer.SetPlayerAllianceStateControl(otherPlayer, false);
-          sourcePlayer.SetPlayerAllianceStateFullControl(otherPlayer, false);
-          break;
-        case AllianceState.AlliedAdvUnits:
-          sourcePlayer.SetPlayerAllianceStateAlly(otherPlayer, true);
-          sourcePlayer.SetPlayerAllianceStateVision(otherPlayer, true);
-          sourcePlayer.SetPlayerAllianceStateControl(otherPlayer, true);
-          sourcePlayer.SetPlayerAllianceStateFullControl(otherPlayer, true);
-          break;
-        case AllianceState.UnalliedVision:
-          sourcePlayer.SetPlayerAllianceStateAlly(otherPlayer, false);
-          sourcePlayer.SetPlayerAllianceStateVision(otherPlayer, true);
-          sourcePlayer.SetPlayerAllianceStateControl(otherPlayer, false);
-          sourcePlayer.SetPlayerAllianceStateFullControl(otherPlayer, false);
-          break;
-        default:
-          throw new ArgumentOutOfRangeException(nameof(allianceState), allianceState, null);
-      }
-      
-      PlayerData.ByHandle(sourcePlayer).SignalAllianceChange();
-    }
-
-    /// <summary>
     /// Returns true if <paramref name="firstPlayer"/> is an ally of <paramref name="secondPlayer"/>.
     /// </summary>
     public static bool IsPlayerAlly(this player firstPlayer, player secondPlayer) =>
       GetPlayerAlliance(firstPlayer, secondPlayer, ALLIANCE_SHARED_XP);
-
-    /// <summary>
-    /// Increases or decreases a specific player state for the player.
-    /// </summary>
-    public static void AdjustPlayerState(this player player, playerstate playerState, int value) =>
-      SetPlayerState(player, playerState, GetPlayerState(player, playerState) + value);
 
     /// <summary>
     /// Returns the maximum number of units the player can build of the given type, or the maximum research level
@@ -127,24 +69,6 @@ namespace MacroTools.Extensions
 
     /// <summary>Returns the number of <see cref="ControlPoint"/>s a player controls.</summary>
     public static List<ControlPoint> GetControlPoints(this player player) => PlayerData.ByHandle(player).ControlPoints;
-
-    /// <summary>Adds an amount of gold to a player.</summary>
-    public static void AddGold(this player player, float gold) => PlayerData.ByHandle(player).AddGold(gold);
-
-    /// <summary>Adds an amount of lumber to a player.</summary>
-    public static void AddLumber(this player player, float lumber) => PlayerData.ByHandle(player).AddLumber(lumber);
-
-    /// <summary>Sets the player's gold to a specific value.</summary>
-    public static void SetGold(this player player, float gold) => PlayerData.ByHandle(player).SetGold(gold);
-
-    /// <summary>Sets the player's lumber to a specific value.</summary>
-    public static void SetLumber(this player player, float lumber) => PlayerData.ByHandle(player).SetLumber(lumber);
-
-    /// <summary>Returns the player's gold, including any partial gold.</summary>
-    public static float GetGold(this player player) => PlayerData.ByHandle(player).GetGold();
-
-    /// <summary>Returns the player's lumber, including any partial lumber.</summary>
-    public static float GetLumber(this player player) => PlayerData.ByHandle(player).GetLumber();
 
     /// <summary>Returns the player's <see cref="Team"/>.</summary>
     public static Team? GetTeam(this player player) => PlayerData.ByHandle(player).Team;
@@ -183,31 +107,15 @@ namespace MacroTools.Extensions
     /// </summary>
     /// <param name="newOwningPlayer">The player who should own the units after being rescued</param>
     /// <param name="units">The units to rescue.</param>
-    public static void RescueGroup(this player? newOwningPlayer, List<unit> units)
+    public static player RescueGroup(this player? newOwningPlayer, List<unit> units)
     {
       newOwningPlayer ??= Player(PLAYER_NEUTRAL_AGGRESSIVE);
 
       foreach (var unit in units)
         unit.Rescue(newOwningPlayer);
+
+      return newOwningPlayer;
     }
-
-    /// <summary>
-    /// Returns the amount of food the player is using.
-    /// </summary>
-    public static int GetFoodUsed(this player whichPlayer) =>
-      GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_FOOD_USED);
-
-    /// <summary>
-    /// Returns the player's food cap.
-    /// </summary>
-    public static int GetFoodCap(this player whichPlayer) =>
-      GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_FOOD_CAP);
-
-    /// <summary>
-    /// Returns player's food cap ceiling.
-    /// </summary>
-    public static int GetFoodCapCeiling(this player whichPlayer) =>
-      GetPlayerState(whichPlayer, PLAYER_STATE_FOOD_CAP_CEILING);
 
     /// <summary>Determines whether or not the player can see or use the specified ability.</summary>
     internal static void SetAbilityAvailability(this player player, int ability, bool value) =>
@@ -233,118 +141,6 @@ namespace MacroTools.Extensions
     internal static PlayerData GetPlayerData(this player player) =>
       PlayerData.ByHandle(player);
 
-    private static void SetPlayerAllianceStateAlly(this player sourcePlayer, player otherPlayer, bool flag)
-    {
-      SetPlayerAlliance(sourcePlayer, otherPlayer, ALLIANCE_PASSIVE, flag);
-      SetPlayerAlliance(sourcePlayer, otherPlayer, ALLIANCE_HELP_REQUEST, flag);
-      SetPlayerAlliance(sourcePlayer, otherPlayer, ALLIANCE_HELP_RESPONSE, flag);
-      SetPlayerAlliance(sourcePlayer, otherPlayer, ALLIANCE_SHARED_XP, flag);
-      SetPlayerAlliance(sourcePlayer, otherPlayer, ALLIANCE_SHARED_SPELLS, flag);
-    }
-
-    private static void SetPlayerAllianceStateVision(this player sourcePlayer, player otherPlayer, bool flag) =>
-      SetPlayerAlliance(sourcePlayer, otherPlayer, ALLIANCE_SHARED_VISION, flag);
-
-    private static void SetPlayerAllianceStateControl(this player sourcePlayer, player otherPlayer, bool flag) =>
-      SetPlayerAlliance(sourcePlayer, otherPlayer, ALLIANCE_SHARED_CONTROL, flag);
-
-    private static void SetPlayerAllianceStateFullControl(this player sourcePlayer, player otherPlayer, bool flag) =>
-      SetPlayerAlliance(sourcePlayer, otherPlayer, ALLIANCE_SHARED_ADVANCED_CONTROL, flag);
-
-    /// <summary>
-    /// Displays a nicely formatted hint to the player.
-    /// </summary>
-    public static void DisplayHint(this player whichPlayer, string msg)
-    {
-      DisplayTextToPlayer(whichPlayer, 0, 0, $"\n|cff00ff00HINT|r - {msg}");
-      if (GetLocalPlayer() == whichPlayer)
-        StartSound(SoundLibrary.Hint);
-    }
-
-    /// <summary>
-    /// Displays a nicely formatted hint to the player that one of their heroes has gained some stats.
-    /// </summary>
-    public static void DisplayHeroReward(this unit whichUnit, int strength, int agility, int intelligence,
-      int experience)
-    {
-      var display = $"\n|cff00ff00HERO REWARD EARNED -{GetHeroProperName(whichUnit)}|r";
-      if (strength > 0)
-        display = $"{display}\n+{strength} Strength";
-      if (agility > 0)
-        display = $"{display}\n+{agility} Agility";
-      if (intelligence > 0)
-        display = $"{display}\n+{intelligence} Intelligence";
-      if (experience > 0)
-        display = $"{display}\n+{experience} Experience";
-      DisplayTextToPlayer(GetOwningPlayer(whichUnit), 0, 0, display);
-      if (GetLocalPlayer() == GetOwningPlayer(whichUnit)) 
-        StartSound(SoundLibrary.Hint);
-    }
-
-    /// <summary>
-    /// Displays a nicely formatted hint to the player that one of their unit limits has increased.
-    /// </summary>
-    public static void DisplayUnitLimit(this Faction whichFaction, int unitTypeId)
-    {
-      DisplayTextToPlayer(whichFaction.Player, 0, 0,
-        $"\n|cff00ff00UNIT LIMIT CHANGED - {GetObjectName(unitTypeId)}|r\nYou can now train up to {whichFaction.GetObjectLimit(unitTypeId)} {GetObjectName(unitTypeId)}s.");
-      if (GetLocalPlayer() == whichFaction.Player)
-        StartSound(SoundLibrary.Hint);
-    }
-
-    /// <summary>
-    /// Displays a nicely formatted hint to the player that they have acquired a research.
-    /// </summary>
-    public static void DisplayResearchAcquired(this player whichPlayer, int researchId, int researchLevel)
-    {
-      DisplayTextToPlayer(whichPlayer, 0, 0,
-        $"\n|cff00ff00RESEARCH ACQUIRED - {GetObjectName(researchId)}|r\n{BlzGetAbilityExtendedTooltip(researchId, researchLevel)}");
-      if (GetLocalPlayer() == whichPlayer)
-        StartSound(SoundLibrary.Hint);
-    }
-
-    /// <summary>
-    /// Displays a nicely formatted hint to the player that they have unlocked a new unit type.
-    /// </summary>
-    public static void DisplayUnitTypeAcquired(this player whichPlayer, int unitId, string flavor)
-    {
-      DisplayTextToPlayer(whichPlayer, 0, 0,
-        $"\n|cff00ff00NEW UNIT ACQUIRED - {GetObjectName(unitId)}\n|r{flavor}");
-      if (GetLocalPlayer() == whichPlayer)
-        StartSound(SoundLibrary.Hint);
-    }
-
-    /// <summary>
-    /// Alerts the player that one of their researches has been refunded.
-    /// </summary>
-    public static void DisplayRefundedResearch(this player whichPlayer, int researchTypeId)
-    {
-      DisplayTextToPlayer(whichPlayer, 0, 0,
-        $"\n|cff008000REFUND|r - You cannot research {GetObjectName(researchTypeId)}. All resources spent on it have been refunded.");
-    }
-
-    /// <summary>
-    /// Indicates to the player that they have acquired a new <see cref="Power"/>.
-    /// </summary>
-    public static void DisplayPowerAcquired(this player whichPlayer, Power power)
-    {
-      DisplayTextToPlayer(whichPlayer, 0, 0,
-        $"\n|cff00ff00NEW POWER ACQUIRED - {power.Name}\n|r{power.Description}");
-      if (GetLocalPlayer() == whichPlayer)
-        StartSound(SoundLibrary.Hint);
-    }
-
-    /// <summary>
-    /// Indicates to the player that a <see cref="LegendaryHero"/> has been summoned.
-    /// </summary>
-    public static void DisplayLegendaryHeroSummoned(this player whichPlayer, LegendaryHero legendaryHero,
-      string message)
-    {
-      DisplayTextToPlayer(whichPlayer, 0, 0,
-        $"\n|cffd45e19LEGENDARY FOE SUMMONED - {legendaryHero.Name}\n|r{message}");
-      StartSound(SoundLibrary.Warning);
-    }
-
     /// <summary>
     /// Safely removes all of the player's units.
     /// <para>Units that cannot be safely removed are instead turned hostile.</para>
@@ -363,13 +159,22 @@ namespace MacroTools.Extensions
 
       return whichPlayer;
     }
-    
-    /// <summary>Removes all of the player's resources.</summary>
-    public static player RemoveAllResources(this player whichPlayer)
+
+    /// <summary>
+    /// Selects the specified unit for the player.
+    /// </summary>
+    public static player Select(this player whichPlayer, unit whichUnit)
     {
-      whichPlayer.SetGold(0);
-      whichPlayer.SetLumber(0);
+      if (GetLocalPlayer() == whichPlayer)
+        SelectUnit(GetSoldUnit(), true);
+      
       return whichPlayer;
     }
+
+    /// <summary>
+    /// Returns cross-game settings set by the player.
+    /// </summary>
+    internal static PlayerSettings GetPlayerSettings(this player whichPlayer) =>
+      PlayerData.ByHandle(whichPlayer).PlayerSettings;
   }
 }

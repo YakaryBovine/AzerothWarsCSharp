@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "The powerful Summoners are serving their Master once again.";
+    public override string RewardFlavour => "The powerful Summoners are serving their Master once again.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => $"Summoners can be trained from the Archives.";

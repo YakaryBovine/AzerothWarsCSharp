@@ -5,7 +5,6 @@ using MacroTools.LegendSystem;
 using MacroTools.ObjectiveSystem.Objectives.LegendBased;
 using MacroTools.ObjectiveSystem.Objectives.UnitBased;
 using MacroTools.QuestSystem;
-using WarcraftLegacies.Source.Setup.FactionSetup;
 using static War3Api.Common;
 
 namespace WarcraftLegacies.Source.Quests.Scourge
@@ -40,7 +39,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Arthas has ascended the Frozen Throne itself and shattered Ner'zhul's frozen prison. Ner'zhul and Arthas are now joined, body and soul, into one being: the god-like Lich King.";
 
     /// <inheritdoc />
@@ -73,7 +72,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
         .SetManaPercent(100)
         .AddItemSafe(_helmOfDomination.Item);
       
-      _utgardeKeep.Rescue(ScourgeSetup.Scourge.Player);
+      _utgardeKeep.Rescue(completingFaction.Player);
     }
   }
 }

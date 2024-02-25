@@ -45,7 +45,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Dalaran outskirs are now secure, the mages will join Dalaran.";
 
     /// <inheritdoc/>
@@ -65,9 +65,9 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     /// <inheritdoc/>
     protected override void OnComplete(Faction completingFaction)
     {
-      completingFaction.Player.RescueGroup(_rescueUnits);
-      if (GetLocalPlayer() == completingFaction.Player) 
-        PlayThematicMusic("war3mapImported\\DalaranTheme.mp3");
+      completingFaction.Player
+        .RescueGroup(_rescueUnits)
+        .PlayMusicThematic("war3mapImported\\DalaranTheme.mp3");
     }
   }
 }

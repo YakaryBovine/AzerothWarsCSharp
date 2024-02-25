@@ -13,7 +13,7 @@ namespace WarcraftLegacies.Source.Quests.Goblin
     private const int LumberReward = 30000;
     
     /// <inheritdoc/>
-    protected override string RewardFlavour => "The World Tree is ours, our lumber supplies will never run out!";
+    public override string RewardFlavour => "The World Tree is ours, our lumber supplies will never run out!";
 
     /// <inheritdoc/>
     protected override string RewardDescription =>

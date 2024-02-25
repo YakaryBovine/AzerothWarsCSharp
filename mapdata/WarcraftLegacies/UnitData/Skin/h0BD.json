@@ -1,0 +1,39 @@
+{
+  "OldId": 1735093576,
+  "NewId": 1145188456,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Id": 1868786037,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNCentaurKhan.blp"
+    },
+    {
+      "Id": 1818520949,
+      "Type": 3,
+      "Value": "units\\creeps\\CentaurKhan\\CentaurKhan.mdl"
+    },
+    {
+      "Id": 1633907573,
+      "Type": 1,
+      "Value": 1.9
+    },
+    {
+      "Id": 1835101813,
+      "Type": 3,
+      "Value": "Ramzes the Horror"
+    },
+    {
+      "Id": 1869770869,
+      "Type": 3,
+      "Value": "Ramzes the Horror"
+    },
+    {
+      "Id": 1718840949,
+      "Type": 3,
+      "Value": "(Creep-Desolace)"
+    }
+  ]
+}

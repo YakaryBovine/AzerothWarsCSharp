@@ -27,7 +27,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Warsong has drunk the blood of Mannoroth. It will take Thrall 4 minutes to save Grom and purify the Warsong Clan orcs.";
 
     /// <inheritdoc />

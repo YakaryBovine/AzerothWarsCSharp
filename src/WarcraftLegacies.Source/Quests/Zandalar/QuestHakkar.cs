@@ -28,7 +28,7 @@ namespace WarcraftLegacies.Source.Quests.Zandalar
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "Hakkar has emerged from the Drowned Temple";
+    public override string RewardFlavour => "Hakkar has emerged from the Drowned Temple";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Gain the demigod hero Hakkar";

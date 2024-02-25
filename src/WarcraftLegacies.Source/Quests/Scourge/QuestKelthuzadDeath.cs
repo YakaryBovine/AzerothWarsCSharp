@@ -5,7 +5,6 @@ using MacroTools.ObjectiveSystem.Objectives.LegendBased;
 using MacroTools.ObjectiveSystem.Objectives.MetaBased;
 using MacroTools.ObjectiveSystem.Objectives.QuestBased;
 using MacroTools.QuestSystem;
-using WarcraftLegacies.Source.Setup.FactionSetup;
 using static War3Api.Common;
 
 namespace WarcraftLegacies.Source.Quests.Scourge
@@ -19,7 +18,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
     private readonly ObjectiveEitherOf _objectiveEitherOf;
 
     /// <inheritdoc />
-    protected override string RewardFlavour => 
+    public override string RewardFlavour => 
       _objectiveEitherOf.ObjectiveA.Progress == QuestProgress.Complete
         ? "As foretold by the Lich King, Kel'thuzad has been slain. Unseen to his assailants, his spirit is carried away by the howling winds of Northrend and reconstituted at the base of Icecrown Citadel."
         : "In a rare twist of fate, the Lich King's prophecy did not come to pass: Kel'thuzad survived long enough to reach the Sunwell under his own power.";
@@ -47,7 +46,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
       {
         _kelthuzad.UnitType = FourCC("U00M");
         _kelthuzad.PermaDies = false;
-        _kelthuzad.ForceCreate(ScourgeSetup.Scourge.Player, Regions.FTSummon.Center,
+        _kelthuzad.ForceCreate(whichFaction.Player, Regions.FTSummon.Center,
           270);
       }
       else

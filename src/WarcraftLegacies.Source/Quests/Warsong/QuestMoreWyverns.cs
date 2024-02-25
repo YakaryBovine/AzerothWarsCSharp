@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     }
     
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Sentinels have been eliminated. Warchief Thrall breathes a sigh of relief, knowing that his people are safe - for now.";
 
     /// <inheritdoc/>

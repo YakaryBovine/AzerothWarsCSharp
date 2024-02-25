@@ -31,7 +31,7 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "Keel Harbor has been liberated.";
+    public override string RewardFlavour => "Keel Harbor has been liberated.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Control of all buildings in Keel Harbor.";

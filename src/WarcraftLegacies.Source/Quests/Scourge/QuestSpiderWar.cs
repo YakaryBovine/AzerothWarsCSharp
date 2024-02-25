@@ -15,8 +15,8 @@ namespace WarcraftLegacies.Source.Quests.Scourge
 {
   public sealed class QuestSpiderWar : QuestData
   {
-    private static readonly int QuestResearchId = Constants.UPGRADE_R03A_QUEST_COMPLETED_WAR_OF_THE_SPIDER;
-    private readonly List<unit> _rescueUnits = new();
+    private const int QuestResearchId = Constants.UPGRADE_R03A_QUEST_COMPLETED_WAR_OF_THE_SPIDER;
+    private readonly List<unit> _rescueUnits;
 
     public QuestSpiderWar(Rectangle rescueRect, unit spiderQueen) : base("War of the Spider",
       "The proud Nerubians have declared war on the newly formed Lich King, destroy them to secure the continent of Northrend.",
@@ -36,7 +36,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Northrend and the Icecrown Citadel is now under full control of the Lich King and the Scourge.";
 
     /// <inheritdoc/>
@@ -56,9 +56,9 @@ namespace WarcraftLegacies.Source.Quests.Scourge
     /// <inheritdoc/>
     protected override void OnComplete(Faction completingFaction)
     {
-      completingFaction.Player.RescueGroup(_rescueUnits);
-      SetPlayerTechResearched(completingFaction.Player, FourCC("R03A"), 1);
-      if (GetLocalPlayer() == completingFaction.Player) PlayThematicMusic("war3mapImported\\ScourgeTheme.mp3");
+      completingFaction.Player
+        .RescueGroup(_rescueUnits)
+        .PlayMusicThematic("war3mapImported\\ScourgeTheme.mp3");
     }
 
     /// <inheritdoc/>

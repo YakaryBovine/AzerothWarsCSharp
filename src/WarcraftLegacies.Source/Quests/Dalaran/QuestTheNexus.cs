@@ -27,7 +27,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Nexus powers have been absorbed by Jaina";
 
     /// <inheritdoc/>

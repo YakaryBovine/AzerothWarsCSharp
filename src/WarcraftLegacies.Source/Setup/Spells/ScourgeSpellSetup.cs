@@ -4,7 +4,7 @@ using MacroTools.PassiveAbilitySystem;
 using MacroTools.Spells;
 using MacroTools.SpellSystem;
 using System.Collections.Generic;
-using WarcraftLegacies.Source.Mechanics.Scourge;
+using WarcraftLegacies.Source.FactionMechanics.Scourge;
 using WarcraftLegacies.Source.PassiveAbilities;
 using WarcraftLegacies.Source.Spells;
 using WarcraftLegacies.Source.Spells.Reap;

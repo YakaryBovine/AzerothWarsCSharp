@@ -15,7 +15,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Dreadlords drink freely of the Sunwell. The energies that once coursed through the waters of the well now course through the veins of the Nazrethim, infusing them with power enough to tear holes in dimensions.";
 
     /// <inheritdoc/>

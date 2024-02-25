@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Warsong Clan has sail for the icy shores of Northrend and up a formidable encampment at Borean Tundra.";
 
     /// <inheritdoc/>

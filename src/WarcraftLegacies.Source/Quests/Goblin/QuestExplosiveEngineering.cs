@@ -8,7 +8,7 @@ namespace WarcraftLegacies.Source.Quests.Goblin
   public sealed class QuestExplosiveEngineering : QuestData
   {
     /// <inheritdoc/>
-    protected override string RewardFlavour => "With the first Bilgewater-owned offshore oil rig now completed, Chief Engineer Gazlowe begins his long journey back home.";
+    public override string RewardFlavour => "With the first Bilgewater-owned offshore oil rig now completed, Chief Engineer Gazlowe begins his long journey back home.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => $"Learn to train Gazlowe from the {GetObjectName(Constants.UNIT_O03O_ALTAR_OF_INDUSTRY_GOBLIN_ALTAR)}";

@@ -31,7 +31,7 @@ namespace WarcraftLegacies.Source.Quests.Zandalar
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       $"{_enterZandalarRegion.CompletingUnitName} has spoken with the elders of the Echo Isles and they have agreed to let the Zandalar trolls set up an outpost on one of their islands.";
 
     /// <inheritdoc />

@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Kael'thas' profane ritual has paved the way for Kil'jaeden, supreme commander of the Burning Legion, to bridge the gap from the Twisting Nether to our world. Our people embrace fel magic wholeheartedly, training in preparation for their coming lord.";
     
     /// <inheritdoc />

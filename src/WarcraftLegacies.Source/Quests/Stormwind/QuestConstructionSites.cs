@@ -28,7 +28,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "Stormwind's Construction Sites are now ready to be upgraded.";
+    public override string RewardFlavour => "Stormwind's Construction Sites are now ready to be upgraded.";
 
     /// <inheritdoc />
     protected override string RewardDescription => "Your Construction Sites can be upgraded";
@@ -36,10 +36,14 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     /// <inheritdoc />
     protected override void OnComplete(Faction completingFaction)
     {
-      if (completingFaction.Player != GetLocalPlayer()) 
+      if (completingFaction.Player == null) 
         return;
+      
       foreach (var constructionSite in _constructionSites)
-        constructionSite.Ping(5);
+      {
+        var position = constructionSite.GetPosition();
+        completingFaction.Player.PingMinimapSimple(position.X, position.Y, 5);
+      }
     }
   }
 }

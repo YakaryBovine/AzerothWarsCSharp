@@ -32,7 +32,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "The outpost in Stranglethorn is now built";
+    public override string RewardFlavour => "The outpost in Stranglethorn is now built";
 
     /// <inheritdoc />
     protected override string RewardDescription => "Gain control of the Stranglethorn Outpost";

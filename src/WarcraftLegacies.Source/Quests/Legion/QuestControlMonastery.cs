@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "The Monastery has been corrupted and plundered. A secret demon gate has now been formed inside.";
+    public override string RewardFlavour => "The Monastery has been corrupted and plundered. A secret demon gate has now been formed inside.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => $"Learn to train troops from the Monastery, and learn to build 1 more {GetObjectName(Constants.UNIT_U006_SUMMONING_CIRCLE_LEGION_MAGIC)}";

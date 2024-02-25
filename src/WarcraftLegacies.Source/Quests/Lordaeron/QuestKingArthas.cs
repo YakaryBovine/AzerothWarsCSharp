@@ -39,7 +39,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Fate decreed that Arthas would witness the fall of Stratholme and become corrupted by vengeance. Instead, he defended his homeland from the ravenous Scourge and took the battle to Northrend. Back at home, Terenas Menethil is forced to admit: his son is ready to be King.";
 
     /// <inheritdoc/>

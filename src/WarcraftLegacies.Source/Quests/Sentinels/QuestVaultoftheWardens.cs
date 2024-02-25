@@ -31,7 +31,7 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The ancient Vault of the Wardens has been secured. Maiev and her Wardens take up residence within its ancient halls.";
 
     /// <inheritdoc />

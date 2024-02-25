@@ -33,7 +33,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "The Clutcheries of Zangarmarsh are now built";
+    public override string RewardFlavour => "The Clutcheries of Zangarmarsh are now built";
 
     /// <inheritdoc />
     protected override string RewardDescription => "Gain control of the Zangarmarsh Outpost and the ability to build the Clutchery";

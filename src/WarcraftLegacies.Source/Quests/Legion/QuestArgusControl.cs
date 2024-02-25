@@ -45,7 +45,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
       "Learn to train Tichondrius and Anetheron from the Altar of Destruction, and to cast the Portal spells from the Legion Teleporter";
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "With Argus finally under the Legion's control, the invasion of Azeroth can begin in earnest.";
 
     /// <inheritdoc/>

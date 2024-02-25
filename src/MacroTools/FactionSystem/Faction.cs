@@ -19,8 +19,7 @@ namespace MacroTools.FactionSystem
   ///   Represents a faction in the Azeroth Wars universe, such as Lordaeron, Stormwind, or the Frostwolf Clan.
   ///   Governs techtrees and quests.
   /// </summary>
-  //Todo: make this sealed once all Factions have been moved over to the new style.
-  public class Faction
+  public abstract class Faction
   {
     /// <summary>Signifies unlimited unit production.</summary>
     public const int UNLIMITED = 200;
@@ -29,7 +28,6 @@ namespace MacroTools.FactionSystem
     private const int FoodMaximumDefault = 200;
 
     private readonly Dictionary<int, int> _abilityAvailabilities = new();
-
     private readonly Dictionary<int, int> _objectLevels = new();
     private readonly Dictionary<int, int> _objectLimits = new();
     private readonly List<Power> _powers = new();
@@ -40,6 +38,8 @@ namespace MacroTools.FactionSystem
     private player? _player;
     private readonly int _undefeatedResearch;
 
+    internal List<FactionDependentInitializer> FactionDependentInitializers { get; } = new();
+    
     /// <summary>Fired when the <see cref="Faction" /> gains a <see cref="Power" />.</summary>
     public event EventHandler<FactionPowerEventArgs>? PowerAdded;
 
@@ -52,7 +52,7 @@ namespace MacroTools.FactionSystem
     /// <summary>Invoked when one of the <see cref="Faction"/>'s <see cref="QuestData"/>s changes progress.</summary>
     public event EventHandler<FactionQuestProgressChangedEventArgs>? QuestProgressChanged;
 
-    public List<unit> GoldMines { private get; init; } = new();
+    protected List<unit> GoldMines { private get; init; } = new();
     
     static Faction()
     {
@@ -60,9 +60,10 @@ namespace MacroTools.FactionSystem
       {
         try
         {
-          var faction = FactionManager.GetFromPlayer(GetTriggerPlayer());
+          var faction = GetTriggerPlayer().GetFaction();
           if (faction == null)
             return;
+          
           var researchId = GetResearched();
           var research = ResearchManager.GetFromTypeId(researchId);
           if (research == null || !research.IncompatibleWith.Any(x => faction.GetObjectLevel(x.ResearchTypeId) > 0))
@@ -88,13 +89,13 @@ namespace MacroTools.FactionSystem
     }
 
     /// <summary>Displayed to the <see cref="Faction" /> when the game starts.</summary>
-    public string? IntroText { get; init; }
+    public string? IntroText { get; protected init; }
 
     /// <summary>
     /// All of the <see cref="Faction"/>'s <see cref="ControlPoint"/> <see cref="ControlPoint.Defender"/>s
     /// will be represented by this unit type.
     /// </summary>
-    public int? ControlPointDefenderUnitTypeId { get; init; }
+    public int? ControlPointDefenderUnitTypeId { get; protected init; }
 
     /// <summary>
     /// Check to see if <see cref="Faction"/> has any living essential legends
@@ -108,10 +109,10 @@ namespace MacroTools.FactionSystem
     public int StartingLumber { get; init; }
 
     /// <summary>The units this faction should start the game with.</summary>
-    public List<unit> StartingUnits { get; init; } = new();
+    public List<unit> StartingUnits { get; protected init; } = new();
     
     /// <summary>Where any player occupying this faction should have their camera set to on game start.</summary>
-    public Point? StartingCameraPosition { get; init; }
+    public Point? StartingCameraPosition { get; protected init; }
 
     /// <summary>Players with this faction will become this color.</summary>
     public playercolor PlayerColor { get; }
@@ -126,12 +127,13 @@ namespace MacroTools.FactionSystem
       set
       {
         _foodMaximum = value;
-        if (Player != null) SetPlayerState(Player, PLAYER_STATE_FOOD_CAP_CEILING, value);
+        if (Player != null) 
+          SetPlayerState(Player, PLAYER_STATE_FOOD_CAP_CEILING, value);
       }
     }
 
     /// <summary>Music that will play for the Faction at the start of the game.</summary>
-    public string CinematicMusic { get; init; } = "";
+    public string CinematicMusic { get; protected init; } = "";
 
     /// <summary>Whether or not the <see cref="Faction"/> has been defeated.</summary>
     public ScoreStatus ScoreStatus { get; private set; } = ScoreStatus.Undefeated;
@@ -142,7 +144,7 @@ namespace MacroTools.FactionSystem
     /// play at a very basic level. For instance, a Faction with a very complex starting quest would be very hard
     /// even if it doesn't have to perform a lot of micro in fights.</para>
     /// </summary>
-    public FactionLearningDifficulty LearningDifficulty { get; init; }
+    public FactionLearningDifficulty LearningDifficulty { get; protected init; }
     
     public string ColoredName => $"{PrefixCol}{_name}|r";
 
@@ -191,7 +193,7 @@ namespace MacroTools.FactionSystem
       }
     }
 
-    public QuestData? StartingQuest { get; set; }
+    public QuestData? StartingQuest { get; protected set; }
 
     /// <summary>
     ///   This research is enabled for every player while this <see cref="Faction" /> is not defeated.
@@ -224,7 +226,7 @@ namespace MacroTools.FactionSystem
       return essentialLegends;
     }
 
-    public Faction(string name, playercolor playerColor, string prefixCol, string icon)
+    protected Faction(string name, playercolor playerColor, string prefixCol, string icon)
     {
       _name = name;
       PlayerColor = playerColor;
@@ -343,10 +345,11 @@ namespace MacroTools.FactionSystem
     public void Unally()
     {
       if (!(Player?.GetTeam()?.Size > 1)) return;
-      var newTeamName = Name + " Pact";
-      if (FactionManager.TeamWithNameExists(newTeamName))
+      var newTeamName = $"{Name} Pact";
+
+      if (FactionManager.TryGetTeamByName(newTeamName, out var existingTeam))
       {
-        Player.SetTeam(FactionManager.GetTeamByName(newTeamName));
+        Player.SetTeam(existingTeam);
         return;
       }
 
@@ -462,12 +465,104 @@ namespace MacroTools.FactionSystem
       return _questsByName.Values.FirstOrDefault(x => x.GetType() == typeof(T)) as T ??
              throw new Exception($"{Name} does not have a {nameof(QuestData)} of type {typeof(T)}");
     }
-
+    
     /// <summary>Returns all <see cref="QuestData"/>s the <see cref="Faction"/> can complete.</summary>
     public List<QuestData> GetAllQuests() => _questsByName.Values.ToList();
 
+    /// <summary>
+    /// Registers an initializer function that will only fire once a <see cref="Faction"/>s of the specified type has
+    /// been registered.
+    /// </summary>
+    /// <param name="initializer">The initializer function itself, which receives the registered instance of the
+    /// <see cref="Faction"/> type it depends on.</param>
+    /// <typeparam name="TFaction">The type of <see cref="Faction"/> to depend on.</typeparam>
+    protected void RegisterFactionDependentInitializer<TFaction>(Action<TFaction> initializer) where TFaction : Faction
+    {
+      var factionTypes = new List<Type> { typeof(TFaction) };
+      var factionDependentInitializer = new FactionDependentInitializer(factionTypes, () =>
+      {
+        if (FactionManager.TryGetFactionByType<TFaction>(out var factionDependency))
+          initializer(factionDependency);
+      });
+      FactionDependentInitializers.Add(factionDependentInitializer);
+    }
+    
+    /// <summary>
+    /// Registers an initializer function that will only fire once all <see cref="Faction"/>s of the specified types have
+    /// been registered.
+    /// </summary>
+    /// <param name="initializer">The initializer function itself, which receives the registered instance of the
+    /// <see cref="Faction"/> type it depends on.</param>
+    /// <typeparam name="TFactionA">One of the type of <see cref="Faction"/> to depend on.</typeparam>
+    /// <typeparam name="TFactionB">One of the type of <see cref="Faction"/> to depend on.</typeparam>
+    protected void RegisterFactionDependentInitializer<TFactionA, TFactionB>(Action<TFactionA, TFactionB> initializer) where TFactionA : Faction where TFactionB : Faction
+    {
+      var factionTypes = new List<Type> { typeof(TFactionA), typeof(TFactionB) };
+      var factionDependentInitializer = new FactionDependentInitializer(factionTypes, () =>
+      {
+        if (FactionManager.TryGetFactionByType<TFactionA>(out var factionDependencyA) &&
+            FactionManager.TryGetFactionByType<TFactionB>(out var factionDependencyB))
+          initializer(factionDependencyA, factionDependencyB);
+      });
+      FactionDependentInitializers.Add(factionDependentInitializer);
+    }
+    
+    /// <summary>
+    /// Registers an initializer function that will only fire once all <see cref="Faction"/>s of the specified types have
+    /// been registered.
+    /// </summary>
+    /// <param name="initializer">The initializer function itself, which receives the registered instance of the
+    /// <see cref="Faction"/> type it depends on.</param>
+    /// <typeparam name="TFactionA">One of the type of <see cref="Faction"/> to depend on.</typeparam>
+    /// <typeparam name="TFactionB">One of the type of <see cref="Faction"/> to depend on.</typeparam>
+    /// <typeparam name="TFactionC">One of the type of <see cref="Faction"/> to depend on.</typeparam>
+    protected void RegisterFactionDependentInitializer<TFactionA, TFactionB, TFactionC>(Action<TFactionA, TFactionB, TFactionC> initializer) 
+      where TFactionA : Faction 
+      where TFactionB : Faction
+      where TFactionC : Faction
+    {
+      var factionTypes = new List<Type> { typeof(TFactionA), typeof(TFactionB) };
+      var factionDependentInitializer = new FactionDependentInitializer(factionTypes, () =>
+      {
+        if (FactionManager.TryGetFactionByType<TFactionA>(out var factionDependencyA) &&
+            FactionManager.TryGetFactionByType<TFactionB>(out var factionDependencyB) &&
+            FactionManager.TryGetFactionByType<TFactionC>(out var factionDependencyC))
+          initializer(factionDependencyA, factionDependencyB, factionDependencyC);
+      });
+      FactionDependentInitializers.Add(factionDependentInitializer);
+    }
+    
+    /// <summary>
+    /// Registers an initializer function that will only fire once all <see cref="Faction"/>s of the specified types have
+    /// been registered.
+    /// </summary>
+    /// <param name="initializer">The initializer function itself, which receives the registered instance of the
+    /// <see cref="Faction"/> type it depends on.</param>
+    /// <typeparam name="TFactionA">One of the type of <see cref="Faction"/> to depend on.</typeparam>
+    /// <typeparam name="TFactionB">One of the type of <see cref="Faction"/> to depend on.</typeparam>
+    /// <typeparam name="TFactionC">One of the type of <see cref="Faction"/> to depend on.</typeparam>
+    /// <typeparam name="TFactionD">One of the type of <see cref="Faction"/> to depend on.</typeparam>
+    protected void RegisterFactionDependentInitializer<TFactionA, TFactionB, TFactionC, TFactionD>(
+      Action<TFactionA, TFactionB, TFactionC, TFactionD> initializer) 
+      where TFactionA : Faction 
+      where TFactionB : Faction
+      where TFactionC : Faction
+      where TFactionD : Faction
+    {
+      var factionTypes = new List<Type> { typeof(TFactionA), typeof(TFactionB) };
+      var factionDependentInitializer = new FactionDependentInitializer(factionTypes, () =>
+      {
+        if (FactionManager.TryGetFactionByType<TFactionA>(out var factionDependencyA) &&
+            FactionManager.TryGetFactionByType<TFactionB>(out var factionDependencyB) &&
+            FactionManager.TryGetFactionByType<TFactionC>(out var factionDependencyC) &&
+            FactionManager.TryGetFactionByType<TFactionD>(out var factionDependencyD)) 
+          initializer(factionDependencyA, factionDependencyB, factionDependencyC, factionDependencyD);
+      });
+      FactionDependentInitializers.Add(factionDependentInitializer);
+    }
+    
     /// <summary>Removes all gold mines assigned to the faction</summary>
-    public void RemoveGoldMines()
+    private void RemoveGoldMines()
     {
       foreach (var unit in GoldMines) 
         KillUnit(unit);
@@ -534,7 +629,7 @@ namespace MacroTools.FactionSystem
       foreach (var (key, _) in _objectLevels)
         Player?.SetObjectLevel(key, 0);
 
-      foreach (var (key, value) in _abilityAvailabilities)
+      foreach (var (key, _) in _abilityAvailabilities)
         Player?.SetAbilityAvailability(key, true);
     }
 

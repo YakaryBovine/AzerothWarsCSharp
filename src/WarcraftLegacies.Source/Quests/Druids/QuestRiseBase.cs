@@ -30,7 +30,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The grove has been rejuvenised and the ancients have awakened";
 
     /// <inheritdoc />

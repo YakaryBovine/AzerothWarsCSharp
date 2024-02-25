@@ -42,7 +42,7 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Auberdine has been reached and has joined the Sentinels in their war effort";
 
     /// <inheritdoc />

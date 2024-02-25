@@ -39,7 +39,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Thrall has stabilized the power of the Maelstrom and stored it within the Doomhammer. He is no longer merely the Warchief of the Horde; he is the World-Shaman of all Azeroth.";
     
     /// <inheritdoc />

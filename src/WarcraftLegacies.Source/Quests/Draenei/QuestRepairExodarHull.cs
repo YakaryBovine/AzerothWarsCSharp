@@ -35,10 +35,10 @@ namespace WarcraftLegacies.Source.Quests.Draenei
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "The Exodar's hull has been repaired. Its systems thrum to life, pulsating with crystalline energy.";
+    public override string RewardFlavour => "The Exodar's hull has been repaired. Its systems thrum to life, pulsating with crystalline energy.";
 
     /// <inheritdoc/>
-    protected override string PenaltyFlavour => "The Exodar is destroyed. It can never be repaired again.";
+    public override string PenaltyFlavour => "The Exodar is destroyed. It can never be repaired again.";
 
     /// <inheritdoc/>
     protected override string RewardDescription =>

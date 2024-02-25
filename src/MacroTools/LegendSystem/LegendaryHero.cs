@@ -240,10 +240,12 @@ namespace MacroTools.LegendSystem
 
       if (string.IsNullOrEmpty(DeathMessage)) 
         return;
-      DisplayTextToPlayer(GetLocalPlayer(), 0, 0,
-        GetOwningPlayer(Unit) == Player(PLAYER_NEUTRAL_AGGRESSIVE)
-          ? $"\n|cffffcc00LEGENDARY FOE SLAIN|r\n{DeathMessage}"
-          : $"\n|cffffcc00HERO SLAIN|r\n{DeathMessage}");
+      
+      foreach (var player in WCSharp.Shared.Util.EnumeratePlayers())
+        DisplayTextToPlayer(player, 0, 0,
+          GetOwningPlayer(Unit) == Player(PLAYER_NEUTRAL_AGGRESSIVE)
+            ? $"\n|cffffcc00LEGENDARY FOE SLAIN|r\n{DeathMessage}"
+            : $"\n|cffffcc00HERO SLAIN|r\n{DeathMessage}");
     }
     
     private void RefreshDummy()
@@ -291,8 +293,8 @@ namespace MacroTools.LegendSystem
       {
         var u = FirstOfGroup(tempGroup);
         if (u == null) break;
-
-        if (GetLocalPlayer() == GetTriggerPlayer()) PingMinimap(GetUnitX(u), GetUnitY(u), 5);
+        
+        GetTriggerPlayer().PingMinimapSimple(GetUnitX(u), GetUnitY(u), 5);
 
         GroupRemoveUnit(tempGroup, u);
       }

@@ -30,7 +30,7 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
     }
     
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Magni has spoken with Falstad Wildhammer and secured an alliance with the Wildhammer Clan.";
 
     /// <inheritdoc />

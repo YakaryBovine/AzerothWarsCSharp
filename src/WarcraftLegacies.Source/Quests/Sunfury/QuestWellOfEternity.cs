@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Kil'jaeden has reformed the ancient Well of Eternity. From its wellsprings, unlimited arcane energies spring forth. For the first time in their miserable existences, the Sunfury are truly sated.";
 
     /// <inheritdoc/>

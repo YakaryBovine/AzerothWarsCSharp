@@ -27,7 +27,7 @@ namespace WarcraftLegacies.Source.Quests.Scarlet
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Against all odds, the Scarlet Crusade has reclaimed and rebuilt the lands of Lordaeron, filling its cities and fields with the beginnings of a new generation. Having proven itself capable of far more than simple vengeance, the Crusade receives the Light's ultimate blessing.";
 
     /// <inheritdoc/>

@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Kingdom of Lordaeron has fallen, eliminating Azeroth's vanguard against the Legion.";
 
     /// <inheritdoc/>

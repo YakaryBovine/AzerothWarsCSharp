@@ -21,19 +21,10 @@ namespace MacroTools.FactionChoices
     {
       var pickedFaction = choice.Data;
       HasChoiceBeenPicked = true;
-      if (GetLocalPlayer() == pickingPlayer && pickedFaction.StartingCameraPosition != null)
-      {
-        var startingCameraPosition = pickedFaction.StartingCameraPosition;
-        if (startingCameraPosition != null)
-          SetCameraPosition(startingCameraPosition.X,
-            startingCameraPosition.Y);
-      }
+      if (pickedFaction.StartingCameraPosition != null)
+        pickingPlayer.RepositionCamera(pickedFaction.StartingCameraPosition);
 
-      //Todo: once all Factions are moved to the new Faction model, remove the if statement and always register
-      //Todo: the faction, as a player should never be picking an already registered faction.
-      if (FactionManager.GetFactionByName(pickedFaction.Name) == null)
-        FactionManager.Register(pickedFaction);
-      
+      FactionManager.Register(pickedFaction);
       pickingPlayer.SetFaction(pickedFaction);
       var startingUnits = pickedFaction.StartingUnits;
       pickingPlayer.RescueGroup(startingUnits);

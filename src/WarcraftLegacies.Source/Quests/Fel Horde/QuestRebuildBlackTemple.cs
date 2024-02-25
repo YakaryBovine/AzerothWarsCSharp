@@ -41,7 +41,7 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "The camp in Shadowmoon Valley has been recaptured for the Fel Horde";
+    public override string RewardFlavour => "The camp in Shadowmoon Valley has been recaptured for the Fel Horde";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Gain a base with a goldmine in Shadowmoon Valley";

@@ -55,7 +55,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "Malfurion has emerged from his deep slumber in the Barrow Den. Darnassus and the Moonglade ancients have been awakened.";
+    public override string RewardFlavour => "Malfurion has emerged from his deep slumber in the Barrow Den. Darnassus and the Moonglade ancients have been awakened.";
 
     /// <inheritdoc />
     protected override string RewardDescription => "Gain Nordrassil, the Darnassus base, the Cenarion Hold base, the Moonglade base, the hero Malfurion, and the artifact G'hanir";

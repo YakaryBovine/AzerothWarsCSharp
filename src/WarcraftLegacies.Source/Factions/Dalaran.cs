@@ -5,6 +5,7 @@ using MacroTools.Extensions;
 using MacroTools.FactionChoices;
 using MacroTools.FactionSystem;
 using MacroTools.Libraries;
+using MacroTools.Mechanics;
 using MacroTools.ObjectiveSystem;
 using MacroTools.ObjectiveSystem.Objectives.LegendBased;
 using MacroTools.ObjectiveSystem.Objectives.QuestBased;
@@ -13,7 +14,6 @@ using WarcraftLegacies.Source.GameLogic;
 using WarcraftLegacies.Source.Quests;
 using WarcraftLegacies.Source.Quests.Dalaran;
 using WarcraftLegacies.Source.Setup;
-using WarcraftLegacies.Source.Setup.FactionSetup;
 using WCSharp.Shared.Data;
 using static War3Api.Common;
 
@@ -56,6 +56,9 @@ Your mages are the finest in Azeroth, be sure to utilize them alongside your her
       {
         preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(9204, 2471))
       };
+      
+      RegisterFactionDependentInitializer<Scourge>(RegisterScourgeDialogue);
+      RegisterFactionDependentInitializer<Legion>(RegisterBookOfMedivhQuest);
     }
 
     /// <inheritdoc />
@@ -63,10 +66,11 @@ Your mages are the finest in Azeroth, be sure to utilize them alongside your her
     {
       RegisterObjectLimits();
       RegisterQuests();
-      RegisterBookOfMedivhQuest();
       RegisterDialogue();
       RegisterProtectors();
       Regions.Dalaran.CleanupHostileUnits();
+      WaygateManager.Setup(Constants.UNIT_N0AO_WAY_GATE_DALARAN_SIEGE);
+      SharedFactionConfigSetup.AddSharedFactionConfig(this);
     }
 
     /// <inheritdoc />
@@ -189,17 +193,17 @@ Your mages are the finest in Azeroth, be sure to utilize them alongside your her
       AddQuest(theNexus);
     }
 
-    private void RegisterBookOfMedivhQuest()
+    private void RegisterBookOfMedivhQuest(Legion legion)
     {
       SharedQuestRepository.RegisterQuestFactory(faction => new QuestBookOfMedivh(_allLegendSetup.Dalaran.Dalaran,
         new NamedRectangle("Dalaran", Regions.BookOfMedivhDalaran), _artifactSetup.BookOfMedivh,
-        faction == LegionSetup.Legion, faction == this));
+        faction == legion, faction == this));
     }
 
     private void RegisterDialogue()
     {
       TriggeredDialogueManager.Add(
-        new TriggeredDialogue(new DialogueSequence(new MacroTools.DialogueSystem.Dialogue(
+        new TriggeredDialogue(new DialogueSequence(new Dialogue(
             @"Sound\Dialogue\NightElfCampaign\NightElf06Interlude\N06Medivh42",
             "Now, at long last, I have returned to set things right. I... am Medivh, the Last Guardian. I tell you now, the only chance for this world is for you to unite in arms against the enemies of all who live!",
             "Medivh"))
@@ -218,7 +222,7 @@ Your mages are the finest in Azeroth, be sure to utilize them alongside your her
           }));
       
       TriggeredDialogueManager.Add(
-        new TriggeredDialogue(new MacroTools.DialogueSystem.Dialogue(
+        new TriggeredDialogue(new Dialogue(
           soundFile: @"Sound\Dialogue\HumanCampaign\Human05\H05Jaina01.flac",
           caption:
           "Hearthglen, finally! I could use some rest!",
@@ -229,18 +233,21 @@ Your mages are the finest in Azeroth, be sure to utilize them alongside your her
         {
           new ObjectiveLegendInRect(_allLegendSetup.Dalaran.Jaina, Regions.Hearthglen, "Hearthglen")
         }));
-      
+    }
+    
+    private void RegisterScourgeDialogue(Scourge scourge)
+    {
       TriggeredDialogueManager.Add(new TriggeredDialogue(
         new DialogueSequence(
-          new MacroTools.DialogueSystem.Dialogue(@"Sound\Dialogue\UndeadCampaign\Undead07\U07Antonidas13.flac",
+          new Dialogue(@"Sound\Dialogue\UndeadCampaign\Undead07\U07Antonidas13.flac",
             "It pains me to even look at you, Arthas.",
             "Arthas Menethil"),
-          new MacroTools.DialogueSystem.Dialogue(@"Sound\Dialogue\UndeadCampaign\Undead07\U07Arthas14.flac",
+          new Dialogue(@"Sound\Dialogue\UndeadCampaign\Undead07\U07Arthas14.flac",
             "I'll be happy to end your torment, old man. I told you that your magics could not stop me.",
             "Antonidas")
-        ), new[]
+        ), new Faction[]
         {
-          ScourgeSetup.Scourge,
+          scourge,
           this
         }, new List<Objective>
         {

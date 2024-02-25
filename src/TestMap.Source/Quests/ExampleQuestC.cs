@@ -18,11 +18,11 @@ namespace TestMap.Source.Quests
     {
       AddObjective(new ObjectiveAcquireArtifact(ArtifactSetup.Killmaim));
       AddObjective(new ObjectiveSelfExists());
-      _zerglingPower = new DummyPower("Zerglings", "Spawn zerglings constantly.", "Zergling");
+      _zerglingPower = new DummyPower("Zerglings", "Spawn zerglings constantly.");
     }
 
     protected override string RewardDescription => "A free Zergling, and destroy Kelen's Dagger of Escape";
-    protected override string RewardFlavour => "Congratulations on your free Zergling!";
+    public override string RewardFlavour => "Congratulations on your free Zergling!";
     protected override string PenaltyDescription => "A hostile Peasant spawns";
 
     protected override void OnAdd(Faction whichFaction)

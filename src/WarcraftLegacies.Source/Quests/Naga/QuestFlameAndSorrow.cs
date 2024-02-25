@@ -25,7 +25,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "With the power to dominate the Skull of Gul'dan finally in hand, Illidan breathes deep of its power. With one swift motion, he crushes it to dust, absorbing its phenomenal demonic energies for himself.";
 
     /// <inheritdoc/>

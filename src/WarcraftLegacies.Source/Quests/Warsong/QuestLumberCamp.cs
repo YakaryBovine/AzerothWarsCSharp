@@ -32,7 +32,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Barrens have been cleared and the Warsong has established a base of operation in the Ashenvale Forest";
 
     /// <inheritdoc />

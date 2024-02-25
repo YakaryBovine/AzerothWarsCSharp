@@ -8,8 +8,6 @@ using WarcraftLegacies.Source.GameLogic;
 using WarcraftLegacies.Source.Quests;
 using WarcraftLegacies.Source.Quests.Gilneas;
 using WarcraftLegacies.Source.Setup;
-using WarcraftLegacies.Source.Setup.FactionSetup;
-using WarcraftLegacies.Source.Setup.QuestSetup;
 using WCSharp.Shared.Data;
 using static War3Api.Common;
 
@@ -48,14 +46,16 @@ Once you have reclaimed Gilneas, open Greymane's Gate and march North to assist 
         preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(7709, -2853)),
         preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(9392, -921)),
       };
+      RegisterFactionDependentInitializer<Legion>(RegisterBookOfMedivhQuest);
+      RegisterFactionDependentInitializer<Druids>(RegisterDruidsQuests);
     }
-    
+
     /// <inheritdoc />
     public override void OnRegistered()
     {
       RegisterObjectLimits();
       RegisterQuests();
-      RegisterBookOfMedivhQuest();
+      SharedFactionConfigSetup.AddSharedFactionConfig(this);
     }
 
     private void RegisterObjectLimits()
@@ -126,14 +126,18 @@ Once you have reclaimed Gilneas, open Greymane's Gate and march North to assist 
       AddQuest(new QuestTempestReach());
       AddQuest(new QuestGilneasCity(_gilneasGate));
       AddQuest(new QuestCrowley());
-      AddQuest(new QuestGoldrinn(_artifactSetup.ScytheOfElune, _allLegendSetup.Gilneas.Goldrinn));
     }
     
-    private void RegisterBookOfMedivhQuest()
+    private void RegisterBookOfMedivhQuest(Legion legion)
     {
       SharedQuestRepository.RegisterQuestFactory(faction => new QuestBookOfMedivh(_allLegendSetup.Gilneas.GilneasCastle,
         new NamedRectangle("Gilneas", Regions.BookOfMedivhGilneas), _artifactSetup.BookOfMedivh,
-        faction == LegionSetup.Legion, faction == this));
+        faction == legion, faction == this));
+    }
+    
+    private void RegisterDruidsQuests(Druids druids)
+    {
+      AddQuest(new QuestGoldrinn(_artifactSetup.ScytheOfElune, _allLegendSetup.Gilneas.Goldrinn, druids));
     }
   }
 }

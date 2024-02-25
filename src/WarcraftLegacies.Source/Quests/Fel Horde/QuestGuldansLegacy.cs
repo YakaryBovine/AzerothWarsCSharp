@@ -14,7 +14,7 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
       $"Learn to research {GetObjectName(Constants.UPGRADE_R03O_BLOOD_RUNES_FEL_HORDE)} from the {GetObjectName(Constants.UNIT_O031_WAR_MILL_FEL_HORDE_RESEARCH)}";
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Gul'dan's remains have been located within the Tomb of Sargeras. His eldritch knowledge may now be put to purpose.";
 
     /// <summary>

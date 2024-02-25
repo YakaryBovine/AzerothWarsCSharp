@@ -38,7 +38,7 @@ namespace WarcraftLegacies.Source.Quests.Scarlet
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Crimson Cathedral has been established in Northrend. Seeing first-hand that the Light can reach even the darkest places of the world, what few shreds of doubt lingering in Brigitte Abbendis' soul evaporate.";
 
     /// <inheritdoc/>

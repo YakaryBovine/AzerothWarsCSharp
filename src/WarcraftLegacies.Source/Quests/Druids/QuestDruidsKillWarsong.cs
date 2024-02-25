@@ -28,7 +28,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
     }
     
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Warsong presence on Kalimdor has been eliminated. The sacred lands are safe from their hatchets.";
 
     /// <inheritdoc/>

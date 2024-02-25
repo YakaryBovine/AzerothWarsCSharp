@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
     private readonly ObjectiveAnyUnitInRect _anyUnitInRect;
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Shen'dralar, the Highborne survivors of the Sundering, swear allegiance to their fellow Night Elves. As a sign of their loyalty, they offer up an artifact they have guarded for thousands of years: the Scepter of the Queen.";
 
     /// <inheritdoc/>

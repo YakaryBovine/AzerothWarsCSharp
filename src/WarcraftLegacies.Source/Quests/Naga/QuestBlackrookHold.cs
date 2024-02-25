@@ -33,7 +33,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Broken Isles have been secured, and Black Rook Hold's garrison has been re-established.";
 
     /// <inheritdoc />

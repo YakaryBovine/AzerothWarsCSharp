@@ -1,0 +1,89 @@
+{
+  "OldId": 1718764353,
+  "NewId": 859000916,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Id": 1953653089,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNFelFlameStorm.blp"
+    },
+    {
+      "Id": 1718840929,
+      "Type": 3,
+      "Value": ""
+    },
+    {
+      "Id": 2037082209,
+      "Type": 3,
+      "Value": "R"
+    },
+    {
+      "Level": 1,
+      "Id": 828536161,
+      "Type": 3,
+      "Value": "Calls \u003CTP33:ACrf,DataA1\u003E waves off Felfire down from the sky igniting and damaging all enemy units in an area, Each wave deals \u003CTP33:ACrf,DataB1\u003E damage; units effected by Felfire take \u003CTP33:ACrf,DataE1\u003E damage per second for \u003CTP33:ACrf,Dur1\u003E seconds."
+    },
+    {
+      "Id": 1835101793,
+      "Type": 3,
+      "Value": "Felfire"
+    },
+    {
+      "Level": 1,
+      "Id": 829453409,
+      "Type": 3,
+      "Value": "Felfire - [|cffffcc00Level 1|r]"
+    },
+    {
+      "Level": 2,
+      "Id": 829453409,
+      "Type": 3,
+      "Value": "Felfire - [|cffffcc00Level 2|r]"
+    },
+    {
+      "Level": 3,
+      "Id": 829453409,
+      "Type": 3,
+      "Value": "Felfire - [|cffffcc00Level 3|r]"
+    },
+    {
+      "Level": 2,
+      "Id": 828536161,
+      "Type": 3,
+      "Value": "Calls \u003CTP33:ACrf,DataA2\u003E waves off Felfire down from the sky igniting and damaging all enemy units in an area, Each wave deals \u003CTP33:ACrf,DataB2\u003E damage; units effected by Felfire take \u003CTP33:ACrf,DataE2\u003E damage per second for \u003CTP33:ACrf,Dur2\u003E seconds."
+    },
+    {
+      "Level": 3,
+      "Id": 828536161,
+      "Type": 3,
+      "Value": "Calls \u003CTP33:ACrf,DataA3\u003E waves off Felfire down from the sky igniting and damaging all enemy units in an area, Each wave deals \u003CTP33:ACrf,DataB3\u003E damage; units effected by Felfire take \u003CTP33:ACrf,DataE3\u003E damage per second for \u003CTP33:ACrf,Dur3\u003E seconds."
+    },
+    {
+      "Id": 1918988897,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNFelFlameStorm.blp"
+    },
+    {
+      "Id": 1952805473,
+      "Type": 3,
+      "Value": "Learn Felfire - [|cffffcc00Level %d|r]"
+    },
+    {
+      "Id": 1953854049,
+      "Type": 3,
+      "Value": "Calls waves off Felfire down from the sky crushing enemy units as they strike, units hit by the blasts are then engulfed in Felfire causing damage over time. |n|cffffcc00Level 1|r - Each wave deals \u003CTP33:ACrf,DataB1\u003E initial damage and \u003CTP33:ACrf,DataE1\u003E damage per second for \u003CTP33:ACrf,Dur1\u003E seconds.|n|cffffcc00Level 2|r - Each wave deals \u003CTP33:ACrf,DataB2\u003E initial damage and \u003CTP33:ACrf,DataE2\u003E damage per second for \u003CTP33:ACrf,Dur2\u003E seconds.|n|cffffcc00Level 3|r - Each wave deals \u003CTP33:ACrf,DataB3\u003E initial damage and \u003CTP33:ACrf,DataE3\u003E damage per second for \u003CTP33:ACrf,Dur3\u003E seconds."
+    },
+    {
+      "Id": 2020635233,
+      "Value": 3
+    },
+    {
+      "Id": 1802007137,
+      "Type": 3,
+      "Value": "R"
+    }
+  ]
+}

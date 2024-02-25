@@ -12,7 +12,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
     private const int ElementalGuardianId = Constants.UNIT_E00X_ELEMENTAL_GUARDIAN_DRUIDS_DEMI;
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Frostwolves have been driven from Kalimdor. Their departure reveals the existence of a powerful nature spirit that now heeds the call of the Druids.";
 
     /// <inheritdoc/>

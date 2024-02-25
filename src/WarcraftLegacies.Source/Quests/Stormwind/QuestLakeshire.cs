@@ -35,7 +35,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
 
     //Todo: bad flavour
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Lakeshire has been liberated, and its military is now free to assist Stormwind.";
 
     /// <inheritdoc/>

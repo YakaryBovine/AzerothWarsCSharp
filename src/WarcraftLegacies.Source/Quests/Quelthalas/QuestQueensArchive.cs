@@ -27,7 +27,7 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "We have uncovered the secrets to Warlock magic";
+    public override string RewardFlavour => "We have uncovered the secrets to Warlock magic";
 
     /// <inheritdoc />
     protected override string RewardDescription => "You can now train Warlocks at the Consortium";

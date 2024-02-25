@@ -19,7 +19,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     }
     
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Khadgar has been freed from his confines under the Black Temple, and he is now free to serve the Kingdom of Stormwind.";
 
     /// <inheritdoc/>

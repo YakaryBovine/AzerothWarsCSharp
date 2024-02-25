@@ -31,7 +31,7 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "Stormglen Village has been liberated.";
+    public override string RewardFlavour => "Stormglen Village has been liberated.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Control of all buildings in Stormglen Village";

@@ -29,7 +29,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "The walking corpses assailing Hearthglen have been put back to rest, and Hearthglen lives to see another day.";
+    public override string RewardFlavour => "The walking corpses assailing Hearthglen have been put back to rest, and Hearthglen lives to see another day.";
 
     /// <inheritdoc />
     protected override string RewardDescription => "Control of all units in Hearthglen";

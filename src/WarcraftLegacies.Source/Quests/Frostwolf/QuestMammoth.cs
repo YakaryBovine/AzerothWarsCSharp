@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Rexxar ventures north into lands once thought incompatible with life, and discovers the paradise of furred megafauna that is the Borean Tundra. He tames the woolly mammoths there, and teaches the Frostwolf to ride them into battle.";
 
     /// <inheritdoc />

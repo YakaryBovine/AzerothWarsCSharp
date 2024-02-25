@@ -40,7 +40,7 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
     }
     
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Hellfire Citadel has been subjugated, and its military is now free to assist the Fel Horde.";
     
     /// <inheritdoc/>
@@ -50,11 +50,9 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
     /// <inheritdoc/>
     protected override void OnComplete(Faction completingFaction)
     {
-      if(completingFaction.Player != null)
-      {
-        completingFaction.Player.RescueGroup(_rescueUnits);
-      }
-      if (GetLocalPlayer() == completingFaction.Player) PlayThematicMusic("war3mapImported\\FelTheme.mp3");
+      completingFaction.Player?
+        .RescueGroup(_rescueUnits)
+        .PlayMusicThematic("war3mapImported\\FelTheme.mp3");
     }
 
     /// <inheritdoc/>

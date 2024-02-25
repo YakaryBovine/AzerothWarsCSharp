@@ -47,7 +47,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
     /// <summary>
     /// <inheritdoc/>
     /// </summary>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Draenai of the Ashtongue tribe have joined our cause.";
 
     /// <summary>
@@ -62,9 +62,9 @@ namespace WarcraftLegacies.Source.Quests.Naga
     /// </summary>
     protected override void OnComplete(Faction completingFaction)
     {
-      completingFaction.Player?.RescueGroup(_rescueUnits);
-      if (completingFaction.Player == GetLocalPlayer())
-        PlayThematicMusic("IllidansTheme");
+      completingFaction.Player?
+        .RescueGroup(_rescueUnits)
+        .PlayMusicThematic("IllidansTheme");
     }
 
     /// <summary>

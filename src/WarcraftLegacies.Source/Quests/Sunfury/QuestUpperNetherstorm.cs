@@ -51,7 +51,7 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "Our people spread throughout the lands of Upper Netherstorm, erecting their homes amidst its arcane crystals and basking in its magical storms.";
+    public override string RewardFlavour => "Our people spread throughout the lands of Upper Netherstorm, erecting their homes amidst its arcane crystals and basking in its magical storms.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => $"Gain {GoldReward} gold, {LumberReward} lumber, and a base in Upper Netherstorm";

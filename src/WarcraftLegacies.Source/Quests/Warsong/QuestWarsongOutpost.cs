@@ -32,7 +32,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       $"The Warsong and their allies have taken control of the deserts of Uldum and established an outpost in the region.";
 
     /// <inheritdoc />

@@ -15,7 +15,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     }
     
     /// <inheritdoc/>
-    protected override string RewardFlavour => "Karazhan has been captured. Dalaran's archivists scour its halls for arcane resources.";
+    public override string RewardFlavour => "Karazhan has been captured. Dalaran's archivists scour its halls for arcane resources.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Learn to research three powerful upgrades at Karazhan.";

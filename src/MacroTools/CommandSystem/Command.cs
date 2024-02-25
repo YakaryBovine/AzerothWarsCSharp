@@ -35,10 +35,10 @@ namespace MacroTools.CommandSystem
     /// <summary>
     /// What happens when the <see cref="CommandSystem.Command"/> gets executed by a player.
     /// </summary>
-    /// <param name="cheater">The player typing the <see cref="CommandSystem.Command"/> command in.</param>
+    /// <param name="commandUser">The player typing the <see cref="CommandSystem.Command"/> command in.</param>
     /// <param name="parameters">The parameters specified by the player entering the sheet, seperated by spaces.</param>
     /// <returns>A message describing what the <see cref="CommandSystem.Command"/> is doing to the executing player.</returns>
-    public abstract string Execute(player cheater, params string[] parameters);
+    public abstract string Execute(player commandUser, params string[] parameters);
 
     /// <summary>
     /// Fired when the <see cref="Command"/> is registered.

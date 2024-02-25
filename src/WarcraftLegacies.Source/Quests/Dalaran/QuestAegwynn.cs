@@ -18,7 +18,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Aegwynn will come back from exile to mentor Jaina.";
 
     /// <inheritdoc/>

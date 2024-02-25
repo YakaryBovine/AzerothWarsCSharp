@@ -12,7 +12,7 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
     private const int BuildingId = Constants.UNIT_O030_FORTRESS_FEL_HORDE_T3;
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Stormwind's annihilation has left behind the corpses of thousands of elite knights. As occurred during the Second War, these corpses have been filled with the souls of slain Shadow Council members, recreating the indominatable order of Death Knights.";
 
     /// <inheritdoc/>

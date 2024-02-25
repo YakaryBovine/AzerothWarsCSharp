@@ -32,11 +32,8 @@ namespace WarcraftLegacies.Source.GameLogic
           SetUnitPosition(unit, invasionLocation.Center.X, invasionLocation.Center.Y);
       }
 
-      if (GetLocalPlayer() != pickingPlayer) 
-        return;
-      
       if (invasionLocation != null)
-        SetCameraPosition(invasionLocation.Center.X, invasionLocation.Center.Y);
+        pickingPlayer.RepositionCamera(invasionLocation.Center);
     }
 
     /// <inheritdoc />

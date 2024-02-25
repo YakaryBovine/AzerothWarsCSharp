@@ -27,7 +27,7 @@ namespace WarcraftLegacies.Source.Quests.Draenei
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "Velen has liberated Argus and re-assembled the Crown of Triumvirate";
+    public override string RewardFlavour => "Velen has liberated Argus and re-assembled the Crown of Triumvirate";
 
     /// <inheritdoc />
     protected override string RewardDescription => "You gain the powerful item, the Crown of the Triumvirate";

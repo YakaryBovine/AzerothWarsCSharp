@@ -37,7 +37,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "The city-fortress of Tyr's Hand has decided to join us! Renowed for their siege engineers, we can now build siege workshops.";
+    public override string RewardFlavour => "The city-fortress of Tyr's Hand has decided to join us! Renowed for their siege engineers, we can now build siege workshops.";
 
     /// <inheritdoc />
     protected override string RewardDescription => $"Gain control of all units in Tyr's Hand, learn to train Garithos from the {GetObjectName(Constants.UNIT_HALT_ALTAR_OF_KINGS_LORDAERON_ALTAR)}, and learn to build {GetObjectName(Constants.UNIT_H094_SIEGE_WORKSHOP_LORDAERON_SIEGE)}s";

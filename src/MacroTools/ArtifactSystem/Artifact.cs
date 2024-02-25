@@ -123,12 +123,10 @@ namespace MacroTools.ArtifactSystem
     /// </summary>
     public void Ping(player whichPlayer)
     {
-      if (GetLocalPlayer() != whichPlayer) 
-        return;
       if (_owningUnit != null)
-        PingMinimap(GetUnitX(_owningUnit), GetUnitY(_owningUnit), 3);
+        whichPlayer.PingMinimapSimple(GetUnitX(_owningUnit), GetUnitY(_owningUnit), 3);
       else
-        PingMinimap(GetItemX(Item), GetItemY(Item), 3);
+        whichPlayer.PingMinimapSimple(GetItemX(Item), GetItemY(Item), 3);
     }
 
     private void SetOwningPlayer(player? value)

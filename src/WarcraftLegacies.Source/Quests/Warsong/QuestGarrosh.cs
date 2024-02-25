@@ -7,7 +7,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
   public sealed class QuestGarrosh : QuestData
   {
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "With Kalimdor now under the Horde's control, the Warsong will be able to expand towards new conquests";
 
     /// <inheritdoc/>

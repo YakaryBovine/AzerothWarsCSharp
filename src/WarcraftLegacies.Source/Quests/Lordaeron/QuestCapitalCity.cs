@@ -53,7 +53,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     private static bool RescueUnitFilter(unit whichUnit) => GetUnitTypeId(whichUnit) != Constants.UNIT_N08F_UNDERCITY_ENTRANCE;
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Capital City of Lordaeron has joined Arthas.";
 
     /// <inheritdoc/>
@@ -87,10 +87,11 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
         _uther.Unit?.SetLevel(5, false);
       }
 
-      completingFaction.Player?.RescueGroup(_rescueUnits);
+      completingFaction.Player?
+        .RescueGroup(_rescueUnits)
+        .PlayMusicThematic("war3mapImported\\CapitalCity.mp3");
+      
       SetUnitInvulnerable(_terenas, true);
-      if (GetLocalPlayer() == completingFaction.Player)
-        PlayThematicMusic("war3mapImported\\CapitalCity.mp3");
       _uther.AddUnitDependency(_capitalPalace.Unit);
     }
   }

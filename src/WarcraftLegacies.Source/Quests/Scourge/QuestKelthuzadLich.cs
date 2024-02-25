@@ -2,7 +2,6 @@
 using MacroTools.LegendSystem;
 using MacroTools.ObjectiveSystem.Objectives.LegendBased;
 using MacroTools.QuestSystem;
-using WarcraftLegacies.Source.Setup.FactionSetup;
 using static War3Api.Common;
 
 namespace WarcraftLegacies.Source.Quests.Scourge
@@ -20,21 +19,10 @@ namespace WarcraftLegacies.Source.Quests.Scourge
       AddObjective(new ObjectiveControlCapital(sunwell, false));
       AddObjective(new ObjectiveLegendInRect(kelthuzad, Regions.Sunwell, "The Sunwell"));
       ResearchId = Constants.UPGRADE_R065_QUEST_COMPLETED_INTO_THE_REALM_ETERNAL;
-      
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour
-    {
-      get
-      {
-        var completionPopup =
-          "Kel'thuzad has been reanimated and empowered through the unlimited magical energies of the Sunwell.";
-        if (LegionSetup.Legion != null)
-          completionPopup += " He now has the ability to summon the Burning Legion.";
-        return completionPopup;
-      }
-    }
+    public override string RewardFlavour => "Kel'thuzad has been reanimated and empowered through the unlimited magical energies of the Sunwell. He now has the ability to summon the Burning Legion.";
 
     /// <inheritdoc />
     protected override string RewardDescription => "Kel'thuzad becomes a Lich, and his Dark Ritual ability gains an additional effect to summon a Revenant";

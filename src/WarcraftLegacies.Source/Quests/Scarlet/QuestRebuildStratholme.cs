@@ -39,7 +39,7 @@ namespace WarcraftLegacies.Source.Quests.Scarlet
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The city of Stratholme once more stands as a bastion of human civilization. Though still a mere shadow of its former glory, it will reclaim its majesty in time.";
 
     /// <inheritdoc/>

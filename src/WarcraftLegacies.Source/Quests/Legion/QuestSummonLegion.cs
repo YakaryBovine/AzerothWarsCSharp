@@ -4,7 +4,6 @@ using MacroTools.Extensions;
 using MacroTools.FactionSystem;
 using MacroTools.ObjectiveSystem.Objectives.UnitBased;
 using MacroTools.QuestSystem;
-using MacroTools.Wrappers;
 using WCSharp.Shared.Data;
 using static War3Api.Common; 
 
@@ -27,7 +26,6 @@ namespace WarcraftLegacies.Source.Quests.Legion
       ResearchId = Constants.UPGRADE_R04B_QUEST_COMPLETED_UNDER_THE_BURNING_SKY;
       Global = true;
       
-
       foreach (var unit in CreateGroup().EnumUnitsInRect(rescueRect).EmptyToList())
         if (GetOwningPlayer(unit) == Player(PLAYER_NEUTRAL_PASSIVE))
         {
@@ -38,7 +36,8 @@ namespace WarcraftLegacies.Source.Quests.Legion
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "Tremble, mortals, and despair. Doom has come to this world.";
+    public override string RewardFlavour => 
+      $"A great portal to the depths of the Twisting Nether has been opened by {_objectiveCastSpell.Caster?.GetProperName()}. The Burning Legion steps forth, heralding the beginning of the end.";
 
     /// <inheritdoc />
     protected override string RewardDescription =>
@@ -60,10 +59,6 @@ namespace WarcraftLegacies.Source.Quests.Legion
       _rescueUnits.Clear();
 
       CreatePortals(whichFaction.Player);
-
-      var archimondeDialogue = new SoundWrapper(@"Sound\Dialogue\UndeadCampaign\Undead08\U08Archimonde19.flac",
-        soundEax: SoundEax.HeroAcks);
-      archimondeDialogue.Play(true);
 
       CreateTimer().Start(6, false, () =>
       {

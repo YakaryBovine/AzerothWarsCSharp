@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
     }
     
     /// <inheritdoc/>
-    protected override string RewardFlavour => "The Spire has been pillaged. A secret demon gate has now been formed inside.";
+    public override string RewardFlavour => "The Spire has been pillaged. A secret demon gate has now been formed inside.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Learn to train troops from the Spire Keep and gain 500 gold";

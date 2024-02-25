@@ -33,7 +33,7 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Dwarven Empire is re-united again, Ironforge is ready for war again.";
 
     /// <inheritdoc/>
@@ -53,7 +53,7 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
     protected override void OnComplete(Faction completingFaction)
     {
       foreach (var unit in _rescueUnits) unit.Rescue(completingFaction.Player ?? Player(PLAYER_NEUTRAL_AGGRESSIVE));
-      if (GetLocalPlayer() == completingFaction.Player) PlayThematicMusic("war3mapImported\\DwarfTheme.mp3");
+      completingFaction.Player?.PlayMusicThematic("war3mapImported\\DwarfTheme.mp3");
     }
   }
 }

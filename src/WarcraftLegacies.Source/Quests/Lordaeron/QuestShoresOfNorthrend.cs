@@ -29,7 +29,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Crown Prince Arthas, and what remains of his forces, have landed on the shores of Northrend and established a base camp.";
 
     /// <inheritdoc/>

@@ -14,7 +14,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
 
   public sealed class QuestOrgrimmar : QuestData
   {
-    private readonly List<unit> _rescueUnits = new();
+    private readonly List<unit> _rescueUnits;
     private const int RequiredResearchId = Constants.UPGRADE_R05O_FORTIFIED_HULLS_WARSONG;
 
     public QuestOrgrimmar(Rectangle rescueRect) : base("To Tame a Land",
@@ -30,7 +30,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "The city of Orgrimmar was finally constructed by the Warsong engineers, it is now a home for the new Horde and a symbol of power and innovation";
+    public override string RewardFlavour => "The city of Orgrimmar was finally constructed by the Warsong engineers, it is now a home for the new Horde and a symbol of power and innovation";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Control of all units in Orgrimmar, able to train Varok and Azerite Siege Engines";
@@ -38,8 +38,10 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     /// <inheritdoc/>
     protected override void OnComplete(Faction completingFaction)
     {
-      foreach (var unit in _rescueUnits) unit.Rescue(completingFaction.Player);
-      if (GetLocalPlayer() == completingFaction.Player) PlayThematicMusic("war3mapImported\\OrgrimmarTheme.mp3");
+      foreach (var unit in _rescueUnits) 
+        unit.Rescue(completingFaction.Player);
+
+      completingFaction.Player?.PlayMusicThematic("war3mapImported\\OrgrimmarTheme.mp3");
     }
 
     /// <inheritdoc/>

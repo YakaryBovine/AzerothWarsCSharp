@@ -35,7 +35,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "The forces of Outland are now under Illidan's command.";
+    public override string RewardFlavour => "The forces of Outland are now under Illidan's command.";
 
     /// <inheritdoc />
     protected override string RewardDescription => $"Gain control of the Black Temple and enable Lady Vashj to be trained at the Altar of the Betrayer";

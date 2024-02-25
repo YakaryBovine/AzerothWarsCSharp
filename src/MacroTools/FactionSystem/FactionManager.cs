@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using MacroTools.Extensions;
-using static War3Api.Common;
-
 namespace MacroTools.FactionSystem
 {
   /// <summary>
@@ -15,6 +13,7 @@ namespace MacroTools.FactionSystem
     private static readonly Dictionary<string, Team> TeamsByName = new();
     private static readonly List<Team> AllTeams = new();
     private static readonly Dictionary<string, Faction> FactionsByName = new();
+    private static readonly List<Faction> AllFactions = new();
 
     /// <summary>
     ///   Fired when a <see cref="Faction" /> is registered to the <see cref="FactionManager" />.
@@ -40,32 +39,26 @@ namespace MacroTools.FactionSystem
       }
     }
 
-    public static List<Faction> GetAllFactions()
-    {
-      return FactionsByName.Values.ToList();
-    }
-    
-    public static List<Team> GetAllTeams()
-    {
-      return AllTeams.ToList();
-    }
-
-    public static bool TeamWithNameExists(string teamName)
-    {
-      return TeamsByName.ContainsKey(teamName.ToLower());
-    }
+    /// <summary>
+    /// Returns all registered <see cref="Faction"/>s.
+    /// </summary>
+    /// <returns></returns>
+    public static ReadOnlyCollection<Faction> GetAllFactions() => AllFactions.AsReadOnly();
 
     /// <summary>
-    /// Returns the <see cref="Team"/> with the specified name if one exists.
-    /// Returns null otherwise.
+    /// Returns all registered <see cref="Team"/>s.
     /// </summary>
-    public static Team? GetTeamByName(string teamName) =>
-      TeamsByName.TryGetValue(teamName.ToLower(), out var team) ? team : null;
+    /// <returns></returns>
+    public static ReadOnlyCollection<Team> GetAllTeams() => AllTeams.AsReadOnly();
 
-    public static Faction? GetFromPlayer(player whichPlayer)
-    {
-      return PlayerData.ByHandle(whichPlayer)?.Faction;
-    }
+    /// <summary>
+    /// Gets the registered <see cref="Team"/> with the specified name.
+    /// </summary>
+    /// <param name="teamName">The name of the team.</param>
+    /// <param name="team">The team with the specified name.</param>
+    /// <returns>Returns true if a team with the specified name exists.</returns>
+    public static bool TryGetTeamByName(string teamName, [NotNullWhen(true)] out Team? team) =>
+      TeamsByName.TryGetValue(teamName.ToLower(), out team);
 
     public static bool FactionWithNameExists(string name)
     {
@@ -83,11 +76,16 @@ namespace MacroTools.FactionSystem
     /// Returns true if a <see cref="Faction"/> with the specified type exists.
     /// </summary>
     /// <param name="faction">Outputs the <see cref="Faction"/> with the specified type.</param>
-    public static bool TryGetFactionByType<T>([NotNullWhen(true)] out Faction? faction) where T : Faction
+    public static bool TryGetFactionByType<T>([NotNullWhen(true)] out T? faction) where T : Faction
     {
       faction = FactionsByName.Values.FirstOrDefault(x => x.GetType() == typeof(T)) as T;
       return faction != null;
     }
+
+    /// <summary>
+    /// Returns true if a <see cref="Faction"/> with the specified type exists.
+    /// </summary>
+    public static bool FactionOfTypeExists(Type factionType) => AllFactions.Any(x => x.GetType() == factionType);
 
     /// <summary>
     ///   Registers a <see cref="Faction" /> to the <see cref="FactionManager" />,
@@ -98,9 +96,12 @@ namespace MacroTools.FactionSystem
       if (!FactionsByName.ContainsKey(faction.Name.ToLower()))
       {
         FactionsByName[faction.Name.ToLower()] = faction;
+        AllFactions.Add(faction);
         FactionRegistered?.Invoke(faction, faction);
         faction.OnRegistered();
         faction.NameChanged += OnFactionNameChange;
+
+        ExecuteFactionDependentInitializers();
         return faction;
       }
 
@@ -123,6 +124,20 @@ namespace MacroTools.FactionSystem
         throw new Exception(
           $"Attempted to register a {nameof(Team)} named {team.Name}, but there is already a registered {nameof(Team)} with that name.");
       }
+    }
+
+    /// <summary>
+    /// Executes all <see cref="FactionDependentInitializer"/>s related to the provided <see cref="Faction"/>, which have
+    /// satisfied their dependencies and which have not already been executed.
+    /// </summary>
+    private static void ExecuteFactionDependentInitializers()
+    {
+      //Try execute initializers that depend on the provided Faction.
+      var dependentInitializers = AllFactions
+        .SelectMany(x => x.FactionDependentInitializers)
+        .Where(x => !x.Executed && x.FactionDependencies.All(FactionOfTypeExists));
+      foreach (var initializer in dependentInitializers)
+        initializer.Execute();
     }
   }
 }

@@ -1,21 +1,18 @@
 ﻿using MacroTools.FactionSystem;
 using WarcraftLegacies.Source.Quests.Scarlet;
 using WarcraftLegacies.Source.Setup;
-using WarcraftLegacies.Source.Setup.QuestSetup;
 using static War3Api.Common;
 
 namespace WarcraftLegacies.Source.Factions
 {
   public sealed class ScarletCrusade : Faction
   {
-    private readonly ArtifactSetup _artifactSetup;
     private readonly AllLegendSetup _allLegendSetup;
 
     /// <inheritdoc />
-    public ScarletCrusade(ArtifactSetup artifactSetup, AllLegendSetup allLegendSetup) : base("Scarlet Crusade", PLAYER_COLOR_MAROON, "|cff800000",
+    public ScarletCrusade(AllLegendSetup allLegendSetup) : base("Scarlet Crusade", PLAYER_COLOR_MAROON, "|cff800000",
       "ReplaceableTextures/CommandButtons/BTNScarletKnight.blp")
     {
-      _artifactSetup = artifactSetup;
       _allLegendSetup = allLegendSetup;
       StartingGold = 200;
       StartingLumber = 500;
@@ -36,6 +33,7 @@ Fortify your strongholds against the storm to come and make ready to unleash the
     {
       RegisterObjectLimits();
       RegisterQuests();
+      SharedFactionConfigSetup.AddSharedFactionConfig(this);
     }
 
     private void RegisterObjectLimits()

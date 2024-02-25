@@ -14,6 +14,6 @@ namespace TestMap.Source.Quests
     }
 
     protected override string RewardDescription => "No idea.";
-    protected override string RewardFlavour => "Thanks for completing me instead of that other quest!";
+    public override string RewardFlavour => "Thanks for completing me instead of that other quest!";
   }
 }

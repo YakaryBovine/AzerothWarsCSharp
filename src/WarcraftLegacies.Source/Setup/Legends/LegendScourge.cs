@@ -3,16 +3,14 @@ using MacroTools;
 using MacroTools.ArtifactSystem;
 using MacroTools.Extensions;
 using MacroTools.LegendSystem;
-using WarcraftLegacies.Source.Setup.FactionSetup;
 using WCSharp.Shared.Data;
 using static War3Api.Common;
 using static War3Api.Blizzard;
-#pragma warning disable CS1591
 
 namespace WarcraftLegacies.Source.Setup.Legends
 {
   /// <summary>
-  /// Responsible for setting up and managing all <see cref="ScourgeSetup.Scourge"/> <see cref="Legend"/>s.
+  /// Responsible for setting up and managing all Scourge <see cref="Legend"/>s.
   /// </summary>
   public sealed class LegendScourge
   {

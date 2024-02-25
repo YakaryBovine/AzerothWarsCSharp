@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
 {
   public sealed class QuestCrossroads : QuestData
   {
-    private readonly List<unit> _rescueUnits = new();
+    private readonly List<unit> _rescueUnits;
 
     public QuestCrossroads(Rectangle rescueRect, PreplacedUnitSystem preplacedUnitSystem) : base("The Crossroads",
       "The Horde still needs to establish a strong strategic foothold into Kalimdor. Expand into the Barrens and claim the Crossroads.",
@@ -32,7 +32,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "The Crossroads have been constructed";
+    public override string RewardFlavour => "The Crossroads have been constructed";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Control of the Crossroads";
@@ -53,7 +53,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
         ? Player(PLAYER_NEUTRAL_AGGRESSIVE)
         : completingFaction.Player;
 
-     rescuer.RescueGroup(_rescueUnits); ;
+      rescuer.RescueGroup(_rescueUnits);
     }
 
     /// <inheritdoc/>

@@ -18,7 +18,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     }
     
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Fountain of Blood is under Warsong control. As the orcs drink from it, they feel a a familiar fury awake within them.";
 
     /// <inheritdoc/>

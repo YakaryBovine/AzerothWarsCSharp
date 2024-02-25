@@ -38,7 +38,7 @@ namespace WarcraftLegacies.Source.Quests.Scarlet
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Nobody had noticed, but until now Renault has been somewhat reserved in his actions. With his hometown now reclaimed, he shines with a new vigour.";
 
     /// <inheritdoc/>

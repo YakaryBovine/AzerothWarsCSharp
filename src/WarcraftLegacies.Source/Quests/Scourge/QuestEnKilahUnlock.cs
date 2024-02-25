@@ -32,7 +32,7 @@ namespace WarcraftLegacies.Source.Quests.Scourge
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "The temple city of En'kilah is now under the control of the Scourge.";
+    public override string RewardFlavour => "The temple city of En'kilah is now under the control of the Scourge.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Control of all buildings in En'Kilah";

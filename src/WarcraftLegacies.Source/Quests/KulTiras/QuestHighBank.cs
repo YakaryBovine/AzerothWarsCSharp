@@ -37,7 +37,7 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "With the south coast of the Eastern Kingdoms now secure, High Bank has been established as a base of operations on an island near the Twilight Highlands.";
 
     /// <inheritdoc/>

@@ -10,7 +10,7 @@ namespace WarcraftLegacies.Source.Quests.Goblin
   public sealed class QuestWesternExpansion : QuestData
   {
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The western shores are now clear of pesky elves, our business expansion can continue and our Zeppelins can fly safe.";
 
     /// <inheritdoc/>

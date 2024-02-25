@@ -15,8 +15,9 @@ namespace WarcraftLegacies.Source.GameModes
     /// <inheritdoc />
     public void OnChoose()
     {
-      DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "The Great War begins!");
-
+      foreach (var player in WCSharp.Shared.Util.EnumeratePlayers())
+        DisplayTextToPlayer(player, 0, 0, "The Great War begins!");
+      
       Player(3).SetTeam(TeamSetup.Legion);
       Player(23).SetTeam(TeamSetup.Legion);
 

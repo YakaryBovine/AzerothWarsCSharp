@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Medivh's spirit has been cleansed of Sargeras' influence, allowing him to return to Azeroth for a time.";
 
     /// <inheritdoc/>

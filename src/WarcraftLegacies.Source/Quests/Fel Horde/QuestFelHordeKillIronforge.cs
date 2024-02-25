@@ -20,7 +20,7 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
     }
     
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Great Forge has been annihilated. The Fel Horde's peons immediately salvage its intact refineries and put them to purpose in the creation of Felsteel.";
 
     /// <inheritdoc/>

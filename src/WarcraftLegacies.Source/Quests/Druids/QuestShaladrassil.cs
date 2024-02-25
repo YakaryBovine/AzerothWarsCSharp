@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "With Shaladrassil back under Druidic control, its roots begin to swell and its branches bloom flowers anew, as if welcoming the Night elves home.";
+    public override string RewardFlavour => "With Shaladrassil back under Druidic control, its roots begin to swell and its branches bloom flowers anew, as if welcoming the Night elves home.";
     
     /// <inheritdoc />
     protected override string RewardDescription => "You gain the Shaladrassil's Blessing Power";

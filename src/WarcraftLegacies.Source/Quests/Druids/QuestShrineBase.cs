@@ -31,7 +31,7 @@ namespace WarcraftLegacies.Source.Quests.Druids
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The World Tree has been rid of corruption and the Ancients can awaken";
 
     /// <inheritdoc />

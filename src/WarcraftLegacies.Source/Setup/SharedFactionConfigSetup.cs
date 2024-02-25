@@ -21,17 +21,5 @@ namespace WarcraftLegacies.Source.Setup
       faction.ModObjectLimit(Constants.UPGRADE_R006_FORTIFIED_HULLS_UNIVERSAL_UPGRADE, Faction.UNLIMITED);
       faction.ModObjectLimit(Constants.UPGRADE_R07L_FORTIFIED_HULLS, Faction.UNLIMITED); //path of the old gods
     }
-    
-    /// <summary>
-    /// Sets up <see cref="SharedFactionConfigSetup"/>.
-    /// </summary>
-    public static void Setup()
-    {
-      //Todo: this function should eventually be removed in favour of just using AddSharedFactionConfig for everyone,
-      //but that will require every Faction to be moved over to the new late-registration style currently exemplified
-      //by Dalaran and Gilneas.
-      foreach (var faction in FactionManager.GetAllFactions()) 
-        AddSharedFactionConfig(faction);
-    }
   }
 }

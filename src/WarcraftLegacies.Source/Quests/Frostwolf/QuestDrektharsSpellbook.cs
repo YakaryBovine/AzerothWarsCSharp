@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The World Tree, Nordrassil, has been captured by the forces of the Horde. Drek'thar has gifted Warchief Thrall his magical spellbook for this achievement.";
 
     /// <inheritdoc />

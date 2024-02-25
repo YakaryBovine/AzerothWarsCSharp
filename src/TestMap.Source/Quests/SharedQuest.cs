@@ -17,6 +17,6 @@ namespace TestMap.Source.Quests
     
     protected override string RewardDescription => "The Tomb of Sargeras has been opened.";
 
-    protected override string RewardFlavour => "The Tomb of Sargeras has been opened.";
+    public override string RewardFlavour => "The Tomb of Sargeras has been opened.";
   }
 }

@@ -7,7 +7,6 @@ using MacroTools.ObjectiveSystem.Objectives.FactionBased;
 using MacroTools.ObjectiveSystem.Objectives.TimeBased;
 using MacroTools.ObjectiveSystem.Objectives.UnitBased;
 using WarcraftLegacies.Source.Rocks;
-using MacroTools;
 
 namespace WarcraftLegacies.Source.Quests.Gilneas
 {
@@ -38,7 +37,7 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "Every worgen has been eliminated, the curse is lifting!";
+    public override string RewardFlavour => "Every worgen has been eliminated, the curse is lifting!";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Gain control of the Greymane Wall and Gilneas City. Enable to train Genn Greymane and the Worgen units";
@@ -52,10 +51,11 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
         .SetInvulnerable(false);
       SetUnitOwner(_gilneasDoor, whichFaction.Player, true);
 
-      whichFaction.Player.RescueGroup(_rescueUnits);
+      whichFaction.Player
+        .RescueGroup(_rescueUnits)
+        .PlayMusicThematic("war3mapImported\\GilneasTheme1.mp3");
+      
       RockSystem.Register(new RockGroup(Regions.GilneasUnlock5, FourCC("LTrc"), 1));
-      if (GetLocalPlayer() == whichFaction.Player)
-        PlayThematicMusic("war3mapImported\\GilneasTheme1.mp3");
     }
 
     /// <inheritdoc/>

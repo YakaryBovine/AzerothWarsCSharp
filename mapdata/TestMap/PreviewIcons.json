@@ -2,21 +2,45 @@
   "Icons": [
     {
       "IconType": 2,
+      "X": 211,
+      "Y": 45,
+      "Color": "#21C000"
+    },
+    {
+      "IconType": 2,
+      "X": 201,
+      "Y": 77,
+      "Color": "#949697"
+    },
+    {
+      "IconType": 2,
+      "X": 182,
+      "Y": 178,
+      "Color": "#7EC0f2"
+    },
+    {
+      "IconType": 2,
+      "X": 155,
+      "Y": 234,
+      "Color": "#106247"
+    },
+    {
+      "IconType": 2,
+      "X": 150,
+      "Y": 202,
+      "Color": "#1BE7ba"
+    },
+    {
+      "IconType": 2,
+      "X": 145,
+      "Y": 133,
+      "Color": "#FF0303"
+    },
+    {
+      "IconType": 2,
       "X": 78,
       "Y": 40,
       "Color": "#4F2B05"
-    },
-    {
-      "IconType": 2,
-      "X": 32,
-      "Y": 109,
-      "Color": "#0042ff"
-    },
-    {
-      "IconType": 2,
-      "X": 44,
-      "Y": 79,
-      "Color": "#FFFC00"
     },
     {
       "IconType": 2,
@@ -32,45 +56,21 @@
     },
     {
       "IconType": 2,
+      "X": 44,
+      "Y": 79,
+      "Color": "#FFFC00"
+    },
+    {
+      "IconType": 2,
+      "X": 32,
+      "Y": 109,
+      "Color": "#0042ff"
+    },
+    {
+      "IconType": 2,
       "X": 24,
       "Y": 168,
       "Color": "#550081"
-    },
-    {
-      "IconType": 2,
-      "X": 182,
-      "Y": 178,
-      "Color": "#7EC0f2"
-    },
-    {
-      "IconType": 2,
-      "X": 211,
-      "Y": 45,
-      "Color": "#21C000"
-    },
-    {
-      "IconType": 2,
-      "X": 201,
-      "Y": 77,
-      "Color": "#949697"
-    },
-    {
-      "IconType": 2,
-      "X": 145,
-      "Y": 133,
-      "Color": "#FF0303"
-    },
-    {
-      "IconType": 2,
-      "X": 150,
-      "Y": 202,
-      "Color": "#1BE7ba"
-    },
-    {
-      "IconType": 2,
-      "X": 155,
-      "Y": 234,
-      "Color": "#106247"
     }
   ]
 }

@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Daelin stands before the Hellfire Citadel, towering over the landscape like a twisted monument to the Orc's brutality. He vows that, this time, he won't merely drive the Orcs back - he'll lead his men to conquer these brutal lands and slaughter them all.";
 
     /// <inheritdoc/>

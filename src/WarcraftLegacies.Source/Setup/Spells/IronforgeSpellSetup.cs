@@ -1,15 +1,11 @@
 ﻿using MacroTools.PassiveAbilities;
 using MacroTools.PassiveAbilitySystem;
 using MacroTools.SpellSystem;
-using WarcraftLegacies.Source.Setup.FactionSetup;
 using WarcraftLegacies.Source.Spells;
 using static War3Api.Common;
 
 namespace WarcraftLegacies.Source.Setup.Spells
 {
-  /// <summary>
-  /// Responsible for setting up all <see cref="IronforgeSetup.Ironforge"/> <see cref="Spell"/>s and <see cref="PassiveAbility"/>s.
-  /// </summary>
   public static class IronforgeSpellSetup
   {
     /// <summary>

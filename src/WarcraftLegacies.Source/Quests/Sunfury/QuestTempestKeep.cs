@@ -60,7 +60,7 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "With food production now secured, we can settle Tempest Keep and start growing Ancients of the Arcane.";
 
     /// <inheritdoc/>

@@ -28,7 +28,7 @@ namespace WarcraftLegacies.Source.Quests.Naga
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Now that the South Alliance lies in ruin, Lady Vashj's champion Lord Naj'entus has joined Illidan's forces.";
 
     /// <inheritdoc/>

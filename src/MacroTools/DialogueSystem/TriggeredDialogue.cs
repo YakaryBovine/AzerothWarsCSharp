@@ -5,6 +5,7 @@ using MacroTools.Extensions;
 using MacroTools.FactionSystem;
 using MacroTools.ObjectiveSystem;
 using MacroTools.QuestSystem;
+using static War3Api.Common;
 
 namespace MacroTools.DialogueSystem
 {
@@ -20,7 +21,7 @@ namespace MacroTools.DialogueSystem
     
     internal List<Objective> Objectives { get; }
     
-    private readonly IEnumerable<Faction> _audience;
+    private readonly IEnumerable<Faction>? _audience;
     private readonly IHasPlayableDialogue _playableDialogue;
     private bool _inactive;
 
@@ -44,7 +45,12 @@ namespace MacroTools.DialogueSystem
 
     private void Complete()
     {
-      foreach (var player in _audience.Select(x => x.Player)) 
+      //Play audio to everyone if audience was not set.
+      var audience = _audience != null
+        ? _audience.Select(x => x.Player)
+        : WCSharp.Shared.Util.EnumeratePlayers(PLAYER_SLOT_STATE_PLAYING, MAP_CONTROL_USER);
+      
+      foreach (var player in audience) 
         player?.QueueDialogue(_playableDialogue);
 
       _inactive = true;
@@ -63,7 +69,7 @@ namespace MacroTools.DialogueSystem
     /// <param name="playableDialogue">The dialogue that will be played when the conditions are met.</param>
     /// <param name="objectives">When these are completed, the dialogue plays.</param>
     /// <param name="audience">A list of factions that can hear the dialogue being played.</param>
-    public TriggeredDialogue(IHasPlayableDialogue playableDialogue, IEnumerable<Faction> audience, 
+    public TriggeredDialogue(IHasPlayableDialogue playableDialogue, IEnumerable<Faction>? audience, 
       IEnumerable<Objective> objectives)
     {
       _playableDialogue = playableDialogue;

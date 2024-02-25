@@ -30,7 +30,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Vol'jin, foremost Shadow Hunter of the Darkspear Tribe, welcomes Thrall to his village with open arms. The trolls of the Echo Isles unanimously agree to join the new Horde.";
 
     /// <inheritdoc />

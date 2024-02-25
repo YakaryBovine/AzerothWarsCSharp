@@ -22,7 +22,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     }
     
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Jaina Proudmoore has discovered the Soul Gem within the ruined vaults at Scholomance.";
 
     /// <inheritdoc />

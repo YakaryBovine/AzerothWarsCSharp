@@ -35,8 +35,7 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
       _elvenRunestone = elvenRunestone;
       _silvermoon = silvermoon;
       _sunwell = sunwell;
-      AddObjective(new ObjectiveUnitIsDead(
-        preplacedUnitSystem.GetUnit(Constants.UNIT_O00O_CHIEFTAN_OF_THE_AMANI_TRIBE_CREEP_ZUL_AMAN)));
+      AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(Constants.UNIT_O06Z_ZUL_JIN_CREEP_ZUL_AMAN)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01V_ZUL_AMAN)));
       AddObjective(new ObjectiveControlPoint(ControlPointManager.Instance.GetFromUnitType(Constants.UNIT_N01L_EVERSONG_WOODS)));
       AddObjective(new ObjectiveUpgrade(Constants.UNIT_H03T_PALACE_QUEL_THALAS_T3, Constants.UNIT_H033_STEADING_QUEL_THALAS_T1));
@@ -49,7 +48,7 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Amani trolls have been eliminated, settling a racial feud that had persisted for millenia.";
 
     /// <inheritdoc />
@@ -73,12 +72,13 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
     /// <inheritdoc />
     protected override void OnComplete(Faction completingFaction)
     {
-      completingFaction.Player.RescueGroup(_rescueUnits);
+      completingFaction.Player
+        .RescueGroup(_rescueUnits)
+        .PlayMusicThematic("war3mapImported\\SilvermoonTheme.mp3");
+      
       if (UnitAlive(_elvenRunestone))
         _silvermoon.Unit?.SetInvulnerable(true);
       _sunwell.Unit?.SetInvulnerable(true);
-      if (GetLocalPlayer() == completingFaction.Player)
-        PlayThematicMusic("war3mapImported\\SilvermoonTheme.mp3");
     }
   }
 }

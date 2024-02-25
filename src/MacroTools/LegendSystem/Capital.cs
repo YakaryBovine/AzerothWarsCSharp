@@ -104,7 +104,8 @@ namespace MacroTools.LegendSystem
       if (Hivemind && OwningPlayer != null)
         PlayerDistributor.DistributePlayer(OwningPlayer);
       
-      DisplayTextToPlayer(GetLocalPlayer(), 0, 0, $"\n|cffffcc00CAPITAL DESTROYED|r\n{DeathMessage}");
+      foreach (var player in WCSharp.Shared.Util.EnumeratePlayers())
+        DisplayTextToPlayer(player, 0, 0, $"\n|cffffcc00CAPITAL DESTROYED|r\n{DeathMessage}");
     }
   }
 }

@@ -32,7 +32,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "Galen Trollbane has pledged his forces to Stormwind's cause.";
+    public override string RewardFlavour => "Galen Trollbane has pledged his forces to Stormwind's cause.";
 
     /// <inheritdoc />
     protected override string RewardDescription =>

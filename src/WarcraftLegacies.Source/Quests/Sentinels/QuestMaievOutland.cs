@@ -36,7 +36,7 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
     protected override string RewardDescription => "Control of Maiev's Outland outpost and moves Maiev to Outland";
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "Maiev's Outland outpost have been constructed.";
+    public override string RewardFlavour => "Maiev's Outland outpost have been constructed.";
 
     /// <inheritdoc/>
     protected override void OnComplete(Faction completingFaction)

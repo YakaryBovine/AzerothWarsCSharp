@@ -53,7 +53,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Lordaeron has been destroyed by the vile Scourge, leaving those left alive with naught but vengeance in their hearts. From the ashes rises the Scarlet Crusade, the untempered bright that will bring to the undying dead the wrath of the living.";
 
     /// <inheritdoc/>
@@ -77,7 +77,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
 
     private void AssignScarletCrusadeFaction(Faction completingFaction)
     {
-      var scarletCrusade = new ScarletCrusade(_artifactSetup, _allLegendSetup);
+      var scarletCrusade = new ScarletCrusade(_allLegendSetup);
       FactionManager.Register(scarletCrusade);
       scarletCrusade.CopyObjectLevelsFrom(completingFaction);
       completingFaction.Player?.SetFaction(scarletCrusade);
@@ -143,9 +143,7 @@ namespace WarcraftLegacies.Source.Quests.Lordaeron
 
       whichPlayer.AddGold(StartingGold);
       whichPlayer.AddLumber(StartingLumber);
-
-      if (GetLocalPlayer() == whichPlayer)
-        SetCameraPosition(20629, 10112);
+      whichPlayer.RepositionCamera(20629, 10112);
     }
   }
 }

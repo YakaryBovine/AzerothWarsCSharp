@@ -31,7 +31,7 @@ namespace WarcraftLegacies.Source.Quests.Zandalar
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Zul'gurub has fallen. The Gurubashi trolls lend their might to the Zandalari.";
 
     /// <inheritdoc/>

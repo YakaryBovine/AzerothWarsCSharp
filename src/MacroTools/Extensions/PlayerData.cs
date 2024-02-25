@@ -155,7 +155,9 @@ namespace MacroTools.Extensions
       }
     }
 
-    public PlayerSettings PlayerSettings => SaveManager.SavesByPlayer.ContainsKey(_player)? SaveManager.SavesByPlayer[_player]: CreateNewPlayerSettings();
+    internal PlayerSettings PlayerSettings => SaveManager.SavesByPlayer.ContainsKey(_player)
+      ? SaveManager.SavesByPlayer[_player]
+      : CreateNewPlayerSettings();
     
     /// <summary>
     ///   Controls name, available objects, color, and icon.

@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
     private readonly int _rewardArtifactItemTypeId;
 
     /// <inheritdoc />
-    protected override string RewardFlavour => 
+    public override string RewardFlavour => 
       $"After months of digging, excavating, and tomb raiding, the Explorer's Guild has finally unearthed an artifact from Ul'dum: {GetObjectName(_rewardArtifactItemTypeId)}.";
 
     /// <inheritdoc />

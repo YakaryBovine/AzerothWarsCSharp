@@ -39,7 +39,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Jaina Proudmoore abandons the once mighty city of Dalaran and leads her people across the sea, arriving in the untamed lands of Kalimdor.";
 
     /// <inheritdoc />
@@ -47,7 +47,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
       "Gain control of all units at Theramore and teleport all of your units within Dalaran to Theramore. Dalaran becomes hostile";
 
     /// <inheritdoc />
-    protected override string PenaltyFlavour =>
+    public override string PenaltyFlavour =>
       "Dalaran has fallen. Those who managed to survive its destruction travel west, to the distant lands of Kalimdor. They hope that this new world will treat them more kindly than the one they left behind.";
 
     /// <inheritdoc />

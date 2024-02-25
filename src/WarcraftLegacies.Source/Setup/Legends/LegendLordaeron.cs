@@ -3,7 +3,6 @@ using MacroTools;
 using MacroTools.ArtifactSystem;
 using MacroTools.Extensions;
 using MacroTools.LegendSystem;
-using WarcraftLegacies.Source.Setup.FactionSetup;
 using WCSharp.Shared.Data;
 using static War3Api.Common;
 
@@ -80,25 +79,6 @@ namespace WarcraftLegacies.Source.Setup.Legends
         new Point(8638, 9342)));
       CapitalPalace.AddProtector(preplacedUnitSystem.GetUnit(Constants.UNIT_H007_IMPROVED_CANNON_TOWER_LORDAERON_TOWER,
         new Point(9545, 9372)));
-      
-      CreateTrigger()
-        .RegisterUnitEvent(CapitalPalace.Unit, EVENT_UNIT_CHANGE_OWNER)
-        .AddAction(() =>
-        {
-          var lordaeronPlayer = LordaeronSetup.Lordaeron.Player;
-          if (lordaeronPlayer.GetTeam()?.Contains(GetOwningPlayer(GetTriggerUnit())) == true){
-          return;
-          }
-          Terenas.Unit.Kill();
-          SetDoodadAnimation(Regions.King_Arthas_crown.Center.X, Regions.King_Arthas_crown.Center.Y, 200,
-            FourCC("Ysaw"), false, "hide", false);
-          SetDoodadAnimation(Regions.King_Arthas_crown.Center.X, Regions.King_Arthas_crown.Center.Y, 200,
-            FourCC("D044"), false, "hide", false);
-          SetDoodadAnimation(Regions.King_Arthas_crown.Center.X, Regions.King_Arthas_crown.Center.Y, 200,
-            FourCC("YObb"), false, "hide", false);
-          SetDoodadAnimationRect(Regions.Terenas.Rect, FourCC("YScr"), "show", false);
-          DestroyTrigger(GetTriggeringTrigger());
-        });
 
       Stratholme = new Capital
       {

@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Darkshire has been liberated, and its military is now free to assist Stormwind.";
 
     /// <inheritdoc/>

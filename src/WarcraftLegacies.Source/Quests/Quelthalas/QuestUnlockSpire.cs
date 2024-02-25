@@ -33,7 +33,7 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "Sylvanas has been trained, the Spire has joined the Kingdom.";
+    public override string RewardFlavour => "Sylvanas has been trained, the Spire has joined the Kingdom.";
 
     /// <inheritdoc />
     protected override string RewardDescription => "Control of the Windrunner Spire";

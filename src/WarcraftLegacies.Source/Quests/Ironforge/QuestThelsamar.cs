@@ -13,13 +13,13 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
 {
   public sealed class QuestThelsamar : QuestData
   {
-    private readonly List<unit> _rescueUnits = new();
+    private readonly List<unit> _rescueUnits;
 
     public QuestThelsamar(PreplacedUnitSystem preplacedUnitSystem, Rectangle rescueRect) : base("Murloc Menace",
       "A vile group of Murloc is terrorizing Thelsamar. Destroy them!",
       @"ReplaceableTextures\CommandButtons\BTNMurlocNightCrawler.blp")
     {
-      AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(FourCC("N089"))));
+      AddObjective(new ObjectiveUnitIsDead(preplacedUnitSystem.GetUnit(Constants.UNIT_N0D1_MURLOC_SORCERER_CREEP_LOCH_MODAN)));
       AddObjective(new ObjectiveExpire(600, Title));
       AddObjective(new ObjectiveSelfExists());
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.Invulnerable);
@@ -27,7 +27,7 @@ namespace WarcraftLegacies.Source.Quests.Ironforge
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "The Murlocs have been defeated, Thelsamar will join your cause.";
+    public override string RewardFlavour => "The Murlocs have been defeated, Thelsamar will join your cause.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Control of all units in Thelsamar";

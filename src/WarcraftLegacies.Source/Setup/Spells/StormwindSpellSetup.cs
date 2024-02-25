@@ -41,7 +41,7 @@ namespace WarcraftLegacies.Source.Setup.Spells
       {
         DummyAbilityId = Constants.ABILITY_A130_RESURRECTION_STORMWIND_CHAMPION_SINGLE,
         DummyAbilityOrderId = OrderId("resurrection"),
-    });
+      });
     }
   }
 }

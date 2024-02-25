@@ -32,7 +32,7 @@ namespace WarcraftLegacies.Source.Quests.Goblin
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "Our trade empire has grown large enough to earn the attention of the Trade Princes of Kezan. Their investments are already flowing in and we can deploy traders all over the world.";
+    public override string RewardFlavour => "Our trade empire has grown large enough to earn the attention of the Trade Princes of Kezan. Their investments are already flowing in and we can deploy traders all over the world.";
 
     /// <inheritdoc />
     protected override string RewardDescription => "You can now train Traders";

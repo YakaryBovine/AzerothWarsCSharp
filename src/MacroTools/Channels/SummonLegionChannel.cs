@@ -23,7 +23,8 @@ namespace MacroTools.Channels
       TimerDialogDisplay(_timerDialog, true);
       TimerDialogSetTitle(_timerDialog, "Legion Summon");
       PingMinimap(GetUnitX(Caster), GetUnitY(Caster), 8);
-      DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "The Burning Legion is being summoned!");
+      foreach (var player in WCSharp.Shared.Util.EnumeratePlayers())
+        DisplayTextToPlayer(player, 0, 0, "The Burning Legion is being summoned!");
     }
 
     /// <inheritdoc />

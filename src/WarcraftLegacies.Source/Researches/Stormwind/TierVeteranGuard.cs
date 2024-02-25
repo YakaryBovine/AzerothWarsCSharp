@@ -1,7 +1,7 @@
-﻿using MacroTools.FactionSystem;
-using WarcraftLegacies.Source.Setup.FactionSetup;
+﻿using MacroTools.Extensions;
+using MacroTools.FactionSystem;
 using WCSharp.Events;
-
+using static War3Api.Common;
 
 namespace WarcraftLegacies.Source.Researches.Stormwind
 {
@@ -9,8 +9,8 @@ namespace WarcraftLegacies.Source.Researches.Stormwind
   {
     private static void Research()
     {
-      StormwindSetup.Stormwind.ModObjectLimit(Constants.UNIT_H03K_MARSHAL_STORMWIND, -Faction.UNLIMITED);
-      StormwindSetup.Stormwind.ModObjectLimit(Constants.UNIT_H03U_REAR_MARSHAL_STORMWIND_DEFENSIVE, 12);
+      GetTriggerPlayer().GetFaction()?.ModObjectLimit(Constants.UNIT_H03K_MARSHAL_STORMWIND, -Faction.UNLIMITED);
+      GetTriggerPlayer().GetFaction()?.ModObjectLimit(Constants.UNIT_H03U_REAR_MARSHAL_STORMWIND_DEFENSIVE, 12);
     }
 
     public static void Setup()

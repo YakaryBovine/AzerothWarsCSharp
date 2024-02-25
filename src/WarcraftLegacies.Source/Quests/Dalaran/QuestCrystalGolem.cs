@@ -21,7 +21,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "Dalaran's Earth Golems have been infused with living crystal.";
+    public override string RewardFlavour => "Dalaran's Earth Golems have been infused with living crystal.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Transform your Earth Golems into Crystal Golems";

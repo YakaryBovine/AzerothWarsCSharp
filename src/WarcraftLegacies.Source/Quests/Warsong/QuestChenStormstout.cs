@@ -25,7 +25,7 @@ namespace WarcraftLegacies.Source.Quests.Warsong
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "Chen Stormstout has joined the Warsong as a mercenary!";
+    public override string RewardFlavour => "Chen Stormstout has joined the Warsong as a mercenary!";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "The hero Chen Stormstout is now trainable at the Altar";

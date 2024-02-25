@@ -23,7 +23,7 @@ namespace WarcraftLegacies.Source.Quests.KulTiras
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Kul Tiran outpost in Westfall has been completed. In the mean time, the Ember Order has cleansed House Waycrest of their Drust influence. Meredith Waycrest has been released from her pact, and may now join the war effort.";
 
     /// <inheritdoc/>

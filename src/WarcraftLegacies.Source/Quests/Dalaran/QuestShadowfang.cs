@@ -36,7 +36,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Shadowfang has been liberated, and its military is now free to assist Dalaran.";
 
     /// <inheritdoc />

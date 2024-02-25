@@ -31,8 +31,7 @@ namespace WarcraftLegacies.Source.Spells
       if (oilPower == null) 
         return;
       foreach (var oilDeposit in oilPower.GetAllOilPools())
-        if (GetLocalPlayer() == caster.OwningPlayer())
-          PingMinimapEx(oilDeposit.Position.X, oilDeposit.Position.Y, Duration, 255, 255, 255, false);
+        caster.OwningPlayer().PingMinimapSimple(oilDeposit.Position.X, oilDeposit.Position.Y, Duration);
     }
   }
 }

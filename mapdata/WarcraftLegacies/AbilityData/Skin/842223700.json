@@ -1,0 +1,45 @@
+{
+  "OldId": 1718764353,
+  "NewId": 842223700,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Id": 1953653089,
+      "Type": 3,
+      "Value": "ReplaceableTextures/CommandButtons/BTNFlameStorm.blp"
+    },
+    {
+      "Id": 2020631137,
+      "Value": 1
+    },
+    {
+      "Id": 1718840929,
+      "Type": 3,
+      "Value": "(Eredar Warlock)"
+    },
+    {
+      "Id": 2037082209,
+      "Type": 3,
+      "Value": "W"
+    },
+    {
+      "Level": 1,
+      "Id": 828536161,
+      "Type": 3,
+      "Value": "Calls down \u003CTP32:ACrf,DataA1\u003E individual firebolts from the sky igniting units, affected units take \u003CTP32:ACrf,DataE1\u003E damage per second for \u003CTP32:ACrf,Dur1\u003E seconds."
+    },
+    {
+      "Id": 1835101793,
+      "Type": 3,
+      "Value": "Firestorm"
+    },
+    {
+      "Level": 1,
+      "Id": 829453409,
+      "Type": 3,
+      "Value": "Firestorm"
+    }
+  ]
+}

@@ -24,8 +24,8 @@ namespace WarcraftLegacies.Source.GameLogic
         foreach (var player in WCSharp.Shared.Util.EnumeratePlayers())
         {
           var playerFaction = player.GetFaction();
-          if (playerFaction != null && player.GetFaction()?.StartingQuest != null && GetLocalPlayer() == player)
-            playerFaction.StartingQuest?.DisplayDiscovered(playerFaction);
+          if (playerFaction?.StartingQuest != null)
+            playerFaction.DisplayDiscovered(playerFaction.StartingQuest);
         }
       });
     }

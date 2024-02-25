@@ -30,7 +30,7 @@ namespace WarcraftLegacies.Source.Quests.Gilneas
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "Tempest Reach has been liberated.";
+    public override string RewardFlavour => "Tempest Reach has been liberated.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Control of all buildings in Tempest Reach.";

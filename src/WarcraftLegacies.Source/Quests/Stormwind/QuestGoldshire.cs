@@ -34,7 +34,7 @@ namespace WarcraftLegacies.Source.Quests.Stormwind
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "The Gnolls have been defeated, Goldshire is safe.";
+    public override string RewardFlavour => "The Gnolls have been defeated, Goldshire is safe.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Control of all units in Goldshire";

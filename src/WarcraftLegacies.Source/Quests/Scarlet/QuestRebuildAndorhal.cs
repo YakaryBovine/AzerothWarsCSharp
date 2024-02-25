@@ -27,7 +27,7 @@ namespace WarcraftLegacies.Source.Quests.Scarlet
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Survivors from Lordaeron's fall are once more pouring into Andorhal. Eagles and Gryphons from Aerie Peak soar down to the renewed agricultural center to enjoy its renewed production.";
 
     /// <inheritdoc/>

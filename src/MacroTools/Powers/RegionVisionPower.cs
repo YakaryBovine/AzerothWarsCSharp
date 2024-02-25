@@ -13,7 +13,7 @@ namespace MacroTools.Powers
     private readonly List<fogmodifier> _fogModifiers = new();
     private readonly IEnumerable<Rectangle> _visionRects;
 
-    public RegionVisionPower(string name, string description, string iconName, IEnumerable<Rectangle> visionRects)
+    public RegionVisionPower(string name, string description, IEnumerable<Rectangle> visionRects)
     {
       Name = name;
       Description = description;

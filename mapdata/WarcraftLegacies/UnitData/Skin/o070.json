@@ -1,0 +1,107 @@
+{
+  "OldId": 1634493007,
+  "NewId": 808923247,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Id": 1868786037,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNBronzeDragon.blp"
+    },
+    {
+      "Id": 1953980789,
+      "Type": 3,
+      "Value": "Revive |cffffcc00A|rmani Warlord"
+    },
+    {
+      "Id": 1651270517,
+      "Value": 120
+    },
+    {
+      "Id": 1718840949,
+      "Type": 3,
+      "Value": "(Creep-Caverns)"
+    },
+    {
+      "Id": 1818520949,
+      "Type": 3,
+      "Value": "units\\creeps\\BronzeDragon\\BronzeDragon.mdl"
+    },
+    {
+      "Id": 1735156597,
+      "Value": 180
+    },
+    {
+      "Id": 1935763573,
+      "Type": 3,
+      "Value": ""
+    },
+    {
+      "Id": 1831952757,
+      "Type": 3,
+      "Value": "Abilities\\Weapons\\ChimaeraLightningMissile\\ChimaeraLightningMissile.mdl"
+    },
+    {
+      "Id": 1633907573,
+      "Type": 1,
+      "Value": 2
+    },
+    {
+      "Id": 1835101813,
+      "Type": 3,
+      "Value": "Occulus"
+    },
+    {
+      "Id": 1869770869,
+      "Type": 3,
+      "Value": "Occulus"
+    },
+    {
+      "Id": 1919972469,
+      "Type": 3,
+      "Value": "Revive Amani Warlord"
+    },
+    {
+      "Id": 1668510581,
+      "Type": 1,
+      "Value": 3
+    },
+    {
+      "Id": 2053927797,
+      "Type": 1,
+      "Value": 230
+    },
+    {
+      "Id": 1751675765,
+      "Type": 1,
+      "Value": 300
+    },
+    {
+      "Id": 2003334005,
+      "Type": 1,
+      "Value": 300
+    },
+    {
+      "Id": 2020111221,
+      "Type": 1,
+      "Value": 150
+    },
+    {
+      "Id": 2036888437,
+      "Type": 1,
+      "Value": 150
+    },
+    {
+      "Id": 1885959285,
+      "Type": 3,
+      "Value": "Summon |cffffcc00A|rmani Warlord"
+    },
+    {
+      "Id": 1684960117,
+      "Type": 3,
+      "Value": "AzureDragon"
+    }
+  ]
+}

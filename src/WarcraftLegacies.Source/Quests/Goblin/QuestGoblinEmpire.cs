@@ -22,7 +22,7 @@ namespace WarcraftLegacies.Source.Quests.Goblin
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => "With all the Goblin towns united, a new empire rises!";
+    public override string RewardFlavour => "With all the Goblin towns united, a new empire rises!";
 
     /// <inheritdoc/>
     protected override string RewardDescription => "Unlock the Intercontinental Artillery";

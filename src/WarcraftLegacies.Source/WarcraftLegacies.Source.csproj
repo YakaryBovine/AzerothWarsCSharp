@@ -11,16 +11,5 @@
         <ProjectReference Include="..\MacroTools\MacroTools.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-        <PackageReference Include="War3Api.Common" Version="1.33.0" />
-        <PackageReference Include="WCSharp.Buffs" Version="2.2.0" />
-        <PackageReference Include="WCSharp.Effects" Version="2.2.0" />
-        <PackageReference Include="WCSharp.Events" Version="2.2.0" />
-        <PackageReference Include="WCSharp.Json" Version="2.2.0" />
-        <PackageReference Include="WCSharp.Lightnings" Version="2.2.0" />
-        <PackageReference Include="WCSharp.Missiles" Version="2.2.0" />
-        <PackageReference Include="WCSharp.SaveLoad" Version="2.2.0" />
-        <PackageReference Include="WCSharp.Shared" Version="2.2.0" />
-    </ItemGroup>
 
 </Project>

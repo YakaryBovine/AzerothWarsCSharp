@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.Sunfury
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "Extensive study of Murmur's essence has granted Solarion the power to channel void energies.";
 
     /// <inheritdoc />

@@ -1,0 +1,29 @@
+{
+  "OldId": 1685212738,
+  "NewId": 909332564,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Id": 1835101798,
+      "Type": 3,
+      "Value": "Felfire"
+    },
+    {
+      "Id": 1953653094,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNFelFlameStorm.blp"
+    },
+    {
+      "Id": 1700951398,
+      "Type": 3,
+      "Value": "This unit was hit by Felfire; it will take damage over time."
+    },
+    {
+      "Id": 1885959270,
+      "Type": 3,
+      "Value": "Felfire"
+    }
+  ]
+}

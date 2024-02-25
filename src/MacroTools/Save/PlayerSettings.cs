@@ -3,7 +3,7 @@ using WCSharp.SaveLoad;
 
 namespace MacroTools.Save
 {
-  public sealed class PlayerSettings : Saveable
+  internal sealed class PlayerSettings : Saveable
   {
     private int? _camDistance;
     
@@ -12,10 +12,11 @@ namespace MacroTools.Save
       get => _camDistance ?? 2400;
       set => _camDistance = Math.Clamp(value, 700, 2701);
     }
-    public bool ShowQuestText { get; set; } = true;
     
-    public bool PlayDialogue { get; set; } = true;
+    internal bool ShowQuestText { get; set; } = true;
     
-    public bool ShowCaptions { get; set; } = true;
+    internal bool PlayDialogue { get; set; } = true;
+    
+    internal bool ShowCaptions { get; set; } = true;
   }
 }

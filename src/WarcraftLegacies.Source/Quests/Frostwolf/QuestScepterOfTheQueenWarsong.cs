@@ -43,7 +43,7 @@ namespace WarcraftLegacies.Source.Quests.Frostwolf
     private readonly ObjectiveAnyUnitInRect _anyUnitInRect;
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Highborne are no longer implicitly defended by the Night Elven presence at Feathermoon Stronghold. The Horde unleashes their full might against these Night Elven arcanists.";
 
     /// <inheritdoc/>

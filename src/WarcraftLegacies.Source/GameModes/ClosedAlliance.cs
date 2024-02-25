@@ -14,8 +14,9 @@ namespace WarcraftLegacies.Source.GameModes
     /// <inheritdoc />
     public void OnChoose()
     {
-      DisplayTextToPlayer(GetLocalPlayer(), 0, 0,
-        "Open alliances are disabled; only Quests can change your alliance.");
+      foreach (var player in WCSharp.Shared.Util.EnumeratePlayers())
+        DisplayTextToPlayer(player, 0, 0, "Open alliances are disabled; only Quests can change your alliance.");
+      
       Hint.Register(new Hint("You can leave your current alliances by typing -unally, but you won't be able to join a new one."));
       SetupControlPointVictory();
       UnallyCommand.Setup();

@@ -4,13 +4,14 @@ using MacroTools.ObjectiveSystem.Objectives.MetaBased;
 using MacroTools.ObjectiveSystem.Objectives.TimeBased;
 using MacroTools.ObjectiveSystem.Objectives.UnitBased;
 using MacroTools.QuestSystem;
-using WarcraftLegacies.Source.Setup.FactionSetup;
 using static War3Api.Common;
 
 namespace WarcraftLegacies.Source.Quests.Fel_Horde
 {
   public sealed class QuestDarkPortal : QuestData
   {
+    private readonly Faction _stormwind;
+    private readonly Faction _illidari;
     private readonly unit _innerWaygate1;
     private readonly unit _innerWaygate2;
     private readonly unit _innerWaygate3;
@@ -27,12 +28,16 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
     /// <param name="outerWaygate1">A Waygate outside outland, next to the Dark Portal.</param>
     /// <param name="outerWaygate2">A Waygate outside outland, next to the Dark Portal.</param>
     /// <param name="outerWaygate3">A Waygate outside outland, next to the Dark Portal.</param>
+    /// <param name="stormwind">Affects the reward flavour.</param>
+    /// <param name="illidari">Affects the reward flavour.</param>
     public QuestDarkPortal(unit innerWaygate1, unit innerWaygate2, unit innerWaygate3, unit outerWaygate1,
-      unit outerWaygate2, unit outerWaygate3)
+      unit outerWaygate2, unit outerWaygate3, Faction stormwind, Faction illidari)
       : base("The Dark Portal",
         "Following the Second War, the archmage Khadgar and his fellow magi sealed the Dark Portal so that it would never again be used to threaten Azeroth. Little did they know that their magicks were only temporary, and that the portal would open again in time.",
         @"ReplaceableTextures\CommandButtons\BTNDarkPortal.blp")
     {
+      _stormwind = stormwind;
+      _illidari = illidari;
       _innerWaygate1 = innerWaygate1.Show(false);
       _innerWaygate2 = innerWaygate2.Show(false);
       _innerWaygate3 = innerWaygate3.Show(false);
@@ -47,15 +52,15 @@ namespace WarcraftLegacies.Source.Quests.Fel_Horde
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour
+    public override string RewardFlavour
     {
       get
       {
         var flavour = "The Dark Portal, previously thought to have been sealed forever, has been opened once more.";
-        if (StormwindSetup.Stormwind?.ScoreStatus != ScoreStatus.Defeated)
+        if (_stormwind.ScoreStatus != ScoreStatus.Defeated)
           flavour +=
             " The people of Stormwind are about to relive their worst nightmares, as the demonic Fel Horde spills forth from Outland to resume their slaughterous rampage.";
-        else if (IllidariSetup.Illidari?.ScoreStatus != ScoreStatus.Defeated)
+        else if (_illidari.ScoreStatus != ScoreStatus.Defeated)
           flavour +=
             " Illidan's forces brace themselves, ready to visit destruction upon Azeroth in the name of their new master.";
         else

@@ -36,7 +36,7 @@ namespace WarcraftLegacies.Source.Quests.Goblin
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       $"{_enterRatchetRegion.CompletingUnitName} and his cronies have established the city of Ratchet, an ostensibly neutral port populated by smugglers and outcasts.";
 
     /// <inheritdoc />

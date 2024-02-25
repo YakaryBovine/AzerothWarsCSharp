@@ -1,6 +1,5 @@
 ﻿using MacroTools.CommandSystem;
 using MacroTools.Extensions;
-using MacroTools.FactionSystem;
 using MacroTools.ShoreSystem;
 using static War3Api.Common;
 
@@ -39,9 +38,6 @@ namespace MacroTools.Cheats
 
       foreach (var unit in CreateGroup().EnumUnitsInRect(WCSharp.Shared.Data.Rectangle.WorldBounds).EmptyToList())
         unit.Remove();
-
-      cheater.SetFaction(new Faction("Dummy", PLAYER_COLOR_COAL, "", ""));
-      cheater.SetTeam(new Team("Dummy"));
 
       var newFogModifier = CreateFogModifierRect(cheater, FOG_OF_WAR_VISIBLE,
         WCSharp.Shared.Data.Rectangle.WorldBounds.Rect, true, true);

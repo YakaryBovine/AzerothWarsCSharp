@@ -25,7 +25,7 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
     }
 
     /// <inheritdoc />
-    protected override string RewardFlavour => "We have uncovered the technology to build arcane weaponry";
+    public override string RewardFlavour => "We have uncovered the technology to build arcane weaponry";
 
     /// <inheritdoc />
     protected override string RewardDescription =>

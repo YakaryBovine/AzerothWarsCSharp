@@ -66,12 +66,12 @@ namespace WarcraftLegacies.Source.Quests
       : "The Book of Medivh";
 
     /// <inheritdoc/>
-    protected override string RewardFlavour => _bypassLevelRequirement
+    public override string RewardFlavour => _bypassLevelRequirement
       ? $"{_objectiveWithCompletingUnit.CompletingUnitName} has retrieved the Book of Medivh from its pedestal. With its power, we can summon the full might of the Burning Legion from the depths of the Twisting Nether."
       : $"{_objectiveWithCompletingUnit.CompletingUnitName} has retrieved the Book of Medivh from its pedestal, and now prepares to harness its untold power.";
 
     /// <inheritdoc/>
-    protected override string PenaltyFlavour => 
+    public override string PenaltyFlavour => 
       "Another faction has retrieved the Book of Medivh from its pedestal. Hopefully they do not turn its nefarious power against us.";
 
     /// <inheritdoc/>

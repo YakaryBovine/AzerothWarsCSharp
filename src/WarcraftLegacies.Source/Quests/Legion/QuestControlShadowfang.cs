@@ -16,7 +16,7 @@ namespace WarcraftLegacies.Source.Quests.Legion
     }
     
     /// <inheritdoc/>
-    protected override string RewardFlavour => "Shadowfang Keep is now under the Legion control. A secret demon gate has now been formed inside.";
+    public override string RewardFlavour => "Shadowfang Keep is now under the Legion control. A secret demon gate has now been formed inside.";
 
     /// <inheritdoc/>
     protected override string RewardDescription => $"Learn to train troops from Shadowfang Keep, and learn to build 1 more {GetObjectName(Constants.UNIT_N04Q_NETHER_PIT_LEGION_BARRACKS)}";

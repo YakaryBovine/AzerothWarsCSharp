@@ -21,7 +21,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Nexus has been captured. The Blue Dragonflight fights for Dalaran.";
 
     /// <inheritdoc/>

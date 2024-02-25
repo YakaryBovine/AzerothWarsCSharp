@@ -14,7 +14,9 @@ namespace WarcraftLegacies.Source.GameModes
     /// <inheritdoc />
     public void OnChoose()
     {
-      DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "Alliances are open!");
+      foreach (var player in WCSharp.Shared.Util.EnumeratePlayers())
+        DisplayTextToPlayer(player, 0, 0, "Alliances are open!");
+      
       SetupAllianceCommands();
       SetupControlPointVictory();
     }

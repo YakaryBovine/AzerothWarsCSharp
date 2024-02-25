@@ -24,7 +24,7 @@ namespace WarcraftLegacies.Source.Quests.Sentinels
     }
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The Warsong presence on Kalimdor has been eliminated. The land has been protected from their misbegotten race.";
 
     /// <inheritdoc/>

@@ -39,11 +39,11 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
     }
 
     /// <inheritdoc />
-    protected override string PenaltyFlavour =>
+    public override string PenaltyFlavour =>
       "The Sunwell has fallen. The survivors escape into the Hinterlands and find refuge at Quel'Danil Lodge.";
 
     /// <inheritdoc/>
-    protected override string RewardFlavour =>
+    public override string RewardFlavour =>
       "The rangers of Quel'danil have been reunited with the forces of Quel'thalas.";
 
     /// <inheritdoc/>
@@ -68,9 +68,8 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
       
       if (completingFaction.ScoreStatus == ScoreStatus.Defeated)
         return;
-      
-      if (GetLocalPlayer() == completingFaction.Player)
-        SetCameraPosition(_rescueRect.Center.X, _rescueRect.Center.Y);
+
+      completingFaction.Player?.RepositionCamera(_rescueRect.Center.X, _rescueRect.Center.Y);
       CreateSecondChanceUnits(completingFaction);
       completingFaction.Player?.AddGold(GoldOnFail);
       completingFaction.Player?.AddLumber(LumberOnFail);

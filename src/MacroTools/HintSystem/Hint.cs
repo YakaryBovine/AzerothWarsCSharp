@@ -29,7 +29,8 @@ namespace MacroTools.HintSystem
 
     private void Display()
     {
-      GetLocalPlayer().DisplayHint(_msg);
+      foreach (var player in WCSharp.Shared.Util.EnumeratePlayers())
+        player.DisplayHint(_msg);
       Unread.Remove(this);
     }
 
