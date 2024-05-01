@@ -38,6 +38,7 @@ namespace TestMap.Source.Setup
         new BasicResearch(FourCC("Rhri"), 30),
         new BasicResearch(FourCC("Rhde"), 30)
       );
+      BurrowPrototype.Setup();
     }
   }
 }
