@@ -67,6 +67,18 @@ namespace Launcher.IntegrityChecker.TestSupport
         case ChaosRaider ability:
           RemoveWithChildren(ability);
           break;
+        case EtherealForm ability:
+          RemoveWithChildren(ability);
+          break;
+        case CorporealForm ability:
+          RemoveWithChildren(ability);
+          break;
+        case SentryWard ability:
+          RemoveWithChildren(ability);
+          break;
+        case SentryWardItem ability:
+          RemoveWithChildren(ability);
+          break;
         case Ability ability:
           RemoveWithChildren(ability);
           break;
@@ -197,6 +209,54 @@ namespace Launcher.IntegrityChecker.TestSupport
       for (var i = 0; i < ability.StatsLevels; i++)
       {
         RemoveWithChildren(ability.DataNewUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(EtherealForm ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataAlternateFormUnit[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(CorporealForm ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataAlternateFormUnit[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(SentryWard ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataWardUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(SentryWardItem ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataWardUnitType[i]);
       }
     }
     
