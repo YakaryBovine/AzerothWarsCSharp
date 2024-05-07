@@ -79,6 +79,9 @@ namespace Launcher.IntegrityChecker.TestSupport
         case SentryWardItem ability:
           RemoveWithChildren(ability);
           break;
+        case StasisTrap ability:
+          RemoveWithChildren(ability);
+          break;
         case Ability ability:
           RemoveWithChildren(ability);
           break;
@@ -249,6 +252,18 @@ namespace Launcher.IntegrityChecker.TestSupport
     }
     
     private void RemoveWithChildren(SentryWardItem ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataWardUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(StasisTrap ability)
     {
       if (!Abilities.Contains(ability))
         return;
