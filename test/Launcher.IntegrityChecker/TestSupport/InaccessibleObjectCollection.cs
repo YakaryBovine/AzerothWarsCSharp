@@ -109,6 +109,45 @@ namespace Launcher.IntegrityChecker.TestSupport
         case BurrowScarabLvl3 ability:
           RemoveWithChildren(ability);
           break;
+        case Graveyard ability:
+          RemoveWithChildren(ability);
+          break;
+        case Exhume ability:
+          RemoveWithChildren(ability);
+          break;
+        case AvengerForm ability:
+          RemoveWithChildren(ability);
+          break;
+        case PlagueToss ability:
+          RemoveWithChildren(ability);
+          break;
+        case AuraPlagueAbomination ability:
+          RemoveWithChildren(ability);
+          break;
+        case AuraPlagueCreep ability:
+          RemoveWithChildren(ability);
+          break;
+        case AuraPlagueAnimatedDead ability:
+          RemoveWithChildren(ability);
+          break;
+        case AuraPlagueCreepGfx ability:
+          RemoveWithChildren(ability);
+          break;
+        case AuraPlaguePlagueWard ability:
+          RemoveWithChildren(ability);
+          break;
+        case RaiseDead ability:
+          RemoveWithChildren(ability);
+          break;
+        case RaiseDeadCreep ability:
+          RemoveWithChildren(ability);
+          break;
+        case RaiseDeadItem ability:
+          RemoveWithChildren(ability);
+          break;
+        case StoneForm ability:
+          RemoveWithChildren(ability);
+          break;
         case Ability ability:
           RemoveWithChildren(ability);
           break;
@@ -459,6 +498,165 @@ namespace Launcher.IntegrityChecker.TestSupport
     }
     
     private void RemoveWithChildren(BurrowScarabLvl3 ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataAlternateFormUnit[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(Graveyard ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataCorpseUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(Exhume ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(AvengerForm ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataAlternateFormUnit[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(PlagueToss ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataWardUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(AuraPlagueAbomination ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataPlagueWardUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(AuraPlagueCreep ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataPlagueWardUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(AuraPlagueAnimatedDead ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataPlagueWardUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(AuraPlagueCreepGfx ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataPlagueWardUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(AuraPlaguePlagueWard ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataPlagueWardUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(RaiseDead ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataUnitTypeOne[i]);
+        RemoveWithChildren(ability.DataUnitTypeTwo[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(RaiseDeadCreep ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataUnitTypeOne[i]);
+        RemoveWithChildren(ability.DataUnitTypeTwo[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(RaiseDeadItem ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataUnitTypeOne[i]);
+        RemoveWithChildren(ability.DataUnitTypeTwo[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(StoneForm ability)
     {
       if (!Abilities.Contains(ability))
         return;
