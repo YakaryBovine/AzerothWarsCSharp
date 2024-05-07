@@ -14,11 +14,23 @@ namespace Launcher.Extensions
         PurchaseItem or LightningAttack or Inventory or AttributeModifierSkill);
     }
     
-    public static IEnumerable<Tech> GetTechtreeRequirementsSafe(this Ability unit)
+    public static IEnumerable<Unit> GetUnitSkinListSafe(this Ability ability)
     {
       try
       {
-        return unit.TechtreeRequirements;
+        return ability.DataUnitSkinList;
+      }
+      catch
+      {
+        return Array.Empty<Unit>();
+      }
+    }
+    
+    public static IEnumerable<Tech> GetTechtreeRequirementsSafe(this Ability ability)
+    {
+      try
+      {
+        return ability.TechtreeRequirements;
       }
       catch
       {

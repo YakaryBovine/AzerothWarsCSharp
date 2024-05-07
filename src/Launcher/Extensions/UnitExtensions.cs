@@ -16,7 +16,7 @@ namespace Launcher.Extensions
     {
       return unit.GetTechtreeRequirementsSafe().Any(x => x.IsUpgradeSafe());
     }
-
+    
     public static IEnumerable<Ability> GetUnitAbilitiesSafe(this Unit unit)
     {
       try

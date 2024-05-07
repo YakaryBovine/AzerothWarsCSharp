@@ -22,6 +22,17 @@ namespace Launcher.IntegrityChecker.TestSupport
       Abilities = abilities;
     }
 
+    /// <summary>
+    /// Returns all <see cref="BaseObject"/>s in the collection.
+    /// </summary>
+    public List<BaseObject> GetAllObjects()
+    {
+      var objects = new List<BaseObject>();
+      objects.AddRange(Units);
+      objects.AddRange(Upgrades);
+      return objects;
+    }
+    
     public void RemoveWithChildren(BaseObject baseObject)
     {
       switch (baseObject)
@@ -34,6 +45,12 @@ namespace Launcher.IntegrityChecker.TestSupport
           break;
         case ArchMageWaterElemental summonWaterElemental:
           RemoveWithChildren(summonWaterElemental);
+          break;
+        case SummonSeaElemental ability:
+          RemoveWithChildren(ability);
+          break;
+        case Ability ability:
+          RemoveWithChildren(ability);
           break;
       }
     }
@@ -80,16 +97,29 @@ namespace Launcher.IntegrityChecker.TestSupport
         RemoveWithChildren(archmageWaterElemental.DataSummonedUnitType[i]);
       }
     }
-
-    /// <summary>
-    /// Returns all <see cref="BaseObject"/>s in the collection.
-    /// </summary>
-    public List<BaseObject> GetAllObjects()
+    
+    private void RemoveWithChildren(SummonSeaElemental ability)
     {
-      var objects = new List<BaseObject>();
-      objects.AddRange(Units);
-      objects.AddRange(Upgrades);
-      return objects;
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataSummonedUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(Ability ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      foreach (var unit in ability.GetUnitSkinListSafe())
+      {
+        RemoveWithChildren(unit);
+      }
     }
     
     private void RemoveWithChildren(Upgrade upgrade)
