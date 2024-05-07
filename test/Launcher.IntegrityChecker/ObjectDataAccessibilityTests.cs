@@ -41,9 +41,9 @@ namespace Launcher.IntegrityChecker
       
       var exceptionMessageBuilder = new StringBuilder();
       exceptionMessageBuilder.AppendLine(
-        $"There is no way to acquire the following {_inaccesibleObjects.Units.Count} units. Remove them from the map or add a way to train or summon them.");
-      foreach (var upgrade in _inaccesibleObjects.Units)
-        exceptionMessageBuilder.AppendLine($"{GetReadableId(upgrade)} - {GetId(upgrade)}");
+        $"There is no way to acquire the following {_inaccesibleObjects.Units.Count} units. Remove them from the game, add a way to train or summon them, add code that references them, or place them somewhere on the map.");
+      foreach (var unit in _inaccesibleObjects.Units)
+        exceptionMessageBuilder.AppendLine($"{GetReadableId(unit)} - {GetLabel(unit)}");
       
       throw new XunitException(exceptionMessageBuilder.ToString());
     }
@@ -78,5 +78,11 @@ namespace Launcher.IntegrityChecker
     private static int GetId(BaseObject baseObject) => baseObject.NewId != 0 ? baseObject.NewId : baseObject.OldId;
 
     private static string GetReadableId(BaseObject baseObject) => GetId(baseObject).IdToFourCc();
+    
+    private static string GetLabel(Unit unit)
+    {
+      var suffix = unit.IsTextNameEditorSuffixModified ? unit.TextNameEditorSuffix : string.Empty;
+      return $"{unit.GetTextNameSafe()} {suffix}";
+    }
   }
 }
