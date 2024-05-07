@@ -82,6 +82,21 @@ namespace Launcher.IntegrityChecker.TestSupport
         case StasisTrap ability:
           RemoveWithChildren(ability);
           break;
+        case Militia ability:
+          RemoveWithChildren(ability);
+          break;
+        case Polymorph ability:
+          RemoveWithChildren(ability);
+          break;
+        case PolymorphCreep ability:
+          RemoveWithChildren(ability);
+          break;
+        case HexCreep ability:
+          RemoveWithChildren(ability);
+          break;
+        case ShadowHunterHex ability:
+          RemoveWithChildren(ability);
+          break;
         case Ability ability:
           RemoveWithChildren(ability);
           break;
@@ -272,6 +287,126 @@ namespace Launcher.IntegrityChecker.TestSupport
       for (var i = 0; i < ability.StatsLevels; i++)
       {
         RemoveWithChildren(ability.DataWardUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(Militia ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataAlternateFormUnit[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(Polymorph ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        foreach (var unit in ability.DataMorphUnitsAir[i])
+        {
+          RemoveWithChildren(unit);
+        }
+        foreach (var unit in ability.DataMorphUnitsAmphibious[i])
+        {
+          RemoveWithChildren(unit);
+        }
+        foreach (var unit in ability.DataMorphUnitsGround[i])
+        {
+          RemoveWithChildren(unit);
+        }
+        foreach (var unit in ability.DataMorphUnitsWater[i])
+        {
+          RemoveWithChildren(unit);
+        }
+      }
+    }
+    
+    private void RemoveWithChildren(PolymorphCreep ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        foreach (var unit in ability.DataMorphUnitsAir[i])
+        {
+          RemoveWithChildren(unit);
+        }
+        foreach (var unit in ability.DataMorphUnitsAmphibious[i])
+        {
+          RemoveWithChildren(unit);
+        }
+        foreach (var unit in ability.DataMorphUnitsGround[i])
+        {
+          RemoveWithChildren(unit);
+        }
+        foreach (var unit in ability.DataMorphUnitsWater[i])
+        {
+          RemoveWithChildren(unit);
+        }
+      }
+    }
+    
+    private void RemoveWithChildren(HexCreep ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        foreach (var unit in ability.DataMorphUnitsAir[i])
+        {
+          RemoveWithChildren(unit);
+        }
+        foreach (var unit in ability.DataMorphUnitsAmphibious[i])
+        {
+          RemoveWithChildren(unit);
+        }
+        foreach (var unit in ability.DataMorphUnitsGround[i])
+        {
+          RemoveWithChildren(unit);
+        }
+        foreach (var unit in ability.DataMorphUnitsWater[i])
+        {
+          RemoveWithChildren(unit);
+        }
+      }
+    }
+    
+    private void RemoveWithChildren(ShadowHunterHex ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        foreach (var unit in ability.DataMorphUnitsAir[i])
+        {
+          RemoveWithChildren(unit);
+        }
+        foreach (var unit in ability.DataMorphUnitsAmphibious[i])
+        {
+          RemoveWithChildren(unit);
+        }
+        foreach (var unit in ability.DataMorphUnitsGround[i])
+        {
+          RemoveWithChildren(unit);
+        }
+        foreach (var unit in ability.DataMorphUnitsWater[i])
+        {
+          RemoveWithChildren(unit);
+        }
       }
     }
     
