@@ -100,6 +100,15 @@ namespace Launcher.IntegrityChecker.TestSupport
         case ShadowHunterSerpentWard ability:
           RemoveWithChildren(ability);
           break;
+        case Burrow ability:
+          RemoveWithChildren(ability);
+          break;
+        case BurrowScarabLvl2 ability:
+          RemoveWithChildren(ability);
+          break;
+        case BurrowScarabLvl3 ability:
+          RemoveWithChildren(ability);
+          break;
         case Ability ability:
           RemoveWithChildren(ability);
           break;
@@ -422,6 +431,42 @@ namespace Launcher.IntegrityChecker.TestSupport
       for (var i = 0; i < ability.StatsLevels; i++)
       {
         RemoveWithChildren(ability.DataSummonedUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(Burrow ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataAlternateFormUnit[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(BurrowScarabLvl2 ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataAlternateFormUnit[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(BurrowScarabLvl3 ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataAlternateFormUnit[i]);
       }
     }
     
