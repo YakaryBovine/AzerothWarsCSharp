@@ -49,6 +49,24 @@ namespace Launcher.IntegrityChecker.TestSupport
         case SummonSeaElemental ability:
           RemoveWithChildren(ability);
           break;
+        case ChaosGrom ability:
+          RemoveWithChildren(ability);
+          break;
+        case ChaosGrunt ability:
+          RemoveWithChildren(ability);
+          break;
+        case ChaosKodo ability:
+          RemoveWithChildren(ability);
+          break;
+        case ChaosPeon ability:
+          RemoveWithChildren(ability);
+          break;
+        case ChaosShaman ability:
+          RemoveWithChildren(ability);
+          break;
+        case ChaosRaider ability:
+          RemoveWithChildren(ability);
+          break;
         case Ability ability:
           RemoveWithChildren(ability);
           break;
@@ -107,6 +125,78 @@ namespace Launcher.IntegrityChecker.TestSupport
       for (var i = 0; i < ability.StatsLevels; i++)
       {
         RemoveWithChildren(ability.DataSummonedUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(ChaosGrom ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataNewUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(ChaosGrunt ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataNewUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(ChaosKodo ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataNewUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(ChaosPeon ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataNewUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(ChaosRaider ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataNewUnitType[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(ChaosShaman ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataNewUnitType[i]);
       }
     }
     
