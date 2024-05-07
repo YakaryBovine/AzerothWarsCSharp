@@ -16,6 +16,30 @@ namespace Launcher.Extensions
     {
       return unit.GetTechtreeRequirementsSafe().Any(x => x.IsUpgradeSafe());
     }
+
+    public static IEnumerable<Ability> GetUnitAbilitiesSafe(this Unit unit)
+    {
+      try
+      {
+        return unit.AbilitiesNormal;
+      }
+      catch
+      {
+        return new List<Ability>();
+      }
+    }
+    
+    public static IEnumerable<Ability> GetHeroAbilitiesSafe(this Unit unit)
+    {
+      try
+      {
+        return unit.AbilitiesHero;
+      }
+      catch
+      {
+        return new List<Ability>();
+      }
+    }
     
     public static List<Target> GetAllTargetsAllowedSafe(this Unit unit)
     {

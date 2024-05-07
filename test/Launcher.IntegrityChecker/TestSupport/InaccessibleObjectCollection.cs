@@ -1,4 +1,6 @@
-﻿using War3Api.Object;
+﻿using Launcher.Extensions;
+using War3Api.Object;
+using War3Api.Object.Abilities;
 
 namespace Launcher.IntegrityChecker.TestSupport
 {
@@ -10,11 +12,14 @@ namespace Launcher.IntegrityChecker.TestSupport
     public List<Unit> Units { get; }
     
     public List<Upgrade> Upgrades { get; }
+    
+    public List<Ability> Abilities { get; }
 
-    public InaccessibleObjectCollection(List<Unit> units, List<Upgrade> upgrades)
+    public InaccessibleObjectCollection(List<Unit> units, List<Upgrade> upgrades, List<Ability> abilities)
     {
       Units = units;
       Upgrades = upgrades;
+      Abilities = abilities;
     }
 
     public void RemoveWithChildren(BaseObject baseObject)
@@ -27,6 +32,9 @@ namespace Launcher.IntegrityChecker.TestSupport
         case Upgrade upgrade:
           RemoveWithChildren(upgrade);
           break;
+        case ArchMageWaterElemental summonWaterElemental:
+          RemoveWithChildren(summonWaterElemental);
+          break;
       }
     }
     
@@ -36,22 +44,41 @@ namespace Launcher.IntegrityChecker.TestSupport
         return;
       
       Units.Remove(unit);
-
-      if (unit.IsTechtreeUnitsTrainedModified)
-        foreach (var trainedUnit in unit.TechtreeUnitsTrained)
-          RemoveWithChildren(trainedUnit);
+      
+      foreach (var trainedUnit in unit.GetUnitsTrainedSafe())
+        RemoveWithChildren(trainedUnit);
 
       if (unit.IsTechtreeStructuresBuiltModified)
         foreach (var builtStructure in unit.TechtreeStructuresBuilt)
           RemoveWithChildren(builtStructure);
       
-      if (unit.IsTechtreeUpgradesToModified)
-        foreach (var upgradesTo in unit.TechtreeUpgradesTo)
-          RemoveWithChildren(upgradesTo);
+      foreach (var upgradesTo in unit.GetUpgradesToSafe())
+        RemoveWithChildren(upgradesTo);
+      
+      foreach (var research in unit.GetResearchesAvailableSafe())
+        RemoveWithChildren(research);
+      
+      if (unit.IsTechtreeUnitsSoldModified)
+        foreach (var unitSold in unit.TechtreeUnitsSold)
+          RemoveWithChildren(unitSold);
+      
+      foreach (var unitAbility in unit.GetUnitAbilitiesSafe())
+        RemoveWithChildren(unitAbility);
+      
+      foreach (var heroAbility in unit.GetHeroAbilitiesSafe())
+        RemoveWithChildren(heroAbility);
+    }
 
-      if (unit.IsTechtreeResearchesAvailableModified)
-        foreach (var research in unit.TechtreeResearchesAvailable)
-          RemoveWithChildren(research);
+    private void RemoveWithChildren(ArchMageWaterElemental archmageWaterElemental)
+    {
+      if (!Abilities.Contains(archmageWaterElemental))
+        return;
+      
+      Abilities.Remove(archmageWaterElemental);
+      for (var i = 0; i < archmageWaterElemental.StatsLevels; i++)
+      {
+        RemoveWithChildren(archmageWaterElemental.DataSummonedUnitType[i]);
+      }
     }
 
     /// <summary>

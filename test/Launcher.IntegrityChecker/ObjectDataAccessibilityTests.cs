@@ -32,6 +32,21 @@ namespace Launcher.IntegrityChecker
       
       throw new XunitException(exceptionMessageBuilder.ToString());
     }
+    
+    [Fact]
+    public void AllUnits_CanBeAccessed()
+    {
+      if (_inaccesibleObjects.Units.Count <= 0) 
+        return;
+      
+      var exceptionMessageBuilder = new StringBuilder();
+      exceptionMessageBuilder.AppendLine(
+        $"There is no way to acquire the following {_inaccesibleObjects.Units.Count} units. Remove them from the map or add a way to train or summon them.");
+      foreach (var upgrade in _inaccesibleObjects.Units)
+        exceptionMessageBuilder.AppendLine($"{GetReadableId(upgrade)} - {GetId(upgrade)}");
+      
+      throw new XunitException(exceptionMessageBuilder.ToString());
+    }
 
     private InaccessibleObjectCollection GetInaccessibleObjects()
     {
@@ -40,7 +55,8 @@ namespace Launcher.IntegrityChecker
       
       var inaccessibleObjects = new InaccessibleObjectCollection(
         objectDatabase.GetUnits().ToList(),
-        objectDatabase.GetUpgrades().ToList());
+        objectDatabase.GetUpgrades().ToList(),
+        objectDatabase.GetAbilities().ToList());
       
       var preplacedUnitIds = map.Units!.Units.Select(x => x.TypeId).ToHashSet();
       var preplacedUnitTypes = objectDatabase.GetUnits().Where(x => preplacedUnitIds.Contains(x.NewId)).ToList();
