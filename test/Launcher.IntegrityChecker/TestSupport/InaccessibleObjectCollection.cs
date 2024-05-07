@@ -97,6 +97,9 @@ namespace Launcher.IntegrityChecker.TestSupport
         case ShadowHunterHex ability:
           RemoveWithChildren(ability);
           break;
+        case ShadowHunterSerpentWard ability:
+          RemoveWithChildren(ability);
+          break;
         case Ability ability:
           RemoveWithChildren(ability);
           break;
@@ -407,6 +410,18 @@ namespace Launcher.IntegrityChecker.TestSupport
         {
           RemoveWithChildren(unit);
         }
+      }
+    }
+    
+    private void RemoveWithChildren(ShadowHunterSerpentWard ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataSummonedUnitType[i]);
       }
     }
     
