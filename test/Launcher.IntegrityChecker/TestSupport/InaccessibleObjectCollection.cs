@@ -148,6 +148,21 @@ namespace Launcher.IntegrityChecker.TestSupport
         case StoneForm ability:
           RemoveWithChildren(ability);
           break;
+        case Inferno ability:
+          RemoveWithChildren(ability);
+          break;
+        case ItemInferno ability:
+          RemoveWithChildren(ability);
+          break;
+        case DreadlordInferno ability:
+          RemoveWithChildren(ability);
+          break;
+        case TichondriusInferno ability:
+          RemoveWithChildren(ability);
+          break;
+        case CryptLordLocustSwarm ability:
+          RemoveWithChildren(ability);
+          break;
         case Ability ability:
           RemoveWithChildren(ability);
           break;
@@ -666,6 +681,69 @@ namespace Launcher.IntegrityChecker.TestSupport
       {
         RemoveWithChildren(ability.DataAlternateFormUnit[i]);
       }
+    }
+    
+    private void RemoveWithChildren(CryptLordCarrionScarabs ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++)
+      {
+        RemoveWithChildren(ability.DataUnitTypeOne[i]);
+        RemoveWithChildren(ability.DataUnitTypeTwo[i]);
+      }
+    }
+    
+    private void RemoveWithChildren(Inferno ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++) 
+        RemoveWithChildren(ability.DataSummonedUnit[i]);
+    }
+    
+    private void RemoveWithChildren(DreadlordInferno ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++) 
+        RemoveWithChildren(ability.DataSummonedUnit[i]);
+    }
+    
+    private void RemoveWithChildren(ItemInferno ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++) 
+        RemoveWithChildren(ability.DataSummonedUnit[i]);
+    }
+    
+    private void RemoveWithChildren(TichondriusInferno ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++) 
+        RemoveWithChildren(ability.DataSummonedUnit[i]);
+    }
+    
+    private void RemoveWithChildren(CryptLordLocustSwarm ability)
+    {
+      if (!Abilities.Contains(ability))
+        return;
+      
+      Abilities.Remove(ability);
+      for (var i = 0; i < ability.StatsLevels; i++) 
+        RemoveWithChildren(ability.DataSwarmUnitType[i]);
     }
     
     private void RemoveWithChildren(Ability ability)
