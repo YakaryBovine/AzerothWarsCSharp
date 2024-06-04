@@ -15,7 +15,7 @@ namespace WarcraftLegacies.Source.Setup.Legends
     {
       Cthun = new LegendaryHero("C'thun")
       {
-        UnitType = UNIT_U00R_OLD_GOD,
+        UnitType = UNIT_U00R_OLD_GOD_AHN_QIRAJ,
         PermaDies = true,
         StartingXp = 10000,
       };
