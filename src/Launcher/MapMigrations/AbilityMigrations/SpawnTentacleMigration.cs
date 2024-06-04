@@ -33,9 +33,10 @@ namespace Launcher.MapMigrations.AbilityMigrations
         spawnTentacle.TextTooltipNormalExtended[i] = $"Spawns a Tentacle with {hitPoints} hit points and {damage} damage at the target location. The Tentacle's attacks deal damage to all units in a straight line in front of it.";
       }
       
-      var unitData = objectDatabase.GetAllData().UnitData;
-      map.UnitObjectData = unitData;
-      map.UnitSkinObjectData = unitData;
+      spawnTentacle.TextTooltipLearnExtended = "testing";
+      var abilityData = objectDatabase.GetAllData().AbilityData;
+      map.AbilityObjectData = abilityData;
+      map.AbilitySkinObjectData = abilityData;
     }
   }
 }

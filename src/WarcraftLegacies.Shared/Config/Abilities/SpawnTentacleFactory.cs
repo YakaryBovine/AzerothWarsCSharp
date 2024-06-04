@@ -8,6 +8,7 @@ namespace WarcraftLegacies.Shared.Config.Abilities
     {
       return new SpawnTentacleModel
       {
+        Name = "Spawn Tentacle",
         SummonedUnitTypeId = Constants.UNIT_N073_TENTACLE_C_THUN,
         HitPoints = new LeveledAbilityField<int>
         {

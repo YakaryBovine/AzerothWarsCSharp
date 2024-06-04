@@ -8,7 +8,7 @@
     /// <summary>
     /// The name for the ability that the player sees.
     /// </summary>
-    public string Name { get; init; }
+    public required string Name { get; init; }
     
     /// <summary>
     /// The unit type ID of the Tentacle.
