@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using MacroTools.Missiles;
 using MacroTools.PassiveAbilitySystem;
+using WarcraftLegacies.Shared.Models.Abilities;
 using WCSharp.Missiles;
 using static War3Api.Common;
 
