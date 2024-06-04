@@ -1,5 +1,5 @@
 ﻿using WarcraftLegacies.Shared.Models.Factions;
-using static WarcraftLegacies.Shared.Constants;
+using static Constants;
 
 namespace WarcraftLegacies.Shared.Config.Factions
 {
