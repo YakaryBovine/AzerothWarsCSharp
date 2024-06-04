@@ -2,6 +2,8 @@
 using MacroTools.ResearchSystems;
 using MacroTools.Spells;
 using MacroTools.SpellSystem;
+using WarcraftLegacies.Shared;
+using WarcraftLegacies.Shared.Models.Abilities;
 using WarcraftLegacies.Source.Spells;
 using WarcraftLegacies.Source.Spells.Slipstream;
 using WCSharp.Shared.Data;

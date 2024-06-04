@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using MacroTools;
 using MacroTools.FactionSystem;
-using WarcraftLegacies.Shared.FactionObjectLimits;
+using WarcraftLegacies.Shared.Config.Factions;
 using WarcraftLegacies.Source.FactionMechanics.Fel_Horde;
 using WarcraftLegacies.Source.Quests.Fel_Horde;
 using WarcraftLegacies.Source.Setup;

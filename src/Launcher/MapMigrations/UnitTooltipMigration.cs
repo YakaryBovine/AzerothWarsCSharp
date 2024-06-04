@@ -4,7 +4,7 @@ using System.Text;
 using Launcher.Extensions;
 using War3Api.Object;
 using War3Net.Build;
-using WarcraftLegacies.Shared;
+using WarcraftLegacies.Shared.Config.Factions;
 
 namespace Launcher.MapMigrations
 {

@@ -9,7 +9,7 @@ using MacroTools.ObjectiveSystem.Objectives.QuestBased;
 using MacroTools.ObjectiveSystem.Objectives.UnitBased;
 using MacroTools.QuestSystem;
 using MacroTools.ResearchSystems;
-using WarcraftLegacies.Shared.FactionObjectLimits;
+using WarcraftLegacies.Shared.Config.Factions;
 using WarcraftLegacies.Source.Quests.Lordaeron;
 using WarcraftLegacies.Source.Quests.Scourge;
 using WarcraftLegacies.Source.Researches;

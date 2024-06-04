@@ -3,7 +3,7 @@ using MacroTools;
 using MacroTools.Extensions;
 using MacroTools.FactionChoices;
 using MacroTools.FactionSystem;
-using WarcraftLegacies.Shared.FactionObjectLimits;
+using WarcraftLegacies.Shared.Config.Factions;
 using WarcraftLegacies.Source.Quests.Zandalar;
 using WarcraftLegacies.Source.Setup;
 using WCSharp.Shared.Data;

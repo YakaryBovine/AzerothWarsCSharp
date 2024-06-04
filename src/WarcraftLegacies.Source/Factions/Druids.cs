@@ -6,7 +6,7 @@ using MacroTools.LegendSystem;
 using MacroTools.ObjectiveSystem;
 using MacroTools.ObjectiveSystem.Objectives.LegendBased;
 using MacroTools.ObjectiveSystem.Objectives.UnitBased;
-using WarcraftLegacies.Shared.FactionObjectLimits;
+using WarcraftLegacies.Shared.Config.Factions;
 using WarcraftLegacies.Source.FactionMechanics.Druids;
 using WarcraftLegacies.Source.Powers;
 using WarcraftLegacies.Source.Quests.Druids;

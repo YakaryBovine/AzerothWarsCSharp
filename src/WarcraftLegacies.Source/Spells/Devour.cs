@@ -1,6 +1,8 @@
 ﻿using MacroTools;
 using MacroTools.Extensions;
 using MacroTools.SpellSystem;
+using WarcraftLegacies.Shared;
+using WarcraftLegacies.Shared.Models.Abilities;
 using WCSharp.Shared.Data;
 
 namespace WarcraftLegacies.Source.Spells

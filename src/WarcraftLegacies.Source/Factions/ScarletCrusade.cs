@@ -1,6 +1,6 @@
 ﻿using MacroTools.FactionSystem;
 using System.Collections.Generic;
-using WarcraftLegacies.Shared.FactionObjectLimits;
+using WarcraftLegacies.Shared.Config.Factions;
 using WarcraftLegacies.Source.Quests.Scarlet;
 using WarcraftLegacies.Source.Setup;
 

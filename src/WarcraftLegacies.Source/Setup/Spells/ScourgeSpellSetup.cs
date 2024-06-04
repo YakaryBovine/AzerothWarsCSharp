@@ -4,6 +4,8 @@ using MacroTools.PassiveAbilitySystem;
 using MacroTools.Spells;
 using MacroTools.SpellSystem;
 using System.Collections.Generic;
+using WarcraftLegacies.Shared;
+using WarcraftLegacies.Shared.Models.Abilities;
 using WarcraftLegacies.Source.FactionMechanics.Scourge;
 using WarcraftLegacies.Source.PassiveAbilities;
 using WarcraftLegacies.Source.Spells;

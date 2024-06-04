@@ -1,6 +1,8 @@
 ﻿using MacroTools;
 using MacroTools.PassiveAbilities;
 using MacroTools.PassiveAbilitySystem;
+using WarcraftLegacies.Shared;
+using WarcraftLegacies.Shared.Models.Abilities;
 
 namespace WarcraftLegacies.Source.Setup.Spells
 {

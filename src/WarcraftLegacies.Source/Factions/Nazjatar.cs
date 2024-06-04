@@ -1,5 +1,6 @@
 ﻿using MacroTools.FactionSystem;
-using WarcraftLegacies.Shared.FactionObjectLimits;
+using WarcraftLegacies.Shared;
+using WarcraftLegacies.Shared.Config.Factions;
 using WarcraftLegacies.Source.Setup;
 using static War3Api.Common;
 

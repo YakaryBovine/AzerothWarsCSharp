@@ -1,5 +1,7 @@
 ﻿using MacroTools;
 using MacroTools.PassiveAbilitySystem;
+using WarcraftLegacies.Shared;
+using WarcraftLegacies.Shared.Models.Abilities;
 using WCSharp.Buffs;
 
 namespace WarcraftLegacies.Source.PassiveAbilities.Incubate

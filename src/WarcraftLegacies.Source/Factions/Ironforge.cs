@@ -2,7 +2,7 @@
 using MacroTools;
 using MacroTools.FactionSystem;
 using MacroTools.ResearchSystems;
-using WarcraftLegacies.Shared.FactionObjectLimits;
+using WarcraftLegacies.Shared.Config.Factions;
 using WarcraftLegacies.Source.Quests.Ironforge;
 using WarcraftLegacies.Source.Researches.Ironforge;
 using WarcraftLegacies.Source.Setup;

@@ -9,10 +9,6 @@
     <ItemGroup>
         <ProjectReference Include="..\WarcraftLegacies.Generated\WarcraftLegacies.Generated.csproj" />
         <ProjectReference Include="..\MacroTools\MacroTools.csproj" />
-        <ProjectReference Include="..\WarcraftLegacies.Shared\WarcraftLegacies.Shared.csproj" />
     </ItemGroup>
-
-
-
-
+    
 </Project>

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using MacroTools;
 using MacroTools.Extensions;
 using MacroTools.SpellSystem;
+using WarcraftLegacies.Shared;
+using WarcraftLegacies.Shared.Models.Abilities;
 using WCSharp.Events;
 using WCSharp.Shared.Data;
 

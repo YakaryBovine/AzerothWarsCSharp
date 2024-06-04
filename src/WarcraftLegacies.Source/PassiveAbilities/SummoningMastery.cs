@@ -2,6 +2,8 @@
 using MacroTools;
 using MacroTools.Extensions;
 using MacroTools.PassiveAbilitySystem;
+using WarcraftLegacies.Shared;
+using WarcraftLegacies.Shared.Models.Abilities;
 
 namespace WarcraftLegacies.Source.PassiveAbilities
 {

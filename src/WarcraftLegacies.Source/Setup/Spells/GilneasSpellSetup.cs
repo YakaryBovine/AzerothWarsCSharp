@@ -1,6 +1,8 @@
 ﻿using MacroTools;
 using MacroTools.Spells;
 using MacroTools.SpellSystem;
+using WarcraftLegacies.Shared;
+using WarcraftLegacies.Shared.Models.Abilities;
 
 namespace WarcraftLegacies.Source.Setup.Spells
 {

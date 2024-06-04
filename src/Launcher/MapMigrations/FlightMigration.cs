@@ -4,6 +4,7 @@ using War3Api.Object;
 using War3Api.Object.Enums;
 using War3Net.Build;
 using War3Net.CodeAnalysis.Jass.Extensions;
+using WarcraftLegacies.Shared;
 
 namespace Launcher.MapMigrations
 {

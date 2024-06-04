@@ -1,7 +1,7 @@
 ﻿using MacroTools;
 using MacroTools.FactionSystem;
 using System.Collections.Generic;
-using WarcraftLegacies.Shared.FactionObjectLimits;
+using WarcraftLegacies.Shared.Config.Factions;
 using WarcraftLegacies.Source.Quests.Stormwind;
 using WarcraftLegacies.Source.Researches.Stormwind;
 using WarcraftLegacies.Source.Setup;

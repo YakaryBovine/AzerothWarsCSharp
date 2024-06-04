@@ -8,7 +8,7 @@ using MacroTools.ObjectiveSystem.Objectives.LegendBased;
 using MacroTools.ObjectiveSystem.Objectives.QuestBased;
 using MacroTools.Powers;
 using MacroTools.ResearchSystems;
-using WarcraftLegacies.Shared.FactionObjectLimits;
+using WarcraftLegacies.Shared.Config.Factions;
 using WarcraftLegacies.Source.Quests.Legion;
 using WarcraftLegacies.Source.Researches;
 using WarcraftLegacies.Source.Setup;
