@@ -34,10 +34,8 @@ namespace WarcraftLegacies.Source.Powers
       }
     }
 
-    /// <summary>The effect that appears when a unit deals bonus damage.</summary>
     public string Effect { get; init; } = "";
 
-    /// <summary>ID of the research associated with this power.</summary>
     public int ResearchId { get; init; }
 
     public SpellBoost(int bonusDamageAmountPercentage, List<Capital> sunwell)
@@ -47,14 +45,12 @@ namespace WarcraftLegacies.Source.Powers
       _sunwell = sunwell;
     }
 
-    /// <inheritdoc />
     public override void OnAdd(player whichPlayer)
     {
       PlayerUnitEvents.Register(CustomPlayerUnitEvents.PlayerDealsDamage, OnDamage, GetPlayerId(whichPlayer));
       _playersWithPower.Add(whichPlayer);
     }
 
-    /// <inheritdoc />
     public override void OnAdd(Faction whichFaction)
     {
       var sunwell = _sunwell.First(); // Assuming `_sunwell` is a list of capitals
@@ -65,7 +61,6 @@ namespace WarcraftLegacies.Source.Powers
       RefreshIsActive();
     }
 
-    /// <inheritdoc />
     public override void OnRemove(player whichPlayer)
     {
       PlayerUnitEvents.Unregister(CustomPlayerUnitEvents.PlayerDealsDamage, OnDamage, GetPlayerId(whichPlayer));
@@ -73,7 +68,6 @@ namespace WarcraftLegacies.Source.Powers
       SetPlayerTechResearched(whichPlayer, ResearchId, 0);
     }
 
-    /// <inheritdoc />
     public override void OnRemove(Faction whichFaction)
     {
       foreach (var objective in _objectives)
@@ -82,26 +76,36 @@ namespace WarcraftLegacies.Source.Powers
       _objectives.Clear();
     }
 
-
     private void OnDamage()
     {
       var damagingUnit = GetEventDamageSource();
+      Console.WriteLine($"[Debug] Damage Source: {damagingUnit}");
+
       if (!IsActive)
+      {
+        Console.WriteLine("[Debug] SpellBoost is not active.");
         return;
+      }
 
       var damageType = BlzGetEventDamageType();
+      Console.WriteLine($"[Debug] Damage Type: {damageType}");
+
       if (damageType != DAMAGE_TYPE_MAGIC)
+      {
+        Console.WriteLine("[Debug] Damage is not of type MAGIC.");
         return;
+      }
 
-      var bonusDamage = (int)(GetEventDamage() * 0.2f);
-      BlzSetEventDamage(GetEventDamage() + bonusDamage);
-      AddSpecialEffectTarget(Effect, damagingUnit, "origin")
-          .SetLifespan(1);
+      var originalDamage = GetEventDamage();
+      var bonusDamage = (int)(originalDamage * (_bonusDamageAmountPercentage / 100.0f));
+      BlzSetEventDamage(originalDamage + bonusDamage);
 
-      var playerId = GetPlayerId(GetOwningPlayer(damagingUnit));
-      DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, 5, "Bonus damage applied to your ability!");
+      Console.WriteLine($"[Debug] Original Damage: {originalDamage}");
+      Console.WriteLine($"[Debug] Bonus Damage: {bonusDamage}");
+      Console.WriteLine($"[Debug] Total Damage: {originalDamage + bonusDamage}");
+
+      AddSpecialEffectTarget(Effect, damagingUnit, "origin").SetLifespan(1);
     }
-
 
     private void AddObjective(Objective objective)
     {
