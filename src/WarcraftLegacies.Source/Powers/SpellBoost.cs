@@ -75,6 +75,7 @@ namespace WarcraftLegacies.Source.Powers
       _objectives.Clear();
     }
 
+
     private void OnDamage()
     {
       var damagingUnit = GetEventDamageSource();
@@ -87,27 +88,34 @@ namespace WarcraftLegacies.Source.Powers
       }
 
       var attackType = BlzGetEventAttackType();
+      var damageType = BlzGetEventDamageType();
       Console.WriteLine($"[Debug] Attack Type: {attackType}");
+      Console.WriteLine($"[Debug] Damage Type: {damageType}");
 
-      // Check if the attack type is MAGIC
-      if (attackType != ATTACK_TYPE_MAGIC)
+      // Check if the attack type is MAGIC or the damage type is NORMAL (for spells)
+      if (attackType == ATTACK_TYPE_MAGIC || damageType == DAMAGE_TYPE_NORMAL)
       {
-        Console.WriteLine("[Debug] Attack is not of type MAGIC.");
-        return;
+        var originalDamage = GetEventDamage();
+        var bonusDamage = (int)(originalDamage * (_bonusDamageAmountPercentage / 100.0f));
+        BlzSetEventDamage(originalDamage + bonusDamage);
+
+        Console.WriteLine($"[Debug] Original Damage: {originalDamage}");
+        Console.WriteLine($"[Debug] Bonus Damage: {bonusDamage}");
+        Console.WriteLine($"[Debug] Total Damage: {originalDamage + bonusDamage}");
+
+        AddSpecialEffectTarget(Effect, damagingUnit, "origin").SetLifespan(1);
+
+        // Additional debugging for DAMAGE_TYPE_NORMAL
+        if (damageType == DAMAGE_TYPE_NORMAL)
+        {
+          Console.WriteLine("[Debug] Spell Damage Applied: {bonusDamage}");
+        }
       }
+    
+      }
+    
 
-      var originalDamage = GetEventDamage();
-      var bonusDamage = (int)(originalDamage * (_bonusDamageAmountPercentage / 100.0f));
-      BlzSetEventDamage(originalDamage + bonusDamage);
-
-      Console.WriteLine($"[Debug] Original Damage: {originalDamage}");
-      Console.WriteLine($"[Debug] Bonus Damage: {bonusDamage}");
-      Console.WriteLine($"[Debug] Total Damage: {originalDamage + bonusDamage}");
-
-      AddSpecialEffectTarget(Effect, damagingUnit, "origin").SetLifespan(1);
-    }
-
-    private void AddObjective(Objective objective)
+      private void AddObjective(Objective objective)
     {
       _objectives.Add(objective);
       objective.ProgressChanged += OnObjectiveProgressChanged;
