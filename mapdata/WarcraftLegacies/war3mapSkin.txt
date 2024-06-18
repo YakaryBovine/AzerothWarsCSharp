@@ -1,5 +1,5 @@
 [Categories]
-GiantClass="Demi-hero"
+GiantClass=
 
 [CmdSelectSkill]
 Hotkey=F
@@ -12,37 +12,37 @@ InfoPanelIconArmorNormal=UI\Widgets\Console\Human\UPGGate.blp
 InfoPanelIconArmorNormalNeutral=UI\Widgets\Console\Human\BTNGate.blp
 
 [FrameDef]
-ARMORTIP_DIVINE="Pierce: |cff00ff0050%|r|NSiege: |cff00ff0050%|r|NMagic: |cff00ff0050%|r|nSpell: |cff00ff000%|r|NNormal: |cffffff00100%|r|NHero: |cffffff00100%|r|NChaos: |cffff0000110%|r"
-ARMORTIP_FORT="Pierce: |cff00ff0035%|r|nMagic: |cff00ff0035%|r|nNormal: |cff00ff0070%|r|nHero: |cff00ff0070%|r|nSpell: |cffffff00100%|r|nChaos: |cffff0000110%|r|nSiege: |cffff0000200%|r"
-ARMORTIP_HERO="Pierce: |cff00ff0050%|r|NSiege: |cff00ff0050%|r|NMagic: |cff00ff0050%|r|nSpell: |cff00ff0070%|r|NNormal: |cffffff00100%|r|NHero: |cffffff00100%|r|NChaos: |cffff0000110%|r"
-ARMORTIP_LARGE="Pierce: |cffffff00100%|r|nSiege: |cffffff00100%|r|nNormal: |cffffff00100%|r|r|nHero: |cffffff00100%|r|nSpell: |cffffff00100%|r|nChaos: |cffff0000110%|r|nMagic: |cffff0000180%|r"
-ARMORTIP_MEDIUM="Siege: |cff00ff0050%|r|NPierce: |cff00ff0075%|r|NMagic: |cff00ff0075%|r|NSpell: |cffffff00100%|r|NHero: |cffffff00100%|r|NChaos: |cffff0000110%|r|NNormal: |cffff0000150%|r"
-ARMORTIP_NONE="Normal: |cffffff00100%|r|NMagic: |cffffff00100%|r|nSpell: |cffffff00100%|r|NHero: |cffffff00100%|r|NChaos: |cffff0000110%|r|NPierce: |cffff0000150%|r|NSiege: |cffff0000150%|r"
-ARMORTIP_NONE_V0C="Normal: |cffffff00100%|r|NMagic: |cffffff00100%|r|nSpell: |cffffff00100%|r|NHero: |cffffff00100%|r|NChaos: |cffff0000110%|r|NPierce: |cffff0000150%|r|NSiege: |cffff0000150%|r"
-ARMORTIP_NONE_V0M="Normal: |cffffff00100%|r|NMagic: |cffffff00100%|r|nSpell: |cffffff00100%|r|NHero: |cffffff00100%|r|NChaos: |cffff0000110%|r|NPierce: |cffff0000150%|r|NSiege: |cffff0000150%|r"
-ARMORTIP_NORMAL="Pierce: |cff00ff0030%|r|nMagic: |cff00ff0030%|r|nNormal: |cff00ff0030%|r|nHero: |cff00ff0030%|r|nSpell: |cffffff00100%|r|nChaos: |cffff000030%|r|nSiege: |cffff0000400%|r"
-ARMORTIP_SMALL="Normal: |cffffff00100%|r|NSiege: |cffffff00100%|r|NSpell: |cffffff00100%|r|NHero: |cffffff00100%|r|NChaos: |cffff0000110%|r|NMagic: |cffff0000125%|r|NPierce: |cffff0000200%|r"
-BONUS_ATTACK_SPEED=" - Each point increases attack speed"
-COLON_GOLD_INCOME_RATE="|c22222222"
-DAMAGETIP_CHAOS="All Armor |cff00ff00110%|r|nGate: |cffff000030%|r"
-DAMAGETIP_HERO="Unarmored: |cffffff00100%|r|nLight: |cffffff00100%|r|NMedium: |cffffff00100%|r|NHeavy: |cffffff00100%|r|NHero: |cffffff00100%|r|NFortified: |cffff000070%|r|nGate: |cffff000030%|r"
-DAMAGETIP_MAGIC="Heavy: |cff00ff00180%|r|NLight: |cff00ff00125%|r|NUnarmored: |cffffff00100%|r|NMedium: |cffff000075%|r|NHero: |cffff000050%|r|NFortified: |cffff000035%|r|nGate: |cffff000030%|r"
-DAMAGETIP_MELEE="Medium: |cff00ff00150%|r|NUnarmored: |cffffff00100%|r|NLight: |cffffff00100%|r|NHeavy: |cffffff00100%|r|NHero: |cffffff00100%|r|NFortified: |cffff000070%|r|nGate: |cffff000030%|r"
-DAMAGETIP_NORMAL="Medium: |cff00ff00150%|r|NUnarmored: |cffffff00100%|r|NLight: |cffffff00100%|r|NHeavy: |cffffff00100%|r|NHero: |cffffff00100%|r|NFortified: |cffff000070%|r|nGate: |cffff000030%|r"
-DAMAGETIP_PIERCE="Light: |cff00ff00200%|r|NUnarmored: |cff00ff00150%|r|NHeavy: |cffffff00100%|r|NMedium: |cffff000075%|r|NHero: |cffff000050%|r|NFortified: |cffff000035%|r|nGate: |cffff000030%|r"
-DAMAGETIP_SIEGE="Gate: |cff00ff00400%|r|nFortified: |cff00ff00200%|r|NUnarmored: |cff00ff00150%|r|NLight: |cffffff00100%|r|NHeavy: |cffffff00100%|r|NMedium: |cffff000050%|r|NHero: |cffff000050%|r"
-DAMAGETIP_SIEGE_V0C="Gate: |cff00ff00400%|r|nFortified: |cff00ff00200%|r|NUnarmored: |cff00ff00150%|r|NLight: |cffffff00100%|r|NHeavy: |cffffff00100%|r|NMedium: |cffff000050%|r|NHero: |cffff000050%|r"
-DAMAGETIP_SIEGE_V0M="Gate: |cff00ff00400%|r|nFortified: |cff00ff00200%|r|NUnarmored: |cff00ff00150%|r|NLight: |cffffff00100%|r|NHeavy: |cffffff00100%|r|NMedium: |cffff000050%|r|NHero: |cffff000050%|r"
+ARMORTIP_DIVINE=
+ARMORTIP_FORT=
+ARMORTIP_HERO=
+ARMORTIP_LARGE=
+ARMORTIP_MEDIUM=
+ARMORTIP_NONE=
+ARMORTIP_NONE_V0C=
+ARMORTIP_NONE_V0M=
+ARMORTIP_NORMAL=
+ARMORTIP_SMALL=
+BONUS_ATTACK_SPEED=
+COLON_GOLD_INCOME_RATE=
+DAMAGETIP_CHAOS=
+DAMAGETIP_HERO=
+DAMAGETIP_MAGIC=
+DAMAGETIP_MELEE=
+DAMAGETIP_NORMAL=
+DAMAGETIP_PIERCE=
+DAMAGETIP_SIEGE=
+DAMAGETIP_SIEGE_V0C=
+DAMAGETIP_SIEGE_V0M=
 KEY_EXIT=E|cffffd700X|rIT
 KEY_EXIT_PROGRAM=E|cffffd700X|rIT Program
-KEY_QUESTS="Quests (|Cfffed312F9|R)"
+KEY_QUESTS=
 KEY_QUIT_MISSION=|cffffd700Q|ruit mission |cffff0000DO NOT FORGET TO RESTART WARCRAFT 3 BEFORE NEXT GAME!|r
-QUESTS="Quests"
-QUESTSMAIN="Faction Quests"
-QUESTSOPTIONAL="Shared Quests"
+QUESTS=
+QUESTSMAIN=
+QUESTSOPTIONAL=
 QUIT=Quit DO NOT FORGET TO RESTART WARCRAFT 3
 QUIT_MISSION=Quit Game DO NOT FORGET TO RESTART WARCRAFT 3
-RESOURCE_UBERTIP_GOLD="Gold is given every second depending on how many Control Points a player owns."
-RESOURCE_UBERTIP_UPKEEP="Visit our discord server: discord.gg/4eGZnR5"
-UPKEEP_NONE="discord.gg/4eGZnR5"
+RESOURCE_UBERTIP_GOLD=
+RESOURCE_UBERTIP_UPKEEP=
+UPKEEP_NONE=
 

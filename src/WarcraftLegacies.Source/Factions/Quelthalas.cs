@@ -2,9 +2,16 @@
 using MacroTools;
 using MacroTools.DialogueSystem;
 using MacroTools.FactionSystem;
+using MacroTools.LegendSystem;
 using MacroTools.ObjectiveSystem.Objectives.LegendBased;
 using MacroTools.ResearchSystems;
+<<<<<<< Updated upstream
 using WarcraftLegacies.Shared.FactionObjectLimits;
+using WarcraftLegacies.Source.Powers;
+
+=======
+using WarcraftLegacies.Source.Powers;
+>>>>>>> Stashed changes
 using WarcraftLegacies.Source.Quests.Quelthalas;
 using WarcraftLegacies.Source.Researches;
 using WarcraftLegacies.Source.Setup;
@@ -18,7 +25,7 @@ namespace WarcraftLegacies.Source.Factions
     private readonly AllLegendSetup _allLegendSetup;
 
     /// <inheritdoc />
-    
+
     public Quelthalas(PreplacedUnitSystem preplacedUnitSystem, AllLegendSetup allLegendSetup) : base("Quel'thalas", PLAYER_COLOR_CYAN, "|C0000FFFF",
       @"ReplaceableTextures\CommandButtons\BTNSylvanusWindrunner.blp")
     {
@@ -54,6 +61,7 @@ The Plague of Undeath is coming and Lordaeron will need your help with the Scour
     /// <inheritdoc />
     public override void OnRegistered()
     {
+      RegisterPowers();
       RegisterObjectLimits();
       RegisterQuests();
       RegisterResearches();
@@ -69,6 +77,21 @@ The Plague of Undeath is coming and Lordaeron will need your help with the Scour
       ModAbilityAvailability(ABILITY_A0OC_EXTRACT_VIAL_ALL, -1);
     }
 
+    private void RegisterPowers()
+    {
+      var sunwell = new List<Capital>
+      {
+        _allLegendSetup.Quelthalas.Sunwell,
+
+      };
+      AddPower(new SpellBoost(20, sunwell)
+      {
+        Name = "SpellBoost",
+        Effect = @"abilities\spells\undead\absorbmana\absorbmanabirthmissile.mdx",
+        ResearchId = UPGRADE_R008_SPELL_BOOST_POWER_IS_ACTIVE
+      });
+    }
+
     private void RegisterQuests()
     {
       var newQuest = AddQuest(new QuestSilvermoon(Regions.SunwellAmbient,
@@ -76,17 +99,17 @@ The Plague of Undeath is coming and Lordaeron will need your help with the Scour
       StartingQuest = newQuest;
       AddQuest(new QuestUnlockSpire(Regions.WindrunnerSpireUnlock, _allLegendSetup.Quelthalas.Sylvanas));
       AddQuest(new QuestTheBloodElves(_allLegendSetup.Neutral.DraktharonKeep));
-      AddQuest(new QuestQueldanil(Regions.QuelDanil_Lodge, Regions.BloodElfSecondChanceSpawn, 
+      AddQuest(new QuestQueldanil(Regions.QuelDanil_Lodge, Regions.BloodElfSecondChanceSpawn,
         _allLegendSetup.Quelthalas.Sunwell, _allLegendSetup.Quelthalas.Rommath));
       AddQuest(new QuestQueensArchive(_allLegendSetup.Quelthalas.Rommath));
       AddQuest(new QuestForgottenKnowledge());
     }
-    
+
     private void RegisterResearches()
     {
       ResearchManager.Register(new SunfuryWarrior(UPGRADE_R004_SUNFURY_TRAINING_QUEL_THALAS, 300));
     }
-    
+
     private void RegisterScourgeDialogue(Scourge scourge)
     {
       TriggeredDialogueManager.Add(
