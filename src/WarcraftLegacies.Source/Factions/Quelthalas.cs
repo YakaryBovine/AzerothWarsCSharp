@@ -5,13 +5,8 @@ using MacroTools.FactionSystem;
 using MacroTools.LegendSystem;
 using MacroTools.ObjectiveSystem.Objectives.LegendBased;
 using MacroTools.ResearchSystems;
-<<<<<<< Updated upstream
 using WarcraftLegacies.Shared.FactionObjectLimits;
 using WarcraftLegacies.Source.Powers;
-
-=======
-using WarcraftLegacies.Source.Powers;
->>>>>>> Stashed changes
 using WarcraftLegacies.Source.Quests.Quelthalas;
 using WarcraftLegacies.Source.Researches;
 using WarcraftLegacies.Source.Setup;
