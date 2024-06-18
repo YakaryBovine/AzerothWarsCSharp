@@ -53,14 +53,13 @@ namespace WarcraftLegacies.Source.Powers
 
     public override void OnAdd(Faction whichFaction)
     {
-      var sunwell = _sunwell.First(); // Assuming `_sunwell` is a list of capitals
+      var sunwell = _sunwell.First(); 
       AddObjective(new ObjectiveControlCapital(sunwell, false)
       {
         EligibleFactions = new List<Faction> { whichFaction }
       });
       RefreshIsActive();
     }
-
     public override void OnRemove(player whichPlayer)
     {
       PlayerUnitEvents.Unregister(CustomPlayerUnitEvents.PlayerDealsDamage, OnDamage, GetPlayerId(whichPlayer));
@@ -87,12 +86,13 @@ namespace WarcraftLegacies.Source.Powers
         return;
       }
 
-      var damageType = BlzGetEventDamageType();
-      Console.WriteLine($"[Debug] Damage Type: {damageType}");
+      var attackType = BlzGetEventAttackType();
+      Console.WriteLine($"[Debug] Attack Type: {attackType}");
 
-      if (damageType != DAMAGE_TYPE_MAGIC)
+      // Check if the attack type is MAGIC
+      if (attackType != ATTACK_TYPE_MAGIC)
       {
-        Console.WriteLine("[Debug] Damage is not of type MAGIC.");
+        Console.WriteLine("[Debug] Attack is not of type MAGIC.");
         return;
       }
 
