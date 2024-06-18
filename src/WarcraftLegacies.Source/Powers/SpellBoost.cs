@@ -97,6 +97,9 @@ namespace WarcraftLegacies.Source.Powers
       BlzSetEventDamage(GetEventDamage() + bonusDamage);
       AddSpecialEffectTarget(Effect, damagingUnit, "origin")
           .SetLifespan(1);
+
+      var playerId = GetPlayerId(GetOwningPlayer(damagingUnit));
+      DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, 5, "Bonus damage applied to your ability!");
     }
 
 
