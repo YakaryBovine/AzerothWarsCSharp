@@ -53,7 +53,7 @@ namespace WarcraftLegacies.Source.Powers
 
     public override void OnAdd(Faction whichFaction)
     {
-      var sunwell = _sunwell.First(); 
+      var sunwell = _sunwell.First();
       AddObjective(new ObjectiveControlCapital(sunwell, false)
       {
         EligibleFactions = new List<Faction> { whichFaction }
@@ -75,50 +75,23 @@ namespace WarcraftLegacies.Source.Powers
       _objectives.Clear();
     }
 
-
     private void OnDamage()
     {
       var damagingUnit = GetEventDamageSource();
-      Console.WriteLine($"[Debug] Damage Source: {damagingUnit}");
 
       if (!IsActive)
-      {
-        Console.WriteLine("[Debug] SpellBoost is not active.");
         return;
-      }
 
       var attackType = BlzGetEventAttackType();
-      Console.WriteLine($"[Debug] Attack Type: {attackType}");
 
-    
       if (attackType == ATTACK_TYPE_MAGIC || attackType == ATTACK_TYPE_NORMAL)
       {
         var originalDamage = GetEventDamage();
         var bonusDamage = (int)(originalDamage * (_bonusDamageAmountPercentage / 100.0f));
         BlzSetEventDamage(originalDamage + bonusDamage);
-
-        Console.WriteLine($"[Debug] Original Damage: {originalDamage}");
-        Console.WriteLine($"[Debug] Bonus Damage: {bonusDamage}");
-        Console.WriteLine($"[Debug] Total Damage: {originalDamage + bonusDamage}");
-
         AddSpecialEffectTarget(Effect, damagingUnit, "origin").SetLifespan(1);
-
-        // debug lines for attack type clarification
-        if (attackType == ATTACK_TYPE_MAGIC)
-        {
-          Console.WriteLine("[Debug] The attack was of type MAGIC.");
-        }
-        else if (attackType == ATTACK_TYPE_NORMAL)
-        {
-          Console.WriteLine("[Debug] The attack was of type NORMAL.");
-        }
-
-        // Debugging for MAGIC or NORMAL attack damage
-        Console.WriteLine("[Debug] Spell or Magic Attack Damage Applied: {bonusDamage}");
       }
     }
-
-
 
     private void AddObjective(Objective objective)
     {
