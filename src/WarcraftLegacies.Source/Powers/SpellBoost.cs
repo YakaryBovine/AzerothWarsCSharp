@@ -88,12 +88,10 @@ namespace WarcraftLegacies.Source.Powers
       }
 
       var attackType = BlzGetEventAttackType();
-      var damageType = BlzGetEventDamageType();
       Console.WriteLine($"[Debug] Attack Type: {attackType}");
-      Console.WriteLine($"[Debug] Damage Type: {damageType}");
 
-      // Check if the attack type is MAGIC or the damage type is NORMAL (for spells)
-      if (attackType == ATTACK_TYPE_MAGIC || damageType == DAMAGE_TYPE_NORMAL)
+    
+      if (attackType == ATTACK_TYPE_MAGIC || attackType == ATTACK_TYPE_NORMAL)
       {
         var originalDamage = GetEventDamage();
         var bonusDamage = (int)(originalDamage * (_bonusDamageAmountPercentage / 100.0f));
@@ -105,17 +103,24 @@ namespace WarcraftLegacies.Source.Powers
 
         AddSpecialEffectTarget(Effect, damagingUnit, "origin").SetLifespan(1);
 
-        // Additional debugging for DAMAGE_TYPE_NORMAL
-        if (damageType == DAMAGE_TYPE_NORMAL)
+        // debug lines for attack type clarification
+        if (attackType == ATTACK_TYPE_MAGIC)
         {
-          Console.WriteLine("[Debug] Spell Damage Applied: {bonusDamage}");
+          Console.WriteLine("[Debug] The attack was of type MAGIC.");
         }
-      }
-    
-      }
-    
+        else if (attackType == ATTACK_TYPE_NORMAL)
+        {
+          Console.WriteLine("[Debug] The attack was of type NORMAL.");
+        }
 
-      private void AddObjective(Objective objective)
+        // Debugging for MAGIC or NORMAL attack damage
+        Console.WriteLine("[Debug] Spell or Magic Attack Damage Applied: {bonusDamage}");
+      }
+    }
+
+
+
+    private void AddObjective(Objective objective)
     {
       _objectives.Add(objective);
       objective.ProgressChanged += OnObjectiveProgressChanged;
