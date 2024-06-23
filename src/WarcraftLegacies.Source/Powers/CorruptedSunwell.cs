@@ -49,8 +49,7 @@ namespace WarcraftLegacies.Source.Powers
 
     public override void OnAdd(player whichPlayer)
     {
-      PlayerUnitEvents.Register(CustomPlayerUnitEvents.PlayerUnitCast, OnAbilityCast, GetPlayerId(whichPlayer)); // Changed to PlayerUnitCast event
-      _playersWithPower.Add(whichPlayer);
+      PlayerUnitEvents.Register(CustomPlayerUnitEvents.PlayerUnitCast, OnAbilityCast, GetPlayerId(whichPlayer)); 
     }
 
     public override void OnAdd(Faction whichFaction)
@@ -68,7 +67,7 @@ namespace WarcraftLegacies.Source.Powers
 
     public override void OnRemove(player whichPlayer)
     {
-      PlayerUnitEvents.Unregister(CustomPlayerUnitEvents.PlayerUnitCast, OnAbilityCast, GetPlayerId(whichPlayer)); // Changed to PlayerUnitCast event
+      PlayerUnitEvents.Unregister(CustomPlayerUnitEvents.PlayerUnitCast, OnAbilityCast, GetPlayerId(whichPlayer));
       _playersWithPower.Remove(whichPlayer);
       SetPlayerTechResearched(whichPlayer, ResearchId, 0);
     }
