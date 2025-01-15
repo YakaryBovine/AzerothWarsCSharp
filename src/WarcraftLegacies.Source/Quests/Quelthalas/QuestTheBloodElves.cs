@@ -35,7 +35,7 @@ namespace WarcraftLegacies.Source.Quests.Quelthalas
 
     /// <inheritdoc />
     protected override string RewardDescription =>
-      $"Learn to train {GetObjectName(UnittypeId)}s from the Consortium, and you can summon Magister Rommath from the Altar of Prowess";
+      $"Learn to train {GetObjectName(UnittypeId)}s from the Consortium, and you can summon Magister Rommath & Lor'themar Theron from the Altar of Prowess";
 
     /// <inheritdoc />
     protected override void OnComplete(Faction completingFaction)

@@ -35,7 +35,8 @@ namespace WarcraftLegacies.Source.Setup.Legends
       {
         Unit = preplacedUnitSystem.GetUnit(UNIT_N001_THE_SUNWELL_QUEL_THALAS_OTHER),
         Capturable = true,
-        Essential = true
+        Essential = true,
+        DeathMessage = "The Sunwell, once a source of great magical energy, is no more. Its corruption has ended, and the land is free from its dark influence."
       };
       Sunwell.AddProtector(Silvermoon.Unit);
 

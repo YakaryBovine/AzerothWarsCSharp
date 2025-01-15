@@ -43,7 +43,6 @@ public static class Regions
 	public static Rectangle BlackTempleBase { get; set; } = new Rectangle(2112f, -31584f, 6496f, -28288f);
 	public static Rectangle BlademasterUnlock { get; set; } = new Rectangle(4352f, -10496f, 5024f, -10112f);
 	public static Rectangle BlastedlandAmbient { get; set; } = new Rectangle(14912f, -22208f, 20224f, -16896f);
-	public static Rectangle BloodElfSecondChanceSpawn { get; set; } = new Rectangle(17376f, 6144f, 17760f, 6560f);
 	public static Rectangle BookOfMedivhDalaran { get; set; } = new Rectangle(9312f, 4864f, 9600f, 5216f);
 	public static Rectangle BookOfMedivhGilneas { get; set; } = new Rectangle(7840f, 448f, 8032f, 640f);
 	public static Rectangle BootyBayQuest { get; set; } = new Rectangle(9696f, -24160f, 12032f, -22304f);

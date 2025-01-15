@@ -9,6 +9,8 @@ using WarcraftLegacies.Source.Quests.Quelthalas;
 using WarcraftLegacies.Source.Researches;
 using WarcraftLegacies.Source.Setup;
 using WCSharp.Shared.Data;
+using WarcraftLegacies.Source.Powers;
+using MacroTools.LegendSystem;
 
 namespace WarcraftLegacies.Source.Factions
 {
@@ -18,7 +20,6 @@ namespace WarcraftLegacies.Source.Factions
     private readonly AllLegendSetup _allLegendSetup;
 
     /// <inheritdoc />
-    
     public Quelthalas(PreplacedUnitSystem preplacedUnitSystem, AllLegendSetup allLegendSetup) : base("Quel'thalas", PLAYER_COLOR_CYAN, "|C0000FFFF",
       @"ReplaceableTextures\CommandButtons\BTNSylvanusWindrunner.blp")
     {
@@ -58,8 +59,25 @@ The Plague of Undeath is coming and Lordaeron will need your help with the Scour
       RegisterQuests();
       RegisterResearches();
       SharedFactionConfigSetup.AddSharedFactionConfig(this);
+      RegisterPowers();
     }
+    private void RegisterPowers()
+    {
+      var fontsOfPower = new List<Capital>
+      {
+        _allLegendSetup.Quelthalas.Sunwell,
+        _allLegendSetup.FelHorde.BlackTemple,
+        _allLegendSetup.Druids.Nordrassil,
+      };
 
+      AddPower(new FontOfPower(fontsOfPower)
+      {
+        IconName = "PriestAdept",
+        Name = "Font of Power",
+        ResearchId = UPGRADE_ZBFO_FONT_OF_POWER_IS_ACTIVE_POWER
+      });
+    }
+    
     private void RegisterObjectLimits()
     {
       foreach (var (objectTypeId, objectLimit) in QuelthalasObjectLimitData.GetAllObjectLimits())
@@ -76,8 +94,7 @@ The Plague of Undeath is coming and Lordaeron will need your help with the Scour
       StartingQuest = newQuest;
       AddQuest(new QuestUnlockSpire(Regions.WindrunnerSpireUnlock, _allLegendSetup.Quelthalas.Sylvanas));
       AddQuest(new QuestTheBloodElves(_allLegendSetup.Neutral.DraktharonKeep));
-      AddQuest(new QuestQueldanil(Regions.QuelDanil_Lodge, Regions.BloodElfSecondChanceSpawn, 
-        _allLegendSetup.Quelthalas.Sunwell, _allLegendSetup.Quelthalas.Rommath));
+      AddQuest(new QuestQueldanil(Regions.QuelDanil_Lodge));
       AddQuest(new QuestQueensArchive(_allLegendSetup.Quelthalas.Rommath));
       AddQuest(new QuestForgottenKnowledge());
     }

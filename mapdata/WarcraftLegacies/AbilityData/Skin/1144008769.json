@@ -1,0 +1,89 @@
+{
+  "OldId": 1818447425,
+  "NewId": 1144008769,
+  "Unk": [
+    0
+  ],
+  "Modifications": [
+    {
+      "Id": 1768841569,
+      "Type": 3,
+      "Value": "spell"
+    },
+    {
+      "Id": 1953653089,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNWispSplode.blp"
+    },
+    {
+      "Id": 2037408353,
+      "Value": 2
+    },
+    {
+      "Id": 1952539489,
+      "Type": 3,
+      "Value": ""
+    },
+    {
+      "Id": 1885430625,
+      "Type": 3,
+      "Value": ""
+    },
+    {
+      "Id": 1718840929,
+      "Type": 3,
+      "Value": "(Quel\u0027thalas - Sunwell)"
+    },
+    {
+      "Id": 1952540001,
+      "Type": 3,
+      "Value": ""
+    },
+    {
+      "Id": 1835101793,
+      "Type": 3,
+      "Value": "Destroy the Corrupted Sunwell"
+    },
+    {
+      "Id": 1918988897,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNMind Crush.blp"
+    },
+    {
+      "Id": 2020635233,
+      "Value": 3
+    },
+    {
+      "Id": 1802007137,
+      "Type": 3,
+      "Value": "Z"
+    },
+    {
+      "Id": 1952805473,
+      "Type": 3,
+      "Value": "Learn Inspire Madness - [|cffffcc00Level %d|r]"
+    },
+    {
+      "Id": 1953854049,
+      "Type": 3,
+      "Value": "Takes control of several random enemy units in the target area. After 30 seconds, each unit controlled this way dies of madness.|n|n|cffffcc00Level 1|r - Controls 6 units. |n|cffffcc00Level 2|r - Controls 10 units. |n|cffffcc00Level 3|r - Controls 14 units."
+    },
+    {
+      "Id": 1952543841,
+      "Type": 3,
+      "Value": ""
+    },
+    {
+      "Level": 1,
+      "Id": 829453409,
+      "Type": 3,
+      "Value": "Destroy the Corrupted Sunwell"
+    },
+    {
+      "Level": 1,
+      "Id": 828536161,
+      "Type": 3,
+      "Value": "Destroys the Sunwell, putting an end to its corruptive influence over the land."
+    }
+  ]
+}

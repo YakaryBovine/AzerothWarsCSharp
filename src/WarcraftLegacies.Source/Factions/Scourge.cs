@@ -57,6 +57,7 @@ When the Plague hits Lordaeron, you will have a choice to where you want all you
         "ud",
         "undead"
       };
+      RegisterFactionDependentInitializer<Quelthalas>(RegisterQuelthalasRelatedQuests);
       RegisterFactionDependentInitializer<Lordaeron>(RegisterLordaeronRelatedQuests);
       RegisterFactionDependentInitializer<Lordaeron, Legion>(RegisterLordaeronLegionRelatedQuests);
       RegisterFactionDependentInitializer<Dalaran>(RegisterDalaranDialogue);
@@ -106,8 +107,6 @@ When the Plague hits Lordaeron, you will have a choice to where you want all you
           _allLegendSetup.Scourge.TheFrozenThrone);
       QuestSlumberingKing questSlumberingKing = new();
       
-      var questKelthuzadLich = AddQuest(new QuestKelthuzadLich(_allLegendSetup.Quelthalas.Sunwell, _allLegendSetup.Scourge.Kelthuzad));
-      AddQuest(new QuestKelthuzadDies(questKelthuzadLich, _allLegendSetup.Scourge.Kelthuzad));
       AddQuest(questSpiderWar);
       StartingQuest = questSpiderWar;
       AddQuest(questDrakUnlock);
@@ -174,59 +173,6 @@ When the Plague hits Lordaeron, you will have a choice to where you want all you
             new ObjectiveStartSpell(ABILITY_A00J_SUMMON_THE_BURNING_LEGION_ALL_FACTIONS, false,
               _allLegendSetup.Scourge.Kelthuzad)
           }));
-
-      TriggeredDialogueManager.Add(
-        new TriggeredDialogue(
-          new DialogueSequence(
-            new Dialogue(
-              soundFile: @"Sound\Dialogue\UndeadCampaign\Undead02\U02KelThuzad27.flac",
-              caption: "Told you my death would mean little.",
-              speaker: "Kel'thuzad"),
-            new Dialogue(
-              soundFile: @"Sound\Dialogue\UndeadCampaign\Undead02\U02Arthas28.flac",
-              caption: "What the... Am I hearing ghosts now?",
-              speaker: "Arthas Menethil"),
-            new Dialogue(
-              soundFile: @"Sound\Dialogue\UndeadCampaign\Undead02\U02KelThuzad29.flac",
-              caption: "It is I, Kel'Thuzad. I was right about you, Prince Arthas.",
-              speaker: "Kel'thuzad")),
-          new[] { this },
-          new Objective[]
-          {
-            new ObjectiveLegendMeetsLegend(_allLegendSetup.Scourge.Arthas, _allLegendSetup.Scourge.Kelthuzad),
-            new ObjectiveQuestComplete(GetQuestByType<QuestKelthuzadDies>())
-            {
-              EligibleFactions = new List<Faction> { this }
-            },
-            new ObjectiveQuestNotComplete(GetQuestByType<QuestKelthuzadLich>())
-            {
-              EligibleFactions = new List<Faction> { this }
-            }
-          }));
-
-      TriggeredDialogueManager.Add(new TriggeredDialogue(
-        new DialogueSequence(
-          new Dialogue(
-            soundFile: @"Sound\Dialogue\UndeadExpCamp\Undead01x\L01Arthas43.flac",
-            caption: "Aarrghh... Not again!",
-            speaker: "Arthas Menethil"),
-          new Dialogue(
-            soundFile: @"Sound\Dialogue\UndeadExpCamp\Undead01x\L01LichKing44.flac",
-            caption:
-            "It is I, the Lich King. Danger draws near the Frozen Throne! You must return to Northrend immediately! Obey!",
-            speaker: "The Lich King")),
-        new Faction[] { this }, 
-        new Objective[]
-        {
-          new ObjectiveDontControlCapital(_allLegendSetup.Scourge.TheFrozenThrone, false)
-          {
-            EligibleFactions = new List<Faction> { this }
-          },
-          new ObjectiveControlLegend(_allLegendSetup.Scourge.Arthas, false)
-          {
-            EligibleFactions = new List<Faction> { this }
-          }
-        }));
     }
     
     private void RegisterDalaranDialogue(Dalaran dalaran)
@@ -344,11 +290,6 @@ When the Plague hits Lordaeron, you will have a choice to where you want all you
         new TriggeredDialogue(
           new DialogueSequence(
             new Dialogue(
-              soundFile: @"Sound\Dialogue\UndeadCampaign\Undead05A\U05AArthas22.flac",
-              caption:
-              "Citizens of Silvermoon! I have given you ample opportunities to surrender, but you have stubbornly refused! Know that today, your entire race and your ancient heritage will end! Death itself has come to claim the high home of the elves!",
-              speaker: "Arthas Menethil"),
-            new Dialogue(
               soundFile: @"Sound\Dialogue\UndeadCampaign\Undead05A\U05AArthas30.flac",
               caption: "Now, arise, Kel'Thuzad, and serve the Lich King once again!",
               speaker: "Arthas Menethil"),
@@ -364,6 +305,35 @@ When the Plague hits Lordaeron, you will have a choice to where you want all you
           new[]
           {
             new ObjectiveQuestComplete(GetQuestByType<QuestKelthuzadLich>())
+            {
+              EligibleFactions = new List<Faction> { this }
+            }
+          }));
+      
+      TriggeredDialogueManager.Add(
+        new TriggeredDialogue(
+          new DialogueSequence(
+            new Dialogue(
+              soundFile: @"Sound\Dialogue\UndeadCampaign\Undead02\U02KelThuzad27.flac",
+              caption: "Told you my death would mean little.",
+              speaker: "Kel'thuzad"),
+            new Dialogue(
+              soundFile: @"Sound\Dialogue\UndeadCampaign\Undead02\U02Arthas28.flac",
+              caption: "What the... Am I hearing ghosts now?",
+              speaker: "Arthas Menethil"),
+            new Dialogue(
+              soundFile: @"Sound\Dialogue\UndeadCampaign\Undead02\U02KelThuzad29.flac",
+              caption: "It is I, Kel'Thuzad. I was right about you, Prince Arthas.",
+              speaker: "Kel'thuzad")),
+          new[] { this },
+          new Objective[]
+          {
+            new ObjectiveLegendMeetsLegend(_allLegendSetup.Scourge.Arthas, _allLegendSetup.Scourge.Kelthuzad),
+            new ObjectiveQuestComplete(GetQuestByType<QuestKelthuzadDies>())
+            {
+              EligibleFactions = new List<Faction> { this }
+            },
+            new ObjectiveQuestNotComplete(GetQuestByType<QuestKelthuzadLich>())
             {
               EligibleFactions = new List<Faction> { this }
             }
@@ -393,11 +363,17 @@ When the Plague hits Lordaeron, you will have a choice to where you want all you
             new ObjectiveLegendMeetsLegend(_allLegendSetup.Scourge.Arthas, _allLegendSetup.Legion.Tichondrius)
           }));
     }
-
+    
+    private void RegisterQuelthalasRelatedQuests(Quelthalas quelthalas)
+    {
+      var questKelthuzadLich = AddQuest(new QuestKelthuzadLich(_allLegendSetup.Quelthalas.Sunwell,
+        _allLegendSetup.Scourge.Kelthuzad, quelthalas));
+      AddQuest(new QuestKelthuzadDies(questKelthuzadLich, _allLegendSetup.Scourge.Kelthuzad));
+    }
+    
     private void RegisterLordaeronRelatedQuests(Faction lordaeron)
     {
       var stratholme = _allLegendSetup.Lordaeron.Stratholme;
-      var frozenThrone = _allLegendSetup.Scourge?.TheFrozenThrone;
       var arthas = _allLegendSetup.Lordaeron.Arthas;
       
       QuestDestroyStratholme questDestroyStratholme = new(lordaeron, stratholme, arthas);
