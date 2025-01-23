@@ -15,7 +15,7 @@ namespace WarcraftLegacies.Source.Quests.Zandalar
   public sealed class QuestGundrak : QuestData
   {
     private const int GundrakResearch = UPGRADE_R02Q_QUEST_COMPLETED_THE_DRAKKARI_FORTRESS_WARSONG;
-    private const int WarlordId = UNIT_NFTK_WARLORD_WARSONG;
+    private const int WarlordId = UNIT_NFTK_WARLORD_ZANDALAR;
     private const int TrollShrineId = UNIT_O04X_LOA_SHRINE_ZANDALARI_SIEGE;
     private readonly int _goldReward = 50;
     /// <summary>

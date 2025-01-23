@@ -1,4 +1,5 @@
-﻿using MacroTools.FactionSystem;
+﻿using MacroTools.Extensions;
+using MacroTools.FactionSystem;
 using MacroTools.PassiveAbilities;
 using MacroTools.PassiveAbilitySystem;
 using MacroTools.Powers;
@@ -23,6 +24,7 @@ namespace WarcraftLegacies.Source.Factions
       ControlPointDefenderUnitTypeId = Constants.UNIT_NECP_CONTROL_POINT_DEFENDER_SKYWALL_TOWER;
       TraditionalTeam = TeamSetup.OldGods;
       StartingGold = 200;
+      StartingUnits = Regions.SkywallStart.PrepareUnitsForRescue(RescuePreparationMode.Invulnerable);
       IntroText = @"You are playing as the Elementals of Skywall|r|r.
 
 At the start, clear Uldum and take control of Tanaris. 

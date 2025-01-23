@@ -28,7 +28,8 @@ namespace WarcraftLegacies.Source.Factions
       _artifactSetup = artifactSetup;
       StartingGold = 200;
       ControlPointDefenderUnitTypeId = UNIT_H0C1_CONTROL_POINT_DEFENDER_ZANDALAR;
-      LearningDifficulty = FactionLearningDifficulty.Basic;
+      StartingUnits = Regions.ZandalarStart.PrepareUnitsForRescue(RescuePreparationMode.Invulnerable);
+      LearningDifficulty = FactionLearningDifficulty.Advanced;
       IntroText = @"You are playing as the mighty |cffe1946cZandalari Empire|r.
 
 You start off at the southern coast of Tanaris, seperated from your allies. Raise an army and deal with the rogue Trolls in Zul'Farrak.
@@ -39,8 +40,7 @@ Join up with your allies and brace for a tough fight and counter-attack. ";
 
       GoldMines = new List<unit>
       {
-        _preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(-8900, -17000)), //Starting
-        _preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(-3500, -15000))  //Zandalar
+        _preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(-4000, -12000)), //Starting
       };
       Nicknames = new List<string>
       {
