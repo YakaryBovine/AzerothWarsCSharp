@@ -19,10 +19,10 @@ namespace WarcraftLegacies.Source.Factions
 
     /// <inheritdoc />
     public Zandalar(PreplacedUnitSystem preplacedUnitSystem, AllLegendSetup allLegendSetup, ArtifactSetup artifactSetup)
-      : base("Zandalar", PLAYER_COLOR_PEACH, "|cffff8c6c",
+      : base("Atal'zul", PLAYER_COLOR_LIGHT_GRAY, "|cffff8c6c",
         @"ReplaceableTextures\CommandButtons\BTNHeadHunterBerserker.blp")
     {
-      TraditionalTeam = TeamSetup.Horde;
+      TraditionalTeam = TeamSetup.OldGods;
       _preplacedUnitSystem = preplacedUnitSystem;
       _allLegendSetup = allLegendSetup;
       _artifactSetup = artifactSetup;
@@ -79,7 +79,6 @@ Join up with your allies and brace for a tough fight and counter-attack. ";
       AddQuest(new QuestZandalar(Regions.ZandalarUnlock, _preplacedUnitSystem));
       AddQuest(new QuestGundrak(_allLegendSetup));
       AddQuest(new QuestJinthaAlor(_allLegendSetup));
-      AddQuest(new QuestZulgurub(_allLegendSetup));
       AddQuest(new QuestHakkar(_artifactSetup.ZinRokh));
       AddQuest(new QuestZandalarOutpost());
       AddQuest(new QuestExtractSunwellVial(_allLegendSetup.Quelthalas.Sunwell, _artifactSetup.SunwellVial));

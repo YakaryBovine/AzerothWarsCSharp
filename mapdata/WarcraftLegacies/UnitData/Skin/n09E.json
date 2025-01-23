@@ -6,10 +6,6 @@
   ],
   "Modifications": [
     {
-      "Id": 2020631157,
-      "Value": 2
-    },
-    {
       "Id": 1718840949,
       "Type": 3,
       "Value": "(troll)"
@@ -17,12 +13,50 @@
     {
       "Id": 1953458293,
       "Type": 3,
-      "Value": "E"
+      "Value": "Q"
     },
     {
       "Id": 1651864693,
       "Type": 3,
       "Value": "Heavy ranged unit that hurls bolts of lightning. Can cast Chain Lightning and Lightning Shield."
+    },
+    {
+      "Id": 1633907573,
+      "Type": 1,
+      "Value": 0.8
+    },
+    {
+      "Id": 1668510581,
+      "Type": 1,
+      "Value": 2
+    },
+    {
+      "Id": 1835101813,
+      "Type": 3,
+      "Value": "Spawn of Akunda"
+    },
+    {
+      "Id": 1885959285,
+      "Type": 3,
+      "Value": "Summon Spawn of Akunda"
+    },
+    {
+      "Id": 1735156597,
+      "Value": 200
+    },
+    {
+      "Id": 1919705973,
+      "Value": 200
+    },
+    {
+      "Id": 1818520949,
+      "Type": 3,
+      "Value": "units\\creeps\\ThunderLizardVizier\\ThunderLizardVizier.mdl"
+    },
+    {
+      "Id": 1868786037,
+      "Type": 3,
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNThunderLizardVizier.blp"
     }
   ]
 }

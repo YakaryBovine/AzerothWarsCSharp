@@ -1,4 +1,4 @@
-namespace WarcraftLegacies.Shared.FactionObjectLimits
+﻿namespace WarcraftLegacies.Shared.FactionObjectLimits
 {
   public static class ZandalarObjectLimitData
   {
@@ -29,7 +29,6 @@ namespace WarcraftLegacies.Shared.FactionObjectLimits
       yield return new("o04G", Unlimited); //Haruspex
       yield return new("o04E", 6); //Boneseer
       yield return new("h05D", Unlimited); //Raptor Rider
-      yield return new("o021", 12); //Ravager
       yield return new("nftk", 12); //Warlord
       yield return new("o02K", 6); //Bear Rider
       yield return new("n0DN", 6); //Medium

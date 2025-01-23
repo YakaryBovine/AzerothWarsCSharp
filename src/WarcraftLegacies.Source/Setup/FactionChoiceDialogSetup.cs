@@ -19,6 +19,9 @@ namespace WarcraftLegacies.Source.Setup
 
       new FactionChoiceDialogPresenter(new Sentinels(preplacedUnitSystem, allLegendSetup, artifactSetup),
         new Draenei(preplacedUnitSystem, allLegendSetup, artifactSetup)).Run(Player(18));
+
+      new FactionChoiceDialogPresenter(new Skywall(),
+        new Zandalar(preplacedUnitSystem, allLegendSetup, artifactSetup)).Run(Player(8));
     }
   }
 }
