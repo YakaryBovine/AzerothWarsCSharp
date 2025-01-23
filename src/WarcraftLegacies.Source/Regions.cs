@@ -266,6 +266,7 @@ public static class Regions
 	public static Rectangle SilithusAmbient { get; set; } = new Rectangle(-24832f, -20320f, -15712f, -11744f);
 	public static Rectangle SilverpineForest { get; set; } = new Rectangle(6880f, 3936f, 7552f, 4544f);
 	public static Rectangle SkullRetrieval { get; set; } = new Rectangle(8864f, 4672f, 9184f, 4928f);
+	public static Rectangle SkywallStart { get; set; } = new Rectangle(-13152f, -20064f, -11872f, -18688f);
 	public static Rectangle Solliden_Farmstead { get; set; } = new Rectangle(6400f, 8992f, 7808f, 10592f);
 	public static Rectangle South_EK_Ships { get; set; } = new Rectangle(7872f, -18240f, 18880f, -12288f);
 	public static Rectangle SouthshoreAmbient { get; set; } = new Rectangle(9216f, 1216f, 14176f, 3520f);
@@ -358,12 +359,11 @@ public static class Regions
 	public static Rectangle WyrmrestTemple { get; set; } = new Rectangle(-960f, 16928f, -320f, 17696f);
 	public static Rectangle YoggSaronPrison { get; set; } = new Rectangle(3712f, 23104f, 4448f, 23712f);
 	public static Rectangle Zandalari_Echo_Unlock { get; set; } = new Rectangle(-9280f, -5440f, -8384f, -4512f);
+	public static Rectangle ZandalarStart { get; set; } = new Rectangle(-4768f, -12960f, -3872f, -11968f);
 	public static Rectangle ZandalarUnlock { get; set; } = new Rectangle(-5440f, -17152f, -2400f, -14656f);
 	public static Rectangle ZeppelinReturn { get; set; } = new Rectangle(-960f, -5824f, -320f, -5216f);
 	public static Rectangle ZulAman_trolls { get; set; } = new Rectangle(20288f, 11648f, 22848f, 17440f);
 	public static Rectangle Zulfarrak { get; set; } = new Rectangle(-12352f, -14272f, -10528f, -12064f);
 	public static Rectangle ZulfarrakAmbient { get; set; } = new Rectangle(-5952f, -17216f, 2944f, -10368f);
-	public static Rectangle ZandalarStart { get; set; } = new Rectangle(-4768f, -12960f, -3872f, -11968f);
-	public static Rectangle SkywallStart { get; set; } = new Rectangle(-12768f, -20064f, -11872f, -19072f);
 
 }
