@@ -15,6 +15,17 @@
       "Value": "(Brown Elekk)"
     },
     {
+      "Id": 1835101793,
+      "Type": 3,
+      "Value": "Thick Skin"
+    },
+    {
+      "Level": 1,
+      "Id": 829453409,
+      "Type": 3,
+      "Value": "Thick Skin"
+    },
+    {
       "Id": 2037082209,
       "Type": 3,
       "Value": ""
@@ -24,17 +35,6 @@
       "Id": 828536161,
       "Type": 3,
       "Value": "Reduces all ranged attacks on the unit by \u003CA0VI,DataC1\u003E damage. Attacks cannot be reduced below \u003CA0VI,DataB1\u003E damage."
-    },
-    {
-      "Id": 1835101793,
-      "Type": 3,
-      "Value": "Hardened"
-    },
-    {
-      "Level": 1,
-      "Id": 829453409,
-      "Type": 3,
-      "Value": "Hardened"
     }
   ]
 }
