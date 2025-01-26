@@ -70,6 +70,7 @@ namespace WarcraftLegacies.Source.PassiveAbilities.DefensiveCocoon
       GetPlayerTechCount(target.OwningPlayer(), RequiredResearch, false) > 0 && 
       abilityLevel != 0 &&
       BlzGetUnitSkin(target) != EggId && 
-      GetEventDamage() >= GetUnitState(target, UNIT_STATE_LIFE);
+      GetEventDamage() >= GetUnitState(target, UNIT_STATE_LIFE) &&
+      !IsUnitIllusion(target);
   }
 }

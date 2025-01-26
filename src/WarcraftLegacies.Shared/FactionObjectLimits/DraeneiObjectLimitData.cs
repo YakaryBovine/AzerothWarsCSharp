@@ -8,57 +8,57 @@ namespace WarcraftLegacies.Shared.FactionObjectLimits
 
     public static IEnumerable<ObjectLimit> GetAllObjectLimits()
     {
-      yield return new("o02P", Unlimited); //Crystal Hall
-      yield return new("o050", Unlimited); //Metropolis
-      yield return new("o051", Unlimited); //Divine Citadel
-      yield return new("o058", Unlimited); //Altar of Light
-      yield return new("o052", Unlimited); //Ceremonial Altar
-      yield return new("o053", Unlimited); //Smithery
-      yield return new("o054", Unlimited); //Astral Sanctum
-      yield return new("o055", Unlimited); //Crystal Spire
-      yield return new("o056", 60); //Arcane Well
-      yield return new("o057", Unlimited); //Vaults of Relic
-      yield return new("u00U", Unlimited); //Crystal Protector
-      yield return new("u01Q", Unlimited); //Crystal Protector improved
-      yield return new("o059", Unlimited); //Improved Ancient Protector
-      yield return new("o05U", Unlimited); //Lightforged Gateway
-      yield return new("o05A", Unlimited); //Wisp
-      yield return new("o05B", Unlimited); //Defender
-      yield return new("h09T", Unlimited); //Rangari
-      yield return new("e01K", 3); //Polybolos
-      yield return new("o05D", Unlimited); //Elementalist
-      yield return new("o05C", Unlimited); //Luminarch
-      yield return new("h09R", 6); //Vindicator
-      yield return new("nmdr", Unlimited); //Elekk
-      yield return new("h09U", 4); //Elekk Knight
-      yield return new("u02H", 6); //Nether Ray
-      yield return new("n0BJ", 6); //Sharpshooter
-      yield return new("n0BP", 4); //Juggernaut
-      yield return new("n0BM", 8); //Nether Ray
-      yield return new("etrs", Unlimited); //Night Elf Transport Ship
-      yield return new("h0AU", Unlimited); // Scout
-      yield return new("h0AV", Unlimited); // Frigate
-      yield return new("h0B1", Unlimited); // Fireship
-      yield return new("h057", Unlimited); // Galley
-      yield return new("h0B4", Unlimited); // Boarding
-      yield return new("h0BA", Unlimited); // Juggernaut
-      yield return new("h0B8", 6); // Bombard
-      yield return new("H09S", 1); //Maraad
-      yield return new("E01I", 1); //Velen
-      yield return new("E01J", 1); //Nobundo
-      yield return new("H09M", 1); //Adal
-      yield return new("R078", Unlimited); //Elementalist training
-      yield return new("R07C", Unlimited); //Luminarch training
+      yield return new(UNIT_O02P_CRYSTAL_HALL_DRAENEI_T1, Unlimited);
+      yield return new(UNIT_O050_METROPOLIS_DRAENEI_T2, Unlimited);
+      yield return new(UNIT_O051_DIVINE_CITADEL_DRAENEI_T3, Unlimited);
+      yield return new(UNIT_O058_ALTAR_OF_LIGHT_DRAENEI_ALTAR, Unlimited);
+      yield return new(UNIT_O052_CEREMONIAL_ALTAR_DRAENEI_BARRACKS, Unlimited);
+      yield return new(UNIT_O053_LIGHTFORGE_DRAENEI_RESEARCH, Unlimited);
+      yield return new(UNIT_O054_ASTRAL_SANCTUM_DRAENEI_MAGIC, Unlimited);
+      yield return new(UNIT_O055_CRYSTAL_SPIRE_DRAENEI_SPECIALIST, Unlimited);
+      yield return new(UNIT_O056_ARCANE_WELL_DRAENEI_FARM, 60);
+      yield return new(UNIT_O057_VAULT_OF_RELICS_DRAENEI_SHOP, Unlimited);
+      yield return new(UNIT_U00U_CRYSTAL_PROTECTOR_DRAENEI_TOWER, Unlimited);
+      yield return new(UNIT_U01Q_IMPROVED_CRYSTAL_PROTECTOR_DRAENEI_TOWER_2, Unlimited);
+      yield return new(UNIT_O059_SHIPYARD_DRAENEI_SHIPYARD, Unlimited);
+      yield return new(UNIT_O05U_LIGHTFORGED_GATEWAY_DRAENEI_ELITE, Unlimited);
+      yield return new(UNIT_O05A_GEMCRAFTER_DRAENEI_WORKER, Unlimited);
+      yield return new(UNIT_O05B_DEFENDER_DRAENEI, Unlimited);
+      yield return new(UNIT_H09T_RANGARI_DRAENEI, Unlimited);
+      yield return new(UNIT_E01K_POLYBOLOS_DRAENEI, 3);
+      yield return new(UNIT_O05D_ELEMENTALIST_DRAENEI, Unlimited);
+      yield return new(UNIT_O05C_LUMINARCH_DRAENEI, Unlimited);
+      yield return new(UNIT_H09R_VINDICATOR_DRAENEI, 6);
+      yield return new(UNIT_NMDR_BROWN_ELEKK_DRAENEI, Unlimited);
+      yield return new(UNIT_H09U_ELEKK_KNIGHT_DRAENEI, 4);
+      yield return new(UNIT_U02H_NETHER_RAY_DRAENEI, 6);
+      yield return new(UNIT_N0BJ_LIGHTFORGED_SHARPSHOOTER_DRAENEI, 6);
+      yield return new(UNIT_N0BP_LIGHTFORGED_JUGGERNAUT_NEXUS, 4);
+      yield return new(UNIT_N0BM_LIGHTFORGED_DRAGOON_DRAENEI, 8);
+      yield return new(UNIT_ETRS_NIGHT_ELF_TRANSPORT_SHIP_DRUIDS_SENTINELS, Unlimited);
+      yield return new(UNIT_H0AU_SCOUT_SHIP_NIGHT_ELVES, Unlimited);
+      yield return new(UNIT_H0AV_FRIGATE_NIGHT_ELVES, Unlimited);
+      yield return new(UNIT_H0B1_FIRESHIP_NIGHT_ELVES, Unlimited);
+      yield return new(UNIT_H057_GALLEY_NIGHT_ELVES, Unlimited);
+      yield return new(UNIT_H0B4_BOARDING_VESSEL_NIGHT_ELVES, Unlimited);
+      yield return new(UNIT_H0BA_JUGGERNAUT_NIGHT_ELVES, Unlimited);
+      yield return new(UNIT_H0B8_BOMBARD_NIGHT_ELVES, Unlimited);
+      yield return new(UNIT_H09S_HAMMER_OF_THE_LIGHT_DRAENEI, 1);
+      yield return new(UNIT_E01I_AGELESS_ONE_DRUIDS, 1);
+      yield return new(UNIT_E01J_HIGH_SHAMAN_DRUIDS, 1);
+      yield return new(UNIT_H09M_THE_NAARU_DRAENEI, 1);
+      yield return new(UPGRADE_R078_ELEMENTALIST_MASTER_TRAINING_DRAENEI, Unlimited);
+      yield return new(UPGRADE_R07C_LUMINARCH_MASTER_TRAINING_DRAENEI, Unlimited);
 
-      yield return new(UPGRADE_RD01_CRYSTAL_SHIELDS_DRAENEI, Unlimited); //Defender Upgrade
-      yield return new(UPGRADE_RD02_KALIMDOR_WILDS_ACCLIMATIZATION_DRAENEI, Unlimited); //Rangari Upgrade
-      yield return new(UPGRADE_RD04_ALIGNED_CRYSTAL_MECHANISM_DRAENEI, Unlimited); //Polybolos Upgrade
-      yield return new(UPGRADE_RD06_AZEROTHIAN_HUSBANDRY_DRAENEI, Unlimited); //Azerotian Breed
-      yield return new(UPGRADE_RD05_PROTECTOR_OF_KINGS_DRAENEI, Unlimited); //Elek Knight Upgrade
-      yield return new(UPGRADE_RD07_IMPROVED_CRYSTAL_DISCHARGE_DRAENEI, Unlimited); //Crystal Discharge
-      yield return new(UPGRADE_RD08_RESTORE_MANA_DRAENEI, Unlimited); //Mana Syphon
-      yield return new(UPGRADE_RD09_ENDLESS_ENERGY_DRAENEI, Unlimited); //Endless Energy
-      yield return new(UPGRADE_RD10_NAARU_S_SHIELD_DRAENEI, Unlimited); //Naarus Shield
+      yield return new(UPGRADE_RD01_CRYSTAL_SHIELDS_DRAENEI, Unlimited);
+      yield return new(UPGRADE_RD02_KALIMDOR_WILDS_ACCLIMATIZATION_DRAENEI, Unlimited);
+      yield return new(UPGRADE_RD04_ALIGNED_CRYSTAL_MECHANISM_DRAENEI, Unlimited);
+      yield return new(UPGRADE_RD06_AZEROTHIAN_HUSBANDRY_DRAENEI, Unlimited);
+      yield return new(UPGRADE_RD05_PROTECTOR_OF_KINGS_DRAENEI, Unlimited);
+      yield return new(UPGRADE_RD07_IMPROVED_CRYSTAL_DISCHARGE_DRAENEI, Unlimited);
+      yield return new(UPGRADE_RD08_RESTORE_MANA_DRAENEI, Unlimited);
+      yield return new(UPGRADE_RD09_ENDLESS_ENERGY_DRAENEI, Unlimited);
+      yield return new(UPGRADE_RD10_NAARU_S_SHIELD_DRAENEI, Unlimited);
     }
   }
 }
