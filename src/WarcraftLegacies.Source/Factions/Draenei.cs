@@ -19,7 +19,7 @@ namespace WarcraftLegacies.Source.Factions
     private readonly ArtifactSetup _artifactSetup;
 
     /// <inheritdoc />
-    
+
     public Draenei(PreplacedUnitSystem preplacedUnitSystem, AllLegendSetup allLegendSetup, ArtifactSetup artifactSetup) : base("The Exodar",
       PLAYER_COLOR_NAVY, "|cff000080", @"ReplaceableTextures\CommandButtons\BTNBOSSVelen.blp")
     {
@@ -34,11 +34,11 @@ namespace WarcraftLegacies.Source.Factions
       LearningDifficulty = FactionLearningDifficulty.Advanced;
       IntroText = @"You are playing as the exiled |cff000080Draenei|r.
 
-You begin on Azuremyst Island, amid the wreckage of your flight from the Burning Legion.
+      You begin on Azuremyst Island, amid the wreckage of your flight from the Burning Legion.
 
-Further inland your Night-elf allies will need your help against the Orcish Horde, quickly build your base and gain entry to the Exodar.
+      Further inland your Night-elf allies will need your help against the Orcish Horde, quickly build your base and gain entry to the Exodar.
 
-The Exodar is a mighty fortress-base with the ability to move around the map, but it will take a long time to repair.";
+      The Exodar is a mighty fortress-base with the ability to move around the map, but it will take a long time to repair.";
       GoldMines = new List<unit>
       {
         preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(-21000, 8600))
@@ -52,8 +52,12 @@ The Exodar is a mighty fortress-base with the ability to move around the map, bu
         "theexodar",
         "goats"
       };
+
+      // Transfer control of the starting Control Point to the Exodar faction
+      var unitToTransfer = preplacedUnitSystem.GetUnit(UNIT_N06F_SILVERMYST_ISLAND);
+      SetUnitOwner(unitToTransfer, Player(18), true);
     }
-    
+
     /// <inheritdoc />
     public override void OnRegistered()
     {
