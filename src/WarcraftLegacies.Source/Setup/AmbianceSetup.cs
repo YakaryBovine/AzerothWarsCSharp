@@ -104,8 +104,6 @@ namespace WarcraftLegacies.Source.Setup
       Regions.MaelstromAmbient.AddSound(LordaeronFallDay);
       Regions.AshenvaleAmbient.AddSound(AshenvaleDay);
       Regions.AshenvaleAmbient2.AddSound(AshenvaleDay);
-      Regions.AshenvaleAmbient3.AddSound(AshenvaleDay);
-      Regions.AshenvaleAmbient4.AddSound(AshenvaleDay);
       Regions.BarrenAmbient1.AddSound(BarrensDay);
       Regions.BarrenAmbient2.AddSound(BarrensDay);
       Regions.BarrenAmbient3.AddSound(BarrensDay);

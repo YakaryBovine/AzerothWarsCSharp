@@ -62,6 +62,15 @@ The Exodar is a mighty fortress-base with the ability to move around the map, bu
       SharedFactionConfigSetup.AddSharedFactionConfig(this);
     }
 
+    /// <inheritdoc />
+    public override void OnNotPicked()
+    {
+      Regions.ExodarBaseUnlock.CleanupNeutralPassiveUnits();
+      Regions.Darkshore.CleanupNeutralPassiveUnits();
+      base.OnNotPicked();
+    }
+
+
     private void RegisterObjectLimits()
     {
       foreach (var (objectTypeId, objectLimit) in DraeneiObjectLimitData.GetAllObjectLimits())

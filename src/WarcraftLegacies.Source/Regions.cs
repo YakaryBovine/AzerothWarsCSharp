@@ -16,10 +16,8 @@ public static class Regions
 	public static Rectangle Area52Unlock { get; set; } = new Rectangle(-96f, -22688f, 1472f, -20608f);
 	public static Rectangle ArtifactDummyInstance { get; set; } = new Rectangle(19584f, 23232f, 22688f, 24800f);
 	public static Rectangle AshbringerForge { get; set; } = new Rectangle(10240f, -5440f, 10368f, -5312f);
-	public static Rectangle AshenvaleAmbient { get; set; } = new Rectangle(-17856f, 512f, -9856f, 9152f);
+	public static Rectangle AshenvaleAmbient { get; set; } = new Rectangle(-18560f, 512f, -9856f, 9088f);
 	public static Rectangle AshenvaleAmbient2 { get; set; } = new Rectangle(-17760f, 9152f, -11968f, 12704f);
-	public static Rectangle AshenvaleAmbient3 { get; set; } = new Rectangle(-19424f, 512f, -17344f, 2080f);
-	public static Rectangle AshenvaleAmbient4 { get; set; } = new Rectangle(-18528f, 2080f, -17856f, 8640f);
 	public static Rectangle AshenvaleEmeraldPortal { get; set; } = new Rectangle(-8576f, 8992f, -8128f, 9280f);
 	public static Rectangle AshenvaleUnlock { get; set; } = new Rectangle(-15552f, 2464f, -13088f, 4576f);
 	public static Rectangle AstranaarUnlock { get; set; } = new Rectangle(-16832f, 1344f, -15168f, 2496f);
@@ -28,7 +26,7 @@ public static class Regions
 	public static Rectangle Auberdine_Ships { get; set; } = new Rectangle(-18272f, 2848f, -15936f, 5312f);
 	public static Rectangle AuberdineUnlock { get; set; } = new Rectangle(-18784f, 8608f, -14784f, 11104f);
 	public static Rectangle AzsharaAmbient2 { get; set; } = new Rectangle(-8704f, 896f, -3680f, 6112f);
-	public static Rectangle AzuremystAmbient { get; set; } = new Rectangle(-21088f, 6400f, -18528f, 11104f);
+	public static Rectangle AzuremystAmbient { get; set; } = new Rectangle(-21216f, 6400f, -18528f, 11104f);
 	public static Rectangle BalorAmbient { get; set; } = new Rectangle(3104f, -14400f, 6656f, -10112f);
 	public static Rectangle BarrenAmbient1 { get; set; } = new Rectangle(-19456f, -5504f, -9888f, 512f);
 	public static Rectangle BarrenAmbient2 { get; set; } = new Rectangle(-16864f, -8192f, -12160f, -5888f);
@@ -106,7 +104,7 @@ public static class Regions
 	public static Rectangle ElementalRealm { get; set; } = new Rectangle(-18016f, -22848f, -8480f, -20320f);
 	public static Rectangle ElwinForestAmbient { get; set; } = new Rectangle(8704f, -14816f, 13376f, -12672f);
 	public static Rectangle EnKilahUnlock { get; set; } = new Rectangle(-6016f, 18176f, -4832f, 18848f);
-	public static Rectangle ExodarBaseUnlock { get; set; } = new Rectangle(-24480f, 5792f, -21056f, 9184f);
+	public static Rectangle ExodarBaseUnlock { get; set; } = new Rectangle(-24544f, 5792f, -21216f, 9056f);
 	public static Rectangle Far_Eastern_Northrend { get; set; } = new Rectangle(4608f, 20064f, 7328f, 22944f);
 	public static Rectangle FeathermoonCreeps { get; set; } = new Rectangle(-22464f, -12128f, -18368f, -7584f);
 	public static Rectangle FeathermoonUnlock { get; set; } = new Rectangle(-21376f, -10272f, -19776f, -7840f);

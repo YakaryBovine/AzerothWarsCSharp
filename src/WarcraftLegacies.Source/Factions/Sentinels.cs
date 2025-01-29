@@ -69,6 +69,16 @@ Once you have secured your holdings, gather your army and destroy the Old Gods. 
       RegisterDialogue();
       RegisterPowers();
       SharedFactionConfigSetup.AddSharedFactionConfig(this);
+      Regions.AstranaarUnlock.CleanupHostileUnits();
+      Regions.AuberdineUnlock.CleanupHostileUnits();
+    }
+
+    /// <inheritdoc />
+    public override void OnNotPicked()
+    {
+      Regions.AuberdineUnlock.CleanupNeutralPassiveUnits();
+      Regions.AstranaarUnlock.CleanupNeutralPassiveUnits();
+      base.OnNotPicked();
     }
 
     private void RegisterObjectLimits()

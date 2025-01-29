@@ -133,5 +133,86 @@
     "MapItemTableId": -1,
     "ItemTableSets": [],
     "CreationNumber": 2266
+  },
+  {
+    "Flags": 2,
+    "OwnerId": 24,
+    "Hp": -1,
+    "Mp": -1,
+    "TargetAcquisition": -2,
+    "HeroLevel": 1,
+    "InventoryData": [],
+    "AbilityData": [],
+    "CustomPlayerColorId": -1,
+    "WaygateDestinationRegionId": -1,
+    "TypeId": 1702326126,
+    "Position": {
+      "X": -15548.725,
+      "Y": 2064.26
+    },
+    "Rotation": 4.143073558807373,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1702326126,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 1305
+  },
+  {
+    "Flags": 2,
+    "OwnerId": 24,
+    "Hp": -1,
+    "Mp": -1,
+    "TargetAcquisition": -2,
+    "HeroLevel": 1,
+    "InventoryData": [],
+    "AbilityData": [],
+    "CustomPlayerColorId": -1,
+    "WaygateDestinationRegionId": -1,
+    "TypeId": 1651994478,
+    "Position": {
+      "X": -15739.055,
+      "Y": 2063.1885
+    },
+    "Rotation": 5.095048904418945,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1651994478,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 1325
+  },
+  {
+    "Flags": 2,
+    "OwnerId": 24,
+    "Hp": -1,
+    "Mp": -1,
+    "TargetAcquisition": -2,
+    "HeroLevel": 1,
+    "InventoryData": [],
+    "AbilityData": [],
+    "CustomPlayerColorId": -1,
+    "WaygateDestinationRegionId": -1,
+    "TypeId": 1651994478,
+    "Position": {
+      "X": -15810.227,
+      "Y": 1883.9248
+    },
+    "Rotation": 0.01745329238474369,
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "SkinId": 1651994478,
+    "MapItemTableId": -1,
+    "ItemTableSets": [],
+    "CreationNumber": 3206
   }
 ]
