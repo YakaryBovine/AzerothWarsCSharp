@@ -30,24 +30,12 @@ namespace MacroTools.FactionChoices
       pickingPlayer.RescueGroup(startingUnits);
 
       foreach (var unpickedFaction in Choices.Where(x => x.Data != choice.Data))
-        RemoveFaction(unpickedFaction.Data);
+        unpickedFaction.Data.OnNotPicked();
     }
 
     /// <inheritdoc />
     protected override Choice<Faction> GetDefaultChoice(player whichPlayer) => Choices.First();
 
-    private static void RemoveFaction(Faction faction)
-    {
-      var startingUnits = faction.StartingUnits;
-      foreach (var unit in startingUnits)
-        if (ControlPointManager.Instance.UnitIsControlPoint(unit))
-          unit.Rescue(Player(PLAYER_NEUTRAL_AGGRESSIVE));
-        else
-          unit.Remove();
-      
-      faction.OnNotPicked();
-    }
-    
     private static Choice<Faction>[] ConvertToFactionChoices(IEnumerable<Faction> factions)
     {
       return factions
