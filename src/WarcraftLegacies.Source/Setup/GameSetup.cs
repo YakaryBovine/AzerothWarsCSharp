@@ -11,6 +11,7 @@ using WarcraftLegacies.Source.GameLogic;
 using WarcraftLegacies.Source.GameLogic.GameEnd;
 using WarcraftLegacies.Source.GameModes;
 using WarcraftLegacies.Source.UnitTypes;
+using MacroTools.FactionChoices;
 
 namespace WarcraftLegacies.Source.Setup
 {
@@ -39,7 +40,8 @@ namespace WarcraftLegacies.Source.Setup
       NeutralHostileSetup.Setup();
       TeamSetup.Setup();
       new PlayerSetup(preplacedUnitSystem, allLegendSetup, artifactSetup).Setup();
-      FactionChoiceDialogSetup.Setup(preplacedUnitSystem, artifactSetup, allLegendSetup);
+      var sharedGoldMineManager = new SharedGoldMineManager();
+      FactionChoiceDialogSetup.Setup(preplacedUnitSystem, artifactSetup, allLegendSetup, sharedGoldMineManager);
       SharedQuestSetup.Setup(preplacedUnitSystem, artifactSetup, allLegendSetup);
       SpellsSetup.Setup();
       var commandManager = new CommandManager();

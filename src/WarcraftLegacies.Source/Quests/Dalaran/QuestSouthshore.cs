@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using MacroTools.Extensions;
 using MacroTools.FactionSystem;
 using MacroTools.ObjectiveSystem.Objectives.ControlPointBased;
@@ -6,6 +7,7 @@ using MacroTools.ObjectiveSystem.Objectives.FactionBased;
 using MacroTools.ObjectiveSystem.Objectives.TimeBased;
 using MacroTools.QuestSystem;
 using WCSharp.Shared.Data;
+
 
 namespace WarcraftLegacies.Source.Quests.Dalaran
 {
@@ -28,7 +30,7 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
       AddObjective(new ObjectiveExpire(660, Title));
       AddObjective(new ObjectiveSelfExists());
       _rescueUnits = rescueRect.PrepareUnitsForRescue(RescuePreparationMode.HideNonStructures);
-      
+
     }
 
     /// <inheritdoc />
@@ -48,7 +50,11 @@ namespace WarcraftLegacies.Source.Quests.Dalaran
     }
 
     /// <inheritdoc />
-    protected override void OnComplete(Faction completingFaction) => 
+    protected override void OnComplete(Faction completingFaction)
+    {
       completingFaction.Player.RescueGroup(_rescueUnits);
+  
+    }
+
+    }
   }
-}

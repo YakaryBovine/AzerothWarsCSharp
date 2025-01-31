@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using MacroTools;
 using MacroTools.DialogueSystem;
 using MacroTools.Extensions;
@@ -19,21 +20,24 @@ namespace WarcraftLegacies.Source.Factions
 {
   public sealed class Sentinels : Faction
   {
+    private const int replacementUnitTypeId = UNIT_EWSP_WISP_DRUIDS_SENTINELS_WORKER;
+    private readonly SharedGoldMineManager _sharedGoldMineManager;
     private readonly AllLegendSetup _allLegendSetup;
     private readonly ArtifactSetup _artifactSetup;
 
     /// <inheritdoc />
     
-    public Sentinels(PreplacedUnitSystem preplacedUnitSystem, AllLegendSetup allLegendSetup, ArtifactSetup artifactSetup) : base("Sentinels", PLAYER_COLOR_MINT, "|CFFBFFF80",
+    public Sentinels(PreplacedUnitSystem preplacedUnitSystem, AllLegendSetup allLegendSetup, ArtifactSetup artifactSetup, SharedGoldMineManager sharedGoldMineManager) : base("Sentinels", PLAYER_COLOR_MINT, "|CFFBFFF80",
       @"ReplaceableTextures\CommandButtons\BTNPriestessOfTheMoon.blp")
     {
+      _sharedGoldMineManager = sharedGoldMineManager;
       TraditionalTeam = TeamSetup.Kalimdor;
       _allLegendSetup = allLegendSetup;
       _artifactSetup = artifactSetup;
       UndefeatedResearch = FourCC("R05Y");
       StartingGold = 200;
       CinematicMusic = "Comradeship";
-      ControlPointDefenderUnitTypeId = UNIT_H03F_CONTROL_POINT_DEFENDER_SENTINELS;
+      ControlPointDefenderUnitTypeId = UNIT_O05A_GEMCRAFTER_DRAENEI_WORKER;
       StartingCameraPosition = Regions.SentStartPos.Center;
       StartingUnits = Regions.SentStartPos.PrepareUnitsForRescue(RescuePreparationMode.Invulnerable);
       LearningDifficulty = FactionLearningDifficulty.Basic;
@@ -44,10 +48,16 @@ The Druids are slowly waking from their slumber, and it falls to you to drive ba
 Your first mission is to race down the coast to Feathermoon Stronghold, a powerful Sentinel stronghold on the southern half of the continent. 
 
 Once you have secured your holdings, gather your army and destroy the Old Gods. Be careful, they will outnumber you if given time to establish a foothold in Azeroth.";
+
       GoldMines = new List<unit>
       {
         preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(-21300, 8400))
       };
+
+      foreach (var goldMine in GoldMines)
+      {
+        _sharedGoldMineManager.RegisterSharedGoldMine(goldMine, this);
+      }
       Nicknames = new List<string>
       {
         "sent",
@@ -59,6 +69,29 @@ Once you have secured your holdings, gather your army and destroy the Old Gods. 
       RegisterFactionDependentInitializer<Druids>(RegisterDruidsDialogue);
       RegisterFactionDependentInitializer<Illidari>(RegisterIllidariQuestsAndDialogue);
       RegisterFactionDependentInitializer<Legion>(RegisterLegionDialogue);
+    }
+
+
+
+
+    public override void OnNotPicked()
+    {
+      Console.WriteLine("OnNotPicked called. Replacing workers in SentStartPos.");
+      ReplaceWorkersInRectangle(Regions.SentStartPos, replacementUnitTypeId);
+    }
+
+    public void ReplaceWorkersInRectangle(Rectangle rectangle, int replacementUnitTypeId)
+    {
+      Console.WriteLine($"Replacing workers in rectangle: {rectangle}");
+      Func<unit, bool> condition = unit => IsUnitType(unit, UNIT_TYPE_PEON);
+      var replacedUnits = rectangle.ReplaceWorkers(replacementUnitTypeId, condition);
+
+      Console.WriteLine($"Number of units replaced: {replacedUnits.Count}");
+      foreach (var unit in replacedUnits)
+      {
+        SetUnitOwner(unit, Player(18), true);
+        Console.WriteLine($"Replaced unit with ID {GetUnitTypeId(unit)} and set owner to player 18");
+      }
     }
 
     /// <inheritdoc />

@@ -21,7 +21,7 @@ namespace MacroTools.Extensions
       SetSoundPosition(soundHandle, GetRectCenterX(region.Rect), GetRectCenterY(region.Rect), 0);
       RegisterStackedSound(soundHandle, true, width, height);
     }
-   
+
     /// <summary>
     /// Prepares neutral passive units within the specified <paramref name="rectangle"/> according to
     /// the provided <see cref="RescuePreparationMode"/>.
@@ -53,7 +53,7 @@ namespace MacroTools.Extensions
       var unitsInArea = CreateGroup()
         .EnumUnitsInRect(area)
         .EmptyToList();
-      
+
       foreach (var unit in unitsInArea)
       {
         if (unit.OwningPlayer() != Player(PLAYER_NEUTRAL_PASSIVE) || unit.GetTypeId() == FourCC("ngol"))
@@ -88,7 +88,7 @@ namespace MacroTools.Extensions
         }
       }
     }
-    
+
     /// <summary>
     /// Prepares all Neutral Passive inside the specified <paramref name="rectangle"/>.
     /// </summary>
@@ -114,6 +114,32 @@ namespace MacroTools.Extensions
           .PauseEx(true);
       }
       return group;
+    }
+
+    /// <summary>
+    /// Replaces all units in the specified <paramref name="rectangle"/> with a pre-selected unit based on the given condition.
+    /// </summary>
+    /// <param name="rectangle">The rectangle in which to replace units.</param>
+    /// <param name="replacementUnitTypeId">The unit type ID of the replacement unit.</param>
+    /// <param name="condition">A function that determines whether a unit should be replaced.</param>
+    public static List<unit> ReplaceWorkers(this Rectangle rectangle, int replacementUnitTypeId, Func<unit, bool> condition)
+    {
+      var unitsInArea = CreateGroup()
+        .EnumUnitsInRect(rectangle)
+        .EmptyToList()
+        .Where(condition)
+        .ToList();
+
+      foreach (var unit in unitsInArea)
+      {
+        var x = GetUnitX(unit);
+        var y = GetUnitY(unit);
+        var facing = GetUnitFacing(unit);
+        var newUnit = CreateUnit(unit.OwningPlayer(), replacementUnitTypeId, x, y, facing);
+        RemoveUnit(unit);
+      }
+
+      return unitsInArea;
     }
   }
 }

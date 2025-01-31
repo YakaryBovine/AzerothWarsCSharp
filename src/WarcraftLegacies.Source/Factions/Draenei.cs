@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using MacroTools;
 using MacroTools.Extensions;
@@ -14,15 +15,17 @@ namespace WarcraftLegacies.Source.Factions
 {
   public sealed class Draenei : Faction
   {
+    private const int replacementUnitTypeId = UNIT_H03F_CONTROL_POINT_DEFENDER_SENTINELS;
+    private readonly SharedGoldMineManager _sharedGoldMineManager;
     private readonly PreplacedUnitSystem _preplacedUnitSystem;
     private readonly AllLegendSetup _allLegendSetup;
     private readonly ArtifactSetup _artifactSetup;
+    private bool _onNotPickedCalled = false;
 
-    /// <inheritdoc />
-    
-    public Draenei(PreplacedUnitSystem preplacedUnitSystem, AllLegendSetup allLegendSetup, ArtifactSetup artifactSetup) : base("The Exodar",
+    public Draenei(PreplacedUnitSystem preplacedUnitSystem, AllLegendSetup allLegendSetup, ArtifactSetup artifactSetup, SharedGoldMineManager sharedGoldMineManager) : base("The Exodar",
       PLAYER_COLOR_NAVY, "|cff000080", @"ReplaceableTextures\CommandButtons\BTNBOSSVelen.blp")
     {
+      _sharedGoldMineManager = sharedGoldMineManager;
       TraditionalTeam = TeamSetup.NightElves;
       _preplacedUnitSystem = preplacedUnitSystem;
       _allLegendSetup = allLegendSetup;
@@ -34,27 +37,69 @@ namespace WarcraftLegacies.Source.Factions
       LearningDifficulty = FactionLearningDifficulty.Advanced;
       IntroText = @"You are playing as the exiled |cff000080Draenei|r.
 
-You begin on Azuremyst Island, amid the wreckage of your flight from the Burning Legion.
+    You begin on Azuremyst Island, amid the wreckage of your flight from the Burning Legion.
 
-Further inland your Night-elf allies will need your help against the Orcish Horde, quickly build your base and gain entry to the Exodar.
+    Further inland your Night-elf allies will need your help against the Orcish Horde, quickly build your base and gain entry to the Exodar.
 
-The Exodar is a mighty fortress-base with the ability to move around the map, but it will take a long time to repair.";
+    The Exodar is a mighty fortress-base with the ability to move around the map, but it will take a long time to repair.";
+
       GoldMines = new List<unit>
+            {
+                preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(-21300, 8400))
+            };
+
+      foreach (var goldMine in GoldMines)
       {
-        preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(-21000, 8600))
-      };
+        _sharedGoldMineManager.RegisterSharedGoldMine(goldMine, this);
+      }
       Nicknames = new List<string>
-      {
-        "draenei",
-        "dranei",
-        "exo",
-        "exodar",
-        "theexodar",
-        "goats"
-      };
+            {
+                "draenei",
+                "dranei",
+                "exo",
+                "exodar",
+                "theexodar",
+                "goats"
+            };
     }
+
+    public override void OnNotPicked()
+    {
+      if (_onNotPickedCalled) return;
+      _onNotPickedCalled = true;
+
+      Console.WriteLine("OnNotPicked called. Checking units in DraeneiStartPos.");
+
+     
+      var unitsInRegion = GetUnitsInRectangle(Regions.DraeneiStartPos);
+      Console.WriteLine($"Number of units in DraeneiStartPos: {unitsInRegion.Count()}");
+
+      Console.WriteLine("Replacing workers in DraeneiStartPos.");
+      ReplaceWorkersInRectangle(Regions.DraeneiStartPos, replacementUnitTypeId);
+    }
+
+    public void ReplaceWorkersInRectangle(Rectangle rectangle, int replacementUnitTypeId)
+    {
+      Console.WriteLine($"Replacing workers in rectangle: {rectangle}");
+      Func<unit, bool> condition = unit => IsUnitType(unit, UNIT_TYPE_PEON);
+      var replacedUnits = rectangle.ReplaceWorkers(replacementUnitTypeId, condition);
+
+      Console.WriteLine($"Number of units replaced: {replacedUnits.Count}");
+      foreach (var unit in replacedUnits)
+      {
+        SetUnitOwner(unit, Player(18), true);
+        Console.WriteLine($"Replaced unit with ID {GetUnitTypeId(unit)} and set owner to Player 18.");
+      }
+    }
+
     
-    /// <inheritdoc />
+    private IEnumerable<unit> GetUnitsInRectangle(Rectangle rectangle)
+    {
+     
+      // This is a placeholder implementation
+      return new List<unit>();
+    }
+
     public override void OnRegistered()
     {
       RegisterObjectLimits();
@@ -75,14 +120,14 @@ The Exodar is a mighty fortress-base with the ability to move around the map, bu
       AddQuest(questRepairHull);
       AddQuest(new QuestRebuildCivilisation(Regions.Darkshore));
       AddQuest(new QuestShipArgus(
-        _preplacedUnitSystem.GetUnit(UNIT_H03V_ENTRANCE_PORTAL, Regions.OutlandToArgus.Center),
-        _preplacedUnitSystem.GetUnit(UNIT_H03V_ENTRANCE_PORTAL, Regions.TempestKeepSpawn.Center),
-        _allLegendSetup.Draenei.Velen
+          _preplacedUnitSystem.GetUnit(UNIT_H03V_ENTRANCE_PORTAL, Regions.OutlandToArgus.Center),
+          _preplacedUnitSystem.GetUnit(UNIT_H03V_ENTRANCE_PORTAL, Regions.TempestKeepSpawn.Center),
+          _allLegendSetup.Draenei.Velen
       ));
       var crystalProtectors = CreateGroup()
-        .EnumUnitsInRect(Regions.ExodarBaseUnlock.Rect)
-        .EmptyToList()
-        .Where(x => GetUnitTypeId(x) == UNIT_U00U_CRYSTAL_PROTECTOR_DRAENEI_TOWER);
+          .EnumUnitsInRect(Regions.ExodarBaseUnlock.Rect)
+          .EmptyToList()
+          .Where(x => GetUnitTypeId(x) == UNIT_U00U_CRYSTAL_PROTECTOR_DRAENEI_TOWER);
       var questRepairGenerator = new QuestRepairGenerator(_allLegendSetup.Draenei.LegendExodarGenerator, questRepairHull, crystalProtectors);
       AddQuest(questRepairGenerator);
       AddQuest(new QuestTriumvirate(_allLegendSetup.Draenei.Velen));
