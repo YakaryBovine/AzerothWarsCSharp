@@ -27,6 +27,8 @@ namespace WarcraftLegacies.Source.Factions
     public Sentinels(PreplacedUnitSystem preplacedUnitSystem, AllLegendSetup allLegendSetup, ArtifactSetup artifactSetup) : base("Sentinels", PLAYER_COLOR_MINT, "|CFFBFFF80",
       @"ReplaceableTextures\CommandButtons\BTNPriestessOfTheMoon.blp")
     {
+      FactionTownHall = UNIT_N06J_SENTINEL_OUTPOST_SENTINEL_T1;
+      FactionWorker = UNIT_EWSP_WISP_DRUIDS_SENTINELS_WORKER;
       TraditionalTeam = TeamSetup.Kalimdor;
       _allLegendSetup = allLegendSetup;
       _artifactSetup = artifactSetup;
@@ -34,10 +36,11 @@ namespace WarcraftLegacies.Source.Factions
       StartingGold = 200;
       CinematicMusic = "Comradeship";
       ControlPointDefenderUnitTypeId = UNIT_H03F_CONTROL_POINT_DEFENDER_SENTINELS;
-      StartingCameraPosition = Regions.SentStartPos.Center;
-      StartingUnits = Regions.SentStartPos.PrepareUnitsForRescue(RescuePreparationMode.Invulnerable);
+      StartingCameraPosition = Regions.SentDraeSharedStartPos.Center;
+      StartingUnits = Regions.SentDraeSharedStartPos.PrepareUnitsForRescue(RescuePreparationMode.Invulnerable);
       LearningDifficulty = FactionLearningDifficulty.Basic;
       IntroText = @"You are playing as the ever-watchful 
+
 
 The Druids are slowly waking from their slumber, and it falls to you to drive back the Old Gods invaders from Kalimdor until then.
 
@@ -46,7 +49,7 @@ Your first mission is to race down the coast to Feathermoon Stronghold, a powerf
 Once you have secured your holdings, gather your army and destroy the Old Gods. Be careful, they will outnumber you if given time to establish a foothold in Azeroth.";
       GoldMines = new List<unit>
       {
-        preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(-21300, 8400))
+        preplacedUnitSystem.GetUnit(FourCC("ngol"), new Point(-20780, 7860))
       };
       Nicknames = new List<string>
       {

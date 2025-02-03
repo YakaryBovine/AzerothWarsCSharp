@@ -83,7 +83,6 @@ public static class Regions
 	public static Rectangle DemonGate3 { get; set; } = new Rectangle(352f, -25472f, 864f, -25024f);
 	public static Rectangle Desolace_Ships { get; set; } = new Rectangle(-18720f, -7584f, -17088f, -3488f);
 	public static Rectangle DraeneiQuestKill { get; set; } = new Rectangle(-20928f, -5376f, -17184f, -2624f);
-	public static Rectangle DraeneiStartPos { get; set; } = new Rectangle(-20800f, 8128f, -20096f, 8896f);
 	public static Rectangle DragonmawPortal { get; set; } = new Rectangle(22176f, -4896f, 22720f, -4576f);
 	public static Rectangle DragonmawUnlock { get; set; } = new Rectangle(20832f, -5088f, 23168f, -2720f);
 	public static Rectangle DrakUnlock { get; set; } = new Rectangle(1120f, 18592f, 3360f, 20960f);
@@ -252,7 +251,7 @@ public static class Regions
 	public static Rectangle ScholomanceAmbient2 { get; set; } = new Rectangle(12128f, 5440f, 16224f, 7072f);
 	public static Rectangle ScholomanceAmbient3 { get; set; } = new Rectangle(11200f, 7072f, 13728f, 7840f);
 	public static Rectangle SentinelTowerAmbient { get; set; } = new Rectangle(5696f, -17664f, 8672f, -14304f);
-	public static Rectangle SentStartPos { get; set; } = new Rectangle(-21216f, 7808f, -20192f, 8416f);
+	public static Rectangle SentDraeSharedStartPos { get; set; } = new Rectangle(-21216f, 7808f, -20192f, 8416f);
 	public static Rectangle ShadowfangAmbient { get; set; } = new Rectangle(4512f, 2624f, 8576f, 8160f);
 	public static Rectangle ShadowfangUnlock { get; set; } = new Rectangle(4736f, 2976f, 6208f, 4640f);
 	public static Rectangle Shadowforge_City { get; set; } = new Rectangle(11488f, -9728f, 13248f, -8320f);

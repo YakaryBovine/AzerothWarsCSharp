@@ -23,14 +23,16 @@ namespace WarcraftLegacies.Source.Factions
     public Draenei(PreplacedUnitSystem preplacedUnitSystem, AllLegendSetup allLegendSetup, ArtifactSetup artifactSetup) : base("The Exodar",
       PLAYER_COLOR_NAVY, "|cff000080", @"ReplaceableTextures\CommandButtons\BTNBOSSVelen.blp")
     {
+      FactionTownHall = UNIT_O02P_CRYSTAL_HALL_DRAENEI_T1;
+      FactionWorker = UNIT_O05A_GEMCRAFTER_DRAENEI_WORKER;
       TraditionalTeam = TeamSetup.NightElves;
       _preplacedUnitSystem = preplacedUnitSystem;
       _allLegendSetup = allLegendSetup;
       this._artifactSetup = artifactSetup;
       StartingGold = 200;
       ControlPointDefenderUnitTypeId = UNIT_U008_CONTROL_POINT_DEFENDER_DRAENEI;
-      StartingCameraPosition = Regions.DraeneiStartPos.Center;
-      StartingUnits = Regions.DraeneiStartPos.PrepareUnitsForRescue(RescuePreparationMode.Invulnerable);
+      StartingCameraPosition = Regions.SentDraeSharedStartPos.Center;
+      StartingUnits = Regions.SentDraeSharedStartPos.PrepareUnitsForRescue(RescuePreparationMode.Invulnerable);
       LearningDifficulty = FactionLearningDifficulty.Advanced;
       IntroText = @"You are playing as the exiled |cff000080Draenei|r.
 
